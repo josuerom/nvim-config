@@ -1,0 +1,166 @@
+snippet cl "console.log('$1', $2)" b
+console.log('$1', $2);
+endsnippet
+
+snippet cd "console.debug('$1', $2)" b
+console.debug('$1', $2);
+endsnippet
+
+snippet ct "console.time('$1', $2)" b
+console.time('$1', $2);
+endsnippet
+
+snippet imp "import from ''" b
+import ${2:{ $3 }} from '$1'
+endsnippet
+
+snippet mat "Math.$1($2)"
+Math.$1($2)
+endsnippet
+
+snippet c "const $1 = $2" b
+const $1 = $2
+endsnippet
+
+snippet ed "import from ''" b
+export default $1
+endsnippet
+
+snippet fn "const $1 = {$2:name} => $3 {$5}" i
+const $1 = ${2:name} => $3 {
+  $4
+}};
+endsnippet
+
+snippet afn "() => {}" i
+${2:($3)} => ${4:{
+  $5
+}}
+endsnippet
+
+snippet cf "() {}" b
+$1 ($2) {
+  $3
+}
+endsnippet
+
+snippet it "it('', () => {})" b
+it('$1', () => {
+  $2
+})
+endsnippet
+
+snippet desc "describe('', () => {})" b
+describe('$1', () => {
+  $2
+})
+endsnippet
+
+snippet co "const = " b
+const ${1:{ $2 }} = ${3:{
+  $4
+}}
+endsnippet
+
+snippet arr " const $1 = [ ${2} ]" b
+const $1 = [
+  $2
+]
+endsnippet
+
+snippet des "const {} =" b
+const { $1 } = $2
+endsnippet
+
+snippet if "if ($1) { ${2} }"
+if ($1) {
+  ${2}
+}
+endsnippet
+
+snippet ifel "if ($1) { ${2} } else { ${3} }"
+if ($1) {
+  ${2}
+} else {
+  ${3}
+}
+endsnippet
+
+snippet ifelre "if ($1) { ${2} } else { ${3} } return $4"
+if ($1) {
+  ${2}
+} else {
+  ${3}
+}
+return $4;
+endsnippet
+
+snippet else "else { ${2} }"
+else {
+  ${1}
+}
+endsnippet
+
+snippet for "for (...) { ${3} }"
+for ($1 = 0; $1 $2; $1++) {
+  ${3}
+}
+endsnippet
+
+snippet fori "for (i = 0; i < $1; i++) { ${2} } return $3"
+for (i = 0; i < $1; i++) {
+  ${2}
+}
+return $3;
+endsnippet
+
+snippet re "return"
+return $1;
+endsnippet
+
+snippet replace "replace(/s\g/, ' ');"
+replace(/s\g/, ' ');$1
+endsnippet
+
+snippet  "toLowerCase();"
+toLowerCase();$1
+endsnippet
+
+snippet  "split('');"
+split('');$1
+endsnippet
+
+snippet  "join('');"
+join('');$1
+endsnippet
+
+snippet  "reduce()"
+reduce($1)
+endsnippet
+
+snippet  "concat()"
+concat($1)
+endsnippet
+
+snippet  "reversed();"
+reversed();$1
+endsnippet
+
+snippet push "push($1);"
+push($1);$2
+endsnippet
+
+snippet unde "undefined"
+undefined
+endsnippet
+
+snippet objent "Object.entries($1).reduce((acc, el) => acc[1] > el[1] ? acc : el);"
+Object.entries($1).reduce((acc, el) => acc[1] > el[1] ? acc : el);
+endsnippet
+
+snippet /* "JSDoc"
+/*
+- @author Josué Romero
+- @date `!v strftime("%d/%m/%Y")` COL 
+*/
+endsnippet
