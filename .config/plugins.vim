@@ -5,7 +5,6 @@ Plug 'sheerun/vim-polyglot'
 
 " temas
 Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
 
 " barra de estado especial para gruvbox
 Plug 'shinchu/lightline-gruvbox.vim'
@@ -32,8 +31,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " IDE
+Plug 'terrortylor/nvim-comment'
 Plug 'jiangmiao/auto-pairs'
 Plug 'yggdroot/indentline'
-Plug 'terrortylor/nvim-comment'
 
 call plug#end()
