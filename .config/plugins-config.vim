@@ -26,7 +26,8 @@ let g:lightline = {
 " si utilizas el autocompletado KITE descomenta la sgt línea
 "let g:kite_supported_languages = ['nombre-de-los-lenguajes']
 let g:coc_global_extensions = [
-    \ 'coc-snippets'
+    \ 'coc-snippets',
+    \ 'coc-tsserver'
     \ ]
 " si requieres obtener otras extensiones de autocompletado visita el
 " repositorio en github: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions 
