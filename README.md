@@ -24,11 +24,11 @@
 <H1 align="center">Correcta Instalación y Configuración de Neovim - Windows 8.1, 10 & 11 February, 2021.</H1>
 
 <p align="center" width="0">
-   <img align="center" width="645" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/neovim-logo-shadow.png">
+   <img align="center" width="645" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/neovim-logo-shadow.png">
 </p>
 
 <p align="center">
-<img src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/2022-02-26_18-34-31_Trim.gif" width="800">
+<img src="https://github.com/josuerom/nvim-config/blob/main/screenshot/2022-02-26_18-34-31_Trim.gif" width="800">
 </p>
 
 ## Introducción.
@@ -50,7 +50,7 @@ El presente proyecto describe el proceso que debes seguir para personalizar e in
 Buen día, estimado saludo amiga/o para realizar la instalación primero ábrete **Microsft Store**; una vez se inicie, en la barra de búsqueda escribe: **terminal**. Luego de esto, debes seleccionar el programa que se encuentra en la siguiente captura de pantalla que te dejo, lo más seguro es que el programa te aparezca de primero como me sucedió conmigo.
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/win-terminal.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/win-terminal.png">
 </p>
 
 Una vez finalice la instalación, ejecutala como administrador ya que dentro de poco se deben ejecutar una serie de comandos que te explicaré. Posteriormente, el motivo por el cual recomiendo su instalación es para que la Terminal tenga una apariencia más agradable intuitiva. Por otro lado, también podrían usar la ***cmd o símbolo del sistema*** pero lo malo es que con esa terminal neovim nunca se verá igual a como en la otra, si quieres prueba lo, yo utilizo las dos terminales.
@@ -73,7 +73,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Comparto captura de pantalla, a mi me arrojó esos errores porque ya lo tengo instalado, tu solo debes seguir los pasos que te indíco.
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/chocolatey.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/chocolatey.png">
 </p>
 
 Ahora copia y pega este otro comando para instalar neovim en su versión más reciente a la fecha en que lo vas a instalar.
@@ -97,7 +97,7 @@ Para instalarlo da un [click aquí](https://nodejs.org/es/download/ "https://nod
 Esta es la personalización que actualmente tengo en neovim:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/nvim-completo.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/nvim-completo.png">
 </p>
 
 **PREGUNTA:** ¿Te gustaría tener neovim como lo tengo yo?. Si tu respuesta es un **SÍ** deberás descargarte los archivos de este repositorio ya que son necesarios para que tu Neovim tenga una buena interfaz bacana y las mismas funcionalidades que manejo como: atajos y plugins. Una vez se haya descargado debes extraer el archivo _(nvim-config-windows7-8-10-11-nvim.zip)._ Luego de ello, la carpeta extraída obligatoriamente cambiale el nombre por: **nvim** (en minúsculas).
@@ -113,13 +113,13 @@ nvim init.vim
 Añado captura de pantalla, por sino me entendiste muy bien, me referia a está:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/init-vim.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/init-vim.png">
 </p>
 
 Luego de ejecutar el comando, te arrojará muchos errores pero _NO TE ASUSTES NI DEPRIMAS_ que son normales las primeras veces que lo ejecutas, aparecen porque los plugins no se han instalado. Y deben ser éstos mismos errores los que te aparezcan allá:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/errores-normales.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/errores-normales.png">
 </p>
 
 Para saltar esos errores puedes presionar varias veces la tecla **Enter** o solo una vez la tecla **Esc**, nada más faltaría instalar el gestor de plugins **vim plug** para que así culmines con el último paso.
@@ -140,13 +140,13 @@ Continuando con esta super guía de instalación, en la ventana principal o vent
 Añado captura de pantalla:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/pluginstall.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/pluginstall.png">
 </p>
 
 Así podrás instalar todos los plugins que manejo a diario, añado otra captura guía.
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/plugins-instalados.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/plugins-instalados.png">
 </p>
 
 Después de que hayan terminado todas las descargas y quieras conocer los cambios efectuados en tu editor. En modo **NORMAL** presiona las teclas:
@@ -158,11 +158,11 @@ El comando cerrará neovim completamente. Para que tú luego, lo vuelvas a abrir
 En términos generales, veraz el cambio justo como en las imágenes que proporcioné al final de esta guía; cabe mencionar que, si deseas cambiar el tema u otra cosas que no te guste, deberás buscar como realizarlo.
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/nvim-init-vim.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/nvim-init-vim.png">
 </p>
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/nvim-nerdtree_java.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/nvim-nerdtree_java.png">
 </p>
 
 ### ¿Atrevete a comentarme que tal te pareció esta guía de instalación o que me faltó?
@@ -174,5 +174,5 @@ josueromram@outlook.es
 Próximamente actualizaré esta guía. Gracias.
 
 <p align="center" width="0">
-   <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/neovim-mark-flat.png">
+   <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/****/screenshot/neovim-mark-flat.png">
 </p> 
