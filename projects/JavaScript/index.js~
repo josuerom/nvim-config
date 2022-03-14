@@ -21,4 +21,4 @@ const mascotas = [
 // edad promedio
 const edades = mascotas.map(x => x.edad)
 const resultado = suma(edades)
-console.log("Result =", resultado / edades.length);
+console.log(resultado / edades.length);
