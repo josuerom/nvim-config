@@ -1,3 +1,4 @@
+// Programa que multiplica dos números sin acudir al signo (*)
 const multiply = (a, b) => {
 	let result = 0;
 	const positive = Math.abs(b) == b;
@@ -10,15 +11,18 @@ const multiply = (a, b) => {
 const a = multiply(50, -50);
 console.log(a);
 
+// Obtiene el número mayor de un arreglo con solo iterar una vez
 const getBiggets = number => number.reduce((acc, el) => acc > el ? acc : el)
 const b = getBiggets([104, 3201, 54, -6542, 64, 7784, 64, 1, 984]);
 console.log(b);
 
+// Función que aplana los arreglos en un nivel
 const array = [[1, 2, [3, []], [4, [6]]]];//[1, 2, [3, []], 4, [6]]]
 const flatten = arr => arr.reduce((acc, el) => acc.concat(el));
 const c = flatten(array);
 console.log(c);
 
+// Función que imprime solo números mayores a 0 y no imprime las palabras reservadas
 const clean = cl => cl.reduce((acc, el) => {
 	if (el) {
 		acc.push(el);
@@ -28,6 +32,7 @@ const clean = cl => cl.reduce((acc, el) => {
 const d = clean([undefined, 0, 1, null, 2, false]);
 console.log(d);
 
+// Función que imprime la cantidad de veces que se repite una palabra.
 const repeated = (str) => {
 	const lowered = str.toLowerCase();
 	const splitted = lowered.split(' ');
@@ -44,6 +49,7 @@ const repeated = (str) => {
 const e = repeated('This is a this most better long');
 console.log(e);
 
+// Función que verifica si un String es un Palindromo o no
 const isPalindrome = (str) => {
 	str = str.replace(/\s/g, '');
 	const lowered = str.toLowerCase();
