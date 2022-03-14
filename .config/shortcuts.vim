@@ -13,6 +13,9 @@ imap jk <Esc>
 nnoremap <C-k> 10 <C-e>
 nnoremap <C-j> 10 <C-y>
 
+" con space+c, comentamos la línea en la que se encuentre el cursor en modo NORMAL
+lua require('nvim_comment').setup({line_mapping="<leader>cl", operator_mapping="<leader>c"})
+
 " coloca un punto y coma al final de línea situada usando (space+,)
 nnoremap <Leader>, $a;<Esc>
 
@@ -55,12 +58,12 @@ nnoremap <Leader>o :sp<CR>
 
 " F3 - elimina todos los espacios vacíos que hayan en el archivo
 nnoremap <F3> :g/^\s\+$/s/\s\+//<CR>
-" F4 - crea un nuevo archivo en la ruta posicionada
+" Ctrl+n - crea un nuevo archivo en la ruta posicionada
 nnoremap <C-n> :tabnew 
-" F5 - actualizas la configuración de neovim (para no reiniciarlo)
+" Ctrl+r - actualiza la configuración de neovim (o lo reinicia)
 nmap <C-r> :source ~/AppData/Local/nvim/init.vim<CR>
-
-nnoremap <Leader>ii :e $MYVIMRC<CR>
+" Space+init - abre el archivo de configuración global
+nnoremap <Leader>init :e $MYVIMRC<CR>
 
 " navegación entre tabs o pestañas abiertas
 nnoremap <silent><S-TAB> :bprevious<CR>
@@ -100,6 +103,8 @@ nnoremap m :m .+1<CR>==
 " copiar ruta general del archivo posicionado
 nnoremap <Leader>kp :let @*=expand("%")<CR>
 
+
+
 "*----------------------- ATAJOS PARA ALGUNAS FUNCIONALIDADES DE COC -----------------------*
 " flujo instantaneo con COC
 nmap <silent> gd <Plug>(coc-definition)
@@ -118,9 +123,6 @@ let g:coc_snippet_prev = '<S-TAB>'
 " else
   inoremap <silent><expr> <c-space> coc#refresh()
 " endif
-
-" con space+cl, comentamos la línea en la que se encuentre el cursor en modo NORMAL
-"lua require('nvim_comment').setup({line_mapping = "<leader>cl", operator_mapping = "<leader>c"})
 
 " con las feclas ajustas el tamaño del búfer's abiertos
 nnoremap <silent> <right> :vertical resize +2<CR>
