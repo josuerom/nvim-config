@@ -174,5 +174,5 @@ josueromram@outlook.es
 Próximamente actualizaré esta guía. Gracias.
 
 <p align="center" width="0">
-   <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/****/screenshot/neovim-mark-flat.png">
+   <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/neovim-mark-flat.png">
 </p> 
