@@ -14,7 +14,7 @@ nnoremap <C-k> 10 <C-e>
 nnoremap <C-j> 10 <C-y>
 
 " con space+c, comentamos la línea en la que se encuentre el cursor en modo NORMAL
-lua require('nvim_comment').setup({line_mapping="<leader>cl", operator_mapping="<leader>c"})
+"lua require('nvim_comment').setup({line_mapping="<leader>cl", operator_mapping="<leader>c"})
 
 " coloca un punto y coma al final de línea situada usando (space+,)
 nnoremap <Leader>, $a;<Esc>
