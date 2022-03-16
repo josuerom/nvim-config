@@ -31,7 +31,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " IDE
-Plug 'terrortylor/nvim-comment'
 Plug 'jiangmiao/auto-pairs'
 Plug 'yggdroot/indentline'
 
