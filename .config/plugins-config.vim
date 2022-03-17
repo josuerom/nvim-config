@@ -27,7 +27,8 @@ let g:lightline = {
 "let g:kite_supported_languages = ['nombre-de-los-lenguajes']
 let g:coc_global_extensions = [
     \ 'coc-snippets',
-    \ 'coc-tsserver'
+    \ 'coc-tsserver',
+    \ 'coc-java'
     \ ]
 " si requieres obtener otras extensiones de autocompletado visita el
 " repositorio en github: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions 
