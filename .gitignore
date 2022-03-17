@@ -1,4 +1,5 @@
 .git\
 .screenshot\
-.gitignore
+.neovim\
 .class
+.gitignore
