@@ -1,5 +1,5 @@
 <p align="center" width="0">
-   <img align="center" width="700" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/neovim-logo-1color.png">
+   <img align="center" width="700" src="https://github.com/josuerom/nvim-config/blob/nvim/screenshot/neovim-logo-1color.png">
 </p>
 
 <H1 align="center">Guía de Atajos que Manejo en el Editor de Texto NeoVim.</H1>
