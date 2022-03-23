@@ -21,7 +21,7 @@
 </p>
 </div>
 
-<H1 align="center">Correcta Instalación y Configuración de Neovim - Windows 8.1, 10 & 11 February, 2021.</H1>
+<H1 align="center">Fantástica Instalación y Configuración de Neovim para SO Windows - February, 2021.</H1>
 
 <p align="center" width="0">
    <img align="center" width="645" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/neovim-logo-shadow.png">
