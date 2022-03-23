@@ -4,7 +4,6 @@
   "snippets.autoTrigger": true,
   "snippets.triggerCharacters": [],
   "snippets.loadFromExtensions": true,
-  "snippets.textmateSnippetsRoots": ["~/.config/nvim/UltiSnips/textmate"],
   "snippets.ultisnips.enable": true,
   "snippets.ultisnips.usePythonx": true,
   "snippets.ultisnips.directories": ["UltiSnips"],
