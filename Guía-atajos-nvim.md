@@ -2,15 +2,15 @@
    <img align="center" width="700" src="https://github.com/josueromram/nvim-config-windows7-8-10-11/blob/nvim/screenshot/neovim-logo-1color.png">
 </p>
 
-<H1 align="center">Guía Completa de Atajos para Mejorar la Productividad en el Editor de Texto NeoVim.</H1>
+<H1 align="center">Guía de Atajos que Manejo en el Editor de Texto NeoVim.</H1>
 
-Cordial saludo, lo que encontrarás en este documento markdown serán los comandos que contiene mi configuración, los siguientes comandos valga la redundancia se pueden usar solamente estando situado en el *MODO* correcto, te explico como entrar a los 2 modos más usados.
+Reciba un cordial saludo estimado/a, lo que encontrarás a continuación en este documento, será una guía de los comandos que contiene mi configuración; los siguientes comandos valga la redundancia se pueden usar solamente si te situas en el *MODO* correspondiente, te explico como entrar a los 2 modos más usados.
 
 Al presionar:
 
-- Esc = te permite salir de cualquier modo ya sea que estes en **INSERT, V-BLOCK, V,LINE, REPLACE**, entre otros. Llevandonos al modo inicial que se llama **NORMAL.**
-- i = te permite entrar al modo **INSERT**, donde se puede insertar código al archivo.
-- v = te permite entrar al modo **VISUAL**, donde se puede seleccionar código, copiar, mover, etc.
+- <Esc> = permite salir de cualquier modo ya sea que estes en **INSERT, V-BLOCK, V,LINE, VISUAL**, entre otros. Llevandonos al modo inicial que se llama **NORMAL.**
+- <i> = permite entrar al modo **INSERT**, donde se puede contenido al archivo.
+- v = te permite entrar al modo **VISUAL**, donde se puede seleccionar código, copiar, cortar y mover.
 
 ### EN MODO NORMAL
 Los comandos que mencionaré solo funcionarán si te situas en el modo **NORMAL.** 
@@ -22,9 +22,9 @@ Los comandos que mencionaré solo funcionarán si te situas en el modo **NORMAL.
 - b = posiciona el cursor al inicio de cada pantalla, pero en sentido contrario.
 - i = permite entrar en modo INSERT, este posiciona el cursor antes de la letra.
 - a = permite entrar en modo INSERT, este posiciona el cursor despues de la letra.
-- x = elimina carácter por carácter.
+- x = corta/elimina carácter por carácter.
 - r = solo permite reemplazar un carácter por otro, entrando y saliendo del modo insertar automáticamente.
-- o = genera un línea vacía debajo del el cursor, como un enter.
+- o = genera un línea vacía debajo debajo del cursor, como un enter.
 - shift + o = genera un línea vacía arriba del el cursor.
 - u = permite regresarnos a algún cambio o deshacer.
 - ctrl + r = permite volver a algún cambio o rehacer.
@@ -70,4 +70,4 @@ Ahora los comandos que mencionaré podrán efectuar su tarea siempre y cuándo e
 - gd = lleva el cursor a la definición o creación del método o atributo.
 - gf = nos abre la definición del método o clase en su archivo origen.
 
-Aúm me faltan más comandos por añadir, cuando tenga tiempo terminaré este documento, gracias.
+Aúm me faltan más comandos por añadir, cuando tenga un poco de tiempo la terminaré, gracias.
