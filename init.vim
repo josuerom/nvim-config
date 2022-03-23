@@ -15,6 +15,7 @@ so ~/AppData/Local/nvim/.config/plugins.vim
 so ~/AppData/Local/nvim/.config/shortcuts.vim
 
 syntax enable
+"set title    " Muestra el nombre del archivo en el borde de la ventana
 set number
 set mouse=a
 set numberwidth=1
@@ -30,7 +31,7 @@ set sw=2
 set relativenumber
 set laststatus=2
 set noshowmode
-"set nowrap
+set nowrap
 set noswapfile
 set backup
 set cursorline
@@ -40,15 +41,17 @@ set incsearch
 set ignorecase
 set smartcase
 set tabstop=2
+"set expandtab  " Insertar espacios en lugar de <Tabs>
 set splitbelow
 set splitright
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 autocmd FileType scss setl iskeyword+=@-@
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+"highlight LineNr guifg=grey         " Color del número de línea   
+"highlight ColorColumn guibg=grey    " Color de la columna límite
 
 " configuración del tema o colorscheme
-"set background=dark
 colorscheme gruvbox
 let g:gruvbox_contrast_dark="hard"
 highlight Normal ctermbg=NONE
