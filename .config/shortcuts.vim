@@ -6,25 +6,30 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-" salir del modo INSERT con [Esc o jk]
-imap jk <Esc>
+" salir del modo INSERT con <Esc> o <ii>
+imap ii <Esc>
 
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
 nnoremap <C-k> 10 <C-e>
 nnoremap <C-j> 10 <C-y>
 
-" con space+c, comentamos la línea en la que se encuentre el cursor en modo NORMAL
-"lua require('nvim_comment').setup({line_mapping="<leader>cl", operator_mapping="<leader>c"})
+" con <space+cm> comentas la línea en la que se encuentre el cursor en modo NORMAL
+"lua require('nvim_comment').setup({line_mapping="<leader>cl", operator_mapping="<leader>cm"})
 
 " coloca un punto y coma al final de línea situada usando (space+,)
 nnoremap <Leader>, $a;<Esc>
 
-" ejecutar archivos JavaScript & TypeScript con Nodejs
+" ejecuta archivos .js & .ts con Nodejs
 nnoremap <Leader>d :!node %<CR>
+" compila y ejecuta archivos .java
+nnoremap <Leader>dj :!java %<CR>
+" compila y ejecuta archivos .py
+nnoremap <Leader>dp :!python %<CR>
 
 " con space+t abre la terminal cmd
 vnoremap <Leader>t :call OpenTerminal()<CR>
 nnoremap <Leader>t :call OpenTerminal()<CR>
+imap trm <Esc> :call OpenTerminal()<CR>
 
 " para guardar archivos
 nnoremap <Leader>w :w<CR>
@@ -36,8 +41,7 @@ nnoremap <Leader>x :qa!<CR>
 " abrir el árbol, side bar o NERDTree
 map <Leader>e :NERDTreeToggle<CR>
 map <Leader>p :Explore<CR>
-
-" encuentra archivos usando el azúcar de línea de comandos Telescope.
+" encuentrar archivos usando el azúcar de línea Telescope
 nnoremap <Leader>f <cmd>Telescope find_files<CR>
 nnoremap <Leader>fl <cmd>Telescope live_grep<CR>
 nnoremap <Leader>fb <cmd>Telescope buffers<CR>
@@ -56,19 +60,19 @@ nnoremap <Leader>i :vsp<CR>
 " dividir pantalla en dos [horizontal] con space+o
 nnoremap <Leader>o :sp<CR>
 
-" F3 - elimina todos los espacios vacíos que hayan en el archivo
+" elimina todos los espacios vacíos que hayan en el archivo con <F3>
 nnoremap <F3> :g/^\s\+$/s/\s\+//<CR>
-" Ctrl+n - crea un nuevo archivo en la ruta posicionada
+" crea un nuevo archivo en la ruta posicionada <Ctrl+n>
 nnoremap <C-n> :tabnew 
-" Ctrl+r - actualiza la configuración de neovim (o lo reinicia)
-nmap <C-r> :source ~/AppData/Local/nvim/init.vim<CR>
-" Space+init - abre el archivo de configuración global
-nnoremap <Leader>init :e $MYVIMRC<CR>
+" actualiza la configuración de neovim o reinicialo con <Ctrl+r>
+nmap <C-r> :so ~/AppData/Local/nvim/init.vim<CR>
+" abre el archivo de configuración global con <space+ini>
+nnoremap <Leader>ini :e $MYVIMRC<CR>
 
-" navegación entre tabs o pestañas abiertas
-nnoremap <silent><S-TAB> :bprevious<CR>
+" navegación entre pestañas abiertas con <Tab> y <>
 nnoremap <silent><TAB> :bnext<CR>
-" eliminar pestaña con space+dl o con Shift+Z+Z
+nnoremap <silent><S-TAB> :bprevious<CR>
+" eliminar pestaña con <space+dl>
 nmap <Leader>dl :bdelete<CR>
 
 " atajo de búsqueda con easymotion
@@ -82,12 +86,10 @@ vnoremap > >gv
 " con shift+v seleccionas toda la línea
 
 " para agrupar una cadena de texto con cualquier simbolo ya sea: () [] {} '' "" debes
-" selecionar la palabra hasta un carácter antes y presionar: s+el-simbolo-a-usar
-
-" vuelva a asignar el marco a las minúsculas para que no agregue un espacio vacío
+" selecionar la palabra hasta un carácter antes y presionar: <s+el-simbolo-a-usar>
 xmap s <Plug>VSurround
 
-" mover bloques de código seleccionado en modo VISUAL, V-LINE o V-BLOCK con 'f' subes el código y con 'g' lo bajas.
+" mover bloques de código seleccionado en modo VISUAL, V-LINE o V-BLOCK con <K> subes el código y con <J> lo bajas
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
@@ -97,15 +99,13 @@ nnoremap n :m .-2<CR>==
 nnoremap m :m .+1<CR>==
 
 " Para camiar el caráctere que tenga una cadena de texto o cambiar el carácter que
-" los contiene, por ejemplo: si tienes un 'Hello Python' al presionar cs+el-simbolo-a-usar, la cadena de caracteres
-" magicamente se cambiarán sin necesidad de entrar en el modo INSERT.
+" los contiene, por ejemplo: si tienes un: 'Hi User' al presionar cs+el-simbolo-a-usar, la cadena de caracteres
+" magicamente se cambiará sin necesidad de entrar en el modo INSERT.
 
 " copiar ruta general del archivo posicionado
 nnoremap <Leader>kp :let @*=expand("%")<CR>
 
-
-
-"*----------------------- ATAJOS PARA ALGUNAS FUNCIONALIDADES DE COC -----------------------*
+"*----------------------- OTRAS FUNCIONALIDADES DE COC -----------------------*
 " flujo instantaneo con COC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -117,12 +117,12 @@ let g:coc_snippet_next = '<TAB>'
 " use <SHIFT-TAB> para saltar al marcador de posición anterior
 let g:coc_snippet_prev = '<S-TAB>'
 
-" Para gatillar el autocompletado de COC presione ctrl+space, aunque automaticamente se gatilla.
-" if &filetype == 'javascript' || &filetype == 'java'
-  " inoremap <silent><expr> <c-space> coc#refresh()
-" else
+" Para gatillar el autocompletado de COC presione <Ctrl+space< aunque automaticamente se gatillará.
+if &filetype == 'javascript' || &filetype == 'java'
+  inoremap <c-space> <C-x><C-u>
+else
   inoremap <silent><expr> <c-space> coc#refresh()
-" endif
+endif
 
 " con las feclas ajustas el tamaño del búfer's abiertos
 nnoremap <silent> <right> :vertical resize +2<CR>
@@ -130,32 +130,7 @@ nnoremap <silent> <left> :vertical resize -2<CR>
 nnoremap <silent> <up> :vertical resize +2<CR>
 nnoremap <silent> <down> :vertical resize -2<CR>
 
-" aplicar AutoFix al problema en la línea actual.
-nmap <Leader>qf <Plug>(coc-fix-current)
-
-" asignar función y objetos de texto de clase
-" NOTA: Requiere compatibilidad con 'textDocument.documentSymbol' del servidor de idiomas.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
-
-" vuelva a asignar <C-f> y <C-b> para las ventanas / ventanas emergentes flotantes de desplazamiento.
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-endif
-
-" acceso rápido a las funcionalidades de CoCList
-" administrar extensiones
+" acceso rápido a las funcionalidades de CoCList, administrar extensiones
 nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
 " conocer y administrar snippets
 nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
