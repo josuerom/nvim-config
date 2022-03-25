@@ -23,25 +23,25 @@ let g:lightline = {
       \ }
       \}
 
-" si utilizas el autocompletado KITE descomenta la sgt línea
+" si no utilizas el autocompletado KITE comente la sgt línea
 let g:kite_supported_languages = ['javascript', 'java']
 let g:coc_global_extensions = [
     \ 'coc-snippets'
     \ ]
 
-" coc
+" cuándo estoy utilizando KITE desabilito la entrega de sugerencias de COC
+autocmd FileType java let b:coc_suggest_disable = 1
 autocmd FileType javascript let b:coc_suggest_disable = 1
-autocmd FileType python let b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
 
-" Usar <Ctrl+space> gatillo el autocompletado de kite
+" Use <Ctrl+space> para gatillar la entrega de sugerencias de KITE
 if &filetype == "javascript" || &filetype == "java"
   inoremap <c-space> <C-x><C-u>
 else
   inoremap <silent><expr> <c-space> coc#refresh()
 endif
 
-" cerrar automaticamente la barra lateral o árbol
+" cerrado automatico de la barra lateral o árbol
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeAutoDeleteBuffer=1
@@ -52,7 +52,7 @@ let NERDTreeMapOpenInTab='\t'
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-" configuración para UltiSnips. No use<tab> si usa https://github.com/Valloric/YouCompleteMe.
+" configuración para UltiSnips
 let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsJumpForwardTrigger="<C-b"
@@ -98,10 +98,10 @@ function! OpenTerminal()
   endif
 endfunction
 
-"*------------------------- CONFIGURACIÓN DE COC: LA DEJO EN INGLES -----------------------------*
+"*------------------------- CONFIGURACIÓN DE COC, LA DEJO EN INGLES -----------------------------*
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-if has("nvim-0.5.0") || has("patch-8.1.1564")
+if has("nvim-0.6.1") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
 else
@@ -188,7 +188,7 @@ xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
-if has('nvim-0.4.0') || has('patch-8.2.0750')
+if has('nvim-0.6.1') || has('patch-8.2.0750')
   nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
   nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
   inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
@@ -210,11 +210,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
-
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
