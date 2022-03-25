@@ -61,28 +61,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
 
-"*---------------------------- SOLUCIÓN CONTRA EL ERROR [coc.nvim] ----------------------------*
-" TE APARECE ÉSTE ERROR CADA VEZ QUE ABRES NVIM.
-" [coc.nvim] Error on execute python script: request error nvim_command - Vim(py3file):
-" E319: No 'python' provider found. Run ':checkhealth provider'
-
-" Ese error aparece porque tenemos instalado el complemento: Plug 'neoclide/coc.nvim' que es muy especial
-" para el autocompletado; el requiere para su funcionamiento derivados host de Python, dicho de otra manera,
-" el sin Python instalado en el PC no será tan eficiente, ¡Si aún no tienes Python ve a instalarlo de su pagína oficial!
-" enlace: https://www.python.org/downloads/
-
-" Añade la siguiente ruta del host Python, al final del archivo [init.vim], así se solucionará el molesto error:
-" let g:python3_host_prog = 'D:\Program Files\Python\Python310\python.exe'
- 
-"*-----------------------------------------------------------------------------------------------*
-
-" si llegas a instalar [vim-devicons], debes instalar un fuente especifica como lo pueden ser [Hack Mono NertFont,
-" JetBrains Mono, Nert Font, etc] y añadir éstas 3 líneas de codigo al archivo para que así puedas ver los iconos en el árbol lateral y no símbolos extraños.
-" if exists("g:loaded_webdevicons")
-"  call webdevicons#refresh()
-"endif
-
-" función para poder abrir la terminal dentro de nvim
+"*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()
   " mover al búfer hacia la derecha
   execute "normal \<C-l>"
@@ -98,9 +77,9 @@ function! OpenTerminal()
     execute "q"
   else
     " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
-    " poner el nombre del .exe o ejecutable ya sea: 'zsh, bash, iTerm', quedando la
+    " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
     " línea (81) así: execute 'vsp term://zsh'
-    execute "vsp term://cmd"
+    execute "vsp term://PowerShell"
 
     " apagar números
     execute "set nonu"
@@ -119,28 +98,7 @@ function! OpenTerminal()
   endif
 endfunction
 
-"*------------------------- CONFIGURACIÓN DE COC -------------------------*
-" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
-" unicode characters in the file autoload/float.vim
-set encoding=utf-8
-
-" TextEdit might fail if hidden is not set.
-set hidden
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
+"*------------------------- CONFIGURACIÓN DE COC: LA DEJO EN INGLES -----------------------------*
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("nvim-0.5.0") || has("patch-8.1.1564")
@@ -164,13 +122,6 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
@@ -180,12 +131,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
