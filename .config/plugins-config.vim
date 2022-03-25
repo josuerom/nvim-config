@@ -24,7 +24,7 @@ let g:lightline = {
       \}
 
 " si no utilizas el autocompletado KITE comente la sgt línea
-let g:kite_supported_languages = ['javascript', 'java']
+let g:kite_supported_languages = ['java', 'javascript']
 let g:coc_global_extensions = [
     \ 'coc-snippets'
     \ ]
@@ -33,13 +33,6 @@ let g:coc_global_extensions = [
 autocmd FileType java let b:coc_suggest_disable = 1
 autocmd FileType javascript let b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
-
-" Use <Ctrl+space> para gatillar la entrega de sugerencias de KITE
-if &filetype == "javascript" || &filetype == "java"
-  inoremap <c-space> <C-x><C-u>
-else
-  inoremap <silent><expr> <c-space> coc#refresh()
-endif
 
 " cerrado automatico de la barra lateral o árbol
 let NERDTreeShowHidden=1
