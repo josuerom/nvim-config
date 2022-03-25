@@ -1,6 +1,6 @@
 let mapleader = " "
 
-" desabilito el uso de las feclas del teclado
+" para el modo NORMAL las flechas no funcionarán
 noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
