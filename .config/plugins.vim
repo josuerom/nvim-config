@@ -13,6 +13,7 @@ Plug 'itchyny/lightline.vim'
 
 " barra lateral o árbol
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 " otros complementos
 Plug 'easymotion/vim-easymotion'
@@ -33,7 +34,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " IDE
-Plug 'scrooloose/nerdcommenter'
+"Plug 'terryma/vim-multiple-cursors'
+Plug 'ddollar/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'yggdroot/indentline'
 
