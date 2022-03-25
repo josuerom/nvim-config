@@ -117,8 +117,9 @@ let g:coc_snippet_next = '<TAB>'
 " use <SHIFT-TAB> para saltar al marcador de posición anterior
 let g:coc_snippet_prev = '<S-TAB>'
 
-" Para gatillar el autocompletado de COC presione <Ctrl+space< aunque automaticamente se gatillará.
-if &filetype == 'javascript' || &filetype == 'java'
+" Use <Ctrl+space> para gatillar la entrega de sugerencias del autocompletado de KITE,
+" aunque el automaticamente se gatilla
+if &filetype == 'java' || &filetype == 'javascript'
   inoremap <c-space> <C-x><C-u>
 else
   inoremap <silent><expr> <c-space> coc#refresh()
@@ -130,7 +131,7 @@ nnoremap <silent> <left> :vertical resize -2<CR>
 nnoremap <silent> <up> :vertical resize +2<CR>
 nnoremap <silent> <down> :vertical resize -2<CR>
 
-" acceso rápido a las funcionalidades de CoCList, administrar extensiones
+" acceso rápido a las funcionalidades de CoCList, administrador de extensiones
 nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
-" conocer y administrar snippets
+" administrar snippets
 nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
