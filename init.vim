@@ -33,6 +33,8 @@ set nowrap
 set noswapfile
 set cursorline
 set tabstop=2
+"set splitright
+set splitbelow
 
 " configuración para Kite
 set laststatus=2
@@ -43,10 +45,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
-" split para la terminal
-set splitbelow
-set splitright
 
 " configuración para COC
 set encoding=utf-8

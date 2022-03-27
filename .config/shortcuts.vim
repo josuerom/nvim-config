@@ -6,8 +6,8 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-" salir del modo INSERT con <Esc> o <ii>
-imap ii <Esc>
+" salir del modo INSERT con <Esc> o <Ctrl+c>
+imap <C-c> <Esc>
 
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
 nnoremap <C-k> 10 <C-e>
@@ -25,6 +25,11 @@ nnoremap <Leader>dd :!node %<CR>
 nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
+
+" testing
+nnoremap <Leader>t :TestNearest<CR>
+nnoremap <Leader>T :TestFile<CR>
+nnoremap <Leader>TT :TestSuite<CR>
 
 " con space+t abre la terminal cmd
 vnoremap <Leader>t :call OpenTerminal()<CR>
@@ -103,7 +108,12 @@ nnoremap m :m .+1<CR>==
 " magicamente se cambiará sin necesidad de entrar en el modo INSERT.
 
 " copiar ruta general del archivo posicionado
-nnoremap <Leader>kp :let @*=expand("%")<CR>
+nnoremap <Leader>P :let @*=expand("%")<CR>
+ 
+" git
+nnoremap <Leader>G :G<cr>
+nnoremap <Leader>gp :Gpush<cr>
+nnoremap <Leader>gl :Gpull<cr>
 
 "*----------------------- OTRAS FUNCIONALIDADES DE COC -----------------------*
 " flujo instantaneo con COC
@@ -113,9 +123,9 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " use <TAB> para saltar al siguiente marcador de posición
-let g:coc_snippet_next = '<TAB>'
+"let g:coc_snippet_next = '<TAB>'
 " use <SHIFT-TAB> para saltar al marcador de posición anterior
-let g:coc_snippet_prev = '<S-TAB>'
+"let g:coc_snippet_prev = '<S-TAB>'
 
 " Use <Ctrl+space> para gatillar la entrega de sugerencias del autocompletado de KITE,
 " aunque el automaticamente se gatilla

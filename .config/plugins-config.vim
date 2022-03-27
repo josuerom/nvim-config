@@ -23,16 +23,16 @@ let g:lightline = {
       \ }
       \}
 
-" si no utilizas el autocompletado KITE comente las dos sgt líneas
-let g:kite_auto_complete = 1
-let g:kite_supported_languages = ['java', 'javascript']
+" si usted utiliza el autocompletado KITE descomente las dos sgt líneas
+"let g:kite_auto_complete = 1
+"let g:kite_supported_languages = ['*']
 let g:coc_global_extensions = [
-    \ 'coc-snippets'
+    \ 'coc-tsserver',
+    \ 'coc-java'
     \ ]
 
-" cuándo estoy utilizando KITE desabilito la entrega de sugerencias de COC
-autocmd FileType java let b:coc_suggest_disable = 1
-autocmd FileType javascript let b:coc_suggest_disable = 1
+" cuándo este utilizando KITE desabilite la entrega de sugerencias de COC, descomente la línea:
+"autocmd FileType javascript let b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
 
 " cerrado automatico de la barra lateral o árbol
@@ -47,13 +47,24 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 " configuración para UltiSnips
-"let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
-"let g:UltiSnipsEditSplit="vertical"
-"let g:UltiSnipsJumpForwardTrigger="<C-b"
-"let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<C-_>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings = 1
+
+" configuración para vim-fugitive
+command! -bang -nargs=? -complete=dir GFiles
+  \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()
@@ -73,7 +84,7 @@ function! OpenTerminal()
     " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
     " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
     " línea (81) así: execute 'vsp term://zsh'
-    execute "vsp term://PowerShell"
+    execute "vsp term://powershell"
 
     " apagar números
     execute "set nonu"
