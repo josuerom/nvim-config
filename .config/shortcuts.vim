@@ -29,8 +29,8 @@ nnoremap <Leader>T :TestFile<CR>
 nnoremap <Leader>TT :TestSuite<CR>
 
 " con space+t abre la terminal cmd
-vnoremap <Leader>t :call OpenTerminal()<CR>
-nnoremap <Leader>t :call OpenTerminal()<CR>
+vnoremap <C-t> :call OpenTerminal()<CR>
+nnoremap <C-t> :call OpenTerminal()<CR>
 imap trm <Esc> :call OpenTerminal()<CR>
 
 " para guardar archivos

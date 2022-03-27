@@ -84,7 +84,7 @@ function! OpenTerminal()
     " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
     " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
     " línea (81) así: execute 'vsp term://zsh'
-    execute "vsp term://powershell"
+    execute "sp term://powershell"
 
     " apagar números
     execute "set nonu"
@@ -95,9 +95,9 @@ function! OpenTerminal()
     silent au BufWinEnter,WinEnter <buffer> startinsert!
 
     " establezco atajos dentro de la terminal
-    execute "tnoremap <buffer> <C-h> <C-\\><C-n><C-w><C-h>"
+    execute "tnoremap <buffer> <Esc> <C-\\><C-n><C-w><C-h>"
     execute "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
-    execute "tnoremap <buffer> <C-\\><C-\\> <C-\\><C-n>"
+    execute "tnoremap <buffer> <C-7> <C-\\><C-\\><C-n>"
 
     startinsert!
   endif

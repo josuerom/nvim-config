@@ -33,8 +33,8 @@ set nowrap
 set noswapfile
 set cursorline
 set tabstop=2
-"set splitright
 set splitbelow
+set splitright
 
 " configuración para Kite
 set laststatus=2
