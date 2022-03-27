@@ -1,4 +1,4 @@
-call plug#begin('~/AppData/Local/Vim-Plug/')
+call plug#begin('~/AppData/Local/vim-plug/')
 
 " resaltado de sintaxis
 Plug 'sheerun/vim-polyglot'
@@ -34,9 +34,12 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " IDE
-"Plug 'terryma/vim-multiple-cursors'
 Plug 'ddollar/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'yggdroot/indentline'
+
+" git
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
 
 call plug#end()

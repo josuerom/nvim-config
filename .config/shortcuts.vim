@@ -20,7 +20,7 @@ nnoremap <C-j> 10 <C-y>
 nnoremap <Leader>, $a;<Esc>
 
 " ejecuta archivos .js & .ts con Nodejs
-nnoremap <Leader>d :!node %<CR>
+nnoremap <Leader>dd :!node %<CR>
 " compila y ejecuta archivos .java
 nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py

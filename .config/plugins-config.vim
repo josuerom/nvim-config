@@ -23,7 +23,8 @@ let g:lightline = {
       \ }
       \}
 
-" si no utilizas el autocompletado KITE comente la sgt línea
+" si no utilizas el autocompletado KITE comente las dos sgt líneas
+let g:kite_auto_complete = 1
 let g:kite_supported_languages = ['java', 'javascript']
 let g:coc_global_extensions = [
     \ 'coc-snippets'
@@ -46,13 +47,13 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 " configuración para UltiSnips
-let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsJumpForwardTrigger="<C-b"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+"let g:UltiSnipsSnippetDirectories=[$HOME.'~/AppData/Local/nvim/UltiSnips']
+"let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsJumpForwardTrigger="<C-b"
+"let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 " navegación con tmux
-let g:tmux_navigator_no_mappings=1
+let g:tmux_navigator_no_mappings = 1
 
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()
