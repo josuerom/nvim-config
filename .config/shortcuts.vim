@@ -13,9 +13,6 @@ imap <C-c> <Esc>
 nnoremap <C-k> 10 <C-e>
 nnoremap <C-j> 10 <C-y>
 
-" con <space+cm> comentas la línea en la que se encuentre el cursor en modo NORMAL
-"lua require('nvim_comment').setup({line_mapping="<leader>cl", operator_mapping="<leader>cm"})
-
 " coloca un punto y coma al final de línea situada usando (space+,)
 nnoremap <Leader>, $a;<Esc>
 
@@ -45,14 +42,7 @@ nnoremap <Leader>x :qa!<CR>
 
 " abrir el árbol, side bar o NERDTree
 map <Leader>e :NERDTreeToggle<CR>
-map <Leader>p :Explore<CR>
-" encuentrar archivos usando el azúcar de línea Telescope
-nnoremap <Leader>f <cmd>Telescope find_files<CR>
-nnoremap <Leader>fl <cmd>Telescope live_grep<CR>
-nnoremap <Leader>fb <cmd>Telescope buffers<CR>
-nnoremap <Leader>fh <cmd>Telescope help_tags<CR>
-nnoremap <Leader>fg <cmd>Telescope git_status<CR>
-nnoremap <Leader>fc <cmd>Telescope command_history<CR>
+map <Leader>p :Files<CR>
 
 " navegación rápida entre buffers abiertos
 nnoremap <silent><C-h> :TmuxNavigateLeft<CR>
@@ -87,8 +77,8 @@ nmap <Leader>s <Plug>(easymotion-s2)
 vnoremap < <gv
 vnoremap > >gv
 
-" seleccionar palabras iguales del archivo con: ctrl+n
-" con shift+v seleccionas toda la línea
+" para comentar alguna línea, debe presionar <space+c+space> en modo NORMAL
+" seleccione la una palabra y presione <ctrl+n> para buscar coincidencias en el archivo
 
 " para agrupar una cadena de texto con cualquier simbolo ya sea: () [] {} '' "" debes
 " selecionar la palabra hasta un carácter antes y presionar: <s+el-simbolo-a-usar>
@@ -103,17 +93,17 @@ nnoremap n :m .-2<CR>==
 " bajar de posición de la línea
 nnoremap m :m .+1<CR>==
 
-" Para camiar el caráctere que tenga una cadena de texto o cambiar el carácter que
-" los contiene, por ejemplo: si tienes un: 'Hi User' al presionar cs+el-simbolo-a-usar, la cadena de caracteres
-" magicamente se cambiará sin necesidad de entrar en el modo INSERT.
+" Para camiar el carácter que contenga una cadena de texto o cambiar el carácteres que los contiene,
+" por ejemplo: si tienes un: 'Hi User Name' al presionar cs+el-simbolo-a-usar, la cadena de carácteres
+" magicamente se cambiará sin necesidad de realizarlo manualmente.
 
-" copiar ruta general del archivo posicionado
+" copiar ruta general del archivo abierto
 nnoremap <Leader>P :let @*=expand("%")<CR>
  
 " git
-nnoremap <Leader>G :G<cr>
-nnoremap <Leader>gp :Gpush<cr>
-nnoremap <Leader>gl :Gpull<cr>
+nnoremap <Leader>G :G<CR>
+nnoremap <Leader>gp :Gpush<CR>
+nnoremap <Leader>gl :Gpull<CR>
 
 "*----------------------- OTRAS FUNCIONALIDADES DE COC -----------------------*
 " flujo instantaneo con COC
@@ -122,18 +112,13 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" use <TAB> para saltar al siguiente marcador de posición
-"let g:coc_snippet_next = '<TAB>'
-" use <SHIFT-TAB> para saltar al marcador de posición anterior
-"let g:coc_snippet_prev = '<S-TAB>'
-
 " Use <Ctrl+space> para gatillar la entrega de sugerencias del autocompletado de KITE,
 " aunque el automaticamente se gatilla
-if &filetype == 'java' || &filetype == 'javascript'
-  inoremap <c-space> <C-x><C-u>
-else
+"if &filetype == 'java' || &filetype == 'javascript'
+"  inoremap <c-space> <C-x><C-u>
+"else
   inoremap <silent><expr> <c-space> coc#refresh()
-endif
+"endif
 
 " con las feclas ajustas el tamaño del búfer's abiertos
 nnoremap <silent> <right> :vertical resize +2<CR>

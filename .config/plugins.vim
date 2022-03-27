@@ -26,7 +26,7 @@ Plug 'janko-m/vim-test'
  
 " autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 
 " IDE
 Plug 'editorconfig/editorconfig-vim'
