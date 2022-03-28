@@ -171,7 +171,7 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
 josueromram@outlook.es
 ```
 
-Próximamente actualizaré esta guía. Gracias.
+# Estimado usuario cordial saludo, le aviso que me encuentro trabajando duro en esté proyecto, y es por eso que constantemente publico cambios.
 
 <p align="center" width="0">
    <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/neovim-mark-flat.png">

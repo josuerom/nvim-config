@@ -15,7 +15,6 @@ so ~/AppData/Local/nvim/.config/plugins.vim
 so ~/AppData/Local/nvim/.config/shortcuts.vim
 
 syntax enable
-"set title
 set number
 set mouse=a
 set numberwidth=1
@@ -25,6 +24,7 @@ set ruler
 set termencoding=utf-8
 set scrolloff=8
 set sw=2
+set cindent
 set termguicolors
 set showmatch
 set relativenumber
@@ -41,7 +41,7 @@ set incsearch
 set ignorecase
 set smartcase
 
-" configuración para COC
+" COC
 set encoding=utf-8
 set hidden
 set nobackup
@@ -52,6 +52,7 @@ set shortmess+=c
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " configuración del tema
+"colorscheme onedark
 colorscheme gruvbox
 let g:gruvbox_contrast_dark="hard"
 highlight Normal ctermbg=NONE
