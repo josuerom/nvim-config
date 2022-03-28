@@ -34,7 +34,6 @@ set noswapfile
 set cursorline
 set tabstop=2
 set splitbelow
-set splitright
 
 " configuración para Kite
 set laststatus=2
