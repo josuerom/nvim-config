@@ -1,0 +1,24 @@
+{
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-14",
+      "path": "D:\\Program Files\\Java\\jdk-14.0.2\\bin",
+      "default": true
+    }
+  ],
+
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.comments.enabled": true,
+  "java.signatureHelp.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "java.selectionRange.enabled": true,
+
+  "typescript.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+
+  "snippets.priority": 1,
+  "snippets.ultisnips.enable": false,
+  "snippets.ultisnips.usePythonx": false
+}

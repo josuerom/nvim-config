@@ -22,7 +22,6 @@ Plug 'christoomey/vim-tmux-navigator'
  
 " autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'SirVer/ultisnips'
 
 " IDE
 Plug 'editorconfig/editorconfig-vim'

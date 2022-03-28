@@ -46,9 +46,9 @@ nnoremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " dividir pantalla en dos [vertical] con space+i
-nnoremap <Leader>i :vsp<CR>
+nnoremap <Leader>ii :vsp<CR>
 " dividir pantalla en dos [horizontal] con space+o
-nnoremap <Leader>o :sp<CR>
+nnoremap <Leader>oo :sp<CR>
 
 " elimina todos los espacios vacíos que hayan en el archivo con <F3>
 nnoremap <F3> :g/^\s\+$/s/\s\+//<CR>
@@ -57,7 +57,7 @@ nnoremap <C-n> :tabnew
 " actualiza la configuración de neovim o reinicialo con <Ctrl+r>
 nmap <C-r> :so ~/AppData/Local/nvim/init.vim<CR>
 " abre el archivo de configuración global con <space+ini>
-nnoremap <Leader>ini :e $MYVIMRC<CR>
+nnoremap <Leader>ni :e $MYVIMRC<CR>
 
 " navegación entre pestañas abiertas con <spacer+l> y <space+a>
 nnoremap <Leader>l :bnext<CR>
@@ -115,10 +115,29 @@ nnoremap <silent> <left> :vertical resize -2<CR>
 nnoremap <silent> <up> :vertical resize +2<CR>
 nnoremap <silent> <down> :vertical resize -2<CR>
 
+
+"*------------------------------ COC-SNIPPETS -----------------------------------*
 " acceso rápido a las funcionalidades de CoCList, administrador de extensiones
 nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
 " administrar snippets
 nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
+
+"*--------------------------------------------------------------------------------*
 
 function! ParensIndent()
   let prev = col('.') - 1
