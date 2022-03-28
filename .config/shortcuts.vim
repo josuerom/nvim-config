@@ -23,15 +23,10 @@ nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
 
-" testing
-nnoremap <Leader>t :TestNearest<CR>
-nnoremap <Leader>T :TestFile<CR>
-nnoremap <Leader>TT :TestSuite<CR>
-
 " con space+t abre la terminal cmd
 vnoremap <C-t> :call OpenTerminal()<CR>
 nnoremap <C-t> :call OpenTerminal()<CR>
-imap trm <Esc> :call OpenTerminal()<CR>
+imap trm <Esc> :w <Esc> :call OpenTerminal()<CR>
 
 " para guardar archivos
 nnoremap <Leader>w :w<CR>
