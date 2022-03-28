@@ -1,4 +1,4 @@
-" configuración de la barra de estado Lightlane
+" configuración de la barra de estado inferior
 let g:lightline = {
       \ 'active': {
       \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
@@ -54,7 +54,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 " navegación con tmux
-let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_no_mappings=1
 
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()

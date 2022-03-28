@@ -35,10 +35,6 @@ set cursorline
 set tabstop=2
 set splitbelow
 
-" configuración para Kite
-set laststatus=2
-set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
-
 " búsqueda en la cmd-nvim
 set hlsearch
 set incsearch
