@@ -98,11 +98,6 @@ nnoremap m :m .+1<CR>==
 
 " copiar ruta general del archivo abierto
 nnoremap <Leader>P :let @*=expand("%")<CR>
- 
-" git
-nnoremap <Leader>G :G<CR>
-nnoremap <Leader>gp :Gpush<CR>
-nnoremap <Leader>gl :Gpull<CR>
 
 "*----------------------- OTRAS FUNCIONALIDADES DE COC -----------------------*
 " flujo instantaneo con COC

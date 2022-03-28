@@ -19,10 +19,6 @@ Plug 'tpope/vim-surround'
 
 " navegación rápida entre tabs o pestañas
 Plug 'christoomey/vim-tmux-navigator'
-
-" test
-Plug 'tyewang/vimux-jest-test'
-Plug 'janko-m/vim-test'
  
 " autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

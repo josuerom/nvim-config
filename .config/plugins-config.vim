@@ -56,16 +56,6 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 " navegación con tmux
 let g:tmux_navigator_no_mappings = 1
 
-" configuración para vim-fugitive
-command! -bang -nargs=? -complete=dir GFiles
-  \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()
   " mover al búfer hacia la derecha
@@ -84,7 +74,7 @@ function! OpenTerminal()
     " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
     " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
     " línea (81) así: execute 'vsp term://zsh'
-    execute "sp term://powershell"
+    execute "sp term://cmd"
 
     " apagar números
     execute "set nonu"
