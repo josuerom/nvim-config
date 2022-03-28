@@ -1,4 +1,4 @@
-call plug#begin('~/AppData/Local/vim-plug/')
+call plug#begin('~/AppData/Local/nvim/plugged/')
 
 " resaltado de sintaxis
 Plug 'sheerun/vim-polyglot'
@@ -22,6 +22,7 @@ Plug 'christoomey/vim-tmux-navigator'
  
 " autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'honza/vim-snippets'
 
 " IDE
 Plug 'editorconfig/editorconfig-vim'
