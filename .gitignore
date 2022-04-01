@@ -1,4 +1,3 @@
-neovim/
-.git/
-screenshot/
-.class
+/neovim/
+/screenshot/
+*.class
