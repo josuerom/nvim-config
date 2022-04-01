@@ -12,7 +12,6 @@ Plug 'itchyny/lightline.vim'
 
 " barra lateral o árbol
 Plug 'scrooloose/nerdtree'
-Plug 'mhinz/vim-startify'
 
 " otros complementos
 Plug 'easymotion/vim-easymotion'
