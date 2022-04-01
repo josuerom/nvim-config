@@ -46,14 +46,16 @@ nnoremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " git
-nnoremap <Leader>g :G<cr>
+nnoremap <Leader>g :Git<cr>
 nnoremap <Leader>ga :Git add<cr>
-nnoremap <Leader>gs :Gstatus<cr>
-nnoremap <Leader>gc :Git commit -m ""
+nnoremap <Leader>gs :Git status<cr>
+nnoremap <Leader>gc :Git commit -m "Upload 👨‍💻"<cr>
 nnoremap <Leader>glg :Git log --oneline<cr>
-nnoremap <Leader>gp :Gpush<cr>
-nnoremap <Leader>gf :Gfetch<cr>
-nnoremap <Leader>gl :Gpull<cr>
+nnoremap <Leader>gp :Git push<cr>
+nnoremap <Leader>gf :Git fetch<cr>
+nnoremap <Leader>gl :Git pull<cr>
+nnoremap <Leader>gm :Git merge<cr>
+nnoremap <Leader>gr :Git revert #commit
 
 " dividir pantalla en dos [vertical] con space+i
 nnoremap <Leader>ii :vsp<CR>
