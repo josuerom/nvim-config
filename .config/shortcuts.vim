@@ -46,9 +46,9 @@ nnoremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " git
-nnoremap <Leader>g :Git<cr>
-nnoremap <Leader>ga :Git add .<cr>
-nnoremap <Leader>gs :Git status<cr>
+nnoremap <Leader>g :G<cr>
+nnoremap <Leader>ga :Git add<cr>
+nnoremap <Leader>gs :Gstatus<cr>
 nnoremap <Leader>gc :Git commit -m ""
 nnoremap <Leader>glg :Git log --oneline<cr>
 nnoremap <Leader>gp :Gpush<cr>

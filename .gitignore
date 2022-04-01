@@ -1,4 +1,4 @@
-neovim\
-.git\
-screenshot\
+neovim/
+.git/
+screenshot/
 .class

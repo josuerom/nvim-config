@@ -14,7 +14,7 @@
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-14",
-      "path": "D:\\Program Files\\Java\\jdk-14.0.2\\bin",
+      "path": "D:\\Program Files\\Java\\jdk-14.0.2\\bin\\javac.exe",
       "default": true
     }
   ],
