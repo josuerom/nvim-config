@@ -5,7 +5,6 @@ Plug 'sheerun/vim-polyglot'
 
 " tema y línea de estado
 Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'itchyny/lightline.vim'
@@ -25,7 +24,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 
 " IDE
-Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdcommenter'
 Plug 'psliwka/vim-smoothie'

@@ -45,6 +45,16 @@ nnoremap <silent><C-j> :TmuxNavigateDown<CR>
 nnoremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
+" git
+nnoremap <Leader>g :Git<cr>
+nnoremap <Leader>ga :Git add .<cr>
+nnoremap <Leader>gs :Git status<cr>
+nnoremap <Leader>gc :Git commit -m ""
+nnoremap <Leader>glg :Git log --oneline<cr>
+nnoremap <Leader>gp :Gpush<cr>
+nnoremap <Leader>gf :Gfetch<cr>
+nnoremap <Leader>gl :Gpull<cr>
+
 " dividir pantalla en dos [vertical] con space+i
 nnoremap <Leader>ii :vsp<CR>
 " dividir pantalla en dos [horizontal] con space+o
@@ -72,10 +82,14 @@ vnoremap < <gv
 vnoremap > >gv
 
 " para comentar alguna línea, debe presionar <space+c+space> en modo NORMAL
-" seleccione la una palabra y presione <ctrl+n> para buscar coincidencias en el archivo
+
+" para multiple cursor debe poner el cursor encima de una palabra y presionar
+" <ctrl+n> para buscar las coincidencias en el archivo y luego presione <c>
+" para cambiar su contenido
 
 " para agrupar una cadena de texto con cualquier simbolo ya sea: () [] {} '' "" debes
 " selecionar la palabra hasta un carácter antes y presionar: <s+el-simbolo-a-usar>
+" por ejemplo: <s+[>
 xmap s <Plug>VSurround
 
 " mover bloques de código seleccionado en modo VISUAL, V-LINE o V-BLOCK con <K> subes el código y con <J> lo bajas

@@ -50,6 +50,16 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
 
+" vim fugitive
+command! -bang -nargs=? -complete=dir GFiles
+  \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()
   " mover al búfer hacia la derecha
@@ -217,9 +227,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-
 " Highlight symbol under cursor on CursorHold
-
 
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 "let g:fzf_layout = { 'window': 'call FloatingFZF()' }

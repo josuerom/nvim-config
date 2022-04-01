@@ -18,22 +18,19 @@ syntax enable
 set number
 set mouse=a
 set numberwidth=1
+set relativenumber
 set clipboard=unnamedplus
 set showcmd
 set ruler
 set termencoding=utf-8
-set scrolloff=8
 set sw=2
-set cindent
 set termguicolors
 set showmatch
-set relativenumber
 set noshowmode
 set nowrap
-set noswapfile
 set cursorline
-set tabstop=2
 set splitbelow
+set laststatus=2
 
 " búsqueda en la cmd-nvim
 set hlsearch
@@ -52,7 +49,6 @@ set shortmess+=c
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " configuración del tema
-"colorscheme onedark
 colorscheme gruvbox
 let g:gruvbox_contrast_dark="hard"
 highlight Normal ctermbg=NONE
