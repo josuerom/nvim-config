@@ -27,7 +27,7 @@ let g:lightline = {
 "let g:kite_auto_complete = 1
 "let g:kite_supported_languages = ['lenguaje']
 let g:coc_global_extensions = [
-		\ 'coc-snippets',
+	  \ 'coc-snippets',
     \ 'coc-tsserver',
     \ 'coc-java'
     \ ]

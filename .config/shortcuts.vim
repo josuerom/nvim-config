@@ -48,7 +48,7 @@ nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " git
 nnoremap <Leader>g :G<CR>
-nnoremap <Leader>ga :Git add<CR>
+nnoremap <Leader>ga :Git add .<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>gc :Git commit -m "Best Update👨‍💻"<CR>
 nnoremap <Leader>glg :Git log --oneline<CR>
