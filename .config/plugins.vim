@@ -25,6 +25,11 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 
+" especialidades
+Plug 'segeljakt/vim-silicon'
+Plug 'voldikss/vim-translator'
+Plug 'voldikss/vim-floaterm'
+
 " IDE
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdcommenter'
@@ -33,6 +38,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
+Plug 'puremourning/vimspector'
 
 " git
 Plug 'tpope/vim-fugitive'

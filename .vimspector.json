@@ -1,0 +1,60 @@
+{
+  "configurations": {
+    "queens.c: Launch": {
+      "adapter": "vscode-cpptools",
+      "configuration": {
+        "name": "cpp",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceRoot}/queens.x",
+        "args": [
+          "*${ProgramArgs}"
+        ],
+        "cwd": "${workspaceRoot}",
+        "externalConsole": false,
+        "stopAtEntry": true,
+        "MIMode": "lldb"
+      }
+
+    },
+
+    "queens.py: Launch": {
+      "adapter": "debugpy",
+      "configuration": {
+        "name": "python: Launch",
+        "type": "python",
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "python": "D:\\Program Files\\Python 3.10.4\\python.exe",
+        "stopOnEntry": true,
+        "externalConsole": false,
+        "debugOptions": [
+          "-m"
+        ],
+        "program": "${workspaceRoot}/queens.py",
+        "args": [
+          "*${ProgramArgs}"
+        ]
+    },
+
+    "queens.java: Launch": {
+      "adapter": "debugjava",
+      "configuration": {
+        "name": "java: Launch",
+        "type": "java",
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "java": "D:\\Program Files\\Java\\bin\\javac.exe",
+        "stopOnEntry": true,
+        "externalConsole": false,
+        "debugOptions": [
+          "-m"
+        ],
+        "program": "${workspaceRoot}/queens.java",
+        "args": [
+          "*${ProgramArgs}"
+        ]
+      }
+    }
+  }
+}

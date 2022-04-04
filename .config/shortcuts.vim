@@ -23,10 +23,24 @@ nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
 
-" con space+t abre la terminal cmd
-vnoremap <C-t> :call OpenTerminal()<CR>
+" con <Ctrl+t> se abre la terminal cmd
 nnoremap <C-t> :call OpenTerminal()<CR>
-imap trm <Esc> :w <Esc> :call OpenTerminal()<CR>
+
+" ejecuta Floaterm con <F7> en modo normal o terminal
+" con <F11> matas las terminales en ejecución
+nnoremap <silent> <F7> :FloatermNew<CR>
+tnoremap <silent> <F7> <C-\><C-n>:FloatermNew<CR>
+nnoremap <silent> <F8> :FloatermNext<CR>
+tnoremap <silent> <F8> <C-\><C-n>:FloatermNext<CR>
+nnoremap <silent> <F9> :FloatermPrev<CR>
+tnoremap <silent> <F9> <C-\><C-n>:FloatermPrev<CR>
+nnoremap <silent> <F10> :FloatermToggle<CR>
+tnoremap <silent> <F10> <C-\><C-n>:FloatermToggle<CR>
+nnoremap <silent> <F11> :FloatermKill<CR>
+tnoremap <silent> <F11> <C-\><C-n>:FloatermKill<CR>
+
+" vim-silicon para tomar capturas elegantes
+vnoremap <silent> <F6> :'<, '>Silicon ~/OneDrive - uniminuto.edu/Pictures/screen-nvim<CR>
 
 " para guardar archivos
 nnoremap <Leader>w :w<CR>

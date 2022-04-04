@@ -29,6 +29,7 @@ let g:lightline = {
 let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-tsserver',
+    \ 'coc-java-vimspector',
     \ 'coc-java'
     \ ]
 
@@ -59,6 +60,16 @@ command! -bang -nargs=* Ag
 
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+" configuración para la funcionalidad de vim-floaterm
+let g:floaterm_keymap_new = '<F7>'
+let g:floaterm_keymap_next = '<F8>'
+let g:floaterm_keymap_prev = '<F9>'
+let g:floaterm_keymap_toggle = '<F10>'
+let g:floaterm_keymap_kill = '<F11>'
+
+" para poder realizar buenas capturas con vim-silicon
+
 
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()
