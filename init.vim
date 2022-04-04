@@ -23,7 +23,7 @@ set clipboard=unnamedplus
 set showcmd
 set ruler
 set termencoding=utf-8
-set sw=4
+set sw=2
 set termguicolors
 set showmatch
 set noshowmode
