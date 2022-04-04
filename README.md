@@ -97,7 +97,7 @@ Para instalarlo da un [click aquí](https://nodejs.org/es/download/ "https://nod
 Esta es la personalización que actualmente tengo en neovim:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/nvim-completo.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/nvim-completo.png">
 </p>
 
 **PREGUNTA:** ¿Te gustaría tener neovim como lo tengo yo?. Si tu respuesta es un **SÍ** deberás descargarte los archivos de este repositorio ya que son necesarios para que tu Neovim tenga una buena interfaz bacana y las mismas funcionalidades que manejo como: atajos y plugins. Una vez se haya descargado debes extraer el archivo _(nvim-config-windows7-8-10-11-nvim.zip)._ Luego de ello, la carpeta extraída obligatoriamente cambiale el nombre por: **nvim** (en minúsculas).
@@ -113,13 +113,13 @@ nvim init.vim
 Añado captura de pantalla, por sino me entendiste muy bien, me referia a está:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/init-vim.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/init-vim.png">
 </p>
 
 Luego de ejecutar el comando, te arrojará muchos errores pero _NO TE ASUSTES NI DEPRIMAS_ que son normales las primeras veces que lo ejecutas, aparecen porque los plugins no se han instalado. Y deben ser éstos mismos errores los que te aparezcan allá:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/errores-normales.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/errores-normales.png">
 </p>
 
 Para saltar esos errores puedes presionar varias veces la tecla **Enter** o solo una vez la tecla **Esc**, nada más faltaría instalar el gestor de plugins **vim plug** para que así culmines con el último paso.
@@ -140,13 +140,13 @@ Continuando con esta super guía de instalación, en la ventana principal o vent
 Añado captura de pantalla:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/pluginstall.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/pluginstall.png">
 </p>
 
 Así podrás instalar todos los plugins que manejo a diario, añado otra captura guía.
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/plugins-instalados.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/plugins-instalados.png">
 </p>
 
 Después de que hayan terminado todas las descargas y quieras conocer los cambios efectuados en tu editor. En modo **NORMAL** presiona las teclas:
@@ -162,7 +162,7 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
 </p>
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/nvim-nerdtree_java.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/nvim-nerdtree_java.png">
 </p>
 
 ### ¿Atrevete a comentarme que tal te pareció esta guía de instalación o que me faltó?

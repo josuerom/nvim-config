@@ -27,7 +27,7 @@ let g:lightline = {
 "let g:kite_auto_complete = 1
 "let g:kite_supported_languages = ['lenguaje']
 let g:coc_global_extensions = [
-    "\ 'coc-snippets',
+		\ 'coc-snippets',
     \ 'coc-tsserver',
     \ 'coc-java'
     \ ]
@@ -77,7 +77,7 @@ function! OpenTerminal()
   else
     " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
     " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
-    " línea (81) así: execute 'vsp term://zsh'
+    " línea (81) así: execute 'sp term://zsh'
     execute "sp term://cmd"
 
     " apagar números
@@ -97,6 +97,12 @@ function! OpenTerminal()
   endif
 endfunction
 
+"*---------------------- SOLUCIÓN A EL ERROR DE COC-SNIPPETS -----------------------*
+" Si al iniciar neovim te aparece siempre este molestoso error de coc-snippets:
+"[coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim. use :CocOpenLog for details
+" ejecuta el comando en la PowerShell como administrador: pip install pynvim
+" así no deberá aparecerte más.
+
 "*------------------------- CONFIGURACIÓN DE COC, LA DEJO EN INGLES -----------------------------*
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
@@ -106,7 +112,7 @@ else
   set signcolumn=yes
 endif
 
-" coc-snippets
+" configuration de coc-snippets
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
