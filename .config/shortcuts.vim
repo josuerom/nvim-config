@@ -10,8 +10,8 @@ noremap <right> <nop>
 imap <C-c> <Esc>
 
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
-nnoremap <C-k> 10 <C-e>
-nnoremap <C-j> 10 <C-y>
+nnoremap <C-k> 20 <C-e>
+nnoremap <C-j> 20 <C-y>
 
 " coloca un punto y coma al final de línea situada usando <space+,>
 nnoremap <Leader>, $a;<Esc>
@@ -167,12 +167,3 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 xmap <Leader>x  <Plug>(coc-convert-snippet)
 
 "*--------------------------------------------------------------------------------*
-
-" compilar java
-nmap <silent> <F2> :call JavaStartDebug()<CR>
-nmap <silent> <F5> :CocCommand java.debug.vimspector.start<CR>
-nmap <silent> <F4> :CocCommand java.debug.vimspector.start {"configuration":"Run-Test","Test":"java-test"}<CR>
-
-" vim-spector
-nmap <Leader>di <Plug>VimspectorBalloonEval
-xmap <Leader>di <Plug>VimspectorBalloonEval'

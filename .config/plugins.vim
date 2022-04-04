@@ -30,7 +30,6 @@ Plug 'voldikss/vim-floaterm'
 
 " IDE
 Plug 'terryma/vim-multiple-cursors'
-Plug 'maksimr/vim-translator'
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
