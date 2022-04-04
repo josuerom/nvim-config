@@ -33,7 +33,7 @@ let g:coc_global_extensions = [
     \ 'coc-java'
     \ ]
 
-" Java Support! Should go in compiler/ and ftplugin/
+" ¡soporte de java! Debería ir en compilador/ y ftplugin
 augroup javaSu
 	autocmd!
 	autocmd FileType java compiler javac
@@ -48,7 +48,7 @@ augroup end
  	set grepformat^=%f:%l:%c:%m
  endif
 
-" con <F1> compila y ejecuta archivos .java
+" con <F5> compila y ejecuta archivos .java
 nmap <silent> <F5> :CocCommand java.debug.vimspector.start<CR>
 
 function! JavaStartDebugCallback(err, port)
@@ -98,63 +98,17 @@ let g:floaterm_keymap_prev = '<F9>'
 let g:floaterm_keymap_toggle = '<F10>'
 let g:floaterm_keymap_kill = '<F11>'
 
-" para realizar buenas capturas de código con vim-silicon
-let g:silicon = {
-      \   'theme':              'Dracula',
-      \   'font':                  'Hack',
-      \   'background':         '#AAAAFF',
-      \   'shadow-color':       '#555555',
-      \   'line-pad':                   2,
-      \   'pad-horiz':                 80,
-      \   'pad-vert':                 100,
-      \   'shadow-blur-radius':         0,
-      \   'shadow-offset-x':            0,
-      \   'shadow-offset-y':            0,
-      \   'line-number':           v:true,
-      \   'round-corner':          v:true,
-      \   'window-controls':       v:true,
-      \ }
-
-let g:silicon['output'] = '~/vim-silicon/screen-{time:%d-%m-%Y}.png'
-
-let s:workhours = {
-      \ 'Monday':    [8, 16],
-      \ 'Tuesday':   [9, 17],
-      \ 'Wednesday': [9, 17],
-      \ 'Thursday':  [9, 17],
-      \ 'Friday':    [9, 15],
-      \ }
-
-function! s:working()
-    let day = strftime('%u')
-    if has_key(s:workhours, day)
-      let hour = strftime('%H')
-      let [start_hour, stop_hour] = s:workhours[day]
-      if start_hour <= hour && hour <= stop_hour
-        return "~/Work-Snippets/"
-      endif
-    endif
-    return "~/Personal-Snippets/"
-endfunction
-
-let g:silicon['output'] = function('s:working')
-
-" para traducir usa vim-translator
-nmap <silent> <Leader>ta <Plug>Translate
-vmap <silent> <Leader>ta <Plug>TranslateV
-" Display translation in a window
-nmap <silent> <Leader>tr <Plug>TranslateW
-vmap <silent> <Leader>tr <Plug>TranslateWV
-" Replace the text with translation
-nmap <silent> <Leader>ts <Plug>TranslateR
-vmap <silent> <Leader>ts <Plug>TranslateRV
-
-nnoremap <silent><expr> <M-f> translator#window#float#has_scroll() ?
-                            \ translator#window#float#scroll(1) : "\<M-f>"
-nnoremap <silent><expr> <M-b> translator#window#float#has_scroll() ?
                             \ translator#window#float#scroll(0) : "\<M-f>"
+ 
+" vim-spector
+let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_install_gadgets = ['debugpy', 'vscode-cpptools']
 
-
+" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval'
 
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()

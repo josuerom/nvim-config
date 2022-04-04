@@ -23,11 +23,10 @@ Plug 'christoomey/vim-tmux-navigator'
  
 " autocompletado y snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'puremourning/vimspector', {'for': ['java']}
 Plug 'honza/vim-snippets'
 
-" especialidades
-Plug 'segeljakt/vim-silicon'
-Plug 'voldikss/vim-translator'
+" terminal flotante
 Plug 'voldikss/vim-floaterm'
 
 " IDE
@@ -38,7 +37,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
-Plug 'puremourning/vimspector', {'for': ['java']}
 
 " git
 Plug 'tpope/vim-fugitive'
