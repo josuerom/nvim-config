@@ -27,7 +27,6 @@
   "java.referencesCodeLens.enable": true,
   "java.completion.enable": true,
   "java.implementationsCodeLens.enable": true,
-  "java.jdt.ls.vmargs": "-javaagent:/C:/Program Files/Java/jdk-11.0.3",
   "java.format.enabled": true,
   "java.format.onType.enabled": true,
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",

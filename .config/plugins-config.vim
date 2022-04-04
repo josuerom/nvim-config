@@ -48,9 +48,6 @@ augroup end
  	set grepformat^=%f:%l:%c:%m
  endif
 
-" con <F5> compila y ejecuta archivos .java
-nmap <silent> <F5> :CocCommand java.debug.vimspector.start<CR>
-
 function! JavaStartDebugCallback(err, port)
   execute "cexpr! 'Java debug started on port: " . a:port . "'"
   call vimspector#LaunchWithSettings({ "configuration": "Java Attach", "AdapterPort": a:port })
@@ -59,9 +56,6 @@ endfunction
 function JavaStartDebug()
   call CocActionAsync('runCommand', 'vscode.java.startDebugSession', function('JavaStartDebugCallback'))
 endfunction
-
-nmap <silent> <F2> :call JavaStartDebug()<CR>
-nmap <silent> <F4> :CocCommand java.debug.vimspector.start {"configuration":"Run Test","Test":"Name of the test"}<CR>
 
 " cuándo este utilizando KITE desabilite la entrega de sugerencias de COC, descomente la línea:
 "autocmd FileType javascript let b:coc_suggest_disable = 1
@@ -100,8 +94,6 @@ let g:floaterm_keymap_kill = '<F11>'
  
 " vim-spector
 let g:vimspector_enable_mappings = 'HUMAN'
-nmap <Leader>di <Plug>VimspectorBalloonEval
-xmap <Leader>di <Plug>VimspectorBalloonEval'
 
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()

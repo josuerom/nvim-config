@@ -67,7 +67,7 @@ nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gf :Git fetch<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gm :Git merge<CR>
-nnoremap <Leader>gr :Git revert 
+nnoremap <Leader>ge :Git revert #commit
 
 " dividir pantalla en dos [vertical] con space+i
 nnoremap <Leader>ii :vsp<CR>
@@ -122,7 +122,6 @@ nnoremap m :m .+1<CR>==
 " copiar ruta general del archivo abierto
 nnoremap <Leader>kp :let @*=expand("%")<CR>
 
-"*----------------------- OTRAS FUNCIONALIDADES DE COC -----------------------*
 " flujo instantaneo con COC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -143,16 +142,16 @@ nnoremap <silent> <left> :vertical resize -2<CR>
 nnoremap <silent> <up> :vertical resize +2<CR>
 nnoremap <silent> <down> :vertical resize -2<CR>
 
-"*------------------------------ COC-SNIPPETS -----------------------------------*
-" acceso rápido a las funcionalidades de CoCList, administrador de extensiones
+" acceso rápido a las funcionalidades de CocList
 nnoremap <silent><nowait> <space>cex  :<C-u>CocList extensions<CR>
 " administrar snippets
 nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
-" actualiza las extensiones
+" actualizar extensiones
 nnoremap <silent><nowait> <space>cup  :<C-u>CocUpdate<CR>
-" desintala la extensión
+" desintalar extensiones
 nnoremap <silent><nowait> <space>cun  :<C-u>CocUninstall coc-
 
+" configuration for COC-SNIPPETS
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
 " Use <C-j> for select text for visual placeholder of snippet.
@@ -167,3 +166,12 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 xmap <Leader>x  <Plug>(coc-convert-snippet)
 
 "*--------------------------------------------------------------------------------*
+
+" coc-java-debug
+nmap <silent> <F2> :call JavaStartDebug()<CR>
+nmap <silent> <F5> :CocCommand java.debug.vimspector.start<CR>
+nmap <silent> <F4> :CocCommand java.debug.vimspector.start {"configuration":"Run-Test","Test":"java-test"}<CR>
+
+" vim-spector
+nmap <Leader>di <Plug>VimspectorBalloonEval
+xmap <Leader>di <Plug>VimspectorBalloonEval'
