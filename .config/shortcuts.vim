@@ -1,6 +1,6 @@
 let mapleader = " "
 
-" para el modo NORMAL las flechas no funcionarán
+" para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
@@ -13,7 +13,7 @@ imap <C-c> <Esc>
 nnoremap <C-k> 10 <C-e>
 nnoremap <C-j> 10 <C-y>
 
-" coloca un punto y coma al final de línea situada usando (space+,)
+" coloca un punto y coma al final de línea situada usando <space+,>
 nnoremap <Leader>, $a;<Esc>
 
 " ejecuta archivos .js & .ts con Nodejs
@@ -29,6 +29,7 @@ nnoremap <C-t> :call OpenTerminal()<CR>
 " presione <F7> en modo normal para abrir la terminal flotante
 " con <F11> matas todas las terminales en ejecución
 nnoremap <silent> <F7> :FloatermNew<CR>
+imap <silent> <Esc>:w <F7> :FloatermNew<CR>
 tnoremap <silent> <F7> <C-\><C-n>:FloatermNew<CR>
 nnoremap <silent> <F8> :FloatermNext<CR>
 tnoremap <silent> <F8> <C-\><C-n>:FloatermNext<CR>
@@ -39,7 +40,7 @@ tnoremap <silent> <F10> <C-\><C-n>:FloatermToggle<CR>
 nnoremap <silent> <F11> :FloatermKill<CR>
 tnoremap <silent> <F11> <C-\><C-n>:FloatermKill<CR>
 
-" para guardar archivos
+" para guardar el archivo
 nnoremap <Leader>w :w<CR>
 " para cerrar algun búfer o pestaña
 nnoremap <Leader>q :q!<CR>
@@ -74,16 +75,16 @@ nnoremap <Leader>ii :vsp<CR>
 " dividir pantalla en dos [horizontal] con space+o
 nnoremap <Leader>oo :sp<CR>
 
-" elimina todos los espacios vacíos que hayan en el archivo con <F3>
-nnoremap <F3> :g/^\s\+$/s/\s\+//<CR>
+" elimina todos los espacios vacíos que hayan en el archivo con <F2>
+nnoremap <F2> :g/^\s\+$/s/\s\+//<CR>
 " crea un nuevo archivo en la ruta posicionada <Ctrl+n>
 nnoremap <C-n> :tabnew 
 " actualiza la configuración de neovim o reinicialo con <Ctrl+r>
 nmap <C-r> :so ~/AppData/Local/nvim/init.vim<CR>
-" abre el archivo de configuración global con <space+ini>
+" abre el archivo de configuración global con <space+ni>
 nnoremap <Leader>ni :e $MYVIMRC<CR>
 
-" navegación entre pestañas abiertas con <spacer+l> y <space+a>
+" navegación entre pestañas abiertas con <spacer+l> y <space+h>
 nnoremap <Leader>l :bnext<CR>
 nnoremap <Leader>h :bprevious<CR>
 nmap <Leader>dl :bdelete<CR>
@@ -119,7 +120,7 @@ nnoremap m :m .+1<CR>==
 " por ejemplo: si tienes un: 'Hi User Name' al presionar cs+el-simbolo-a-usar, la cadena de carácteres
 " magicamente se cambiará sin necesidad de realizarlo manualmente.
 
-" copiar ruta general del archivo abierto
+" copiar ruta general del archivo abierto con <space+kp>
 nnoremap <Leader>kp :let @*=expand("%")<CR>
 
 " flujo instantaneo con COC
@@ -151,7 +152,7 @@ nnoremap <silent><nowait> <space>cup  :<C-u>CocUpdate<CR>
 " desintalar extensiones
 nnoremap <silent><nowait> <space>cun  :<C-u>CocUninstall coc-
 
-" configuration for COC-SNIPPETS
+" configuration for the suggerences of coc-snippets
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
 " Use <C-j> for select text for visual placeholder of snippet.
@@ -167,7 +168,7 @@ xmap <Leader>x  <Plug>(coc-convert-snippet)
 
 "*--------------------------------------------------------------------------------*
 
-" coc-java-debug
+" compilar java
 nmap <silent> <F2> :call JavaStartDebug()<CR>
 nmap <silent> <F5> :CocCommand java.debug.vimspector.start<CR>
 nmap <silent> <F4> :CocCommand java.debug.vimspector.start {"configuration":"Run-Test","Test":"java-test"}<CR>
