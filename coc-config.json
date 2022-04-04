@@ -1,11 +1,12 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["html", "css", "markdown", "javascript", "java",  "python", "vim",  "json"], 
-  "editor.fontFamily": "Lilex",
+  "editor.fontFamily":"Lilex",
   "editor.fontSize": 13,
   "editor.fontLigatures": true,
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
+  "suggest.noselect": false,
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"

@@ -37,6 +37,7 @@ nnoremap <Leader>x :qa!<CR>
 
 " abrir el árbol, side bar o NERDTree
 map <Leader>e :NERDTreeToggle<CR>
+map <Leader>ee :NERDTreeFind<CR>
 map <Leader>p :Files<CR>
 
 " navegación rápida entre buffers abiertos
@@ -46,16 +47,16 @@ nnoremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " git
-nnoremap <Leader>g :Git<cr>
-nnoremap <Leader>ga :Git add<cr>
-nnoremap <Leader>gs :Git status<cr>
-nnoremap <Leader>gc :Git commit -m "Upload 👨‍💻"<cr>
-nnoremap <Leader>glg :Git log --oneline<cr>
-nnoremap <Leader>gp :Git push<cr>
-nnoremap <Leader>gf :Git fetch<cr>
-nnoremap <Leader>gl :Git pull<cr>
-nnoremap <Leader>gm :Git merge<cr>
-nnoremap <Leader>gr :Git revert #commit
+nnoremap <Leader>g :Git<CR>
+nnoremap <Leader>ga :Git add<CR>
+nnoremap <Leader>gs :Git status<CR>
+nnoremap <Leader>gc :Git commit -m "Best Update👨‍💻"<CR>
+nnoremap <Leader>glg :Git log --oneline<CR>
+nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gf :Git fetch<CR>
+nnoremap <Leader>gl :Git pull<CR>
+nnoremap <Leader>gm :Git merge<CR>
+nnoremap <Leader>gr :Git revert 
 
 " dividir pantalla en dos [vertical] con space+i
 nnoremap <Leader>ii :vsp<CR>
@@ -73,7 +74,7 @@ nnoremap <Leader>ni :e $MYVIMRC<CR>
 
 " navegación entre pestañas abiertas con <spacer+l> y <space+a>
 nnoremap <Leader>l :bnext<CR>
-nnoremap <leader>h :bprevious<CR>
+nnoremap <Leader>h :bprevious<CR>
 nmap <Leader>dl :bdelete<CR>
 
 " atajo de búsqueda con easymotion
@@ -108,7 +109,7 @@ nnoremap m :m .+1<CR>==
 " magicamente se cambiará sin necesidad de realizarlo manualmente.
 
 " copiar ruta general del archivo abierto
-nnoremap <Leader>P :let @*=expand("%")<CR>
+nnoremap <Leader>kp :let @*=expand("%")<CR>
 
 "*----------------------- OTRAS FUNCIONALIDADES DE COC -----------------------*
 " flujo instantaneo con COC
@@ -117,7 +118,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use <Ctrl+space> para gatillar la entrega de sugerencias del autocompletado de KITE,
+" Use <Ctrl+space> para gatillar la entrega de sugerencias del autocompletado de KITE o COC
 " aunque el automaticamente se gatilla
 "if &filetype == 'java' || &filetype == 'javascript'
 "  inoremap <c-space> <C-x><C-u>
@@ -131,7 +132,6 @@ nnoremap <silent> <left> :vertical resize -2<CR>
 nnoremap <silent> <up> :vertical resize +2<CR>
 nnoremap <silent> <down> :vertical resize -2<CR>
 
-
 "*------------------------------ COC-SNIPPETS -----------------------------------*
 " acceso rápido a las funcionalidades de CoCList, administrador de extensiones
 nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
@@ -144,14 +144,14 @@ imap <C-l> <Plug>(coc-snippets-expand)
 vmap <C-j> <Plug>(coc-snippets-select)
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_next = '<TAB>'
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<c-k>'
+let g:coc_snippet_prev = '<S-TAB>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Use <leader>x for convert visual selected code to snippet
-xmap <leader>x  <Plug>(coc-convert-snippet)
+xmap <Leader>x  <Plug>(coc-convert-snippet)
 
 "*--------------------------------------------------------------------------------*
 

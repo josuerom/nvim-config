@@ -25,7 +25,7 @@ let g:lightline = {
 
 " si usted utiliza el autocompletado KITE descomente las dos sgt líneas
 "let g:kite_auto_complete = 1
-"let g:kite_supported_languages = ['*']
+"let g:kite_supported_languages = ['lenguaje']
 let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-tsserver',
@@ -49,16 +49,6 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
-
-" syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " vim fugitive
 command! -bang -nargs=? -complete=dir GFiles
@@ -128,7 +118,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_next = '<TAB>'
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
@@ -141,7 +131,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> DOC :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
