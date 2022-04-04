@@ -2,5 +2,4 @@
 /neovim/
 /.config/screenshot/
 /.config/autoload/
-/plugged/
 /projects/java/*.class
