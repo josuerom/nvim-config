@@ -38,7 +38,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
-Plug 'puremourning/vimspector'
+Plug 'puremourning/vimspector', {'for': ['java']}
 
 " git
 Plug 'tpope/vim-fugitive'

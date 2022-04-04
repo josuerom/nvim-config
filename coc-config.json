@@ -14,12 +14,20 @@
 
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-14",
-      "path": "D:\\Program Files\\Java\\jdk-14.0.2\\bin\\javac.exe",
+      "name": "JavaSE-11",
+      "path": "D:\\Program Files\\Java\\jdk-11.0.13",
       "default": true
+    },
+    {
+      "name": "JavaSE-8",
+      "path": "C:\\Program Files\\Java\\jre1.8.0_321"
     }
   ],
-
+  "codeLens.enable": true,
+  "java.referencesCodeLens.enable": true,
+  "java.completion.enable": true,
+  "java.implementationsCodeLens.enable": true,
+  "java.jdt.ls.vmargs": "-javaagent:/C:/Program Files/Java/jdk-11.0.3",
   "java.format.enabled": true,
   "java.format.onType.enabled": true,
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
