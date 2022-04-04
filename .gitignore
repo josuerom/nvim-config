@@ -1,3 +1,6 @@
+# ficheros ignorados||
 /neovim/
-/screenshot/
-*.class
+/.config/screenshot/
+/.config/autoload/
+/plugged/
+/projects/java/*.class
