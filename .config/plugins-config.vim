@@ -97,17 +97,10 @@ let g:floaterm_keymap_next = '<F8>'
 let g:floaterm_keymap_prev = '<F9>'
 let g:floaterm_keymap_toggle = '<F10>'
 let g:floaterm_keymap_kill = '<F11>'
-
-                            \ translator#window#float#scroll(0) : "\<M-f>"
  
 " vim-spector
 let g:vimspector_enable_mappings = 'HUMAN'
-let g:vimspector_install_gadgets = ['debugpy', 'vscode-cpptools']
-
-" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
-" for normal mode - the word under the cursor
 nmap <Leader>di <Plug>VimspectorBalloonEval
-" for visual mode, the visually selected text
 xmap <Leader>di <Plug>VimspectorBalloonEval'
 
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
@@ -148,9 +141,9 @@ function! OpenTerminal()
 endfunction
 
 "*---------------------- SOLUCIÓN A EL ERROR DE COC-SNIPPETS -----------------------*
-" Si al iniciar neovim te aparece siempre este molestoso error de coc-snippets:
-"[coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim. use :CocOpenLog for details
-" ejecuta el comando en la PowerShell como administrador: pip install pynvim
+" Si al iniciar neovim te aparece siempre este molestoso error:
+" [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim. use :CocOpenLog for details
+" ejecuta el sgt comando en la PowerShell como administrador: pip install pynvim
 " así no deberá aparecerte más.
 
 "*------------------------- CONFIGURACIÓN DE COC, LA DEJO EN INGLES -----------------------------*
@@ -264,24 +257,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
-
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Highlight symbol under cursor on CursorHold
 

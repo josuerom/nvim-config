@@ -26,8 +26,8 @@ nnoremap <Leader>dp :!python %<CR>
 " con <Ctrl+t> se abre la terminal cmd
 nnoremap <C-t> :call OpenTerminal()<CR>
 
-" ejecuta Floaterm con <F7> en modo normal o terminal
-" con <F11> matas las terminales en ejecución
+" presione <F7> en modo normal para abrir la terminal flotante
+" con <F11> matas todas las terminales en ejecución
 nnoremap <silent> <F7> :FloatermNew<CR>
 tnoremap <silent> <F7> <C-\><C-n>:FloatermNew<CR>
 nnoremap <silent> <F8> :FloatermNext<CR>
@@ -38,9 +38,6 @@ nnoremap <silent> <F10> :FloatermToggle<CR>
 tnoremap <silent> <F10> <C-\><C-n>:FloatermToggle<CR>
 nnoremap <silent> <F11> :FloatermKill<CR>
 tnoremap <silent> <F11> <C-\><C-n>:FloatermKill<CR>
-
-" vim-silicon para tomar capturas elegantes
-vnoremap <silent> <F6> :'<, '>Silicon ~/OneDrive - uniminuto.edu/Pictures/screen-nvim<CR>
 
 " para guardar archivos
 nnoremap <Leader>w :w<CR>
@@ -132,8 +129,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use <Ctrl+space> para gatillar la entrega de sugerencias del autocompletado de KITE o COC
-" aunque el automaticamente se gatilla
+" Use <Ctrl+space> para gatillar la entrega de sugerencias de COC
+" aunque automaticamente siempre se gatilla
 "if &filetype == 'java' || &filetype == 'javascript'
 "  inoremap <c-space> <C-x><C-u>
 "else
@@ -148,24 +145,25 @@ nnoremap <silent> <down> :vertical resize -2<CR>
 
 "*------------------------------ COC-SNIPPETS -----------------------------------*
 " acceso rápido a las funcionalidades de CoCList, administrador de extensiones
-nnoremap <silent><nowait> <space>coc  :<C-u>CocList extensions<CR>
+nnoremap <silent><nowait> <space>cex  :<C-u>CocList extensions<CR>
 " administrar snippets
 nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
+" actualiza las extensiones
+nnoremap <silent><nowait> <space>cup  :<C-u>CocUpdate<CR>
+" desintala la extensión
+nnoremap <silent><nowait> <space>cun  :<C-u>CocUninstall coc-
 
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
 " Use <C-j> for select text for visual placeholder of snippet.
 vmap <C-j> <Plug>(coc-snippets-select)
-
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
 let g:coc_snippet_next = '<C-j>'
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<C-k>'
-
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Use <leader>x for convert visual selected code to snippet
 xmap <Leader>x  <Plug>(coc-convert-snippet)
 
 "*--------------------------------------------------------------------------------*
-
