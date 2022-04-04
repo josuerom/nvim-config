@@ -47,7 +47,7 @@ nnoremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " git
-nnoremap <Leader>g :Git<CR>
+nnoremap <Leader>g :G<CR>
 nnoremap <Leader>ga :Git add<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>gc :Git commit -m "Best Update👨‍💻"<CR>
@@ -144,9 +144,9 @@ imap <C-l> <Plug>(coc-snippets-expand)
 vmap <C-j> <Plug>(coc-snippets-select)
 
 " Use <C-j> for jump to next placeholder, it's default of coc.nvim
-let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_next = '<C-j>'
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
-let g:coc_snippet_prev = '<S-TAB>'
+let g:coc_snippet_prev = '<C-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
@@ -155,124 +155,3 @@ xmap <Leader>x  <Plug>(coc-convert-snippet)
 
 "*--------------------------------------------------------------------------------*
 
-function! ParensIndent()
-  let prev = col('.') - 1
-  let after = col('.')
-  let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
-  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
-  if (prevChar == '"' && afterChar == '"') ||
-\    (prevChar == "'" && afterChar == "'") ||
-\    (prevChar == "(" && afterChar == ")") ||
-\    (prevChar == "{" && afterChar == "}") ||
-\    (prevChar == "[" && afterChar == "]")
-    return "\<CR>\<ESC>O"
-  endif
-  
-  return "\<CR>"
-endfunction
-
-inoremap <expr> <space> ParensSpacing()
-
-function! ParensSpacing()
-  let prev = col('.') - 1
-  let after = col('.')
-  let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
-  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
-  if (prevChar == '"' && afterChar == '"') ||
-\    (prevChar == "'" && afterChar == "'") ||
-\    (prevChar == "(" && afterChar == ")") ||
-\    (prevChar == "{" && afterChar == "}") ||
-\    (prevChar == "[" && afterChar == "]")
-    return "\<space>\<space>\<left>"
-  endif
-  
-  return "\<space>"
-endfunction
-
-inoremap <expr> <BS> ParensRemoveSpacing()
-
-function! ParensRemoveSpacing()
-  let prev = col('.') - 1
-  let after = col('.')
-  let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
-  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
-
-  if (prevChar == '"' && afterChar == '"') ||
-\    (prevChar == "'" && afterChar == "'") ||
-\    (prevChar == "(" && afterChar == ")") ||
-\    (prevChar == "{" && afterChar == "}") ||
-\    (prevChar == "[" && afterChar == "]")
-    return "\<bs>\<right>\<bs>"
-  endif
-  
-  if (prevChar == ' ' && afterChar == ' ')
-    let prev = col('.') - 2
-    let after = col('.') + 1
-    let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
-    let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
-    if (prevChar == '"' && afterChar == '"') ||
-  \    (prevChar == "'" && afterChar == "'") ||
-  \    (prevChar == "(" && afterChar == ")") ||
-  \    (prevChar == "{" && afterChar == "}") ||
-  \    (prevChar == "[" && afterChar == "]")
-      return "\<bs>\<right>\<bs>"
-    endif
-  endif
-  
-  return "\<bs>"
-endfunction
-
-inoremap { {}<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap ' ''<left>
-inoremap " ""<left>
-
-let curly = "}"
-inoremap <expr> } CheckNextParens(curly)
-
-let bracket = "]"
-inoremap <expr> ] CheckNextParens(bracket)
-
-let parens = ")"
-inoremap <expr> ) CheckNextParens(parens)
-
-let quote = "'"
-inoremap <expr> ' CheckNextQuote(quote)
-
-let dquote = '"'
-inoremap <expr> " CheckNextQuote(dquote)
-
-let bticks = '`'
-inoremap <expr> ` CheckNextQuote(bticks)
-
-function CheckNextQuote(c)
-  let after = col('.')
-  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
-  
-  if (afterChar == a:c)
-    return "\<right>"
-  endif
-  if (afterChar == ' ' || afterChar == '' || afterChar == ')' || afterChar== '}' || afterChar == ']')
-    return a:c . a:c . "\<left>"
-  endif
-  if (afterChar != a:c)
-    let bticks = '`'
-    let dquote = '"'
-    let quote = "'"
-    if(afterChar == dquote || afterChar == quote || afterChar == bticks)
-      return a:c . a:c . "\<left>"
-    endif
-  endif
-  return a:c
-endfunction
-
-function CheckNextParens(c)
-  let after = col('.')
-  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
-  if (afterChar == a:c)
-
-    return "\<right>"
-  endif
-  return a:c
-endfunction

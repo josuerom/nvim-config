@@ -27,7 +27,7 @@ let g:lightline = {
 "let g:kite_auto_complete = 1
 "let g:kite_supported_languages = ['lenguaje']
 let g:coc_global_extensions = [
-    \ 'coc-snippets',
+    "\ 'coc-snippets',
     \ 'coc-tsserver',
     \ 'coc-java'
     \ ]
@@ -147,11 +147,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+nmap <Leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <Leader>f  <Plug>(coc-format-selected)
+nmap <Leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -162,17 +162,17 @@ augroup mygroup
 augroup end
 
 " Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" Example: `<Leader>aap` for current paragraph
+xmap <Leader>a  <Plug>(coc-codeaction-selected)
+nmap <Leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <Leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <Leader>qf  <Plug>(coc-fix-current)
 
 " Run the Code Lens action on the current line.
-nmap <leader>cl  <Plug>(coc-codelens-action)
+nmap <Leader>cl  <Plug>(coc-codelens-action)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -269,3 +269,125 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
     "" has been found.
     "return search_result
 "endfunction
+
+function! ParensIndent()
+  let prev = col('.') - 1
+  let after = col('.')
+  let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+  if (prevChar == '"' && afterChar == '"') ||
+\    (prevChar == "'" && afterChar == "'") ||
+\    (prevChar == "(" && afterChar == ")") ||
+\    (prevChar == "{" && afterChar == "}") ||
+\    (prevChar == "[" && afterChar == "]")
+    return "\<CR>\<ESC>O"
+  endif
+  
+  return "\<CR>"
+endfunction
+
+inoremap <expr> <space> ParensSpacing()
+
+function! ParensSpacing()
+  let prev = col('.') - 1
+  let after = col('.')
+  let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+  if (prevChar == '"' && afterChar == '"') ||
+\    (prevChar == "'" && afterChar == "'") ||
+\    (prevChar == "(" && afterChar == ")") ||
+\    (prevChar == "{" && afterChar == "}") ||
+\    (prevChar == "[" && afterChar == "]")
+    return "\<space>\<space>\<left>"
+  endif
+  
+  return "\<space>"
+endfunction
+
+inoremap <expr> <BS> ParensRemoveSpacing()
+
+function! ParensRemoveSpacing()
+  let prev = col('.') - 1
+  let after = col('.')
+  let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+
+  if (prevChar == '"' && afterChar == '"') ||
+\    (prevChar == "'" && afterChar == "'") ||
+\    (prevChar == "(" && afterChar == ")") ||
+\    (prevChar == "{" && afterChar == "}") ||
+\    (prevChar == "[" && afterChar == "]")
+    return "\<bs>\<right>\<bs>"
+  endif
+  
+  if (prevChar == ' ' && afterChar == ' ')
+    let prev = col('.') - 2
+    let after = col('.') + 1
+    let prevChar = matchstr(getline('.'), '\%' . prev . 'c.')
+    let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+    if (prevChar == '"' && afterChar == '"') ||
+  \    (prevChar == "'" && afterChar == "'") ||
+  \    (prevChar == "(" && afterChar == ")") ||
+  \    (prevChar == "{" && afterChar == "}") ||
+  \    (prevChar == "[" && afterChar == "]")
+      return "\<bs>\<right>\<bs>"
+    endif
+  endif
+  
+  return "\<bs>"
+endfunction
+
+inoremap { {}<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap ' ''<left>
+inoremap " ""<left>
+
+let curly = "}"
+inoremap <expr> } CheckNextParens(curly)
+
+let bracket = "]"
+inoremap <expr> ] CheckNextParens(bracket)
+
+let parens = ")"
+inoremap <expr> ) CheckNextParens(parens)
+
+let quote = "'"
+inoremap <expr> ' CheckNextQuote(quote)
+
+let dquote = '"'
+inoremap <expr> " CheckNextQuote(dquote)
+
+let bticks = '`'
+inoremap <expr> ` CheckNextQuote(bticks)
+
+function CheckNextQuote(c)
+  let after = col('.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+  
+  if (afterChar == a:c)
+    return "\<right>"
+  endif
+  if (afterChar == ' ' || afterChar == '' || afterChar == ')' || afterChar== '}' || afterChar == ']')
+    return a:c . a:c . "\<left>"
+  endif
+  if (afterChar != a:c)
+    let bticks = '`'
+    let dquote = '"'
+    let quote = "'"
+    if(afterChar == dquote || afterChar == quote || afterChar == bticks)
+      return a:c . a:c . "\<left>"
+    endif
+  endif
+  return a:c
+endfunction
+
+function CheckNextParens(c)
+  let after = col('.')
+  let afterChar = matchstr(getline('.'), '\%' . after . 'c.')
+  if (afterChar == a:c)
+
+    return "\<right>"
+  endif
+  return a:c
+endfunction

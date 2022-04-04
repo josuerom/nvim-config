@@ -24,11 +24,11 @@
 <H1 align="center">Fantástica Instalación y Configuración de Neovim para SO Windows - February, 2021.</H1>
 
 <p align="center" width="0">
-   <img align="center" width="645" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/neovim-logo-shadow.png">
+   <img align="center" width="645" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/neovim-logo-shadow.png">
 </p>
 
 <p align="center">
-<img src="https://github.com/josuerom/nvim-config/blob/main/screenshot/2022-02-26_18-34-31_Trim.gif" width="800">
+<img src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/2022-02-26_18-34-31_Trim.gif" width="800">
 </p>
 
 ## Introducción.
@@ -50,7 +50,7 @@ El presente proyecto describe el proceso que debes seguir para personalizar e in
 Buen día, estimado saludo amiga/o para realizar la instalación primero ábrete **Microsft Store**; una vez se inicie, en la barra de búsqueda escribe: **terminal**. Luego de esto, debes seleccionar el programa que se encuentra en la siguiente captura de pantalla que te dejo, lo más seguro es que el programa te aparezca de primero como me sucedió conmigo.
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/win-terminal.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/win-terminal.png">
 </p>
 
 Una vez finalice la instalación, ejecutala como administrador ya que dentro de poco se deben ejecutar una serie de comandos que te explicaré. Posteriormente, el motivo por el cual recomiendo su instalación es para que la Terminal tenga una apariencia más agradable intuitiva. Por otro lado, también podrían usar la ***cmd o símbolo del sistema*** pero lo malo es que con esa terminal neovim nunca se verá igual a como en la otra, si quieres prueba lo, yo utilizo las dos terminales.
@@ -73,7 +73,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Comparto captura de pantalla, a mi me arrojó esos errores porque ya lo tengo instalado, tu solo debes seguir los pasos que te indíco.
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/chocolatey.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/chocolatey.png">
 </p>
 
 Ahora copia y pega este otro comando para instalar neovim en su versión más reciente a la fecha en que lo vas a instalar.
@@ -174,5 +174,5 @@ josueromram@outlook.es
 # Estimado usuario cordial saludo, le aviso que me encuentro trabajando duro en esté proyecto, y es por eso que constantemente publico cambios.
 
 <p align="center" width="0">
-   <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/screenshot/neovim-mark-flat.png">
+   <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/neovim-mark-flat.png">
 </p> 
