@@ -30,7 +30,6 @@
 
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
-
   "snippets.priority": 1,
   "snippets.ultisnips.enable": false,
   "snippets.ultisnips.usePythonx": false

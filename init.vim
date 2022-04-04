@@ -23,7 +23,7 @@ set clipboard=unnamedplus
 set showcmd
 set ruler
 set termencoding=utf-8
-set sw=3
+set sw=4
 set termguicolors
 set showmatch
 set noshowmode
@@ -44,7 +44,7 @@ set hidden
 set nobackup
 set nowritebackup
 set cmdheight=1
-set updatetime=300
+set updatetime=150
 set shortmess+=c
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 

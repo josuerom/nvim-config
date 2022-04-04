@@ -1,6 +1,3 @@
-" Vim support file to define the syntax selection menu
-" This file is normally sourced from menu.vim.
-"
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
 " Last Change:	2017 Oct 28
 
