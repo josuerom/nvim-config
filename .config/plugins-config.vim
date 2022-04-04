@@ -32,30 +32,6 @@ let g:coc_global_extensions = [
     \ 'coc-java'
     \ ]
 
-" ¡soporte de java! Debería ir en compilador/ y ftplugin
-augroup javaSu
-	autocmd!
-	autocmd FileType java compiler javac
-	au Filetype java setlocal makeprg=javac\ %\ -g
-	au Filetype java setlocal errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
-	au FileType java noremap <buffer> <leader>8 :make<cr>:copen<cr>
-	au FileType java noremap <buffer> <leader>9 :!echo %\|awk -F. '{print $1}'\|xargs java<cr>
-augroup end
-
- if executable('rg')
- 	set grepprg=rg\ --vimgrep
- 	set grepformat^=%f:%l:%c:%m
- endif
-
-function! JavaStartDebugCallback(err, port)
-  execute "cexpr! 'Java debug started on port: " . a:port . "'"
-  call vimspector#LaunchWithSettings({ "configuration": "Java Attach", "AdapterPort": a:port })
-endfunction
-
-function JavaStartDebug()
-  call CocActionAsync('runCommand', 'vscode.java.startDebugSession', function('JavaStartDebugCallback'))
-endfunction
-
 " cuándo este utilizando KITE desabilite la entrega de sugerencias de COC, descomente la línea:
 "autocmd FileType javascript let b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
@@ -90,9 +66,6 @@ let g:floaterm_keymap_next = '<F8>'
 let g:floaterm_keymap_prev = '<F9>'
 let g:floaterm_keymap_toggle = '<F10>'
 let g:floaterm_keymap_kill = '<F11>'
- 
-" vim-spector
-let g:vimspector_enable_mappings = 'HUMAN'
 
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
 function! OpenTerminal()
