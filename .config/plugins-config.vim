@@ -1,3 +1,9 @@
+" ____  _    _   _  ____ ___ _   _ ____         ____ ___  _   _ _____ ___ ____ __     _____ __  __
+"|  _ \| |  | | | |/ ___|_ _| \ | / ___|       / ___/ _ \| \ | |  ___|_ _/ ___|\ \   / /_ _|  \/  |
+"| |_) | |  | | | | |  _ | ||  \| \___ \ _____| |  | | | |  \| | |_   | | |  _  \ \ / / | || |\/| |
+"|  __/| |__| |_| | |_| || || |\  |___) |_____| |__| |_| | |\  |  _|  | | |_| | _\ V /  | || |  | |
+"|_|   |_____\___/ \____|___|_| \_|____/       \____\___/|_| \_|_|   |___\____|(_)\_/  |___|_|  |_|
+
 " configuración de la barra de estado inferior
 let g:lightline = {
       \ 'active': {
@@ -22,6 +28,7 @@ let g:lightline = {
       \   'right': ''
       \ }
       \}
+
 
 " si usted utiliza el autocompletado KITE descomente las dos sgt líneas
 "let g:kite_auto_complete = 1
@@ -49,6 +56,9 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
+
+" vim-devicons
+
 
 " ajustes para vim-fugitive
 command! -bang -nargs=? -complete=dir GFiles
