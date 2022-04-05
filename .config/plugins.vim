@@ -15,9 +15,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 
 " barra de estado
-Plug 'maximbaz/lightline-ale'
-Plug 'shinchu/lightline-gruvbox.vim'
-Plug 'itchyny/lightline.vim'
+"Plug 'maximbaz/lightline-ale'
+"Plug 'shinchu/lightline-gruvbox.vim'
+"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 
 " barra lateral o árbol

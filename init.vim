@@ -19,7 +19,6 @@ filetype plugin indent on
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 syntax enable
-set title
 set number
 set mouse=a
 set numberwidth=1

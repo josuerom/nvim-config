@@ -33,6 +33,8 @@ nnoremap <Leader>dp :!python %<CR>
 
 " con <Ctrl+t> se abre la terminal cmd
 nnoremap <C-t> :call OpenTerminal()<CR>
+noremap no :noh<CR>
+map gtree :FlogSplit<CR>
 
 " presione <F7> para abrir una terminal flotante
 " con <F11> matas todas las terminales en ejecución
