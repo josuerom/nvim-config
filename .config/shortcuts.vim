@@ -18,7 +18,7 @@ nnoremap <Leader>, $a;<Esc>
 
 " ejecuta archivos .js & .ts con Nodejs
 nnoremap <Leader>dd :!node %<CR>
-" compila y ejecuta archivos .java
+" compilar y ejecutar archivos .java
 nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
@@ -26,10 +26,9 @@ nnoremap <Leader>dp :!python %<CR>
 " con <Ctrl+t> se abre la terminal cmd
 nnoremap <C-t> :call OpenTerminal()<CR>
 
-" presione <F7> en modo normal para abrir la terminal flotante
+" presione <F7> para abrir una terminal flotante
 " con <F11> matas todas las terminales en ejecución
 nnoremap <silent> <F7> :FloatermNew<CR>
-imap <silent> <Esc>:w <F7> :FloatermNew<CR>
 tnoremap <silent> <F7> <C-\><C-n>:FloatermNew<CR>
 nnoremap <silent> <F8> :FloatermNext<CR>
 tnoremap <silent> <F8> <C-\><C-n>:FloatermNext<CR>
@@ -49,7 +48,7 @@ nnoremap <Leader>x :qa!<CR>
 
 " abrir el árbol, side bar o NERDTree
 map <Leader>e :NERDTreeToggle<CR>
-map <Leader>ee :NERDTreeFind<CR>
+map <Leader>ee :Explore<CR>
 map <Leader>p :Files<CR>
 
 " navegación rápida entre buffers abiertos

@@ -32,8 +32,8 @@ let g:coc_global_extensions = [
     \ 'coc-java'
     \ ]
 
-" cuándo este utilizando KITE desabilite la entrega de sugerencias de COC, descomente la línea:
-"autocmd FileType javascript let b:coc_suggest_disable = 1
+" cuándo este utilizando KITE desabilite la entrega de sugerencias de COC, descomente la sgt línea:
+"autocmd FileType <lenguaje-aquí> let b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
 
 " cerrado automatico de la barra lateral o árbol
@@ -50,7 +50,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
 
-" vim fugitive
+" ajustes para vim-fugitive
 command! -bang -nargs=? -complete=dir GFiles
   \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
 
@@ -60,7 +60,7 @@ command! -bang -nargs=* Ag
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
-" configuración para la funcionalidad de vim-floaterm
+" configuración para la funcionalidad vim-floaterm
 let g:floaterm_keymap_new = '<F7>'
 let g:floaterm_keymap_next = '<F8>'
 let g:floaterm_keymap_prev = '<F9>'
@@ -222,6 +222,5 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 
-" Highlight symbol under cursor on CursorHold
-
+" Highlight symbol under cursor on CursorHold FZF
 let $FZF_DEFAULT_OPTS='--layout=reverse'

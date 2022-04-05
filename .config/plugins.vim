@@ -37,7 +37,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 
-" git
+" integración con git en nvim
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
