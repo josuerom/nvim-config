@@ -18,6 +18,7 @@ Plug 'morhetz/gruvbox'
 Plug 'maximbaz/lightline-ale'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 
 " barra lateral o árbol
 Plug 'scrooloose/nerdtree'
