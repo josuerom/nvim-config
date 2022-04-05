@@ -56,8 +56,8 @@ nnoremap <Leader>x :qa!<CR>
 
 " abrir el árbol, side bar o NERDTree
 map <Leader>e :NERDTreeToggle<CR>
-map <Leader>ee :Explore<CR>
-map <Leader>p :Files<CR>
+map <Leader>p :Explore<CR>
+map <Leader>f :Files<CR>
 
 " navegación rápida entre buffers abiertos
 nnoremap <silent><C-h> :TmuxNavigateLeft<CR>
@@ -94,7 +94,7 @@ nnoremap <F2> :g/^\s\+$/s/\s\+//<CR>
 " crea un nuevo archivo en la ruta posicionada <Ctrl+n>
 nnoremap <C-n> :tabnew 
 " actualiza la configuración de neovim o reinicialo con <Ctrl+r>
-nmap <C-r> :so ~/AppData/Local/nvim/init.vim<CR>
+nmap <C-r> :so %<CR>
 " abre el archivo de configuración global con <space+ni>
 nnoremap <Leader>ni :e $MYVIMRC<CR>
 
@@ -110,7 +110,7 @@ nmap <Leader>s <Plug>(easymotion-s2)
 vnoremap < <gv
 vnoremap > >gv
 
-" para comentar alguna línea, debe presionar <space+c+space> en modo NORMAL
+" para comentar una línea, presione <space+c+space> en modo NORMAL
 
 " para multiple cursor debe poner el cursor encima de una palabra y presionar
 " <ctrl+n> para buscar las coincidencias en el archivo y luego presione <c>

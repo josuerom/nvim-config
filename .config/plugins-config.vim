@@ -40,7 +40,9 @@ autocmd ColorScheme * hi NERDTreeFlags ctermfg=13
 let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-tsserver',
-    \ 'coc-java'
+    \ 'coc-java',
+	 \ 'coc-java-debug',
+	 \ 'coc-lists'
     \ ]
 
 " cuándo este utilizando KITE desabilite la entrega de sugerencias de COC, descomente la sgt línea:

@@ -15,15 +15,13 @@ so ~/AppData/Local/nvim/.config/plugins.vim
 so ~/AppData/Local/nvim/.config/shortcuts.vim
 
 filetype plugin indent on
-" italica
-let &t_ZH="\e[3m"
-let &t_ZR="\e[23m"
 syntax enable
 set number
 set mouse=a
 set numberwidth=1
 set relativenumber
 set clipboard=unnamedplus
+set background=dark
 set showcmd
 set ruler
 set termencoding=utf-8
@@ -44,6 +42,9 @@ set hlsearch
 set ignorecase
 set timeoutlen=200
 set confirm
+set suffixesadd=.java
+set omnifunc=syntaxcomplete#Complete
+set inccommand=split
 
 " COC
 set encoding=utf-8
