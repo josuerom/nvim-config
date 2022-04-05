@@ -59,10 +59,10 @@ nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " git
 nnoremap <Leader>g :G<CR>
-nnoremap <Leader>ga :Git add<CR>
+nnoremap <Leader>ga :Git add -A<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>gc :Git commit -m "Best Update👨‍💻"<CR>
-nnoremap <Leader>gco :Git commit -m "Bug 🪲"
+nnoremap <Leader>gcc :Git commit -m "Bug 🪲"
 nnoremap <Leader>glg :Git log --oneline<CR>
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gf :Git fetch<CR>
