@@ -26,15 +26,13 @@ nnoremap <Leader>, $a;<Esc>
 
 " ejecuta archivos .js & .ts con Nodejs
 nnoremap <Leader>dd :!node %<CR>
-" compilar y ejecutar archivos .java
+" compila y ejecuta archivos .java
 nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
 
 " con <Ctrl+t> se abre la terminal cmd
 nnoremap <C-t> :call OpenTerminal()<CR>
-noremap no :noh<CR>
-map gtree :FlogSplit<CR>
 
 " presione <F7> para abrir una terminal flotante
 " con <F11> matas todas las terminales en ejecución

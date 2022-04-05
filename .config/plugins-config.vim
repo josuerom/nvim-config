@@ -10,7 +10,7 @@
 let g:lightline = {
       \ 'active': {
       \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
-      \   'right': [['kitestatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+      \   'right': [['kitestatus'], ['lineinfo', 'filetype'], ['gitbranch']]
       \ },
       \ 'inactive': {
       \   'left': [['inactive'], ['relativepath']],
@@ -31,37 +31,12 @@ let g:lightline = {
       \ }
       \}
 
-" configuración para airline
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+" configuración para lightline
+if !exists('g:lightline_symbols')
+    let g:lightline_symbols = {}
 endif
 
-" indent line
-let g:indentLine_char_list = ['|', '⌇','│']
-    " powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.maxlinenr = ''
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ' '
-
-" web-devicons
-let g:webdevicons_enable = 1
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-let g:WebDevIconsOS = 'Darwin'
-let g:webdevicons_enable_airline_statusline = 1
-let g:DevIconsEnableFolderExtensionPatternMatching = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
-
-"change color of webdevicons
+" cambio el color de los iconos en NERDTree
 autocmd ColorScheme * hi NERDTreeFlags ctermfg = 13
 
 " si usted utiliza el autocompletado KITE descomente las dos sgt líneas

@@ -15,20 +15,18 @@ Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 
 " barra de estado
-"Plug 'maximbaz/lightline-ale'
-"Plug 'shinchu/lightline-gruvbox.vim'
-"Plug 'itchyny/lightline.vim'
-Plug 'vim-airline/vim-airline'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'itchyny/lightline.vim'
 
-" barra lateral o árbol
+" barra lateral y iconos
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
-" búsqueda rápida
+" búsqueda y agrupador
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
-" navegación rápida entre pestañas
+" navegación entre pestañas
 Plug 'christoomey/vim-tmux-navigator'
  
 " autocompletado y snippets
@@ -47,7 +45,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 
-" integración con git en nvim
+" git en nvim
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
