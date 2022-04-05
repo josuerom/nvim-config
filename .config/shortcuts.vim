@@ -66,17 +66,23 @@ nnoremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " git
-nnoremap <Leader>g :G<CR>
+nnoremap <Leader>gg :G<CR>
 nnoremap <Leader>ga :Git add -A<CR>
 nnoremap <Leader>gs :Git status<CR>
-nnoremap <Leader>gc :Git commit -m "Best Update👨‍💻"<CR>
-nnoremap <Leader>gcc :Git commit -m "Bug 🪲"
-nnoremap <Leader>glg :Git log --oneline<CR>
+nnoremap <Leader>gcc :Git commit -m "Best Update👨‍💻"<CR>
+nnoremap <Leader>gc :Git commit -m "Bug 🪲"
+nnoremap <Leader>go :Git log --oneline<CR>
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gf :Git fetch<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gm :Git merge<CR>
 nnoremap <Leader>ge :Git revert #commit
+
+" flujo instantaneo con COC
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " dividir pantalla en dos [vertical] con space+i
 nnoremap <Leader>ii :vsp<CR>
@@ -131,12 +137,6 @@ nnoremap m :m .+1<CR>==
 " copiar ruta general del archivo abierto con <space+kp>
 nnoremap <Leader>kp :let @*=expand("%")<CR>
 
-" flujo instantaneo con COC
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
 " Use <Ctrl+space> para gatillar la entrega de sugerencias de COC
 " aunque automaticamente siempre se gatilla
 "if &filetype == 'java' || &filetype == 'javascript'
@@ -156,9 +156,9 @@ nnoremap <silent><nowait> <space>cex  :<C-u>CocList extensions<CR>
 " administrar snippets
 nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
 " actualizar extensiones
-nnoremap <silent><nowait> <space>cup  :<C-u>CocUpdate<CR>
+nnoremap <silent><nowait> <space>cuu  :<C-u>CocUpdate<CR>
 " desintalar extensiones
-nnoremap <silent><nowait> <space>cun  :<C-u>CocUninstall coc-
+nnoremap <silent><nowait> <space>cdd  :<C-u>CocUninstall coc-
 
 " configuration for the suggerences of coc-snippets
 " Use <C-l> for trigger snippet expand.
@@ -173,5 +173,4 @@ let g:coc_snippet_prev = '<C-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Use <leader>x for convert visual selected code to snippet
 xmap <Leader>x  <Plug>(coc-convert-snippet)
-
 "*--------------------------------------------------------------------------------*

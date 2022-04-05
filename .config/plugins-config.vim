@@ -10,7 +10,7 @@
 let g:lightline = {
       \ 'active': {
       \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
-      \   'right': [['kitestatus'], ['lineinfo', 'filetype'], ['gitbranch']]
+      \   'right': [['kitestatus'], ['filetype', 'lineinfo'], ['gitbranch']]
       \ },
       \ 'inactive': {
       \   'left': [['inactive'], ['relativepath']],
@@ -31,13 +31,8 @@ let g:lightline = {
       \ }
       \}
 
-" configuración para lightline
-if !exists('g:lightline_symbols')
-    let g:lightline_symbols = {}
-endif
-
 " cambio el color de los iconos en NERDTree
-autocmd ColorScheme * hi NERDTreeFlags ctermfg = 13
+autocmd ColorScheme * hi NERDTreeFlags ctermfg=13
 
 " si usted utiliza el autocompletado KITE descomente las dos sgt líneas
 "let g:kite_auto_complete = 1
@@ -60,8 +55,8 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrowExpandable = '▸▸'
+let g:NERDTreeDirArrowCollapsible = '▾▾'
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
@@ -160,7 +155,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> DOC :call <SID>show_documentation()<CR>
+nnoremap <silent> doc :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
