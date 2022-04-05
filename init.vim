@@ -1,5 +1,5 @@
 "*----------- Configuración [init.vim] 21/Febrero/2021 6:56a.m COL -----------*
- 
+
 							"██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
 							"██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
 							"██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
@@ -8,12 +8,11 @@
 							"╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
 									 " Configurado por >> Josué Romero
 									 " Twitter >> https://twitter.com/josueromr
-
-" Importo los archivos de configuración
+									 
+" importo los archivos de configuración
 so ~/AppData/Local/nvim/.config/plugins-config.vim
 so ~/AppData/Local/nvim/.config/plugins.vim
 so ~/AppData/Local/nvim/.config/shortcuts.vim
-
 
 syntax enable
 set title
@@ -63,6 +62,8 @@ filetype plugin indent on
 " para usar fuente italica
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
+" para ligaturas y más cosas cheveres
+
 
 " cambio el color de sintaxis 
 autocmd ColorScheme * highlight keyword         gui=italic cterm=italic guifg=#D3869B
