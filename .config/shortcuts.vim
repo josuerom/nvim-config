@@ -67,6 +67,7 @@ nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " git
 nnoremap <Leader>gg :G<CR>
+nnoremap <Leader>gv :GV<CR>
 nnoremap <Leader>ga :Git add -A<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>gcc :Git commit -m "Best Update👨‍💻"<CR>
