@@ -18,18 +18,18 @@ Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'itchyny/lightline.vim'
 
-" barra lateral y iconos
+" barra lateral - iconos
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 
-" búsqueda y agrupador
+" búsqueda - agrupador
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
 " navegación entre pestañas
 Plug 'christoomey/vim-tmux-navigator'
  
-" autocompletado y snippets
+" autocompletado - snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 

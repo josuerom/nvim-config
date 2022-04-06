@@ -40,9 +40,7 @@ autocmd ColorScheme * hi NERDTreeFlags ctermfg=13
 let g:coc_global_extensions = [
     \ 'coc-snippets',
     \ 'coc-tsserver',
-    \ 'coc-java',
-	 \ 'coc-java-debug',
-	 \ 'coc-lists'
+    \ 'coc-java'
     \ ]
 
 " cuándo este utilizando KITE desabilite la entrega de sugerencias de COC, descomente la sgt línea:
@@ -57,8 +55,8 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
-let g:NERDTreeDirArrowExpandable = '▸▸'
-let g:NERDTreeDirArrowCollapsible = '▾▾'
+let g:NERDTreeDirArrowExpandable = '»'
+let g:NERDTreeDirArrowCollapsible = '«'
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
