@@ -34,6 +34,13 @@ nnoremap <Leader>dp :!python %<CR>
 " con <Ctrl+t> se abre la terminal cmd
 nnoremap <C-t> :call OpenTerminal()<CR>
 
+" elimina todos los espacios vacíos que hayan en el archivo con <F2>
+nmap <F2> :g/^\s\+$/s/\s\+//<CR>
+" actualiza nvim o reinica con <F3>
+nmap <F3> :so %<CR>
+" <F4> <F5> y <F6> se encuentran disponibles
+
+" abre el archivo de configuración global con <space+ni>
 " presione <F7> para abrir una terminal flotante
 " con <F11> matas todas las terminales en ejecución
 nnoremap <silent> <F7> :FloatermNew<CR>
@@ -89,14 +96,9 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <Leader>ii :vsp<CR>
 " dividir pantalla en dos [horizontal] con space+o
 nnoremap <Leader>oo :sp<CR>
-
-" elimina todos los espacios vacíos que hayan en el archivo con <F2>
-nnoremap <F2> :g/^\s\+$/s/\s\+//<CR>
-" crea un nuevo archivo en la ruta posicionada <Ctrl+n>
+" crear un archivo en nueva pestaña con <Ctrl+n>
 nnoremap <C-n> :tabnew 
-" actualiza la configuración de neovim o reinicialo con <Ctrl+r>
-nmap <C-r> :so %<CR>
-" abre el archivo de configuración global con <space+ni>
+" abre el archivo de configuración inicial de nvim con <space+ni>
 nnoremap <Leader>ni :e $MYVIMRC<CR>
 
 " navegación entre pestañas abiertas con <spacer+l> y <space+h>
@@ -143,10 +145,11 @@ nnoremap <Leader>kp :let @*=expand("%")<CR>
 "if &filetype == 'java' || &filetype == 'javascript'
 "  inoremap <c-space> <C-x><C-u>
 "else
-  inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <silent><expr> <C-space> coc#refresh()
+  imap <silent><expr> <C-space> coc#refresh()
 "endif
 
-" con las feclas ajustas el tamaño del búfer's abiertos
+" con las feclas ajustas el tamaño de las pestañas
 nnoremap <silent> <right> :vertical resize +2<CR>
 nnoremap <silent> <left> :vertical resize -2<CR>
 nnoremap <silent> <up> :vertical resize +2<CR>
@@ -173,5 +176,5 @@ let g:coc_snippet_prev = '<C-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Use <leader>x for convert visual selected code to snippet
-xmap <Leader>x  <Plug>(coc-convert-snippet)
+xmap <Leader>y  <Plug>(coc-convert-snippet)
 "*--------------------------------------------------------------------------------*
