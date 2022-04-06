@@ -9,7 +9,7 @@
 									 " Configurado por >> Josué Romero
 									 " Twitter >> https://twitter.com/josueromr
 									 
-" importo los archivos de configuración
+" importo los archivos de configuración global
 so ~/AppData/Local/nvim/.config/plugins-config.vim
 so ~/AppData/Local/nvim/.config/plugins.vim
 so ~/AppData/Local/nvim/.config/shortcuts.vim
@@ -37,7 +37,7 @@ set autochdir
 set autoindent
 set confirm
 set scrolloff=1
-set tabstop=3
+set tabstop=2
 set hlsearch
 set ignorecase
 set timeoutlen=200
@@ -63,7 +63,9 @@ let g:gruvbox_italic=1
 let g:gruvbox_improved_warnings=1
 highlight Normal ctermbg=none
 
-" cambio el color del resaltado de sintaxis 
+" color del resaltado de sintaxis 
+autocmd BufEnter * :set signcolumn=number
+autocmd BufEnter * :syntax sync fromstart
 autocmd ColorScheme * highlight keyword         gui=italic cterm=italic guifg=#D3869B
 autocmd ColorScheme * highlight conditional     gui=italic cterm=italic guifg=#D3869B
 autocmd ColorScheme * highlight repeat          gui=italic cterm=italic guifg=#D3869B
@@ -71,5 +73,3 @@ autocmd ColorScheme * highlight exception       gui=italic cterm=italic guifg=#D
 autocmd ColorScheme * highlight comment         gui=italic cterm=italic 
 autocmd ColorScheme * highlight function        gui=italic cterm=italic guifg=#83A598
 autocmd ColorScheme * highlight identifier      gui=italic cterm=italic guifg=#83A598
-autocmd BufEnter * :syntax sync fromstart
-autocmd BufEnter * :set signcolumn=number
