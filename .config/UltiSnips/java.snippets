@@ -1,61 +1,64 @@
-## Access Modifiers
-snippet po "protected" br
+## Modificadores de acceso
+snippet po "protected" b
 protected ${0}
 endsnippet
-snippet pu "public" br
+snippet pu "public" b
 public ${0}
 endsnippet
-snippet pr "private" br
+snippet pr "private" b
 private ${0}
 endsnippet
 
-## Annotations
-snippet before "before" br
+## Anotaciones
+snippet before "before" b
 @Before
 static void ${1:intercept}(${2:args}) { ${0} }
 endsnippet
-snippet mm "@ManyToMany" br
+snippet mm "@ManyToMany" b
 @ManyToMany
 ${0}
 endsnippet
-snippet mo "@ManyToOne" br
+snippet mo "@ManyToOne" b
 @ManyToOne
 ${0}
 endsnippet
-snippet om "@OneToMany" br
+snippet om "@OneToMany" b
 @OneToMany${1:(cascade=CascadeType.ALL)}
 ${0}
 endsnippet
-snippet oo "@OneToOne" br
+snippet oo "@OneToOne" b
 @OneToOne
 ${1}
 endsnippet
 
-## Basic Java packages and import
-snippet jb "import java.beans.$1" br
+## Librerias más utilizadas
+snippet im "import $1" b
+import $1
+endsnippet
+snippet jb "import java.beans.$1" b
 import java.beans.$1
 endsnippet
-snippet js "import javax.swing.$1" br
+snippet js "import javax.swing.$1" b
 import javax.swing.$1
 endsnippet
-snippet jt "import java.text.$1" br
+snippet jt "import java.text.$1" b
 import java.text.$1
 endsnippet
-snippet ji "import java.io.$1" br
+snippet ji "import java.io.$1" b
 import java.io.$1
 endsnippet
-snippet jm "import java.math.$1" br
+snippet jm "import java.math.$1" b
 import java.math.$1
 endsnippet
-snippet jn "import java.net.$1" br
+snippet jn "import java.net.$1" b
 import java.net.$1
 endsnippet
-snippet ju "import java.util.$1" br
+snippet ju "import java.util.$1" b
 import java.util.$1
 endsnippet
 
 ## JavaClass
-snippet javaclass "Template JavaClass" br
+snippet javaclass "Template JavaClass" b
 package ${1:mundo}.`vim_snippets#Filename("$1")`;
 
 public class `vim_snippets#Filename("$1")` {
@@ -73,344 +76,378 @@ public class `vim_snippets#Filename("$1")` {
 endsnippet
 
 ## JavaMainClass
-snippet javamainclass "Template JavaMainClass" br
-package ${1:mundo}.`vim_snippets#Filename("$1")`;
+snippet javamainclass "Template JavaMainClass" b
+package ${1:mundo}.`!v vim_snippets#Filename`;
 
-${3://space for java libraries}
+${3://import java libraries}
 
 /**
   *@author Josué Romero
-	*@date `!v strfvim("%e/%m/%Y" - "%R")` COL
+	*@date `!v strftime("%e/%m/%Y" - "%R")` COL
 */
-public class `vim_snippets#Filename("$1")` {
+public class ${1:`vim_snippets#Filename("$1")`} {
 	
 	public static void main (String[] args) {
 		${2:¡Empieza a Codear!}
+		${4}
 	}
 }
 endsnippet
 
 ## Class
-snippet pcl "public class nameClass {}" br
+snippet pcl "public class nameClass {}" b
 public class `vim_snippets#Filename("$1")` {
 	$1
 }
 endsnippet
-snippet cl "public class nameClass {}" br
+snippet cl "public class nameClass {}" b
 class `vim_snippets#Filename("$1")` {
 	$1
 }
 endsnippet
-snippet in "interface" br
+snippet in "interface" b
 interface `vim_snippets#Filename("$1")` ${2:extends Parent}
 endsnippet
-snippet tc "public class daughterClass extends parentClass" br
+snippet tc "public class daughterClass extends parentClass" b
 public class `vim_snippets#Filename("$1")` extends ${0:TestCase}
 endsnippet
 
+## Constructor
+
+
+## Métodos Getters y Setters
+
+
 ## Class Enhancements
-snippet ext "extends" br
+snippet ext "extends" b
 extends ${0}
 endsnippet
-snippet imp "implements" br
+snippet imp "implements" b
 implements ${0}
 endsnippet
 
-## Comments
-snippet /* "JavaDoc" br
+## JavaDoc
+snippet /* "JavaDoc" b
 /*
 	* @see ${1:short description}
 	* @author Josué Romero
 */
 endsnippet
 
-## Constants
-snippet co "static public final dataType nameVar = value;" br
+## Constantes
+snippet co "static public final dataType nameVar = value;" b
 static public final ${1:String} ${2:var} = ${3};
 endsnippet
-snippet cos "static public final String nameVar = 'vaue';" br
+snippet cos "static public final String nameVar = 'vaue';" b
 static public final String ${1:var} = "${2}";
 endsnippet
-snippet fi "final" br
+snippet fi "final" b
 final $1
 endsnippet
 
-## Conditional Structure
-snippet case "case" br
+## Estructuras de condicionales
+snippet case "case" b
 case $1: $2
 	break;
 endsnippet
-snippet def "default" br
+snippet def "default" b
 default:
 		${1:System.err.println("ERROR. Debe ingresar un valor válido.")}
 endsnippet
-snippet el "else" br
+snippet el "else" b
 else {
 	$1
 }$2
 endsnippet
-snippet eif "else if () { $2 }" br
+snippet eif "else if () { $2 }" b
 else if ($1) {
 	$2
 }$3
 endsnippet
-snippet if "if" br
+snippet if "if" b
 if (${1:condition}) {
 	$2
 }$3
 endsnippet
 
-## Loop Structure
-snippet for "for" br
+## Estructura de bucles
+snippet for "for" b
 for (int i = ${1:0}; i < ${2:var}; i++) {
 	$3
 }$4
 endsnippet
-snippet fore "fore" br
+snippet fore "fore" b
 for (${1:int} e : ${2:array}) {
 	$3
 }$4
 endsnippet
-snippet wh "while" br
+snippet wh "while" b
 while (${1:condition}) {
 	$2
 }$3
 endsnippet
-snippet do "do while" br
+snippet do "do while" b
 do {
 	$1
 } while (${2:condition});$3
 endsnippet
 
 
-## Create a Method
-snippet m "" br
-	${1:void} ${2:method}(${3}) ${4:throws }
+## Estructura de método
+snippet m "template for method" b
+public ${1:void} ${2:nameMethod}(${3}) ${4}
 endsnippet
-##
-## Create a Variable
-snippet v "" br
-	${1:String} ${2:var}${3: = null}${4};
-##
-## Declaration for ArrayList
-snippet d.al
-	List<${1:Object}> ${2:list} = new ArrayList<$1>();${0}
-## Declaration for HashMap
-snippet d.hm
-	Map<${1:Object}, ${2:Object}> ${3:map} = new HashMap<$1, $2>();${0}
-## Declaration for HashSet
-snippet d.hs
-	Set<${1:Object}> ${2:set} = new HashSet<$1>();${0}
-## Declaration for Stack
-snippet d.st
-	Stack<${1:Object}> ${2:stack} = new Stack<$1>();${0}
-##
-## Singleton Pattern
-snippet singlet
-	private static class Holder {
-		private static final ${1:`vim_snippets#Filename("$1")`} INSTANCE = new $1();
-	}
+
+## Declaración de atributos o variables
+snippet attribute "" b
+${1:String} ${2:var}${3: = null}${4};
+endsnippet
+
+## Declaración de ArrayList
+snippet d.al "" b
+List<${1:Object}> ${2:list} = new ArrayList<$1>();${0}
+endsnippet
+## Declaración de HashMap
+snippet d.hm "" b
+Map<${1:Object}, ${2:Object}> ${3:map} = new HashMap<$1, $2>();${0}
+endsnippet
+## Declaración de HashSet
+snippet d.hs "" b
+Set<${1:Object}> ${2:set} = new HashSet<$1>();${0}
+endsnippet
+## Declaración de Stack
+snippet d.st "" b
+Stack<${1:Object}> ${2:stack} = new Stack<$1>();${0}
+endsnippet
+
+## Plantilla para el patron de diseño Singleton
+snippet singleton "" b
+private static class Holder {
+	private static final ${1:`vim_snippets#Filename("$1")`} INSTANCE = new $1();
+}
 
 	private $1() { }
 
-	public static $1 getInstance() {
-		return Holder.INSTANCE;
-	}
-##
-## Enhancements to Methods, variables, classes, etc.
-snippet ab
-	abstract ${0}
-snippet fi
-	final ${0}
-snippet st
-	static ${0}
-snippet sy
-	synchronized ${0}
-##
-## Error Methods
-snippet err
-	System.err.print("${0:Message}");
-snippet errf
-	System.err.printf("${1:Message}", ${0:exception});
-snippet errln
-	System.err.println("${0:Message}");
-##
-## Exception Handling
-snippet as
-	assert ${1:test} : "${2:Failure message}";
-snippet ae
-	assertEquals("${1:Failure message}", ${2:expected}, ${3:actual}); snippet aae
-	assertArrayEquals("${1:Failure message}", ${2:expecteds}, ${3:actuals});
-snippet af
-	assertFalse("${1:Failure message}", ${2:condition});
-snippet at
-	assertTrue("${1:Failure message}", ${2:condition});
-snippet an
-	assertNull("${1:Failure message}", ${2:object});
-snippet ann
-	assertNotNull("${1:Failure message}", ${2:object});
-snippet ass
-	assertSame("${1:Failure message}", ${2:expected}, ${3:actual});
-snippet asns
-	assertNotSame("${1:Failure message}", ${2:expected}, ${3:actual});
-snippet fa
-	fail("${1:Failure message}");
-snippet ca
-	catch(${1:Exception} ${2:e}) ${0}
-snippet thr
-	throw ${0}
-snippet ths
-	throws ${0}
-snippet try
-	try {
-		${0:${VISUAL}}
-	} catch(${1:Exception} ${2:e}) {
-	}
-snippet tryf
-	try {
-		${0:${VISUAL}}
-	} catch(${1:Exception} ${2:e}) {
-	} finally {
-	}
-##
-## Find Methods
-snippet findall
-	List<${1:listName}> ${2:items} = $1.findAll();
-snippet findbyid
-	${1:var} ${2:item} = $1.findById(${3});
-##
-## Javadocs
-snippet /**
-	/**
-	 * ${0}
-	 */
-snippet @au
-	@author `system("grep \`id -un\` /etc/passwd | cut -d \":\" -f5 | cut -d \",\" -f1")`
-snippet @br
-	@brief ${0:Description}
-snippet @fi
-	@file ${0:`vim_snippets#Filename("$1")`}.java
-snippet @pa
-	@param ${0:param}
-snippet @re
-	@return ${0:param}
-##
-## Logger Methods
-snippet debug
-	Logger.debug(${1:param});
-snippet error
-	Logger.error(${1:param});
-snippet info
-	Logger.info(${1:param});
-snippet warn
-	Logger.warn(${1:param});
-
-## Loops
-snippet fore
-	 for (int ${1:e} : ${2:array}) {
-			//System.out.print(${1:e} + ", ");$3
-	 }
-snippet fori
-	 for (int ${1:i}; ${1:i} < ${2}; ${1:i}++) {
-			$3
-	 }
-snippet wh
-	 while (${1:condition}) {
-			$2
-	 }
-snippet do
-	 do {
-			$0
-	 } while($1);
-snippet if
-	 if (${1:condition}) {
-			$2
-	 }
-snippet ife
-	 if (${1:condition}) {
-			$2
-	 } else {
-			$3
-	 }
+public static $1 getInstance() {
+	return Holder.INSTANCE;
+}
 endsnippet
 
-## Main method
-snippet main "Method main" br
+## Mejoras a Métodos, variables, clases, etc
+snippet ab "" b
+abstract ${0}
+endsnippet
+snippet fi "" b
+final ${0}
+endsnippet
+snippet st "" b
+static ${0}
+endsnippet
+snippet sy "" b
+synchronized ${0}
+endsnippet
+
+## Métodos para identificar un error
+snippet err "" b
+System.err.print("${0:Message}");
+endsnippet
+snippet errf "" b
+System.err.printf("${1:Message}", ${0:exception});
+endsnippet
+snippet errln "" b
+System.err.println("${0:Message}");
+endsnippet
+
+## Manejo de excepciones
+snippet as "" b
+assert ${1:test} : "${2:Failure message}";
+endsnippet
+snippet ae "" b
+assertEquals("${1:Failure message}", ${2:expected}, ${3:actual}); snippet aae
+assertArrayEquals("${1:Failure message}", ${2:expecteds}, ${3:actuals});
+endsnippet
+snippet af "" b
+assertFalse("${1:Failure message}", ${2:condition});
+endsnippet
+snippet at "" b
+assertTrue("${1:Failure message}", ${2:condition});
+endsnippet
+snippet an "" b
+assertNull("${1:Failure message}", ${2:object});
+endsnippet
+snippet ann "" b
+assertNotNull("${1:Failure message}", ${2:object});
+endsnippet
+snippet ass "" b
+assertSame("${1:Failure message}", ${2:expected}, ${3:actual});
+endsnippet
+snippet asns "" b
+assertNotSame("${1:Failure message}", ${2:expected}, ${3:actual});
+endsnippet
+snippet fa "" b
+fail("${1:Failure message}");
+endsnippet
+snippet ca "" b
+catch(${1:Exception} ${2:e}) ${0}
+endsnippet
+snippet thr "" b
+throw ${0}
+endsnippet
+snippet ths "" b
+throws ${0}
+endsnippet
+snippet try "" b
+try {
+	${0:${VISUAL}}
+	} catch(${1:Exception} ${2:e}) {
+}
+endsnippet
+snippet tryf "" b
+try {
+	${0:${VISUAL}}
+} catch(${1:Exception} ${2:e}) {
+} finally {
+}
+endsnippet
+
+## Buscar métodos
+snippet findall "" b
+List<${1:listName}> ${2:items} = $1.findAll();
+endsnippet
+snippet findbyid "" b
+${1:var} ${2:item} = $1.findById(${3});
+endsnippet
+
+## Javadocs
+snippet doc "" b
+/**
+  * ${0}
+*/
+endsnippet
+snippet @au "" b
+@author `system("grep \`id -un\` /etc/passwd | cut -d \":\" -f5 | cut -d \",\" -f1")`
+endsnippet
+snippet @b "" b
+@brief ${0:Description}
+endsnippet
+snippet @fi "" b
+@file ${0:`vim_snippets#Filename("$1")`}.java
+endsnippet
+snippet @pa "" b
+@param ${0:param}
+endsnippet
+snippet @re "" b
+@return ${0:param}
+endsnippet
+
+## Métodos registrador
+snippet debug "" b
+Logger.debug(${1:param});
+endsnippet
+snippet error "" b
+Logger.error(${1:param});
+endsnippet
+snippet info "" b
+Logger.info(${1:param});
+endsnippet
+snippet warn "" b
+Logger.warn(${1:param});
+endsnippet
+
+## Método principal
+snippet main "Método principal" b
 public static void main (String[] args) {
 	${0}
 }
 endsnippet
 
-## Print Methods
-snippet s
+## Métodos para imprimir por consola
+snippet s "" b
 System.out.printl("$1");
 endsnippet
-snippet ss
+snippet ss "" b
 System.out.println("$1");
 endsnippet
-snippet sse
+snippet sse "" b
 System.err.println("$1");
 endsnippet
-snippet st
+snippet st "" b
 System.out.print("${0:Message}");
 endsnippet
-snippet sf
+snippet sf "" b
 System.out.printf("${1:Message}", ${0:args});
 endsnippet
-snippet ssa
+snippet ssa "" b
 System.out.println(Arrays.toString(${0}));
 endsnippet
 
-## Render Methods
-snippet ren
-	render(${1:param});
-snippet rena
-	renderArgs.put("${1}", ${2});
-snippet renb
-	renderBinary(${1:param});
-snippet renj
-	renderJSON(${1:param});
-snippet renx
-	renderXml(${1:param});
+## Procesamiento de métodos
+snippet ren "" b
+render(${1:param});
+endsnippet
+snippet rena "" b
+renderArgs.put("${1}", ${2});
+endsnippet
+snippet renb "" b
+renderBinary(${1:param});
+endsnippet
+snippet renj "" b
+renderJSON(${1:param});
+endsnippet
+snippet renx "" b
+renderXml(${1:param});
+endsnippet
 
 ## Setter and Getter Methods
-snippet set
-	public void set${0:}(${1:String} ${1:}) {
-		this.$4 = $4;
-	}
-snippet get
-	public ${1:String} get${2:}() {
-		return this.$0;
-	}
+snippet set "" b
+public void set${0:}(${1:String} ${1:}) {
+	this.$4 = $4;
+}
+endsnippet
+snippet get "" b
+public ${1:String} get${2:}() {
+	return this.$0;
+}
+endsnippet
 
 ## Terminate Methods or Loops
-snippet re
-	return ${0}
-snippet br
-	break;
+snippet re "" b
+return ${0}
+endsnippet
+snippet b "" b
+break;
+endsnippet
 
 ## Test Methods
-snippet t
-	public void test${1:Name}() throws Exception {
-		${0}
-	}
-snippet test
-	@Test
-	public void test${1:Name}() throws Exception {
-		${0}
-	}
+snippet t "" b
+public void test${1:Name}() throws Exception {
+	${0}
+}
+endsnippet
+snippet test "" b
+@Test
+public void test${1:Name}() throws Exception {
+	${0}
+}
+endsnippet
 
 ## Miscellaneous
-snippet action
-	public static void ${1:index}(${2:args}) { ${0} }
-snippet rnf
-	notFound(${1:param});
-snippet rnfin
-	notFoundIfNull(${1:param});
-snippet rr
-	redirect(${1:param});
-snippet ru
-	unauthorized(${1:param});
-snippet unless
-	(unless=${1:param});
+snippet action "" b
+public static void ${1:index}(${2:args}) { ${0} }
+endsnippet
+snippet rnf "" b
+notFound(${1:param});
+endsnippet
+snippet rnfin "" b
+notFoundIfNull(${1:param});
+endsnippet
+snippet rr "" b
+redirect(${1:param});
+endsnippet
+snippet ru "" b
+unauthorized(${1:param});
+endsnippet
+snippet unless "" b
+(unless=${1:param});
+endsnippet
 
