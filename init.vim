@@ -6,12 +6,12 @@
 							"██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
 							"██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║ 
 							"╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
-									 " Configurado por >> Josué Romero
+									 " Creador >> Josué Romero
 									 " Twitter >> https://twitter.com/josueromr
 
 " importo los archivos de configuración global
-so ~/AppData/Local/nvim/.config/plugins-config.vim
 so ~/AppData/Local/nvim/.config/plugins.vim
+so ~/AppData/Local/nvim/.config/plugins-config.vim
 so ~/AppData/Local/nvim/.config/shortcuts.vim
 
 filetype plugin indent on
@@ -31,20 +31,12 @@ set showmatch
 set noshowmode
 set nowrap
 set cursorline
-set splitbelow
 set laststatus=2
-set autochdir
-
-set confirm
+set tabstop=1
 set scrolloff=1
-set tabstop=2
 set hlsearch
 set ignorecase
-set timeoutlen=200
-set confirm
-set suffixesadd=.java
-set omnifunc=syntaxcomplete#Complete
-set inccommand=split
+set splitbelow
 
 " COC
 set encoding=utf-8

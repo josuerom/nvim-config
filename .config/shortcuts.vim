@@ -15,8 +15,9 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-" salir del modo INSERT con <Esc> o <Ctrl+c>
+" salir del modo INSERT con <Esc> <Ctrl+c> o <k+j>
 imap <C-c> <Esc>
+imap kj <Esc>
 
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
 nnoremap <C-k> 35 <C-e>

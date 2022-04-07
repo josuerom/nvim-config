@@ -31,9 +31,6 @@ let g:lightline = {
       \ }
       \}
 
-" cambio el color de los iconos vim-devicons
-autocmd ColorScheme * hi NERDTreeFlags ctermfg=13
-
 " si usted utiliza el autocompletado KITE descomente las dos sgt líneas
 "let g:kite_auto_complete = 1
 "let g:kite_supported_languages = ['lenguaje']

@@ -37,11 +37,11 @@ El presente proyecto describe el proceso que debes seguir para personalizar e in
 ## Herramientas necesarias.
 
 1. Instalar **Windows Terminal** (Opcional)
-2. Instalar manejador de paquetes **Chocolatey & Neovim**
+2. Instalar manejador de paquetes **Chocolatey y Neovim**
 3. Instalar **Git**
 4. Instalar **Node.js**
-5. Descargar archivos publicados en **este repositorio**
-6. Instalar el gestor de plugins **vim plug**
+5. Clonar/Descargar archivos de **este repositorio**
+6. Instalar gestor de plugins **vim plug**
 
 **Tenga en cuenta que:** para instalar Neovim, si o si necesitarás utilizar todas esas 5-6 herramientas, para ello aquí conocerás el paso a paso para instalar cada una correctamente sin errores ni falsa información, cabe mensionar que, *Windows PowerShell o la CMD* vienen instalado de fabrica en la pc's con Windows, por eso no será necesario explicarte cómo ejecutarlo, ni instalarlo, ni abrirlo. ¡Si estas acá metido es porque ya debes de saber abrirlo y ejecutar uno que otro comando. Si no sabes pues te invito a mira un video en YT. ¡Listo ya estás preparado!.
 
@@ -171,7 +171,7 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
 josueromram@outlook.es
 ```
 
-# Cordial saludo, le aviso que me encuentro trabajando duro en esté proyecto, así que constantemente publico mejores cambios, gracias.
+### Estimado saludo, tenga en cuenta que, me encuentro trabajando duro en esté proyecto, así que constantemente publico actualizaciones, gracias.
 
 <p align="center" width="0">
    <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/neovim-mark-flat.png">
