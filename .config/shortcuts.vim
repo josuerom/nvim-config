@@ -73,9 +73,9 @@ nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>x :qa!<CR>
 
 " abrir el árbol, side bar o NERDTree
-map <Leader>e :NERDTreeToggle<CR>
-map <Leader>p :Explore<CR>
-map <Leader>f :Files<CR>
+nmap <Leader>e :NERDTreeToggle<CR>
+nmap <Leader>p :Explore<CR>
+nmap <Leader>f :FZF<CR>
 
 " navegación rápida entre buffers abiertos
 nnoremap <silent><C-h> :TmuxNavigateLeft<CR>
