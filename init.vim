@@ -32,8 +32,7 @@ set noshowmode
 set nowrap
 set cursorline
 set laststatus=2
-set tabstop=1
-set scrolloff=1
+set tabstop=2
 set hlsearch
 set ignorecase
 set splitbelow
