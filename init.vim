@@ -8,7 +8,7 @@
 							"╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
 									 " Configurado por >> Josué Romero
 									 " Twitter >> https://twitter.com/josueromr
-									 
+
 " importo los archivos de configuración global
 so ~/AppData/Local/nvim/.config/plugins-config.vim
 so ~/AppData/Local/nvim/.config/plugins.vim
@@ -34,7 +34,7 @@ set cursorline
 set splitbelow
 set laststatus=2
 set autochdir
-set autoindent
+
 set confirm
 set scrolloff=1
 set tabstop=2

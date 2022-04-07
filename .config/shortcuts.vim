@@ -34,25 +34,30 @@ nnoremap <Leader>dp :!python %<CR>
 " con <Ctrl+t> se abre la terminal cmd
 nnoremap <C-t> :call OpenTerminal()<CR>
 
-" elimina todos los espacios vacíos que hayan en el archivo con <F2>
-nmap <F2> :g/^\s\+$/s/\s\+//<CR>
-" actualiza nvim o reinica con <F3>
-nmap <F3> :so %<CR>
-" <F4> <F5> y <F6> se encuentran disponibles
+" eliminar todos los espacios vacíos que hayan en el archivo con <F1>
+nmap <silent> <F11> :g/^\s\+$/s/\s\+//<CR>
+" actualiza nvim o reinica con <F2>
+nmap <F2> :so %<CR>
+" abre el archivo de configuración inicial de nvim con <F3>
+nnoremap <F3> :e $MYVIMRC<CR>
+" crear un archivo en nueva pestaña con <F4>
+nnoremap <F4> :tabnew 
+
+" <F> <F> y <F> se encuentran disponibles
 
 " abre el archivo de configuración global con <space+ni>
-" presione <F7> para abrir una terminal flotante
-" con <F11> matas todas las terminales en ejecución
-nnoremap <silent> <F7> :FloatermNew<CR>
-tnoremap <silent> <F7> <C-\><C-n>:FloatermNew<CR>
-nnoremap <silent> <F8> :FloatermNext<CR>
-tnoremap <silent> <F8> <C-\><C-n>:FloatermNext<CR>
-nnoremap <silent> <F9> :FloatermPrev<CR>
-tnoremap <silent> <F9> <C-\><C-n>:FloatermPrev<CR>
-nnoremap <silent> <F10> :FloatermToggle<CR>
-tnoremap <silent> <F10> <C-\><C-n>:FloatermToggle<CR>
-nnoremap <silent> <F11> :FloatermKill<CR>
-tnoremap <silent> <F11> <C-\><C-n>:FloatermKill<CR>
+" presione <F5> para abrir una terminal flotante
+" con <F9> matas todas las terminales en ejecución
+nnoremap <silent> <F5> :FloatermNew<CR>
+tnoremap <silent> <F5> <C-\><C-n>:FloatermNew<CR>
+nnoremap <silent> <F6> :FloatermNext<CR>
+tnoremap <silent> <F6> <C-\><C-n>:FloatermNext<CR>
+nnoremap <silent> <F7> :FloatermPrev<CR>
+tnoremap <silent> <F7> <C-\><C-n>:FloatermPrev<CR>
+nnoremap <silent> <F8> :FloatermToggle<CR>
+tnoremap <silent> <F8> <C-\><C-n>:Floaterm<CR>
+nnoremap <silent> <F9> :FloatermKill<CR>
+tnoremap <silent> <F9> <C-\><C-n>:FloatermKill<CR>
 
 " para guardar el archivo
 nnoremap <Leader>w :w<CR>
@@ -75,20 +80,22 @@ nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 " git
 nnoremap <Leader>gg :G<CR>
 nnoremap <Leader>gv :GV<CR>
-nnoremap <Leader>ga :Git add -A<CR>
+nnoremap <Leader>gy :Git init<CR>
 nnoremap <Leader>gs :Git status<CR>
-nnoremap <Leader>gcc :Git commit -m "Best Update👨‍💻"<CR>
-nnoremap <Leader>gc :Git commit -m "Bug 🪲"
+nnoremap <Leader>ga :Git add -A<CR>
+nnoremap <Leader>gc :Git commit -m "New change👨‍💻"<CR>
+nnoremap <Leader>gcc :Git commit -m "Solution to an bug 🪲"
+nnoremap <Leader>grr :Git remote add origin https://github.com/josuerom/.git
+nnoremap <Leader>gpp :Git push -u origin main<CR>
 nnoremap <Leader>go :Git log --oneline<CR>
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gf :Git fetch<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gm :Git merge<CR>
-nnoremap <Leader>ge :Git revert #commit
+nnoremap <Leader>ge :Git revert 
 
 " flujo instantaneo con COC
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
@@ -96,10 +103,6 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <Leader>ii :vsp<CR>
 " dividir pantalla en dos [horizontal] con space+o
 nnoremap <Leader>oo :sp<CR>
-" crear un archivo en nueva pestaña con <Ctrl+n>
-nnoremap <C-n> :tabnew 
-" abre el archivo de configuración inicial de nvim con <space+ni>
-nnoremap <Leader>ni :e $MYVIMRC<CR>
 
 " navegación entre pestañas abiertas con <spacer+l> y <space+h>
 nnoremap <Leader>l :bnext<CR>
@@ -140,14 +143,8 @@ nnoremap m :m .+1<CR>==
 " copiar ruta general del archivo abierto con <space+kp>
 nnoremap <Leader>kp :let @*=expand("%")<CR>
 
-" Use <Ctrl+space> para gatillar la entrega de sugerencias de COC
-" aunque automaticamente siempre se gatilla
-"if &filetype == 'java' || &filetype == 'javascript'
-"  inoremap <c-space> <C-x><C-u>
-"else
-  inoremap <silent><expr> <C-space> coc#refresh()
-  imap <silent><expr> <C-space> coc#refresh()
-"endif
+inoremap <silent><expr> <C-space> coc#refresh()
+imap <silent><expr> <C-space> coc#refresh()
 
 " con las feclas ajustas el tamaño de las pestañas
 nnoremap <silent> <right> :vertical resize +2<CR>
@@ -164,17 +161,19 @@ nnoremap <silent><nowait> <space>cuu  :<C-u>CocUpdate<CR>
 " desintalar extensiones
 nnoremap <silent><nowait> <space>cdd  :<C-u>CocUninstall coc-
 
-" configuration for the suggerences of coc-snippets
-" Use <C-l> for trigger snippet expand.
+" Use <C-l> para expandir el fragmento de código
 imap <C-l> <Plug>(coc-snippets-expand)
-" Use <C-j> for select text for visual placeholder of snippet.
+" Use <C-j> para seleccionar texto para el marcador de posición visual del fragmento
 vmap <C-j> <Plug>(coc-snippets-select)
-" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+
+" Use <C-j> para saltar al siguiente marcador de posición
 let g:coc_snippet_next = '<C-j>'
-" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+" Use <C-k> para saltar al marcador de posición anterior
 let g:coc_snippet_prev = '<C-k>'
-" Use <C-j> for both expand and jump (make expand higher priority.)
+
+" Use <C-j> tanto para expandir como para saltar (haga que la expansión sea de mayor prioridad)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
-" Use <leader>x for convert visual selected code to snippet
+" Use <líder+y> para convertir el código visual seleccionado en un fragmento
 xmap <Leader>y  <Plug>(coc-convert-snippet)
+
 "*--------------------------------------------------------------------------------*

@@ -72,13 +72,13 @@ command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 " configuración para la funcionalidad vim-floaterm
-let g:floaterm_keymap_new = '<F7>'
-let g:floaterm_keymap_next = '<F8>'
-let g:floaterm_keymap_prev = '<F9>'
-let g:floaterm_keymap_toggle = '<F10>'
-let g:floaterm_keymap_kill = '<F11>'
+let g:floaterm_keymap_new = '<F5>'
+let g:floaterm_keymap_next = '<F6>'
+let g:floaterm_keymap_prev = '<F7>'
+let g:floaterm_keymap_toggle = '<F8>'
+let g:floaterm_keymap_kill = '<F9>'
 
-" Search uo in FZF
+" Cursor up search in FZF(Line Fuzzy Finder)
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 
 "*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
@@ -122,7 +122,7 @@ endfunction
 " ejecuta el sgt comando en la PowerShell como administrador: pip install pynvim
 " así no deberá aparecerte más.
 
-"*------------------------- CONFIGURACIÓN DE COC, LA DEJO EN INGLES -----------------------------*
+"*---------------------- CONFIGURACIÓN SENCILLA DE COC, LA DEJO EN INGLES ---_----------------------*
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("nvim-0.6.1") || has("patch-8.1.1564")
@@ -143,19 +143,8 @@ function! s:check_back_space() abort
 endfunction
 let g:coc_snippet_next = '<TAB>'
 
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
-    \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Symbol renaming.
-nmap <Leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
 nmap <Leader>fo <Plug>(coc-format-selected)
@@ -168,15 +157,3 @@ augroup mygroup
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
-
-" Applying codeAction to the selected region.
-" Example: `<Leader>aap` for current paragraph
-xmap <Leader>a  <Plug>(coc-codeaction-selected)
-nmap <Leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying codeAction to the current buffer.
-nmap <Leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <Leader>qf  <Plug>(coc-fix-current)
-" Run the Code Lens action on the current line.
-nmap <Leader>cl  <Plug>(coc-codelens-action)
