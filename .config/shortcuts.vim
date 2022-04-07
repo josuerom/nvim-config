@@ -32,6 +32,7 @@ nnoremap <Leader>dd :!node %<CR>
 nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
+nnoremap <Leader>jj :JavaCompleteExAddImport<CR>
 
 " con <Ctrl+t> se abre la terminal
 nnoremap <C-t> :call OpenTerminal()<CR>
@@ -76,6 +77,10 @@ nnoremap <Leader>x :qa!<CR>
 nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>p :Explore<CR>
 nmap <Leader>f :FZF<CR>
+
+" comentar por líneas con <}+}>
+vmap }} <plug>NERDCommenteirToggle
+nmap }} <plug>NERDCommenterToggle
 
 " navegación rápida entre buffers abiertos
 nnoremap <silent><C-h> :TmuxNavigateLeft<CR>

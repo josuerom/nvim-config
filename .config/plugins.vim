@@ -20,6 +20,7 @@ Plug 'itchyny/lightline.vim'
 
 " barra lateral - iconos
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 " búsqueda - agrupador
 Plug 'easymotion/vim-easymotion'
@@ -30,11 +31,10 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " autocompletado - snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 
 " IDE
 Plug 'terryma/vim-multiple-cursors'
-Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -44,6 +44,6 @@ Plug 'yggdroot/indentline'
 
 " git en nvim
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/gv.vim'
+"Plug 'junegunn/gv.vim'
 
 call plug#end()

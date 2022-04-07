@@ -36,6 +36,8 @@ set tabstop=2
 set hlsearch
 set ignorecase
 set splitbelow
+set confirm
+set diffopt+=vertical
 
 " COC
 set encoding=utf-8
@@ -46,6 +48,8 @@ set cmdheight=2
 set updatetime=100
 set shortmess+=c
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+autocmd BufEnter * :set signcolumn=number
+autocmd FileType scss setl iskeyword+=@-@
 
 " configuración del tema
 colorscheme gruvbox
@@ -55,7 +59,6 @@ let g:gruvbox_improved_warnings=1
 highlight Normal ctermbg=none
 
 " color del resaltado de sintaxis 
-autocmd BufEnter * :set signcolumn=number
 autocmd BufEnter * :syntax sync fromstart
 autocmd ColorScheme * highlight keyword         gui=italic cterm=italic guifg=#D3869B
 autocmd ColorScheme * highlight conditional     gui=italic cterm=italic guifg=#D3869B

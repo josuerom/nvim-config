@@ -1,4 +1,4 @@
-// Este programa halla el producto de los 10 primeros números impares.
+/ Este programa halla el producto de los 10 primeros números impares.
 public class MultiplicacionImpares {
 
 	public static void main(String[] args) {

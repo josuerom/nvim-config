@@ -32,14 +32,17 @@ let g:lightline = {
       \ }
       \}
 
-" si usted utiliza el autocompletado KITE descomente las dos sgt líneas
-"let g:kite_auto_complete = 1
+" si usted utiliza el autocompletado KITE descomente la sgt línea y agregue el
+" lenguaje que desea.
 "let g:kite_supported_languages = ['lenguaje']
 let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-java']
 
-" cuándo este utilizando KITE desabilite la entrega de sugerencias de COC, descomente la sgt línea:
-"autocmd FileType <lenguaje-aquí> let b:coc_suggest_disable = 1
-autocmd FileType scss setl iskeyword+=@-@
+" configuración de ultisnips
+let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/.config/UltiSnips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<C-_>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 " cerrado automatico de la barra lateral o árbol
 let NERDTreeShowHidden=1

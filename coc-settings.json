@@ -1,0 +1,152 @@
+{
+  // Python
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider": "black",
+  // "python.formatting.blackPath": "black",
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": true,
+
+  // Rust
+  "rust-analyzer.inlayHints.typeHints": false,
+
+  // Java
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-11",
+      "path": "D:\\Program Files\\Java\\jdk-11.0.13\\bin",
+      "default": true
+    }
+  ],
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.comments.enabled": true,
+  "java.signatureHelp.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "java.selectionRange.enabled": true,
+
+  // Emmet
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "svelte": "html"
+  },
+
+  // Javascript and TypeScript
+  "typescript.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+
+  // Svelte
+  "svelte.enable-ts-plugin": true,
+
+  // Eslint
+  "eslint.packageManager": "yarn",
+  "eslint.nodePath": "/usr/bin/node",
+  "eslint.autoFixOnSave": true,
+
+  // Css
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "wxss.validate": false,
+
+  // Lua
+  "Lua.diagnostics.globals": ["vim"],
+
+  // Deno
+  // "deno.enable": true,
+  // "deno.lint": true,
+  // "deno.unstable": true,
+  // "prettier.disableLanguages": ["javascript", "typescript", "json"],
+  // "tsserver.enable": false,
+
+  // Tabnine
+  "tabnine.shortcut": "TabNine",
+  "tabnine.priority": 1,
+
+  // Diagnostic Sever
+  "diagnostic-languageserver.formatFiletypes": {
+    "lua": "lua-format",
+    "sh": "shfmt",
+    "zsh": "shfmt"
+  },
+
+  "diagnostic-languageserver.filetypes": {
+    "vim": "vint"
+  },
+
+  // Snippets
+  "snippets.priority": 1,
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "snippets.author": "Josué Romero",
+  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/.config/UltiSnips",
+  "snippets.ultisnips.enable": true,
+
+  // Completion Icons
+  "suggest.completionItemKindLabels": {
+    "method": "  ",
+    "function": "  ",
+    "variable": "[]",
+    "field": "  ",
+    "typeParameter": "<>",
+    "constant": "  ",
+    "class": "  ",
+    "interface": " 蘒",
+    "struct": "  ",
+    "event": "  ",
+    "operator": "  ",
+    "module": "  ",
+    "property": "  ",
+    "enum": " 練",
+    "reference": "  ",
+    "keyword": "  ",
+    "file": "  ",
+    "folder": " ﱮ ",
+    "color": "  ",
+    "unit": " 塞 ",
+    "snippet": " ",
+    "text": "  ",
+    "constructor": "  ",
+    "value": "  ",
+    "enumMember": "  ",
+    "default": "  "
+  },
+
+  "suggest.highPrioritySourceLimit": 10,
+  "suggest.languageSourcePriority": 95,
+  "suggest.lowPrioritySourceLimit": 90,
+
+  "coc.source.file.priority": 60,
+  "coc.source.buffer.priority": 50,
+  "yank.priority": 10,
+  "suggest.triggerCompletionWait": 30,
+
+  "suggest.autoTrigger": "always",
+  "suggest.localityBonus": true,
+  "suggest.fixInsertedWord": true,
+  "suggest.enablePreselect": true,
+  "suggest.removeDuplicateItems": true,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "suggest.defaultSortMethod": "alphabetical",
+  "suggest.numberSelect": false,
+  "suggest.triggerAfterInsertEnter": false,
+  "suggest.detailField": "menu",
+  "suggest.keepCompleteopt": false,
+  "suggest.noselect": false,
+
+  // Linting Icons
+  "diagnostic.errorSign": " ",
+  "diagnostic.warningSign": " ",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+
+  // CoC
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.formatOnType": true,
+
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+}
