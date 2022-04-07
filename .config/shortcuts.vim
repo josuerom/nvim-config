@@ -45,8 +45,6 @@ nnoremap <F3> :e $MYVIMRC<CR>
 " crear un archivo en una nueva pestaña, con <F4>
 nnoremap <F4> :tabnew 
 
-" <F10> <F11> y <F12> se encuentran disponibles
-
 " presione <F5> para abrir una terminal flotante en el centro de la pantalla
 " con <F9> matas todas las terminales en ejecución y demás
 nnoremap <silent> <F5> :FloatermNew<CR>
@@ -60,7 +58,14 @@ tnoremap <silent> <F8> <C-\><C-n>:Floaterm<CR>
 nnoremap <silent> <F9> :FloatermKill<CR>
 tnoremap <silent> <F9> <C-\><C-n>:FloatermKill<CR>
 
-" para guardar el archivo <space+w>
+" copia la ruta general del archivo abierto con <F10>
+nnoremap <F10>kp :let @*=expand("%")<CR>
+
+" modo goyo sin distracciones
+nmap <F11> :Goyo<CR>
+imap <F11> <Esc> :Goyo<CR>
+
+"para guardar el archivo <space+w>
 nnoremap <Leader>w :w<CR>
 " para cerrar algun búfer o pestaña <space+q>
 nnoremap <Leader>q :q!<CR>
@@ -147,9 +152,6 @@ nnoremap m :m .+1<CR>==
 " por ejemplo: si tienes un: 'Hi User Name' al presionar cs+el-simbolo-a-usar, la cadena de carácteres
 " magicamente se cambiará sin necesidad de realizarlo manualmente.
 
-" copiar ruta general del archivo abierto con <space+kp>
-nnoremap <Leader>kp :let @*=expand("%")<CR>
-
 " entrega de sugerencias automatica de COC
 imap <silent><expr> <C-space> coc#refresh()
 
@@ -159,14 +161,12 @@ nnoremap <silent> <left> :vertical resize -2<CR>
 nnoremap <silent> <up> :vertical resize +2<CR>
 nnoremap <silent> <down> :vertical resize -2<CR>
 
-" acceso rápido a las funcionalidades de CocList
-nnoremap <silent><nowait> <Leader>ca :<C-u>CocList extensions<CR>
-" administrar snippets
-nnoremap <silent><nowait> <Leader>cs :<C-u>CocList snippets<CR>
+" administrar todos los snippets con <F12>
+nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
 " actualizar extensiones
-nnoremap <silent><nowait> <Leader>cu :<C-u>CocUpdate<CR>
+nnoremap <silent><nowait> <Leader>cuu :<C-u>CocUpdate<CR>
 " desintalar extensiones
-nnoremap <silent><nowait> <Leader>ci :<C-u>CocUninstall coc-
+nnoremap <silent><nowait> <Leader>cii :<C-u>CocUninstall coc-
 
 " Use <C-j> para saltar al siguiente marcador de posición
 let g:coc_snippet_next = '<C-j>'
