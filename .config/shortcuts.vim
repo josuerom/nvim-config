@@ -9,6 +9,7 @@
 let mapleader = " "
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
+" para usar los carácteres <h, j, k & l>
 noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
@@ -18,10 +19,10 @@ noremap <right> <nop>
 imap <C-c> <Esc>
 
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
-nnoremap <C-k> 20 <C-e>
-nnoremap <C-j> 20 <C-y>
+nnoremap <C-k> 35 <C-e>
+nnoremap <C-j> 35 <C-y>
 
-" coloca un punto y coma al final de línea situada usando <space+,>
+" coloca un punto y coma al final de la línea, con <space+,>
 nnoremap <Leader>, $a;<Esc>
 
 " ejecuta archivos .js & .ts con Nodejs
@@ -31,23 +32,22 @@ nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
 
-" con <Ctrl+t> se abre la terminal cmd
+" con <Ctrl+t> se abre la terminal
 nnoremap <C-t> :call OpenTerminal()<CR>
 
 " eliminar todos los espacios vacíos que hayan en el archivo con <F1>
-nmap <silent> <F11> :g/^\s\+$/s/\s\+//<CR>
-" actualiza nvim o reinica con <F2>
+nmap <silent> <F1> :g/^\s\+$/s/\s\+//<CR>
+" reinicia neovim con <F2>
 nmap <F2> :so %<CR>
-" abre el archivo de configuración inicial de nvim con <F3>
+" abre el archivo de configuración inicial con <F3>
 nnoremap <F3> :e $MYVIMRC<CR>
-" crear un archivo en nueva pestaña con <F4>
+" crear un archivo en una nueva pestaña, con <F4>
 nnoremap <F4> :tabnew 
 
-" <F> <F> y <F> se encuentran disponibles
+" <F10> <F11> y <F12> se encuentran disponibles
 
-" abre el archivo de configuración global con <space+ni>
-" presione <F5> para abrir una terminal flotante
-" con <F9> matas todas las terminales en ejecución
+" presione <F5> para abrir una terminal flotante en el centro de la pantalla
+" con <F9> matas todas las terminales en ejecución y demás
 nnoremap <silent> <F5> :FloatermNew<CR>
 tnoremap <silent> <F5> <C-\><C-n>:FloatermNew<CR>
 nnoremap <silent> <F6> :FloatermNext<CR>
@@ -59,11 +59,11 @@ tnoremap <silent> <F8> <C-\><C-n>:Floaterm<CR>
 nnoremap <silent> <F9> :FloatermKill<CR>
 tnoremap <silent> <F9> <C-\><C-n>:FloatermKill<CR>
 
-" para guardar el archivo
+" para guardar el archivo <space+w>
 nnoremap <Leader>w :w<CR>
-" para cerrar algun búfer o pestaña
+" para cerrar algun búfer o pestaña <space+q>
 nnoremap <Leader>q :q!<CR>
-" para salir rápidamente de nvim
+" para salir rápidamente de nvim <space+x>
 nnoremap <Leader>x :qa!<CR>
 
 " abrir el árbol, side bar o NERDTree
@@ -77,7 +77,7 @@ nnoremap <silent><C-j> :TmuxNavigateDown<CR>
 nnoremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
-" git
+" atajos para git
 nnoremap <Leader>gg :G<CR>
 nnoremap <Leader>gv :GV<CR>
 nnoremap <Leader>gy :Git init<CR>
@@ -112,6 +112,12 @@ nmap <Leader>dl :bdelete<CR>
 " atajo de búsqueda con easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
 
+" atajos para el gestor vim-plug
+nnoremap <Leader>pi :PlugInstall<CR>
+nnoremap <Leader>pc :PlugClean<CR>
+nnoremap <Leader>pu :PlugUpdate<CR>
+nnoremap <Leader>pg :PlugUpgrade<CR>
+
 " indentar líneas y bloques en cualquier modo VISUAL
 vnoremap < <gv
 vnoremap > >gv
@@ -143,7 +149,7 @@ nnoremap m :m .+1<CR>==
 " copiar ruta general del archivo abierto con <space+kp>
 nnoremap <Leader>kp :let @*=expand("%")<CR>
 
-inoremap <silent><expr> <C-space> coc#refresh()
+" entrega de sugerencias automatica de COC
 imap <silent><expr> <C-space> coc#refresh()
 
 " con las feclas ajustas el tamaño de las pestañas
@@ -153,27 +159,22 @@ nnoremap <silent> <up> :vertical resize +2<CR>
 nnoremap <silent> <down> :vertical resize -2<CR>
 
 " acceso rápido a las funcionalidades de CocList
-nnoremap <silent><nowait> <space>cex  :<C-u>CocList extensions<CR>
+nnoremap <silent><nowait> <Leader>ca :<C-u>CocList extensions<CR>
 " administrar snippets
-nnoremap <silent><nowait> <space>csn  :<C-u>CocList snippets<CR>
+nnoremap <silent><nowait> <Leader>cs :<C-u>CocList snippets<CR>
 " actualizar extensiones
-nnoremap <silent><nowait> <space>cuu  :<C-u>CocUpdate<CR>
+nnoremap <silent><nowait> <Leader>cu :<C-u>CocUpdate<CR>
 " desintalar extensiones
-nnoremap <silent><nowait> <space>cdd  :<C-u>CocUninstall coc-
-
-" Use <C-l> para expandir el fragmento de código
-imap <C-l> <Plug>(coc-snippets-expand)
-" Use <C-j> para seleccionar texto para el marcador de posición visual del fragmento
-vmap <C-j> <Plug>(coc-snippets-select)
+nnoremap <silent><nowait> <Leader>ci :<C-u>CocUninstall coc-
 
 " Use <C-j> para saltar al siguiente marcador de posición
 let g:coc_snippet_next = '<C-j>'
 " Use <C-k> para saltar al marcador de posición anterior
 let g:coc_snippet_prev = '<C-k>'
 
-" Use <C-j> tanto para expandir como para saltar (haga que la expansión sea de mayor prioridad)
+" Use <C-j> para saltar a los demás marcadores de posición
 imap <C-j> <Plug>(coc-snippets-expand-jump)
-" Use <líder+y> para convertir el código visual seleccionado en un fragmento
+" Use <space+y> para convertir el código visual seleccionado en un fragmento
 xmap <Leader>y  <Plug>(coc-convert-snippet)
 
 "*--------------------------------------------------------------------------------*

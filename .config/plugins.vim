@@ -36,7 +36,7 @@ Plug 'honza/vim-snippets'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-"Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
