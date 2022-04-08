@@ -1,21 +1,5 @@
 priority -50
 
-############
-#  COMMON  #
-############
-
-# The smart snippets use a global options called
-# "g:ultisnips_javascript.{option}" which can control the format
-# of trailing semicolon, space before function paren, etc.
-#
-# e.g.
-# let g:ultisnips_javascript = {
-#      \ 'keyword-spacing': 'always',
-#      \ 'semi': 'never',
-#      \ 'space-before-function-paren': 'always',
-#      \ }
-
-
 global !p
 from javascript_snippets import (
 	semi, space_before_function_paren, keyword_spacing
@@ -163,7 +147,7 @@ snippet de
 debugger`!p snip.rv = semi(snip)`
 endsnippet
 snippet cl "console.log"
-console.log(${0})`!p snip.rv = semi(snip)`
+console.log('$2', $1);
 endsnippet
 snippet cd "console.debug"
 console.debug(${0})`!p snip.rv = semi(snip)`
@@ -222,4 +206,33 @@ snippet clstr "console.log stringified"
 console.log(JSON.stringify(${0}, null, 2))`!p snip.rv = semi(snip)`
 endsnippet
 
-# vim:ft=snippets:
+## Adicionales
+snippet c "const $1 = $2"
+const $1 = $2;
+endsnippet
+
+snippet co "const $1 = $2 => $3"
+const $1 = $2 => $3
+endsnippet
+
+snippet ar "declarar arreglo"
+const ${1:numbers} = [$2];
+endsnippet
+
+snippet for "for"
+for (i = ${1:0}; i < ${2:var}; i++) {
+	$0
+}
+endsnippet
+
+snippet re "return"
+return $1;
+endsnippet
+
+snippet .reduce "reduce((acc, el) => )"
+.reduce((acc, el) => $1);
+endsnippet
+
+snippet Object "Object.entries($1).reduce((acc, el) => $2)"
+Object.entries($1).reduce((acc, el) => $2);
+endsnippet

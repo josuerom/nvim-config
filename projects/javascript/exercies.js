@@ -12,3 +12,5 @@ for (i = 0, acc = 0; i < 17; i++) {
   }
 }
 console.log('Cantidad de ceros =', acc);
+
+
