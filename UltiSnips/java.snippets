@@ -161,24 +161,6 @@ if len(args) == 0:
 }
 endsnippet
 
-## JavaClass
-snippet javaclass "Plantilla JavaClass" b
-package ${1:mundo}.`!p snip.rv = snip.basename`;
-
-public class `!p snip.rv = snip.basename` {
-	/* Atributos */
-	$1
-
-	/* Constructor */
-	public `!p snip.rv = snip.basename`($2) {
-		this.$3 = $3;
-	}
-
-	/* Métodos */
-	$4
-}
-endsnippet
-
 ## JavaMainClass
 snippet javamainclass "Plantilla JavaMainClass" b
 package ${1:interfaz}.`!p snip.rv = snip.basename`;
@@ -195,6 +177,24 @@ public class `!p snip.rv = snip.basename` {
 		${2:¡Empieza a Codear!}
 		${4}
 	}
+}
+endsnippet
+
+## JavaClass
+snippet javaclass "Plantilla JavaClass" b
+package ${1:mundo}.`!p snip.rv = snip.basename`;
+
+public class `!p snip.rv = snip.basename` {
+	/* Atributos */
+	$2
+
+	/* Constructor */
+	public `!p snip.rv = snip.basename`($3) {
+		this.$4 = $4;
+	}
+
+	/* Métodos */
+	$5
 }
 endsnippet
 

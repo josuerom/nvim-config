@@ -83,7 +83,7 @@
     "typescript": ["javascript"]
   },
   "snippets.author": "Josué Romero",
-  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/.config/UltiSnips",
+  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/UltiSnips",
   "snippets.ultisnips.enable": true,
 
   // Completion Icons
