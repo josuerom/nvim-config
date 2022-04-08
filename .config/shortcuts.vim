@@ -32,13 +32,12 @@ nnoremap <Leader>dd :!node %<CR>
 nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
-nnoremap <Leader>jj :JavaCompleteExAddImport<CR>
 
 " con <Ctrl+t> se abre la terminal
 nnoremap <C-t> :call OpenTerminal()<CR>
 
 " eliminar todos los espacios vacíos que hayan en el archivo con <F1>
-nmap <silent> <F1> :g/^\s\+$/s/\s\+//<CR>
+"nmap <F1> :g/^\s\+$/s/\s\+//<CR>
 " reinicia neovim con <F2>
 nmap <F2> :so %<CR>
 " abre el archivo de configuración inicial con <F3>
@@ -78,9 +77,9 @@ nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>p :Explore<CR>
 nmap <Leader>f :FZF<CR>
 
-" comentar por líneas con <}+}>
+" comentar líneas con <}+}>
 vmap }} <plug>NERDCommenteirToggle
-nmap }} <plug>NERDCommenterToggle
+nmap }} <plug>NERDCommenteirToggle
 
 " navegación rápida entre buffers abiertos
 nnoremap <silent><C-h> :TmuxNavigateLeft<CR>
@@ -182,5 +181,3 @@ let g:coc_snippet_prev = '<C-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Use <space+y> para convertir el código visual seleccionado en un fragmento
 xmap <Leader>y  <Plug>(coc-convert-snippet)
-
-"*--------------------------------------------------------------------------------*
