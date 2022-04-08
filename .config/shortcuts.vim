@@ -78,8 +78,9 @@ nmap <Leader>p :Explore<CR>
 nmap <Leader>f :FZF<CR>
 
 " comentar líneas con <}+}>
-vmap }} <plug>NERDCommenteirToggle
-nmap }} <plug>NERDCommenteirToggle
+vmap }} <plug>NERDCommenterToggle
+nmap }} <plug>NERDCommenterToggle
+imap }} <plug>NERDCommenterToggle
 
 " navegación rápida entre buffers abiertos
 nnoremap <silent><C-h> :TmuxNavigateLeft<CR>

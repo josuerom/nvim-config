@@ -34,6 +34,7 @@ Plug 'SirVer/ultisnips'
 
 " IDE
 Plug 'terryma/vim-multiple-cursors'
+Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'

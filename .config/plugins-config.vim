@@ -38,6 +38,7 @@ let g:lightline = {
 let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-java']
 
 " configuración de ultisnips
+"let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<C-}>"
@@ -135,7 +136,6 @@ function! OpenTerminal()
     " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
     " línea (81) así: execute 'sp term://zsh'
     execute "sp term://cmd"
-
     " apagar números
     execute "set nonu"
     execute "set nornu"
