@@ -566,3 +566,27 @@ public abstract class`!p snip.rv = snip.basename` extends ${1:parentClass} {
 	public abstract void get${2:Name}();$0
 }
 endsnippet
+
+snippet ritar "Print invers array" b
+for (int $1 = ($2.length-1); $1 >= 0; $1--) {
+	//int  = $2[$1];
+	if ($1 > 0) {
+		System.out.print($2[$1] + ", ");
+	} else {
+		System.out.print($2[$1] + "]");
+	}
+}
+endsnippet
+
+snippet wl "Surround with ReadWriteLock.writeLock" b
+$1.writeLock().lock();
+try {
+	$2
+} finally {
+	$1.writeLock().unlock();
+}
+endsnippet
+
+snippet st "String" b
+String $1 = " ";$0
+endsnippet
