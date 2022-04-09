@@ -4,7 +4,7 @@
 							"██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
 							"██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
 							"██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
-							"██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║ 
+							"██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║
 							"╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
 									 " Creador >> Josué Romero
 									 " Twitter >> https://twitter.com/josueromr
@@ -24,7 +24,6 @@ set clipboard=unnamedplus
 set background=dark
 set showcmd
 set ruler
-set termencoding=utf-8
 set sw=2
 set termguicolors
 set showmatch
@@ -41,16 +40,19 @@ set diffopt+=vertical
 
 " COC
 set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
 set hidden
 set nobackup
 set nowritebackup
 set cmdheight=2
 set updatetime=100
 set shortmess+=c
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " ajustes para el tema gruvbox
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark="medium"
+let no_buffers_menu=1
+
 highlight Normal ctermbg=none
 colorscheme gruvbox

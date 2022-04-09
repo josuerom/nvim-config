@@ -39,9 +39,10 @@ let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-java']
 
 " configuración de ultisnips
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
-"let g:UltiSnipsListSnippets="<C-,>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsEditSplit="vertical"
 
 " cerrado automatico de la barra lateral o árbol
 let NERDTreeShowHidden=1
@@ -51,8 +52,9 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
-let g:NERDTreeDirArrowExpandable='+'
-let g:NERDTreeDirArrowCollapsible='~'
+" estable tus iconos para los directorios
+"let g:NERDTreeDirArrowExpandable='+'
+"let g:NERDTreeDirArrowCollapsible='~'
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
@@ -71,8 +73,7 @@ command! -bang -nargs=? -complete=dir Files
 let g:floaterm_keymap_new = '<F5>'
 let g:floaterm_keymap_next = '<F6>'
 let g:floaterm_keymap_prev = '<F7>'
-let g:floaterm_keymap_toggle = '<F8>'
-let g:floaterm_keymap_kill = '<F9>'
+let g:floaterm_keymap_kill = '<F8>'
 
 
 " Cursor up search in FZF(Line Fuzzy Finder)

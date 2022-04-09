@@ -52,7 +52,7 @@ nnoremap <F3> :e $MYVIMRC<CR>
 nnoremap <F4> :tabnew 
 
 " presione <F5> en modo NORMAL, INSERT o TERMINAL para abrir una terminal flotante
-" en el centro de la pantalla, y con <F9> matas todas las terminales que hayas abierto
+" en el centro de la pantalla, y con <F8> matas todas las terminales que hayas abierto
 nnoremap <silent> <F5> :FloatermNew<CR>
 imap <F5> <Esc> :w<CR> :FloatermNew<CR>
 tnoremap <silent> <F5> <C-\><C-n>:FloatermNew<CR>
@@ -60,13 +60,13 @@ nnoremap <silent> <F6> :FloatermNext<CR>
 tnoremap <silent> <F6> <C-\><C-n>:FloatermNext<CR>
 nnoremap <silent> <F7> :FloatermPrev<CR>
 tnoremap <silent> <F7> <C-\><C-n>:FloatermPrev<CR>
-nnoremap <silent> <F8> :FloatermToggle<CR>
-tnoremap <silent> <F8> <C-\><C-n>:Floaterm<CR>
-nnoremap <silent> <F9> :FloatermKill<CR>
-tnoremap <silent> <F9> <C-\><C-n>:FloatermKill<CR>
+nnoremap <silent> <F8> :FloatermKill<CR>
+tnoremap <silent> <F8> <C-\><C-n>:FloatermKill<CR>
 
 " copia la ruta general del archivo abierto con <F10>
 nnoremap <F10>kp :let @*=expand("%")<CR>
+" eliminar todos los espacios en blanco que tenga el archivo
+nnoremap <Leader>sp :%s/\s\+$//e<CR>
 
 " modo goyo sin distracciones
 nmap <F11> :Goyo<CR>
@@ -75,7 +75,8 @@ imap <F11> <Esc> :Goyo<CR>
 "para guardar el archivo <space+w>
 nnoremap <Leader>w :w<CR>
 " para cerrar algun búfer o pestaña <space+q>
-nnoremap <Leader>q :q!<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :q!<CR>
 " para salir rápidamente de nvim <space+x>
 nnoremap <Leader>x :qa!<CR>
 
@@ -118,16 +119,16 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " dividir pantalla en dos [vertical] con space+i
-nnoremap <Leader>ii :vsp<CR>
+nnoremap <Leader>ii :vsplit<CR>
 " dividir pantalla en dos [horizontal] con space+o
-nnoremap <Leader>oo :sp<CR>
+nnoremap <Leader>oo :split<CR>
 
 " navegación entre pestañas abiertas con <spacer+l> y <space+h>
 nnoremap <Leader>l :bnext<CR>
 nnoremap <Leader>h :bprevious<CR>
 nmap <Leader>dl :bdelete<CR>
 
-" atajo de búsqueda con easymotion
+" búsqueda por dos carácteres con easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
 
 " atajos para el gestor vim-plug
