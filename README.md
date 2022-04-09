@@ -165,14 +165,12 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
    <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/nvim-nerdtree_java.png">
 </p>
 
-### ¿Atrevete a comentarme que tal te pareció esta guía de instalación o que me faltó?
-¿Quieres contactarte conmigo? Pues puedes hacerlo vía email, a mi correo:
-```correo
+### ¿Necesitas ayuda?, entonces contactate conmigo vía email.
+```email
 josueromram@outlook.es
 ```
 
-### Por ahora dejaré el proyecto hasta acá, realizaré una pausa para de varios días para luego optimizarlo aun más convertiendolo en un IDE, gracias.
-
+### Por ahora dejaré el proyecto hasta acá, realizaré una pausa de varios días para luego optimizarlo aun más convertiendolo en casí un IDE, gracias.
 <p align="center" width="0">
    <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/neovim-mark-flat.png">
 </p> 

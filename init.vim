@@ -53,6 +53,5 @@ set shortmess+=c
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark="medium"
 let no_buffers_menu=1
-
 highlight Normal ctermbg=none
 colorscheme gruvbox
