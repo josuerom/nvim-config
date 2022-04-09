@@ -80,7 +80,7 @@ nmap <Leader>f :FZF<CR>
 " comentar líneas con <}+}>
 vmap }} <plug>NERDCommenterToggle
 nmap }} <plug>NERDCommenterToggle
-imap }} <plug>NERDCommenterToggle
+imap }} <Esc> <plug>NERDCommenterToggle
 
 " navegación rápida entre buffers abiertos
 nnoremap <silent><C-h> :TmuxNavigateLeft<CR>
@@ -94,8 +94,8 @@ nnoremap <Leader>gv :GV<CR>
 nnoremap <Leader>gy :Git init<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>ga :Git add -A<CR>
-nnoremap <Leader>gc :Git commit -m "New change👨‍💻"<CR>
-nnoremap <Leader>gcc :Git commit -m "Solution to an bug 🪲"
+nnoremap <Leader>gc :Git commit -m "New change👨‍💻😎"<CR>
+nnoremap <Leader>gcc :Git commit -m "Bug 🪲"
 nnoremap <Leader>grr :Git remote add origin https://github.com/josuerom/.git
 nnoremap <Leader>gpp :Git push -u origin main<CR>
 nnoremap <Leader>go :Git log --oneline<CR>
@@ -127,13 +127,11 @@ nmap <Leader>s <Plug>(easymotion-s2)
 nnoremap <Leader>pi :PlugInstall<CR>
 nnoremap <Leader>pc :PlugClean<CR>
 nnoremap <Leader>pu :PlugUpdate<CR>
-nnoremap <Leader>pg :PlugUpgrade<CR>
+nnoremap <Leader>pp :PlugUpgrade<CR>
 
 " indentar líneas y bloques en cualquier modo VISUAL
 vnoremap < <gv
 vnoremap > >gv
-
-" para comentar una línea, presione <space+c+space> en modo NORMAL
 
 " para multiple cursor debe poner el cursor encima de una palabra y presionar
 " <ctrl+n> para buscar las coincidencias en el archivo y luego presione <c>
@@ -148,9 +146,8 @@ xmap s <Plug>VSurround
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
-" subir la posición de la línea
+" cambiar la posición de las líneas
 nnoremap n :m .-2<CR>==
-" bajar de posición de la línea
 nnoremap m :m .+1<CR>==
 
 " Para camiar el carácter que contenga una cadena de texto o cambiar el carácteres que los contiene,

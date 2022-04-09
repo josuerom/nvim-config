@@ -168,8 +168,8 @@ package ${1:interfaz};
 ${3://import java libraries}
 
 /**
-	*@author Josué Romero
-	*@date `!v strftime("%e/%B/%Y - %R")` COL
+  *@author Josué Romero
+  *@date `!v strftime("%e/%B/%Y - %R")` COL
 */
 public class `!p snip.rv = snip.basename` {
 	
@@ -568,9 +568,24 @@ public abstract class`!p snip.rv = snip.basename` extends ${1:parentClass} {
 endsnippet
 
 snippet ritar "Print invers array" b
+System.out.print("\nArreglo Inverso: [");
 for (int $1 = ($2.length-1); $1 >= 0; $1--) {
-	//int  = $2[$1];
+	System.out.print($2[$1] + ", ");
+
 	if ($1 > 0) {
+		System.out.print($2[$1] + ", ");
+	} else {
+		System.out.print($2[$1] + "]");
+	}
+}
+endsnippet
+
+snippet itar "Print iterations of array" b
+System.out.print("\nArreglo Original: [");
+for (int $1 = 0; $1 < $2.length; $1++) {
+	System.out.print($2[$1] + ", ");
+
+	if ($1 > ($2.length - 1)) {
 		System.out.print($2[$1] + ", ");
 	} else {
 		System.out.print($2[$1] + "]");

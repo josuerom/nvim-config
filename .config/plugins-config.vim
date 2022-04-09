@@ -40,8 +40,7 @@ let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-java']
 " configuración de ultisnips
 "let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<C-}>"
+let g:UltiSnipsListSnippets="<C->"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
