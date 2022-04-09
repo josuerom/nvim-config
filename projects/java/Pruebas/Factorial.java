@@ -19,5 +19,6 @@ public class Factorial {
 			JOptionPane.showMessageDialog(null, "El factorial de " + el + "! es = " + df.format(acc), "Calculo de Factorial (n!)", JOptionPane.INFORMATION_MESSAGE);
 			x++;
 		}
+		System.out.println("Gracias por usar el pequeño programa.");
 	}
 }

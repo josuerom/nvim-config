@@ -171,7 +171,7 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
 josueromram@outlook.es
 ```
 
-### Por ahora dejaré el proyecto hasta acá con 148 commits, realizaré una pausa para luego optimizarlo aun más, gracias.
+### Por ahora dejaré el proyecto hasta acá, realizaré una pausa para de varios días para luego optimizarlo aun más convertiendolo en un IDE, gracias.
 
 <p align="center" width="0">
    <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/neovim-mark-flat.png">

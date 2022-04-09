@@ -34,7 +34,13 @@ nnoremap <Leader>dj :!java %<CR>
 nnoremap <Leader>dp :!python %<CR>
 
 " con <Ctrl+t> se abre la terminal
-nnoremap <C-t> :call OpenTerminal()<CR>
+nmap <C-t> :call OpenTerminal()<CR> <Esc> :resize 13<CR>
+nmap <Leader>t :split<CR> :terminal powershell<CR> :resize 13<CR>
+
+" acceso rápido a archivos de configuración global
+nmap <Leader>¿ :e ~/AppData/Local/nvim/.config/shortcuts.vim<CR>
+nmap <Leader>' :e ~/AppData/Local/nvim/.config/plugins-config.vim<CR>
+nmap <Leader>0 :e ~/AppData/Local/nvim/.config/plugins.vim<CR>
 
 " eliminar todos los espacios vacíos que hayan en el archivo con <F1>
 "nmap <F1> :g/^\s\+$/s/\s\+//<CR>
@@ -45,9 +51,10 @@ nnoremap <F3> :e $MYVIMRC<CR>
 " crear un archivo en una nueva pestaña, con <F4>
 nnoremap <F4> :tabnew 
 
-" presione <F5> para abrir una terminal flotante en el centro de la pantalla
-" con <F9> matas todas las terminales en ejecución y demás
+" presione <F5> en modo NORMAL, INSERT o TERMINAL para abrir una terminal flotante
+" en el centro de la pantalla, y con <F9> matas todas las terminales que hayas abierto
 nnoremap <silent> <F5> :FloatermNew<CR>
+imap <F5> <Esc> :w<CR> :FloatermNew<CR>
 tnoremap <silent> <F5> <C-\><C-n>:FloatermNew<CR>
 nnoremap <silent> <F6> :FloatermNext<CR>
 tnoremap <silent> <F6> <C-\><C-n>:FloatermNext<CR>
