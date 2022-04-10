@@ -75,7 +75,6 @@ let g:floaterm_keymap_next = '<F6>'
 let g:floaterm_keymap_prev = '<F7>'
 let g:floaterm_keymap_kill = '<F8>'
 
-
 " Cursor up search in FZF(Line Fuzzy Finder)
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 

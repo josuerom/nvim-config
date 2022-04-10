@@ -102,8 +102,8 @@ nnoremap <Leader>gv :GV<CR>
 nnoremap <Leader>gy :Git init<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>ga :Git add -A<CR>
-nnoremap <Leader>gc :Git commit -m "New change👨‍💻😎"<CR>
-nnoremap <Leader>gcc :Git commit -m "Bug 🪲"
+nnoremap <Leader>gc :Git commit -m "🔧 Best change👨‍💻"<CR>
+nnoremap <Leader>gcc :Git commit -m "Bug 🪲🔧"
 nnoremap <Leader>grr :Git remote add origin https://github.com/josuerom/.git
 nnoremap <Leader>gpp :Git push -u origin main<CR>
 nnoremap <Leader>go :Git log --oneline<CR>

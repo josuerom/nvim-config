@@ -18,7 +18,7 @@ Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'itchyny/lightline.vim'
 
-" barra lateral - iconos
+" barra lateral
 Plug 'scrooloose/nerdtree'
 
 " búsqueda - agrupador
