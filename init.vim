@@ -1,4 +1,4 @@
-"*----------- Configuración [init.vim] 21/Febrero/2021 6:56a.m COL -----------*
+"*----------- Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL -----------*
 
 							"██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
 							"██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
@@ -11,7 +11,7 @@
 
 " importo los archivos de configuración global
 so ~/AppData/Local/nvim/.config/plugins.vim
-so ~/AppData/Local/nvim/.config/plugins-config.vim
+so ~/AppData/Local/nvim/.config/plug-config.vim
 so ~/AppData/Local/nvim/.config/shortcuts.vim
 
 filetype plugin indent on

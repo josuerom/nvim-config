@@ -1,10 +1,3 @@
-" .oPYo. o     o    o .oPYo. o o    o .oPYo.   o     o o o     o 
-" 8    8 8     8    8 8    8 8 8b   8 8        8     8 8 8b   d8 
-" 8YooP' 8     8    8 8      8 8`b  8 `Yooo.   8     8 8 8`b d'8 
-" 8      8     8    8 8   oo 8 8 `b 8     `8   `b   d' 8 8 `o' 8 
-" 8      8     8    8 8    8 8 8  `b8      8    `b d'  8 8     8 
-" 8      8oooo `YooP' `YooP8 8 8   `8 `YooP' 88  `8'   8 8     8 
-":..:::::......:.....::..... ....:::..:.....:..::::..:::....::::..
 
 call plug#begin('~/AppData/Local/nvim/plugged/')
 
