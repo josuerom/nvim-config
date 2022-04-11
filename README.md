@@ -21,7 +21,7 @@
 </p>
 </div>
 
-<H1 align="center">Fantástica Instalación y Configuración de Neovim para SO Windows - February, 2021.</H1>
+<H1 align="center">Guía de Instalación y Configuración para Neovim, SO Windows - Febrero, 2021.</H1>
 
 <p align="center" width="0">
    <img align="center" width="645" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/neovim-logo-shadow.png">
@@ -40,7 +40,7 @@ El presente proyecto describe el proceso que debes seguir para personalizar e in
 2. Instalar manejador de paquetes **Chocolatey y Neovim**
 3. Instalar **Git**
 4. Instalar **Node.js**
-5. Clonar/Descargar archivos de **este repositorio**
+5. Clonar/Descargar este repositorio
 6. Instalar gestor de plugins **vim plug**
 
 **Tenga en cuenta que:** para instalar Neovim, si o si necesitarás utilizar todas esas 5-6 herramientas, para ello aquí conocerás el paso a paso para instalar cada una correctamente sin errores ni falsa información, cabe mensionar que, *Windows PowerShell o la CMD* vienen instalado de fabrica en la pc's con Windows, por eso no será necesario explicarte cómo ejecutarlo, ni instalarlo, ni abrirlo. ¡Si estas acá metido es porque ya debes de saber abrirlo y ejecutar uno que otro comando. Si no sabes pues te invito a mira un video en YT. ¡Listo ya estás preparado!.
@@ -93,7 +93,7 @@ Git es un software de control de versiones diseñado por **Linus Torvalds** qui�
 
 Para instalarlo da un [click aquí](https://nodejs.org/es/download/ "https://nodejs.org/es/download/"), este enlace te llevará directamente a su pagina oficial de descarga, si requieres más información de instalación, visualizate un video en **YouTube**.
 
-### Paso No. 5. Descarga los archivos publicados en éste repositorio.
+### Paso No. 5. Clonar/Descarga este repositorio.
 Esta es la personalización que actualmente tengo en neovim:
 
 <p align="center" width="0">
@@ -106,7 +106,7 @@ Ahora bien, corta o copia esa carpeta renombrada 'nvim'. A continuación, diríg
 
 Para abrir neovim lleva a cabo un comando sencillo en la _Consola/Terminal PowerShell o Símbolo del Sistema_, debes ubicarte en la ruta donde colocaron neovim. La ruta tuya es, ¡la misma mía solo que cambia el nombre de usuario y debes entrar a carpeta nvim! **C:\Users\josue\AppData\Local\nvim\**. Cuando estes ahí debes ingresar el siguiente comando y presionar enter:
 
-```vim
+```powershell
 nvim init.vim
 ``` 
 
@@ -124,7 +124,7 @@ Luego de ejecutar el comando, te arrojará muchos errores pero _NO TE ASUSTES NI
 
 Para saltar esos errores puedes presionar varias veces la tecla **Enter** o solo una vez la tecla **Esc**, nada más faltaría instalar el gestor de plugins **vim plug** para que así culmines con el último paso.
 
-### Paso No. 6. Instalar el gestor de plugins 'VIM PLUG'
+### Paso No. 6. Instalar el gestor de plugins VIM PLUG
 **Vim plug** es un administrador de plugins para el editor de texto vim y neovim minimalista, de código abierto creado por **junegunn** hace tiempo. Además es totalmente libre de uso. Una de sus principales y más conmovedores funcionalidades es que puede instalar, actualizar y desinstalar complementos en paralelo. Crea clones para minimizar el uso de espacio del disco y el tiempo de descarga; para realizar una descarga limpia y ligera. Ejecuta en la pestaña PowerShell abierta como administrador, el siguiente comando:
 
 ```powershell
@@ -170,7 +170,7 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
 josueromram@outlook.es
 ```
 
-### Por ahora dejaré el proyecto hasta acá, realizaré una pausa de varios días para luego optimizarlo aun más convertiendolo en casí un IDE, gracias.
+### Por ahora dejaré el proyecto hasta acá, realizaré una pausa de varios días para luego optimizarlo aún más convertiendolo en un IDE, gracias.
 <p align="center" width="0">
    <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/neovim-mark-flat.png">
 </p> 
