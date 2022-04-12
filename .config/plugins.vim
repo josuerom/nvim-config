@@ -1,4 +1,3 @@
-
 call plug#begin('~/AppData/Local/nvim/plugged/')
 
 " resaltado de sintaxis

@@ -35,8 +35,6 @@ set tabstop=2
 set hlsearch
 set ignorecase
 set splitbelow
-set confirm
-set diffopt+=vertical
 
 " COC
 set encoding=utf-8
@@ -45,7 +43,7 @@ set fileencodings=utf-8
 set hidden
 set nobackup
 set nowritebackup
-set cmdheight=2
+set cmdheight=1
 set updatetime=100
 set shortmess+=c
 

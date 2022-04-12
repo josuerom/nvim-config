@@ -1,4 +1,3 @@
-
 let mapleader = " "
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas

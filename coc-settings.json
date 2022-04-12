@@ -14,7 +14,7 @@
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-11",
-      "path": "D:\\Program Files\\Java\\jdk-11.0.13\\bin",
+      "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.14.101-hotspot\\bin",
       "default": true
     }
   ],
