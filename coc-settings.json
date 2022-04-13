@@ -1,15 +1,4 @@
 {
-  // Python
-  "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.formatting.provider": "black",
-  // "python.formatting.blackPath": "black",
-  "python.linting.mypyEnabled": true,
-  "python.linting.pylintEnabled": true,
-
-  // Rust
-  "rust-analyzer.inlayHints.typeHints": false,
-
   // Java
   "java.configuration.runtimes": [
     {
@@ -53,13 +42,6 @@
   // Lua
   "Lua.diagnostics.globals": ["vim"],
 
-  // Deno
-  // "deno.enable": true,
-  // "deno.lint": true,
-  // "deno.unstable": true,
-  // "prettier.disableLanguages": ["javascript", "typescript", "json"],
-  // "tsserver.enable": false,
-
   // Tabnine
   "tabnine.shortcut": "TabNine",
   "tabnine.priority": 1,
@@ -85,36 +67,6 @@
   "snippets.author": "Josué Romero",
   "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/UltiSnips",
   "snippets.ultisnips.enable": true,
-
-  // Completion Icons
-  "suggest.completionItemKindLabels": {
-    "method": "  ",
-    "function": "  ",
-    "variable": "[]",
-    "field": "  ",
-    "typeParameter": "<>",
-    "constant": "  ",
-    "class": "  ",
-    "interface": " 蘒",
-    "struct": "  ",
-    "event": "  ",
-    "operator": "  ",
-    "module": "  ",
-    "property": "  ",
-    "enum": " 練",
-    "reference": "  ",
-    "keyword": "  ",
-    "file": "  ",
-    "folder": " ﱮ ",
-    "color": "  ",
-    "unit": " 塞 ",
-    "snippet": " ",
-    "text": "  ",
-    "constructor": "  ",
-    "value": "  ",
-    "enumMember": "  ",
-    "default": "  "
-  },
 
   "suggest.highPrioritySourceLimit": 10,
   "suggest.languageSourcePriority": 95,
@@ -147,6 +99,5 @@
   // CoC
   "coc.preferences.colorSupport": true,
   "coc.preferences.formatOnType": true,
-
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
 }
