@@ -49,7 +49,8 @@ set shortmess+=c
 
 " ajustes para el tema gruvbox
 let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark="medium"
 let no_buffers_menu=1
+" contrastes: soft, medium y hard
+let g:gruvbox_contrast_dark="medium"
 highlight Normal ctermbg=none
 colorscheme gruvbox
