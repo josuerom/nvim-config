@@ -7,9 +7,9 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-" salir del modo INSERT con <Esc> <Ctrl+c> o <k+j>
+" salir del modo INSERT con <Esc> <Ctrl+c> o <jj>
 imap <C-c> <Esc>
-imap kj <Esc>
+imap jj <Esc>
 
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
 nnoremap <C-k> 35 <C-e>
@@ -19,19 +19,19 @@ nnoremap <C-j> 35 <C-y>
 nnoremap <Leader>, $a;<Esc>
 
 " ejecuta archivos .js & .ts con Nodejs
-nnoremap <Leader>dd :!node %<CR>
+nnoremap <Leader>dn :!node %<CR>
 " compila y ejecuta archivos .java
 nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
 
-" con <Ctrl+t> se abre la terminal
+" con <Ctrl+t> y <> se abre la terminal
 nmap <C-t> :call OpenTerminal()<CR> <Esc> :resize 13<CR>
 nmap <Leader>t :split<CR> :terminal powershell<CR> :resize 13<CR>
 
 " acceso rápido a archivos de configuración global
 nmap <Leader>¿ :e ~/AppData/Local/nvim/.config/shortcuts.vim<CR>
-nmap <Leader>' :e ~/AppData/Local/nvim/.config/plugins-config.vim<CR>
+nmap <Leader>' :e ~/AppData/Local/nvim/.config/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/.config/plugins.vim<CR>
 
 " eliminar todos los espacios vacíos que hayan en el archivo con <F1>
@@ -77,7 +77,7 @@ nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>p :Explore<CR>
 nmap <Leader>f :FZF<CR>
 
-" comentar líneas con <}+}>
+" comentar líneas con <}+}> o con <space+c+space>
 vmap }} <plug>NERDCommenterToggle
 nmap }} <plug>NERDCommenterToggle
 imap }} <Esc> <plug>NERDCommenterToggle
@@ -85,7 +85,7 @@ imap }} <Esc> <plug>NERDCommenterToggle
 " navegación rápida entre buffers abiertos
 nnoremap <silent><C-h> :TmuxNavigateLeft<CR>
 nnoremap <silent><C-j> :TmuxNavigateDown<CR>
-nnoremap <silent><C-k> :TmuxNavigateUp<CR>
+noremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " atajos para git

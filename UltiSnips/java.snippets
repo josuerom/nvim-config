@@ -38,12 +38,11 @@ endsnippet
 
 ## Estructuras para instanciar
 snippet newi "new primitive or int" b
-${1:int} ${2:i} = ${3:1};
-$0
+${1:nameClass} ${2:object} = new ${3:nameClass}();$0
 endsnippet
 
 snippet newo "new Object or variable" b
-${1:Object} ${2:var} = new $1($3);
+${1:Object} ${2:var} = new ${1}($3);$0
 endsnippet
 
 ## Palabras reservadas
@@ -313,32 +312,26 @@ endsnippet
 snippet im "import" b
 import $0;
 endsnippet
-snippet j.b "java.beans." i
+snippet jb "java.beans." i
 import java.beans.$0;
 endsnippet
-
-snippet j.i "java.io" i
+snippet ji "java.io" i
 import java.io.$0;
 endsnippet
-
-snippet j.m "java.math" i
+snippet jm "java.math" i
 import java.math.$0;
 endsnippet
-
-snippet j.n "java.net." i
+snippet jn "java.net." i
 import java.net.$0;
 endsnippet
-
-snippet j.u "java.util."  i
+snippet ju "java.util."  i
 import java.util.$0;
 endsnippet
-
-snippet j.s "javax.swing."  i
+snippet js "javax.swing."  i
 import javax.swing.$0;
 endsnippet
-
-snippet j.t "java.text.DecimalFormat"  i
-import java.text.DecimalFormat;
+snippet jt "java.text.DecimalFormat"  i
+import java.text.DecimalFormat;$0
 endsnippet
 
 snippet main "método principal" b
@@ -418,7 +411,7 @@ snippet ss "System.out.println('')"  b
 System.out.println($1);$0
 endsnippet
 
-snippet sse "System.err.println('')"  b
+snippet err "System.err.println('')"  b
 System.err.println($1);$0
 endsnippet
 
@@ -458,7 +451,7 @@ switch ($1)`!p nl(snip)`{
 endsnippet
 
 snippet sy "synchronized"
-synchronized $0
+synchronized$0
 endsnippet
 
 snippet tc "test case"

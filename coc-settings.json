@@ -1,15 +1,13 @@
 {
-  // Java
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-11",
-      "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.14.101-hotspot\\bin",
+      "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.14.101-hotspot\\bin\\javac.exe",
       "default": true
     }
   ],
   "java.format.enabled": true,
   "java.format.onType.enabled": true,
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   "java.format.comments.enabled": true,
   "java.signatureHelp.enabled": true,
   "java.saveActions.organizeImports": true,
@@ -25,37 +23,15 @@
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
 
-  // Svelte
-  "svelte.enable-ts-plugin": true,
-
-  // Eslint
-  "eslint.packageManager": "yarn",
-  "eslint.nodePath": "/usr/bin/node",
-  "eslint.autoFixOnSave": true,
-
   // Css
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
   "wxss.validate": false,
 
-  // Lua
-  "Lua.diagnostics.globals": ["vim"],
-
   // Tabnine
   "tabnine.shortcut": "TabNine",
   "tabnine.priority": 1,
-
-  // Diagnostic Sever
-  "diagnostic-languageserver.formatFiletypes": {
-    "lua": "lua-format",
-    "sh": "shfmt",
-    "zsh": "shfmt"
-  },
-
-  "diagnostic-languageserver.filetypes": {
-    "vim": "vint"
-  },
 
   // Snippets
   "snippets.priority": 1,
@@ -64,14 +40,17 @@
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"]
   },
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "~/AppData/Local/nvim/UltiSnips"
+  ],
   "snippets.author": "Josué Romero",
-  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/UltiSnips",
-  "snippets.ultisnips.enable": true,
-
+  "snippets.ultisnips.enable": false,
+	"snippets.ultisnips.usePythonx": false,
+  
   "suggest.highPrioritySourceLimit": 10,
   "suggest.languageSourcePriority": 95,
   "suggest.lowPrioritySourceLimit": 90,
-
   "coc.source.file.priority": 60,
   "coc.source.buffer.priority": 50,
   "yank.priority": 10,
@@ -88,16 +67,5 @@
   "suggest.triggerAfterInsertEnter": false,
   "suggest.detailField": "menu",
   "suggest.keepCompleteopt": false,
-  "suggest.noselect": false,
-
-  // Linting Icons
-  "diagnostic.errorSign": " ",
-  "diagnostic.warningSign": " ",
-  "diagnostic.infoSign": "",
-  "diagnostic.hintSign": " ",
-
-  // CoC
-  "coc.preferences.colorSupport": true,
-  "coc.preferences.formatOnType": true,
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+  "suggest.noselect": false
 }

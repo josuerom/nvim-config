@@ -1,13 +1,13 @@
 "*----------- Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL -----------*
 
-							"██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
-							"██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
-							"██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
-							"██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
-							"██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║
-							"╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
-									 " Creador >> Josué Romero
-									 " Twitter >> https://twitter.com/josueromr
+									"██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
+									"██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
+									"██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
+									"██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
+									"██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║
+									"╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
+											 " Creador >> Josué Romero
+											 " Twitter >> https://twitter.com/josueromr
 
 " importo los archivos de configuración global
 so ~/AppData/Local/nvim/.config/plugins.vim
@@ -50,7 +50,6 @@ set shortmess+=c
 " ajustes para el tema gruvbox
 let g:gruvbox_italic=1
 let no_buffers_menu=1
-" contrastes: soft, medium y hard
 let g:gruvbox_contrast_dark="medium"
 highlight Normal ctermbg=none
 colorscheme gruvbox
