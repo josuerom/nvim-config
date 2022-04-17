@@ -25,7 +25,7 @@ nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
 
-" con <Ctrl+t> y <> se abre la terminal
+" con <Ctrl+t> abre las cmd y con <space+t> se abre la PowerShell
 nmap <C-t> :call OpenTerminal()<CR> <Esc> :resize 13<CR>
 nmap <Leader>t :split<CR> :terminal powershell<CR> :resize 13<CR>
 
@@ -57,8 +57,8 @@ tnoremap <silent> <F8> <C-\><C-n>:FloatermKill<CR>
 
 " copia la ruta general del archivo abierto con <F10>
 nnoremap <F10>kp :let @*=expand("%")<CR>
-" eliminar todos los espacios en blanco que tenga el archivo
-nnoremap <Leader>sp :%s/\s\+$//e<CR>
+" eliminar todos los espacios en blanco que tenga el archivo <c+s>
+nnoremap <Leader>cs :%s/\s\+$//e<CR>
 
 " modo goyo sin distracciones
 nmap <F11> :Goyo<CR>
@@ -90,7 +90,7 @@ nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " atajos para git
 nnoremap <Leader>gg :G<CR>
-nnoremap <Leader>gv :GV<CR>
+nnoremap <Leader>go :GV<CR>
 nnoremap <Leader>gy :Git init<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>ga :Git add -A<CR>
@@ -98,12 +98,11 @@ nnoremap <Leader>gc :Git commit -m "🔧 Best change👨‍💻"<CR>
 nnoremap <Leader>gcc :Git commit -m "Bug 🪲🔧"
 nnoremap <Leader>grr :Git remote add origin https://github.com/josuerom/.git
 nnoremap <Leader>gpp :Git push -u origin main<CR>
-nnoremap <Leader>go :Git log --oneline<CR>
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gf :Git fetch<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gm :Git merge<CR>
-nnoremap <Leader>ge :Git revert 
+nnoremap <Leader>ge :Git revert #commit
 
 " flujo instantaneo con COC
 nmap <silent> gd <Plug>(coc-definition)
