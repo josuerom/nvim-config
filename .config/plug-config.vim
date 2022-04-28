@@ -63,17 +63,11 @@ command! -bang -nargs=* Ag
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
-" configuración para la funcionalidad vim-floaterm
-let g:floaterm_keymap_new = '<F5>'
-let g:floaterm_keymap_next = '<F6>'
-let g:floaterm_keymap_prev = '<F7>'
-let g:floaterm_keymap_kill = '<F8>'
-
 " para la búsqueda con FZF (Line Fuzzy Finder)
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 
-"*--------------------------- FUNCIÓN QUE INTEGRA LA TERMINAL DENTRO DE NVIM -------------------------------*
-function! OpenTerminal()
+"*------------------------ FUNCIÓNES PARA INTEGRAR LAS TERMINALES WINDOWS ---------------------------*
+function! OpenCmd()
   execute "normal \<C-l>"
   execute "normal \<C-l>"
   execute "normal \<C-l>"
@@ -90,6 +84,39 @@ function! OpenTerminal()
     " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
     " línea (81) así: execute 'sp term://zsh'
     execute "sp term://cmd"
+    " apagar números
+    execute "set nonu"
+    execute "set nornu"
+
+    " alternar insertar en entrar o salir
+    silent au BufLeave <buffer> stopinsert!
+    silent au BufWinEnter,WinEnter <buffer> startinsert!
+
+    " establezco atajos dentro de la terminal
+    execute "tnoremap <buffer> <Esc> <C-\\><C-n><C-w><C-h>"
+    execute "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
+    execute "tnoremap <buffer> <C-7> <C-\\><C-\\><C-n>"
+    startinsert!
+  endif
+endfunction
+
+function! OpenPowerShell()
+  execute "normal \<C-l>"
+  execute "normal \<C-l>"
+  execute "normal \<C-l>"
+  execute "normal \<C-l>"
+
+  let bufNum = bufnr("%")
+  let bufType = getbufvar(bufNum, "&buftype", "not found")
+
+  if bufType == "terminal"
+    " cerrar terminal existente
+    execute "q"
+  else
+    " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
+    " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
+    " línea (81) así: execute 'sp term://zsh'
+    execute "sp term://powershell"
     " apagar números
     execute "set nonu"
     execute "set nornu"

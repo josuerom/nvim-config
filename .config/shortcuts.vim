@@ -26,8 +26,8 @@ nnoremap <Leader>dj :!java %<CR>
 nnoremap <Leader>dp :!python %<CR>
 
 " con <Ctrl+t> abre las cmd y con <space+t> se abre la PowerShell
-nmap <C-t> :call OpenTerminal()<CR> <Esc> :resize 13<CR>
-nmap <Leader>t :split<CR> :terminal powershell<CR> :resize 13<CR>
+nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 13<CR>
+nmap <C-t> :call OpenPowerShell()<CR> <Esc> :resize 13<CR>
 
 " acceso rápido a archivos de configuración global
 nmap <Leader>¿ :e ~/AppData/Local/nvim/.config/shortcuts.vim<CR>
@@ -42,18 +42,6 @@ nmap <F2> :so %<CR>
 nnoremap <F3> :e $MYVIMRC<CR>
 " crear un archivo en una nueva pestaña, con <F4>
 nnoremap <F4> :tabnew 
-
-" presione <F5> en modo NORMAL, INSERT o TERMINAL para abrir una terminal flotante
-" en el centro de la pantalla, y con <F8> matas todas las terminales que hayas abierto
-nnoremap <silent> <F5> :FloatermNew<CR>
-imap <F5> <Esc> :w<CR> :FloatermNew<CR>
-tnoremap <silent> <F5> <C-\><C-n>:FloatermNew<CR>
-nnoremap <silent> <F6> :FloatermNext<CR>
-tnoremap <silent> <F6> <C-\><C-n>:FloatermNext<CR>
-nnoremap <silent> <F7> :FloatermPrev<CR>
-tnoremap <silent> <F7> <C-\><C-n>:FloatermPrev<CR>
-nnoremap <silent> <F8> :FloatermKill<CR>
-tnoremap <silent> <F8> <C-\><C-n>:FloatermKill<CR>
 
 " copia la ruta general del archivo abierto con <F10>
 nnoremap <F10>kp :let @*=expand("%")<CR>

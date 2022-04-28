@@ -1,10 +1,10 @@
 call plug#begin('~/AppData/Local/nvim/plugged/')
 
-" resaltado de sintaxis
-Plug 'sheerun/vim-polyglot'
-
 " tema
 Plug 'morhetz/gruvbox'
+
+" resaltado de sintaxis
+Plug 'sheerun/vim-polyglot'
 
 " barra de estado
 Plug 'shinchu/lightline-gruvbox.vim'
@@ -12,6 +12,7 @@ Plug 'itchyny/lightline.vim'
 
 " barra lateral
 Plug 'scrooloose/nerdtree'
+Plug 'kyazdani42/nvim-web-devicons'
 
 " búsqueda - agrupador
 Plug 'easymotion/vim-easymotion'
@@ -23,9 +24,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " autocompletado - snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
-
-" terminal flotante
-Plug 'voldikss/vim-floaterm'
 
 " IDE
 Plug 'terryma/vim-multiple-cursors'
