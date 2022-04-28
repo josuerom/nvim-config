@@ -10,7 +10,6 @@ noremap <right> <nop>
 " salir del modo INSERT con <Esc> <Ctrl+c> o <jj>
 imap <C-c> <Esc>
 imap jj <Esc>
-
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
 nnoremap <C-k> 35 <C-e>
 nnoremap <C-j> 35 <C-y>
@@ -25,9 +24,9 @@ nnoremap <Leader>dj :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
 
-" con <Ctrl+t> abre las cmd y con <space+t> se abre la PowerShell
-nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 13<CR>
-nmap <C-t> :call OpenPowerShell()<CR> <Esc> :resize 13<CR>
+" con <Ctrl+t> abres la cmd y con <space+t> abres la powershell
+nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 14<CR>
+nmap <C-t> :call OpenPowerShell()<CR> <Esc> :resize 14<CR>
 
 " acceso rápido a archivos de configuración global
 nmap <Leader>¿ :e ~/AppData/Local/nvim/.config/shortcuts.vim<CR>
@@ -52,8 +51,9 @@ nnoremap <Leader>cs :%s/\s\+$//e<CR>
 nmap <F11> :Goyo<CR>
 imap <F11> <Esc> :Goyo<CR>
 
-"para guardar el archivo <space+w>
+" para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
 nnoremap <Leader>w :w<CR>
+imap <Leader>w <Esc> :w<CR> i
 " para cerrar algun búfer o pestaña <space+q>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
@@ -65,7 +65,7 @@ nmap <Leader>e :NERDTreeToggle<CR>
 nmap <Leader>p :Explore<CR>
 nmap <Leader>f :FZF<CR>
 
-" comentar líneas con <}+}> o con <space+c+space>
+" comentar líneas con <}+}>
 vmap }} <plug>NERDCommenterToggle
 nmap }} <plug>NERDCommenterToggle
 imap }} <Esc> <plug>NERDCommenterToggle
@@ -82,11 +82,13 @@ nnoremap <Leader>go :GV<CR>
 nnoremap <Leader>gy :Git init<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>ga :Git add -A<CR>
-nnoremap <Leader>gc :Git commit -m "🔧 Best change👨‍💻"<CR>
-nnoremap <Leader>gcc :Git commit -m "Bug 🪲🔧"
+nnoremap <Leader>gc :Git commit -m "🔧 New change👨‍💻"<CR>
+nnoremap <Leader>gcc :Git commit -m ""
+nnoremap <Leader>glg :Git log --oneline<CR>
 nnoremap <Leader>grr :Git remote add origin https://github.com/josuerom/.git
 nnoremap <Leader>gpp :Git push -u origin main<CR>
 nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gpu :Git push --set-upstream origin main<CR>
 nnoremap <Leader>gf :Git fetch<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gm :Git merge<CR>
@@ -141,7 +143,7 @@ nnoremap m :m .+1<CR>==
 " por ejemplo: si tienes un: 'Hi User Name' al presionar cs+el-simbolo-a-usar, la cadena de carácteres
 " magicamente se cambiará sin necesidad de realizarlo manualmente.
 
-" entrega de sugerencias automatica de COC
+" entrega automatica de sugerencias o autocompletado COC
 imap <silent><expr> <C-space> coc#refresh()
 
 " con las feclas ajustas el tamaño de las pestañas
@@ -157,12 +159,7 @@ nnoremap <silent><nowait> <Leader>cuu :<C-u>CocUpdate<CR>
 " desintalar extensiones
 nnoremap <silent><nowait> <Leader>cii :<C-u>CocUninstall coc-
 
-" Use <C-j> para saltar al siguiente marcador de posición
-let g:coc_snippet_next = '<C-j>'
-" Use <C-k> para saltar al marcador de posición anterior
-let g:coc_snippet_prev = '<C-k>'
-
 " Use <C-j> para saltar a los demás marcadores de posición
 imap <C-j> <Plug>(coc-snippets-expand-jump)
-" Use <space+y> para convertir el código visual seleccionado en un fragmento
+" Use <space+y> para convertir el código seleccionado en un snippet
 xmap <Leader>y  <Plug>(coc-convert-snippet)
