@@ -2,20 +2,13 @@
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-11",
-      "path": "D:\\Program Files\\Java\\jdk-11.0.15"
+      "path": "D:\\Program Files\\Java\\jdk-11.0.15",
+      //"path": "/usr/lib/jvm/default",
+      "default": true
     }
   ],
-
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
-
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
-  "wxss.validate": false,
-
-  "tabnine.shortcut": "TabNine",
-  "tabnine.priority": 1,
 
   "snippets.priority": 1,
   "snippets.extends": {
@@ -23,33 +16,12 @@
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"]
   },
-
+	
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "~/AppData/Local/nvim/UltiSnips"
   ],
   "snippets.ultisnips.enable": false,
-	"snippets.ultisnips.usePythonx": false,
-  "snippets.author": "Josué Romero",
-  
-  "suggest.highPrioritySourceLimit": 10,
-  "suggest.languageSourcePriority": 95,
-  "suggest.lowPrioritySourceLimit": 90,
-  "coc.source.file.priority": 60,
-  "coc.source.buffer.priority": 50,
-  "yank.priority": 10,
-  "suggest.triggerCompletionWait": 30,
-
-  "suggest.autoTrigger": "always",
-  "suggest.localityBonus": true,
-  "suggest.fixInsertedWord": true,
-  "suggest.enablePreselect": true,
-  "suggest.removeDuplicateItems": true,
-  "suggest.preferCompleteThanJumpPlaceholder": true,
-  "suggest.defaultSortMethod": "alphabetical",
-  "suggest.numberSelect": false,
-  "suggest.triggerAfterInsertEnter": false,
-  "suggest.detailField": "menu",
-  "suggest.keepCompleteopt": false,
-  "suggest.noselect": false
+  "snippets.ultisnips.usePythonx": false,
+  "snippets.author": "Josué Romero"
 }
