@@ -38,7 +38,6 @@ let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-java']
 " configuración de ultisnips
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
-
 " Use <C-j> para saltar al siguiente marcador de posición en los Snippets
 let g:coc_snippet_next = '<C-j>'
 " Use <C-k> para saltar al marcador de posición anterior
@@ -52,9 +51,6 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
-" estable tus iconos para los directorios
-"let g:NERDTreeDirArrowExpandable='+'
-"let g:NERDTreeDirArrowCollapsible='~'
 
 " navegación con tmux
 let g:tmux_navigator_no_mappings=1
@@ -144,7 +140,7 @@ endfunction
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim. use :CocOpenLog for details
 " ejecuta el sgt comando en la PowerShell como administrador: pip install pynvim
 " así no deberá aparecerte más.
-
+"si
 "*---------------------- CONFIGURACIÓN SENCILLA DE COC, LA DEJO EN INGLES ---_----------------------*
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.

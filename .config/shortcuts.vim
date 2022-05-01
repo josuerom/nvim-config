@@ -51,7 +51,7 @@ nnoremap <F4> :tabnew
 
 " copia la ruta general del archivo abierto con <F10>
 nnoremap <F10>kp :let @*=expand("%")<CR>
-" eliminar todos los espacios en blanco que tenga el archivo <c+s>
+" eliminar todos los espacios en blanco que tenga el archivo <space+c+s>
 nnoremap <Leader>cs :%s/\s\+$//e<CR>
 
 " modo goyo sin distracciones
