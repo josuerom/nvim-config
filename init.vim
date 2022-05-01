@@ -1,13 +1,13 @@
-"*----------- Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL -----------*
+"*--------------------- Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL ---------------------*
 
-									"██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
-									"██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
-									"██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
-									"██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
-									"██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
-									"╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
-											 " Creador >> Josué Romero
-											 " Twitter >> https://twitter.com/josueromr
+													"██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
+													"██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
+													"██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
+													"██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
+													"██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
+													"╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
+																		 " Creador >> Josué Romero
+														 " Twitter >> https://twitter.com/josueromr
 
 " importo los archivos de configuración global
 so ~/AppData/Local/nvim/.config/plugins.vim
@@ -29,7 +29,6 @@ set termguicolors
 set showmatch
 set noshowmode
 set nowrap
-set cursorline
 set laststatus=2
 set spelllang=es
 set tabstop=2
@@ -39,7 +38,6 @@ set splitbelow
 
 " COC
 set encoding=utf-8
-set fileencoding=utf-8
 set fileencodings=utf-8
 set hidden
 set nobackup
@@ -48,7 +46,7 @@ set cmdheight=1
 set updatetime=100
 set shortmess+=c
 
-" ajustes para el tema gruvbox
+" ajustes del tema
 let g:gruvbox_italic=1
 let no_buffers_menu=1
 let g:gruvbox_contrast_dark="medium"
