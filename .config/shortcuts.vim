@@ -24,17 +24,12 @@ nnoremap <C-j> 35 <C-y>
 " coloca un punto y coma al final de la línea, con <space+,>
 nnoremap <Leader>, $a;<Esc>
 
-" ejecuta archivos .js & .ts con Nodejs
-nnoremap <Leader>dn :!node %<CR>
-nnoremap rn <Esc> :!node %<CR>
-" compila y ejecuta archivos .java
-nnoremap <Leader>dj :!java %<CR>
-nnoremap rj <Esc> :!java %<CR>
-" compila y ejecuta archivos .py
-nnoremap <Leader>dp :!python %<CR>
-nnoremap rp <Esc> :!python %<CR>
+" ejecute sus archivos (.js, .ts, .java y .py)
+nmap rn <Esc> :!node %<CR>
+nmap rj <Esc> :!java %<CR>
+nmap rp <Esc> :!python %<CR>
 
-" con <Ctrl+t> abres la cmd y con <space+t> abres la powershell
+" con <space+t> abre la cmd y con <Ctrl+t> abre la powershell
 nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 14<CR>
 nmap <C-t> :call OpenPowerShell()<CR> <Esc> :resize 14<CR>
 
@@ -43,36 +38,35 @@ nmap <Leader>¿ :e ~/AppData/Local/nvim/.config/shortcuts.vim<CR>
 nmap <Leader>' :e ~/AppData/Local/nvim/.config/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/.config/plugins.vim<CR>
 
-" eliminar todos los espacios vacíos que hayan en el archivo con <F2>
-nmap <F2> :g/^\s\+$/s/\s\+//<CR>
+" elimina todos los espacios en blanco que contenga el archivo, con <F2>
+nnoremap <F2> :%s/\s\+$//e<CR>
 " abre el archivo de configuración inicial con <F3>
 nnoremap <F3> :e $MYVIMRC<CR>
 " crear un archivo en una nueva pestaña, con <F4>
-nnoremap <F4> :tabnew 
-" reinicia neovim con <F5>
+nnoremap <F4> :tabnew
+" refresca neovim con <F5>
 nmap <F5> :so %<CR>
-" eliminar todos los espacios en blanco que tenga el archivo <F6>
-nnoremap <F6> :%s/\s\+$//e<CR>
+" copia la ruta general del archivo abierto con <F6>
+nnoremap <F6>kp :let @*=expand("%")<CR>
 
-" copia la ruta general del archivo abierto con <F10>
-nnoremap <F10>kp :let @*=expand("%")<CR>
-
-" modo goyo sin distracciones
-nmap <F11> :Goyo<CR>
-imap <F11> <Esc> :Goyo<CR>
+" entre al modo goyo sin distracciones, con <F7>
+nmap <F7> :Goyo<CR>
+imap <F7> <Esc> :Goyo<CR>
 
 " para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
 nnoremap <Leader>w :w<CR>
 imap <Leader>w <Esc> :w<CR>
-" para cerrar algun búfer o pestaña <space+q>
+" para cerrar búfers <space+q>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>Q :q!<CR>
+nnoremap <Leader>qq :q!<CR>
 " para salir rápidamente de nvim <space+x>
 nnoremap <Leader>x :qa!<CR>
 
-" abrir el árbol, side bar o NERDTree
+" abre el árbol, side bar o NERDTree
 nmap <Leader>e :NERDTreeToggle<CR>
+" abre arbol de nvim
 nmap <Leader>p :Explore<CR>
+" ejecute FZF (Fuzy Find Files)
 nmap <Leader>f :FZF<CR>
 
 " comentar líneas con <}+}>
@@ -86,7 +80,7 @@ nnoremap <silent><C-j> :TmuxNavigateDown<CR>
 noremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
-" atajos para git
+" atajos para el flujo rápido con git
 nnoremap <Leader>gg :G<CR>
 nnoremap <Leader>go :GV<CR>
 nnoremap <Leader>gy :Git init<CR>

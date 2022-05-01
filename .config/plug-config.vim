@@ -30,10 +30,13 @@ let g:lightline = {
     \ }
     \}
 
-" si usted utiliza el autocompletado KITE descomente la sgt línea y agregue el
-" lenguaje que desea.
-"let g:kite_supported_languages = ['lenguaje']
-let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-java']
+" si usted utiliza el autocompletado KITE descomente la sgt línea y agregue sus lenguajes.
+"let g:kite_supported_languages = ['lenguaje', 'lenguaje']
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-tsserver',
+  \ 'coc-java'
+  \]
 
 " configuración de ultisnips
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
@@ -139,7 +142,7 @@ endfunction
 " Si al iniciar neovim te aparece siempre este molestoso error:
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
 " ejecuta el sgt comando en la PowerShell como administrador pero antes debes Python instalado: pip install pynvim
-" así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comunicamelo.
+" así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo.
 
 "*---------------------- CONFIGURACIÓN SENCILLA DE COC, LA DEJO EN INGLES ---_----------------------*
 " Always show the signcolumn, otherwise it would shift the text each time

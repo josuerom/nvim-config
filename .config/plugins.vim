@@ -19,7 +19,6 @@ Plug 'itchyny/lightline.vim'
 
 " barra lateral
 Plug 'scrooloose/nerdtree'
-Plug 'kyazdani42/nvim-web-devicons'
 
 " búsqueda - agrupador
 Plug 'easymotion/vim-easymotion'
