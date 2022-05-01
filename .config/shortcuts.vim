@@ -58,7 +58,7 @@ nnoremap <Leader>w :w<CR>
 imap <Leader>w <Esc> :w<CR>
 " para cerrar búfers <space+q>
 nnoremap <Leader>q :q<CR>
-nnoremap <C-w> :q!<CR>
+nnoremap <Leader>qq :q!<CR>
 " para salir rápidamente de nvim <space+x>
 nnoremap <Leader>x :qa!<CR>
 
@@ -111,7 +111,8 @@ nnoremap <Leader>oo :split<CR>
 " navegación entre pestañas abiertas con <spacer+l> y <space+h>
 nnoremap <Leader>l :bnext<CR>
 nnoremap <Leader>h :bprevious<CR>
-nmap <Leader>dl :bdelete<CR>
+nmap <C-w> :bdelete<CR>
+imap <C-w> <Esc> :bdelete<CR>
 
 " búsqueda por dos carácteres con easymotion
 nmap <Leader>s <Plug>(easymotion-s2)

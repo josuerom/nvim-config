@@ -37,14 +37,12 @@ set ignorecase
 set splitbelow
 
 " COC
-set encoding=utf-8
-set fileencodings=utf-8
 set hidden
 set nobackup
 set nowritebackup
-set cmdheight=1
-set updatetime=100
 set shortmess+=c
+set updatetime=100
+set fileencodings=utf-8
 
 " ajustes del tema
 let g:gruvbox_italic=1
