@@ -12,8 +12,8 @@ function! s:get_last_ui_chan()
 		return -1
 	endif
 
-	" Use the last UI in the list
-	return uis[-1].chan
+" Use the last UI in the list
+  return uis[-1].chan
 endfunction
 
 " Close the GUI

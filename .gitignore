@@ -1,5 +1,3 @@
-# ficheros ignorados pal' repositorio
-/neovim/
+# ficheros ignorados en el .git
 /.config/screenshot/
-/.config/autoload/
 /projects/java/*.class
