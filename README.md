@@ -170,7 +170,7 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
 josueromram@outlook.es
 ```
 
-### Por ahora dejaré el proyecto hasta acá, realizaré una pausa de varios días para luego optimizarlo aún más convertiendolo en un IDE, gracias.
+### Dejaré el proyecto hasta acá, realizaré una pausa por varios días para luego optimizar aún más la configuración convertiendo nvim en un IDE asombroso.
 <p align="center" width="0">
    <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/.config/screenshot/neovim-mark-flat.png">
 </p> 
