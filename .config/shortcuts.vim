@@ -26,10 +26,13 @@ nnoremap <Leader>, $a;<Esc>
 
 " ejecuta archivos .js & .ts con Nodejs
 nnoremap <Leader>dn :!node %<CR>
+nnoremap rn <Esc> :!node %<CR>
 " compila y ejecuta archivos .java
 nnoremap <Leader>dj :!java %<CR>
+nnoremap rj <Esc> :!java %<CR>
 " compila y ejecuta archivos .py
 nnoremap <Leader>dp :!python %<CR>
+nnoremap rp <Esc> :!python %<CR>
 
 " con <Ctrl+t> abres la cmd y con <space+t> abres la powershell
 nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 14<CR>
@@ -60,7 +63,7 @@ imap <F11> <Esc> :Goyo<CR>
 
 " para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
 nnoremap <Leader>w :w<CR>
-imap <Leader>w <Esc> :w<CR> i
+imap <Leader>w <Esc> :w<CR>
 " para cerrar algun búfer o pestaña <space+q>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
