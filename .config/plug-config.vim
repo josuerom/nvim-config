@@ -139,8 +139,8 @@ endfunction
 " Si al iniciar neovim te aparece siempre este molestoso error:
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim. use :CocOpenLog for details
 " ejecuta el sgt comando en la PowerShell como administrador: pip install pynvim
-" así no deberá aparecerte más.
-"si
+" así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow
+
 "*---------------------- CONFIGURACIÓN SENCILLA DE COC, LA DEJO EN INGLES ---_----------------------*
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.

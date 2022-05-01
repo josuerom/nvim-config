@@ -31,6 +31,7 @@ set noshowmode
 set nowrap
 set cursorline
 set laststatus=2
+set spelllang=es
 set tabstop=2
 set hlsearch
 set ignorecase

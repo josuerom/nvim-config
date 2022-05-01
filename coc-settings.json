@@ -13,6 +13,14 @@
       "default": true
     }
   ],
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.comments.enabled": true,
+  "java.signatureHelp.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "java.selectionRange.enabled": true,
+
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
 
@@ -27,7 +35,19 @@
     "UltiSnips",
     "~/AppData/Local/nvim/UltiSnips"
   ],
-  "snippets.ultisnips.enable": false,
-  "snippets.ultisnips.usePythonx": false,
-  "snippets.author": "Josué Romero"
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.usePythonx": true,
+  "snippets.author": "Josué Romero",
+
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider": "black",
+  //"python.formatting.blackPath": "black",
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": true,
+
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.formatOnType": true,
+  "coc.source.file.priority": 60,
+  "coc.source.buffer.priority": 50
 }
