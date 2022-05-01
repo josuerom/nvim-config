@@ -58,7 +58,7 @@ nnoremap <Leader>w :w<CR>
 imap <Leader>w <Esc> :w<CR>
 " para cerrar búfers <space+q>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>qq :q!<CR>
+nnoremap <C-w> :q!<CR>
 " para salir rápidamente de nvim <space+x>
 nnoremap <Leader>x :qa!<CR>
 
