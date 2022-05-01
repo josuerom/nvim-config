@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 /**
 	*@author @{username:Josué Romero}
-	*@param 13/abril/2022 - 21:55 COL
+	*@param 13/abril/2022 - 13:55 COL
 */
 public class Fibonacci {
 	

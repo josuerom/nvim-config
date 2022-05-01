@@ -25,9 +25,9 @@ nnoremap <C-j> 35 <C-y>
 nnoremap <Leader>, $a;<Esc>
 
 " ejecute sus archivos (.js, .ts, .java y .py)
-nmap rn <Esc> :!node %<CR>
-nmap rj <Esc> :!java %<CR>
-nmap rp <Esc> :!python %<CR>
+nmap dd <Esc> :!node %<CR>
+nmap dj <Esc> :!java %<CR>
+nmap dp <Esc> :!python %<CR>
 
 " con <space+t> abre la cmd y con <Ctrl+t> abre la powershell
 nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 14<CR>
@@ -45,7 +45,7 @@ nnoremap <F3> :e $MYVIMRC<CR>
 " crear un archivo en una nueva pestaña, con <F4>
 nnoremap <F4> :tabnew
 " refresca neovim con <F5>
-nmap <F5> :so %<CR>
+nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
 " copia la ruta general del archivo abierto con <F6>
 nnoremap <F6>kp :let @*=expand("%")<CR>
 
@@ -69,10 +69,10 @@ nmap <Leader>p :Explore<CR>
 " ejecute FZF (Fuzy Find Files)
 nmap <Leader>f :FZF<CR>
 
-" comentar líneas con <}+}>
+" comentar por línea con <}+}>
 vmap }} <plug>NERDCommenterToggle
 nmap }} <plug>NERDCommenterToggle
-imap }} <Esc> <plug>NERDCommenterToggle
+imap }} <Esc> :w<CR> <plug>NERDCommenterToggle
 
 " navegación rápida entre buffers abiertos
 nnoremap <silent><C-h> :TmuxNavigateLeft<CR>
@@ -86,7 +86,7 @@ nnoremap <Leader>go :GV<CR>
 nnoremap <Leader>gy :Git init<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>ga :Git add -A<CR>
-nnoremap <Leader>gc :Git commit -m "🔧 New change👨‍💻"<CR>
+nnoremap <Leader>gc :Git commit -m "Update files from nvim 🔧 👨‍💻"<CR>
 nnoremap <Leader>gcc :Git commit -m ""
 nnoremap <Leader>glg :Git log --oneline<CR>
 nnoremap <Leader>grr :Git remote add origin https://github.com/josuerom/.git
