@@ -40,19 +40,19 @@ nmap <Leader>¿ :e ~/AppData/Local/nvim/.config/shortcuts.vim<CR>
 nmap <Leader>' :e ~/AppData/Local/nvim/.config/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/.config/plugins.vim<CR>
 
-" eliminar todos los espacios vacíos que hayan en el archivo con <F1>
-"nmap <F1> :g/^\s\+$/s/\s\+//<CR>
-" reinicia neovim con <F2>
-nmap <F2> :so %<CR>
+" eliminar todos los espacios vacíos que hayan en el archivo con <F2>
+nmap <F2> :g/^\s\+$/s/\s\+//<CR>
 " abre el archivo de configuración inicial con <F3>
 nnoremap <F3> :e $MYVIMRC<CR>
 " crear un archivo en una nueva pestaña, con <F4>
 nnoremap <F4> :tabnew 
+" reinicia neovim con <F5>
+nmap <F5> :so %<CR>
+" eliminar todos los espacios en blanco que tenga el archivo <F6>
+nnoremap <F6> :%s/\s\+$//e<CR>
 
 " copia la ruta general del archivo abierto con <F10>
 nnoremap <F10>kp :let @*=expand("%")<CR>
-" eliminar todos los espacios en blanco que tenga el archivo <space+c+s>
-nnoremap <Leader>cs :%s/\s\+$//e<CR>
 
 " modo goyo sin distracciones
 nmap <F11> :Goyo<CR>
@@ -147,10 +147,10 @@ nnoremap n :m .-2<CR>==
 nnoremap m :m .+1<CR>==
 
 " Para camiar el carácter que contenga una cadena de texto o cambiar el carácteres que los contiene,
-" por ejemplo: si tienes un: 'Hi User Name' al presionar cs+el-simbolo-a-usar, la cadena de carácteres
+" por ejemplo: si tienes un: 'Hi UserName' al presionar cs+el-simbolo-a-usar, la cadena de carácteres
 " magicamente se cambiará sin necesidad de realizarlo manualmente.
 
-" entrega automatica de sugerencias o autocompletado COC
+" entrega o gatillado automatico de sugerencias - autocompletado COC
 imap <silent><expr> <C-space> coc#refresh()
 
 " con las feclas ajustas el tamaño de las pestañas

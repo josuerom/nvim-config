@@ -68,7 +68,7 @@ command! -bang -nargs=? -complete=dir Files
 " para la búsqueda con FZF (Line Fuzzy Finder)
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 
-"*------------------------ FUNCIÓNES PARA INTEGRAR LAS TERMINALES WINDOWS ---------------------------*
+"*------------------------ FUNCIÓNES PARA INTEGRAR LAS TERMINALES DE WINDOWS ---------------------------*
 function! OpenCmd()
   execute "normal \<C-l>"
   execute "normal \<C-l>"
@@ -137,9 +137,9 @@ endfunction
 
 "*---------------------- SOLUCIÓN A EL ERROR DE COC-SNIPPETS -----------------------*
 " Si al iniciar neovim te aparece siempre este molestoso error:
-" [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim. use :CocOpenLog for details
-" ejecuta el sgt comando en la PowerShell como administrador: pip install pynvim
-" así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow
+" [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
+" ejecuta el sgt comando en la PowerShell como administrador pero antes debes Python instalado: pip install pynvim
+" así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comunicamelo.
 
 "*---------------------- CONFIGURACIÓN SENCILLA DE COC, LA DEJO EN INGLES ---_----------------------*
 " Always show the signcolumn, otherwise it would shift the text each time

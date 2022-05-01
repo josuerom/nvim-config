@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 /**
 	*@author Josué Romero
-	*@date 13/abril/2022 - 20:11 COL
+	*@param 13/abril/2022 - 21:55 COL
 */
 public class Fibonacci {
 	
@@ -15,6 +15,6 @@ public class Fibonacci {
 		for (int i = 2; i <= 19; i++) {
 			acc[i] = (acc[i-2] + acc[i-1]);
 		}
-		System.out.println("Los primeros 20 números de la sucesión de fibonacci son.\n" + Arrays.toString(acc));
+		System.out.println("Los primeros 20 números de la sucesión de fibonacci son:\n" + Arrays.toString(acc));
 	}
-}
+:
