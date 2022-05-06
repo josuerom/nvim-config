@@ -17,9 +17,14 @@ noremap <right> <nop>
 " salir del modo INSERT con <Esc> <Ctrl+c> o <jj>
 imap <C-c> <Esc>
 imap jj <Esc>
+
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
 nnoremap <C-k> 35 <C-e>
 nnoremap <C-j> 35 <C-y>
+
+" cambia el tamaño de pestañas verticales
+nnoremap > 5<C-w>>
+nnoremap < 5<C-w><
 
 " coloca un punto y coma al final de la línea, con <space+,>
 nnoremap <Leader>, $a;<Esc>
@@ -31,7 +36,7 @@ nmap dp <Esc> :!python %<CR>
 
 " con <space+t> abre la cmd y con <Ctrl+t> abre la powershell
 nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 14<CR>
-nmap <C-t> :call OpenPowerShell()<CR> <Esc> :resize 14<CR>
+nmap <C-t> :call OpenPowerShell()<CR> <Esc>
 
 " acceso rápido a archivos de configuración global
 nmap <Leader>¿ :e ~/AppData/Local/nvim/.config/shortcuts.vim<CR>
@@ -150,12 +155,6 @@ nnoremap m :m .+1<CR>==
 
 " entrega o gatillado automatico de sugerencias - autocompletado COC
 imap <silent><expr> <C-space> coc#refresh()
-
-" con las feclas ajustas el tamaño de las pestañas
-nnoremap <silent> <right> :vertical resize +2<CR>
-nnoremap <silent> <left> :vertical resize -2<CR>
-nnoremap <silent> <up> :vertical resize +2<CR>
-nnoremap <silent> <down> :vertical resize -2<CR>
 
 " administrar todos los snippets con <F12>
 nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
