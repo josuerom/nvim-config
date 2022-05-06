@@ -25,7 +25,7 @@ nnoremap <C-j> 35 <C-y>
 nnoremap <Leader>, $a;<Esc>
 
 " ejecute sus archivos (.js, .ts, .java y .py)
-nmap dd <Esc> :!node %<CR>
+nmap dn <Esc> :!node %<CR>
 nmap dj <Esc> :!java %<CR>
 nmap dp <Esc> :!python %<CR>
 

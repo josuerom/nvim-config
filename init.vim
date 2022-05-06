@@ -35,6 +35,7 @@ set tabstop=2
 set hlsearch
 set ignorecase
 set splitbelow
+set splitright
 
 " COC
 set hidden
