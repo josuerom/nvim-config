@@ -48,6 +48,7 @@ set fileencodings=utf-8
 " ajustes del tema
 let g:gruvbox_italic=1
 let no_buffers_menu=1
-let g:gruvbox_contrast_dark="medium"
+" contrates: soft, medium & hard
+let g:gruvbox_contrast_dark="hard"
 highlight Normal ctermbg=none
 colorscheme gruvbox
