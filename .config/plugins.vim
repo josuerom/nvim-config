@@ -30,7 +30,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " autocompletado - snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 " IDE
 Plug 'terryma/vim-multiple-cursors'
