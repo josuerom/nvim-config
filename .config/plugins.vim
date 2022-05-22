@@ -43,7 +43,6 @@ Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 
 " git en nvim
-Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
 call plug#end()
