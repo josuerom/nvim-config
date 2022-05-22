@@ -31,6 +31,7 @@ nnoremap <Leader>, $a;<Esc>
 
 " ejecute sus archivos (.js, .ts, .java y .py)
 nmap dn <Esc> :!node %<CR>
+nmap dt <Esc> :!tsc %<CR>
 nmap dj <Esc> :!java %<CR>
 nmap dp <Esc> :!python %<CR>
 
@@ -116,8 +117,7 @@ nnoremap <Leader>oo :split<CR>
 " navegación entre pestañas abiertas con <spacer+l> y <space+h>
 nnoremap <Leader>l :bnext<CR>
 nnoremap <Leader>h :bprevious<CR>
-nmap <C-w> :bdelete<CR>
-imap <C-w> <Esc> :bdelete<CR>
+nnoremap <Leader>dl :bdelete<CR>
 
 " búsqueda por dos carácteres con easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
