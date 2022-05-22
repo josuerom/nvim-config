@@ -8,8 +8,8 @@
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-11",
-      "path": "D:\\Program Files\\Java\\jdk-11.0.15",
-      //para linux -> "path": "/usr/lib/jvm/default",
+      "path": "D:\\Program Files\\Java\\jdk-11.0.2\\bin",
+      //"path": "/usr/lib/jvm/default",
       "default": true
     }
   ],
