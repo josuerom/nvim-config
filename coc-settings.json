@@ -7,8 +7,8 @@
 {
   "java.configuration.runtimes": [
     {
-      "name": "OpenJDK-11",
-      "path": "D:\\Program Files\\Java\\jdk-11.0.2\\bin",
+      "name": "JavaSE-11",
+      "path": "D:\\Program Files\\Java\\jdk-11.0.2\\",
       "default": true
     }
   ],
