@@ -10,9 +10,9 @@
 														 " Twitter >> https://twitter.com/josueromr
 
 " importo los archivos de configuración global
-so ~/AppData/Local/nvim/.config/plugins.vim
-so ~/AppData/Local/nvim/.config/plug-config.vim
-so ~/AppData/Local/nvim/.config/shortcuts.vim
+so ~/AppData/Local/nvim/general/plugins.vim
+so ~/AppData/Local/nvim/general/plug-config.vim
+so ~/AppData/Local/nvim/general/shortcuts.vim
 
 filetype plugin indent on
 syntax enable
@@ -48,7 +48,7 @@ set fileencodings=utf-8
 " ajustes del tema
 let g:gruvbox_italic=1
 let no_buffers_menu=1
-" contrates: soft, medium & hard
+" contrastes: soft, medium & hard
 let g:gruvbox_contrast_dark="hard"
 highlight Normal ctermbg=none
 colorscheme gruvbox
