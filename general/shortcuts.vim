@@ -5,10 +5,10 @@
 			"███████║██║  ██║╚██████╔╝██║  ██║   ██║   ╚██████╗╚██████╔╝   ██║   ███████║██╗╚████╔╝ ██║██║ ╚═╝ ██║
 			"╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
+" el <space> es la tecla líder
 let mapleader = " "
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
-" para usar los carácteres <h, j, k & l>
 noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
