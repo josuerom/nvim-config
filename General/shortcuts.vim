@@ -19,8 +19,8 @@ imap <C-c> <Esc>
 imap jj <Esc>
 
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
-nnoremap <C-k> 35 <C-e>
-nnoremap <C-j> 35 <C-y>
+nnoremap <C-k> 50 <C-e>
+nnoremap <C-j> 50 <C-y>
 
 " cambia el tamaño de pestañas verticales
 nnoremap > 5<C-w>>
@@ -29,9 +29,8 @@ nnoremap < 5<C-w><
 " coloca un punto y coma al final de la línea, con <space+,>
 nnoremap <Leader>, $a;<Esc>
 
-" ejecute sus archivos (.js, .ts, .java y .py)
+" ejecute sus archivos (.js, .ts, .java & .py)
 nmap dn <Esc> :!node %<CR>
-nmap dt <Esc> :!tsc %<CR>
 nmap dj <Esc> :!java %<CR>
 nmap dp <Esc> :!python %<CR>
 
@@ -40,9 +39,9 @@ nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 14<CR>
 nmap <C-t> :call OpenPowerShell()<CR> <Esc>
 
 " acceso rápido a archivos de configuración global
-nmap <Leader>¿ :e ~/AppData/Local/nvim/.config/shortcuts.vim<CR>
-nmap <Leader>' :e ~/AppData/Local/nvim/.config/plug-config.vim<CR>
-nmap <Leader>0 :e ~/AppData/Local/nvim/.config/plugins.vim<CR>
+nmap <Leader>¿ :e ~/AppData/Local/nvim/general/shortcuts.vim<CR>
+nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
+nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
 
 " elimina todos los espacios en blanco que contenga el archivo, con <F2>
 nnoremap <F2> :%s/\s\+$//e<CR>
@@ -112,7 +111,7 @@ nmap <silent> gr <Plug>(coc-references)
 " dividir pantalla en dos [vertical] con space+i
 nnoremap <Leader>ii :vsplit<CR>
 " dividir pantalla en dos [horizontal] con space+o
-nnoremap <Leader>oo :split<CR>
+"nnoremap <Leader>oo :split<CR>
 
 " navegación entre pestañas abiertas con <spacer+l> y <space+h>
 nnoremap <Leader>l :bnext<CR>
