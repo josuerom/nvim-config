@@ -1,20 +1,20 @@
 import java.util.Arrays;
 
 /**
-	*@author @{username}
-	*@param 13/abril/2022 - 13:55 COL
+	* @author josuerom
+	* @param 13/marzo/2022 - 13:55 COL
 */
 public class Fibonacci {
 	
 	public static void main(String[] args) {
 		// Mostraré la serie de fibonacci hasta el #4181
-		int acc[] = new int[20];
-		acc[0] = 0;
-		acc[1] = 1;
+		int fibo[] = new int[20];
+		fibo[0] = 0;
+		fibo[1] = 1;
 
 		for (int i = 2; i <= 19; i++) {
-			acc[i] = (acc[i-2] + acc[i-1]);
+			fibo[i] = (fibo[i-2] + fibo[i-1]);
 		}
-		System.out.println("Los primeros 20 números de la Sucesión de Fibonacci son:\n" + Arrays.toString(acc));
+		System.out.println(Arrays.toString(fibo));
 	}
 }
