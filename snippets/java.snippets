@@ -33,8 +33,7 @@ def mixedCase(word):
 	return word[0].lower() + word[1:]
 endglobal
 
-## Inicio de JAVA snippets
-## salta errores
+## Salta errores
 snippet sleep "try sleep catch" b
 try {
 	Thread.sleep(${1:1000});
@@ -174,8 +173,8 @@ package ${1:interfaz};
 ${3://import java libraries}
 
 /**
-  *@author Josué Romero
-  *@param `!v strftime("%e/%B/%Y - %R")` COL
+  * @author Josué Romero
+  * @param `!v strftime("%e/%B/%Y - %R")` COL
 */
 public class `!p snip.rv = snip.basename` {
 	
@@ -230,13 +229,13 @@ default:
 endsnippet
 
 ## Estructuras de condicionales
-snippet elif "else if"
+snippet elseif "else if"
 else if ($1)`!p nl(snip)`{
 	$0${VISUAL}
 }
 endsnippet
 
-snippet el "else" w
+snippet else "else" w
 else`!p nl(snip)`{
 	$0${VISUAL}
 }
@@ -274,7 +273,7 @@ interface `!p snip.rv = snip.basename` extends ${1:Parent} }{
 }
 endsnippet
 
-snippet cc "constructor call or setter body"
+snippet thiscons "constructor call or setter body"
 this.${1:var} = $1;
 endsnippet
 
@@ -387,7 +386,7 @@ ${1:public} ${2:void} ${3:nameMethod}($4) {
 }
 endsnippet
 
-## Getter
+## Getter and Setter
 snippet get "getter" b
 public ${1:String} get${2:Name}() {
 	return `!p snip.rv = mixedCase(t[2])`;
@@ -409,7 +408,7 @@ public $2 get$1() {
 }
 endsnippet
 
-## Salidad de datos por consola
+## Salida de datos por consola
 snippet s "System.out.print('')" b
 System.out.print("$1");$0
 endsnippet
@@ -422,7 +421,7 @@ snippet err "System.err.println('')"  b
 System.err.println($1);$0
 endsnippet
 
-snippet spf "System.out.println('')"  b
+snippet sp "System.out.println('')"  b
 System.out.printf($1);$0
 endsnippet
 
@@ -441,6 +440,10 @@ endsnippet
 
 snippet st "static"
 static $0
+endsnippet
+
+snippet fi "final" b
+final $0
 endsnippet
 
 # Estructuras Switch
@@ -489,7 +492,7 @@ while ($1)`!p nl(snip)`{
 }
 endsnippet
 
-## Otro snippets fundamentales
+## Otros snippets fundamentales
 snippet ar "declarar un arreglo" b
 ${1:int} ${2:name}[] = new $1[${3:10}];$0
 endsnippet

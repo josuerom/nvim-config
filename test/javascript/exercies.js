@@ -13,13 +13,13 @@ for (i = 0, acc = 0; i < 17; i++) {
 }
 console.log('Amount of zeros =', acc);
 
-// Programa que encuentre el número mayor de un arreglo, iterandolo solo una vez
+// Programa que encuentre el número mayor de un arreglo, iterandolo solo una vez.
 const getBiggets = (arr) => arr.reduce((acc, el) => acc > el ? acc : el);
 const arr = [500, 234, -1500, 1000, 876, 8, 33];
 const a = getBiggets(arr);
 console.log('Big number =', a);
 
-// Programa que aplene los arreglos en un nivel
+// Programa que aplene los arreglos en un nivel.
 const flatten = (arr) => arr.reduce((acc, el) => acc.concat(el));
 const numbers = [[1, 2], [3, 4], [[], [5]]]; //[1, 2], [3, 4], [[], [5]]
 const b = flatten(numbers);
