@@ -2,18 +2,10 @@
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-14",
-      "path": "D:\\Program Files\\Java\\jdk-14.0.2\\",
+      "path": "D:\\Program Files\\Java\\jdk-14.0.2\\bin",
       "default": true
     }
   ],
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-  "java.format.enabled": true,
-  "java.format.onType.enabled": true,
-  "java.format.comments.enabled": true,
-  "java.signatureHelp.enabled": true,
-  "java.saveActions.organizeImports": true,
-  "java.selectionRange.enabled": true,
-
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
 
@@ -25,7 +17,7 @@
   },
 	
   "snippets.ultisnips.directories": [
-    "UltiSnips",
+    "snippets",
     "~/AppData/Local/nvim/snippets"
   ],
   "snippets.ultisnips.enable": true,
@@ -37,9 +29,4 @@
   "python.formatting.provider": "black",
   "python.linting.mypyEnabled": true,
   "python.linting.pylintEnabled": true,
-
-  "coc.preferences.colorSupport": true,
-  "coc.preferences.formatOnType": true,
-  "coc.source.file.priority": 60,
-  "coc.source.buffer.priority": 50
 }

@@ -110,8 +110,6 @@ nmap <silent> gr <Plug>(coc-references)
 
 " dividir pantalla en dos [vertical] con space+i
 nnoremap <Leader>ii :vsplit<CR>
-" dividir pantalla en dos [horizontal] con space+o
-"nnoremap <Leader>oo :split<CR>
 
 " navegación entre pestañas abiertas con <spacer+l> y <space+h>
 nnoremap <Leader>l :bnext<CR>
