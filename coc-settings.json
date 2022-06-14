@@ -1,8 +1,8 @@
 {
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-11",
-      "path": "D:\\Program Files\\Java\\jdk-11.0.2\\",
+      "name": "JavaSE-14",
+      "path": "D:\\Program Files\\Java\\jdk-14.0.2\\",
       "default": true
     }
   ],
@@ -26,7 +26,7 @@
 	
   "snippets.ultisnips.directories": [
     "UltiSnips",
-    "~/AppData/Local/nvim/UltiSnips"
+    "~/AppData/Local/nvim/snippets"
   ],
   "snippets.ultisnips.enable": true,
   "snippets.ultisnips.usePythonx": true,
