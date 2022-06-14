@@ -172,5 +172,5 @@ josueromram@outlook.es
 
 ### Dejaré el proyecto hasta acá, realizaré una pausa por varios días para luego optimizar aún más la configuración convertiendo nvim en un IDE asombroso.
 <p align="center" width="0">
-   <img align="center" width="45" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/caricatura.png">
+   <img align="center" width="60" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/caricatura.png">
 </p> 
