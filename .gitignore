@@ -1,0 +1,4 @@
+# ficheros ignorados en el .git
+/plugged/*
+/test/java/*.class
+.gitignore
