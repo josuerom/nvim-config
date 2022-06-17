@@ -29,21 +29,21 @@ nnoremap < 5<C-w><
 " coloca un punto y coma al final de la línea, con <space+,>
 nnoremap <Leader>, $a;<Esc>
 
-" presione <f+j> para ejecutar archivos (.java .py .js & .ts)
+" presione <d+u> para ejecutar archivos (.java .py .js & .ts)
 " en los modos (NORMAL, INSERT y VISUAL)
 if &filetype == "java"
-  imap fj <Esc> :w<CR> :!java %<CR>
-  nmap fj <Esc> :!java %<CR>
+  imap du <Esc> :w<CR> :!java %<CR>
+  nmap du <Esc> :!java %<CR>
 endif
 
 if &filetype == "python"
-  imap fj <Esc> :w<CR> :!python %<CR>
-  nmap fj <Esc> :!python %<CR>
+  imap du <Esc> :w<CR> :!python %<CR>
+  nmap du <Esc> :!python %<CR>
 endif
 
 if &filetype == "javascript" || &filetype == "typescript"
-  imap fj <Esc> :w<CR> :!node %<CR>
-  nmap fj <Esc> :!node %<CR>
+  imap du <Esc> :w<CR> :!node %<CR>
+  nmap du <Esc> :!node %<CR>
 endif
 
 " con <space+t> abre la cmd y con <Ctrl+t> abre la powershell
