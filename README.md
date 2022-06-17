@@ -24,7 +24,7 @@
 <H1 align="center">Guía de Instalación y Configuración para Neovim, SO Windows - Febrero, 2021.</H1>
 
 <p align="center" width="0">
-   <img align="center" width="500" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/encabezado.png">
+   <img align="center" width="520" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/encabezado.png">
 </p>
 
 <p align="center">
@@ -165,12 +165,12 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
    <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/imagenes/.png">
 </p>
 
-## ¿Necesitas ayuda?, contactate vía email.
+### ¿Necesitas ayuda?, contactate vía email.
 ```email
 josueromram@outlook.es
 ```
 
 ### Dejaré el proyecto hasta acá, realizaré una pausa por varios días para luego optimizar aún más la configuración convertiendo nvim en un Editor asombroso.
 <p align="center" width="0">
-   <img align="center" width="60" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/caricatura.png">
+   <img align="center" width="80" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/caricatura.png">
 </p> 
