@@ -1,8 +1,10 @@
-@echo off
+:: Añada la ruta de este archivo en la sgt dirección de regedit.exe
+:: Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
+:: En esa ruta, crea un (valor de cadena), con el nombre: AutoRun, y pasas la ruta
+:: De este archivo Alias.cmd
 
+@echo off
 cls
-echo Buen dia, HACKERMEN JR3!
-echo ------------------------
 
 DOSKEY jv=java --version
 DOSKEY gv=git --version
@@ -14,14 +16,16 @@ DOSKEY ..=cd..
 DOSKEY gi=git init
 DOSKEY ga=git add .
 DOSKEY gs=git status
+DOSKEY gc=git commit -m "Actualización"
 DOSKEY gp=git push
 DOSKEY gl=git pull
 DOSKEY glg=git log --oneline
-DOSKEY gc=git commit -m "Actualización"
 DOSKEY nvim=nvim .
 DOSKEY n=nvim .
-DOSKEY cdn=cd AppData\Local\nvim\
+DOSKEY cdn=cd AppData\Local\nvim
+DOSKEY cdp=cd D:\Projects\
 DOSKEY htop=taskmgr
 DOSKEY shutdown=shutdown /P
-DOSKEY shutdown=shutdown /r
-DOSKEY java=java %
+DOSKEY reboot=shutdown /r
+DOSKEY ls=dir
+
