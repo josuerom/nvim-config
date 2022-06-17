@@ -29,10 +29,22 @@ nnoremap < 5<C-w><
 " coloca un punto y coma al final de la línea, con <space+,>
 nnoremap <Leader>, $a;<Esc>
 
-" ejecute sus archivos (.js, .ts, .java & .py)
-nmap dn <Esc> :!node %<CR>
-nmap dj <Esc> :!java %<CR>
-nmap dp <Esc> :!python %<CR>
+" presione <f+j> para ejecutar archivos (.java .py .js & .ts)
+" en los modos (NORMAL, INSERT y VISUAL)
+if &filetype == "java"
+  imap fj <Esc> :w<CR> :!java %<CR>
+  nmap fj <Esc> :!java %<CR>
+endif
+
+if &filetype == "python"
+  imap fj <Esc> :w<CR> :!python %<CR>
+  nmap fj <Esc> :!python %<CR>
+endif
+
+if &filetype == "javascript" || &filetype == "typescript"
+  imap fj <Esc> :w<CR> :!node %<CR>
+  nmap fj <Esc> :!node %<CR>
+endif
 
 " con <space+t> abre la cmd y con <Ctrl+t> abre la powershell
 nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 14<CR>
