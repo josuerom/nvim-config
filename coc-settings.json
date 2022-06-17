@@ -17,8 +17,8 @@
   },
 	
   "snippets.ultisnips.directories": [
-    "snippets",
-    "~/AppData/Local/nvim/snippets"
+    "UltiSnips",
+    "~/AppData/Local/nvim/UltiSnips"
   ],
   "snippets.ultisnips.enable": true,
   "snippets.ultisnips.usePythonx": true,
