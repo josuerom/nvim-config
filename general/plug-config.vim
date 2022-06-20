@@ -31,7 +31,7 @@ let g:lightline = {
     \}
 
 " si usted utiliza el autocompletado KITE descomente la sgt línea y agregue sus lenguajes.
-"let g:kite_supported_languages = ['lenguaje', 'lenguaje']
+"let g:kite_supported_languages = ['lenguaje']
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-tsserver',
@@ -39,7 +39,7 @@ let g:coc_global_extensions = [
   \]
 
 " configuración de UltiSnips
-let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
+let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/snippets']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<C-_>"
 let g:UltiSnipsJumpForwardTrigger="<tab"
@@ -135,3 +135,5 @@ endfunction
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
 " ejecuta el sgt comando en la PowerShell como administrador pero antes debes instalar Python: pip install pynvim
 " así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo.
+
+"*--------------------------- CONFIGURACIÓN COMPLETA DE COC ----------------------------*
