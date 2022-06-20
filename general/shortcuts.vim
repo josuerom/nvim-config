@@ -5,8 +5,25 @@
 			"███████║██║  ██║╚██████╔╝██║  ██║   ██║   ╚██████╗╚██████╔╝   ██║   ███████║██╗╚████╔╝ ██║██║ ╚═╝ ██║
 			"╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-" <space> como tecla líder
+" <space> es la tecla líder
 let mapleader = " "
+
+" presione <Ctrl+r> para ejecutar archivos (.java .py .js & .ts)
+" en los modos (NORMAL o VISUAL)
+if &filetype == "java"
+  imap <C-r> <Esc> :w<CR> :!java %<CR>
+  nmap <C-r> <Esc> :!java %<CR>
+endif
+
+if &filetype == "python"
+  imap <C-r> <Esc> :w<CR> :!python %<CR>
+  nmap <C-r> <Esc> :!python %<CR>
+endif
+
+if &filetype == "javascript" || &filetype == "typescript"
+  imap <C-r> <Esc> :w<CR> :!node %<CR>
+  nmap <C-r> <Esc> :!node %<CR>
+endif
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
@@ -28,23 +45,6 @@ nnoremap < 5<C-w><
 
 " coloca un punto y coma al final de la línea, con <space+,>
 nnoremap <Leader>, $a;<Esc>
-
-" presione <d+u> para ejecutar archivos (.java .py .js & .ts)
-" en los modos (NORMAL, INSERT y VISUAL)
-if &filetype == "java"
-  imap du <Esc> :w<CR> :!java %<CR>
-  nmap du <Esc> :!java %<CR>
-endif
-
-if &filetype == "python"
-  imap du <Esc> :w<CR> :!python %<CR>
-  nmap du <Esc> :!python %<CR>
-endif
-
-if &filetype == "javascript" || &filetype == "typescript"
-  imap du <Esc> :w<CR> :!node %<CR>
-  nmap du <Esc> :!node %<CR>
-endif
 
 " con <space+t> abre la cmd y con <Ctrl+t> abre la powershell
 nmap <Leader>t :call OpenCmd()<CR> <Esc> :resize 14<CR>
