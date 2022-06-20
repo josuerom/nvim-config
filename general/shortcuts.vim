@@ -8,22 +8,17 @@
 " <space> es la tecla líder
 let mapleader = " "
 
-" presione <Ctrl+r> para ejecutar archivos (.java .py .js & .ts)
-" en los modos (NORMAL o VISUAL)
-if &filetype == "java"
-  imap <C-r> <Esc> :w<CR> :!java %<CR>
-  nmap <C-r> <Esc> :!java %<CR>
-endif
+" <space+jj> para ejecutar archivos (.java)
+imap <Leader>jj <Esc> :w<CR> :!java %<CR>
+nmap <Leader>jj :!java %<CR>
 
-if &filetype == "python"
-  imap <C-r> <Esc> :w<CR> :!python %<CR>
-  nmap <C-r> <Esc> :!python %<CR>
-endif
+" <space+pp> para ejecutar archivos (.py)
+imap <Leader>pp <Esc> :w<CR> :!python %<CR>
+nmap <Leader>pp :!python %<CR>
 
-if &filetype == "javascript" || &filetype == "typescript"
-  imap <C-r> <Esc> :w<CR> :!node %<CR>
-  nmap <C-r> <Esc> :!node %<CR>
-endif
+" <space+nn> para ejecutar archivos (.js .ts)
+imap <Leader>nn <Esc> :w<CR> :!node %<CR>
+nmap <Leader>nn :!node %<CR>
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
