@@ -8,15 +8,14 @@
 " <space> es la tecla líder
 let mapleader = " "
 
-" <space+jj> para ejecutar archivos (.java)
+" presione <space+jj> para ejecutar archivos (.java .py .js & .ts)
+" en modo NORMAL o INSERT
 imap <Leader>jj <Esc> :w<CR> :!java %<CR>
 nmap <Leader>jj :!java %<CR>
 
-" <space+pp> para ejecutar archivos (.py)
 imap <Leader>pp <Esc> :w<CR> :!python %<CR>
 nmap <Leader>pp :!python %<CR>
 
-" <space+nn> para ejecutar archivos (.js .ts)
 imap <Leader>nn <Esc> :w<CR> :!node %<CR>
 nmap <Leader>nn :!node %<CR>
 
@@ -93,13 +92,12 @@ noremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
 " atajos para el flujo rápido con git
-nnoremap <Leader>gg :G<CR>
 nnoremap <Leader>go :GV<CR>
-nnoremap <Leader>gy :Git init<CR>
+nnoremap <Leader>g :Git init<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>ga :Git add -A<CR>
-nnoremap <Leader>gc :Git commit -m "Update files from nvim 🔧 👨‍💻"<CR>
-nnoremap <Leader>gcc :Git commit -m ""
+nnoremap <Leader>gc :Git commit -m "♻ Update"<CR>
+nnoremap <Leader>gcc :Git commit -v<CR>
 nnoremap <Leader>glg :Git log --oneline<CR>
 nnoremap <Leader>grr :Git remote add origin https://github.com/josuerom/.git
 nnoremap <Leader>gpp :Git push -u origin main<CR>
@@ -108,14 +106,14 @@ nnoremap <Leader>gpu :Git push --set-upstream origin main<CR>
 nnoremap <Leader>gf :Git fetch<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gm :Git merge<CR>
-nnoremap <Leader>ge :Git revert #commit
+nnoremap <Leader>ge :Git revert 
 
 " flujo instantaneo con COC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" dividir pantalla en dos [vertical] con space+i
+" dividir pantalla en dos [vertical] con <space+ii>
 nnoremap <Leader>ii :vsplit<CR>
 
 " navegación entre pestañas abiertas con <spacer+l> y <space+h>
