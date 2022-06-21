@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-<img src="https://github.com/josuerom/nvim-config/blob/main/imagenes/review.gif" width="800">
+<img src="https://github.com/josuerom/dotfiles/blob/main/muestra-nvim.gif" width="800">
 </p>
 
 ## Introducción.
