@@ -1,3 +1,3 @@
-# ficheros ignorados en el .git
-/test/java/*.class
-/.gitignore
+# ficheros ignorados .git
+/tests/java/*.class
+.gitignore
