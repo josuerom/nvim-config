@@ -1,7 +1,7 @@
 :: Añada la ruta de este archivo en la sgt dirección de regedit.exe
-:: Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
-:: En esa ruta, crea un (valor de cadena), con el nombre: AutoRun, y pasas la ruta
-:: De este archivo Alias.cmd
+:: Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\
+:: En esa ruta, crea un (valor de cadena), con el nombre: AutoRun, y pasale la ruta
+:: De este archivo Alias.cmd. Luego, reinicie y disfrute.
 
 @echo off
 cls
@@ -17,7 +17,8 @@ DOSKEY ..=cd..
 DOSKEY gi=git init
 DOSKEY ga=git add .
 DOSKEY gs=git status
-DOSKEY gc=git commit -m "Actualización"
+DOSKEY gc=git commit -m "♻ Update"
+DOSKEY gcc=git commit -v
 DOSKEY gp=git push
 DOSKEY gl=git pull
 DOSKEY glg=git log --oneline
@@ -29,4 +30,4 @@ DOSKEY shutdown=shutdown /P
 DOSKEY reboot=shutdown /r
 DOSKEY ls=dir
 DOSKEY rm=rmdir
-DOSKEY del=del
+DOSKEY rf=del
