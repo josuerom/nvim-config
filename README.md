@@ -40,7 +40,7 @@ El presente proyecto describe el proceso que debes seguir para personalizar e in
 2. Instalar manejador de paquetes **Chocolatey y Neovim**
 3. Instalar **Git**
 4. Instalar **Node.js**
-5. Clonar/Descargar este repositorio
+5. Clonar repositorio **nvim-config**
 6. Instalar gestor de plugins **vim plug**
 
 **Tenga en cuenta que:** para instalar Neovim, si o si necesitarás utilizar todas esas 5-6 herramientas, para ello aquí conocerás el paso a paso para instalar cada una correctamente sin errores ni falsa información, cabe mensionar que, *Windows PowerShell o la CMD* vienen instalado de fabrica en la pc's con Windows, por eso no será necesario explicarte cómo ejecutarlo, ni instalarlo, ni abrirlo. ¡Si estas acá metido es porque ya debes de saber abrirlo y ejecutar uno que otro comando. Si no sabes pues te invito a mira un video en YT. ¡Listo ya estás preparado!.
