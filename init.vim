@@ -1,54 +1,50 @@
-"*--------------------- Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL ---------------------*
+"██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗  ██╗   ██╗██╗███╗   ███╗
+"██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝  ██║   ██║██║████╗ ████║
+"██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗  ██║   ██║██║██╔████╔██║
+"██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║  ╚██╗ ██╔╝██║██║╚██╔╝██║
+"██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║██╗╚████╔╝ ██║██║ ╚═╝ ██║
+"╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-														"██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
-														"██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
-														"██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
-														"██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
-														"██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
-														"╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
-																				"Creador >> Josué Romero
-																"Twitter >> https://twitter.com/josueromr
+call plug#begin('~/AppData/Local/nvim/plugged/')
 
-" importo los archivos de configuración global
-so ~/AppData/Local/nvim/general/plugins.vim
-so ~/AppData/Local/nvim/general/plug-config.vim
-so ~/AppData/Local/nvim/general/shortcuts.vim
+" resaltado de sintaxis
+Plug 'sheerun/vim-polyglot'
+" tema
 
-filetype plugin indent on
-syntax enable
-set number
-set mouse=a
-set numberwidth=1
-set relativenumber
-set clipboard=unnamedplus
-set background=dark
-set showcmd
-set ruler
-set sw=2
-set termguicolors
-set showmatch
-set noshowmode
-set nowrap
-set laststatus=2
-set spelllang=es
-set tabstop=2
-set hlsearch
-set ignorecase
-set splitbelow
-set splitright
+Plug 'morhetz/gruvbox'
 
-" COC
-set hidden
-set nobackup
-set nowritebackup
-set shortmess+=c
-set updatetime=100
-set fileencodings=utf-8
+" barra de estado
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'itchyny/lightline.vim'
 
-" ajustes del tema
-let g:gruvbox_italic=1
-let no_buffers_menu=1
-" contrastes: soft, medium & hard
-let g:gruvbox_contrast_dark="hard"
-highlight Normal ctermbg=none
-colorscheme gruvbox
+" barra lateral - iconos
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+
+" búsqueda - agrupador
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+
+" navegación entre pestañas
+Plug 'christoomey/vim-tmux-navigator'
+
+" autocompletado - snippets
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'SirVer/ultisnips'
+
+" historial de commits
+Plug 'junegunn/gv.vim'
+
+" IDE
+Plug 'terryma/vim-multiple-cursors'
+Plug 'preservim/nerdcommenter'
+Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+Plug 'junegunn/fzf.vim'
+Plug 'frazrepo/vim-rainbow'
+Plug 'vim-scripts/taglist.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mhinz/vim-signify'
+Plug 'yggdroot/indentline'
+
+call plug#end()
