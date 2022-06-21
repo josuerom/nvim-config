@@ -119,7 +119,7 @@ Añado captura de pantalla, por sino me entendiste muy bien, me referia a está:
 Luego de ejecutar el comando, te arrojará muchos errores pero _NO TE ASUSTES NI DEPRIMAS_ que son normales las primeras veces que lo ejecutas, aparecen porque los plugins no se han instalado. Y deben ser éstos mismos errores los que te aparezcan allá:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/errores-normales.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/error-inicial.png">
 </p>
 
 Para saltar esos errores puedes presionar varias veces la tecla **Enter** o solo una vez la tecla **Esc**, nada más faltaría instalar el gestor de plugins **vim plug** para que así culmines con el último paso.
@@ -140,7 +140,7 @@ Continuando con esta super guía de instalación, en la ventana principal o vent
 Añado captura de pantalla:
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/pluginstall.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/plug-install.png">
 </p>
 
 Así podrás instalar todos los plugins que manejo a diario, añado otra captura guía.
@@ -158,11 +158,11 @@ El comando cerrará neovim completamente. Para que tú luego, lo vuelvas a abrir
 En términos generales, veraz el cambio justo como en las imágenes que proporcioné al final de esta guía; cabe mencionar que, si deseas cambiar el tema u otra cosas que no te guste, deberás buscar como realizarlo.
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/nvim-file01.png">
 </p>
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/imagenes/.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/imagenes/nvim-file02.png">
 </p>
 
 ### ¿Necesitas ayuda?, contactame vía email.
