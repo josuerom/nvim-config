@@ -93,7 +93,7 @@ Git es un software de control de versiones diseñado por **Linus Torvalds** qui�
 
 Para instalarlo da un [click aquí](https://nodejs.org/es/download/ "https://nodejs.org/es/download/"), este enlace te llevará directamente a su pagina oficial de descarga, si requieres más información de instalación, visualizate un video en **YouTube**.
 
-### Paso No. 5. Clonar/Descarga este repositorio.
+### Paso No. 5. Clona/Descarga este repositorio.
 Esta es la personalización que actualmente tengo en neovim:
 
 <p align="center" width="0">
@@ -124,7 +124,7 @@ Luego de ejecutar el comando, te arrojará muchos errores pero _NO TE ASUSTES NI
 
 Para saltar esos errores puedes presionar varias veces la tecla **Enter** o solo una vez la tecla **Esc**, nada más faltaría instalar el gestor de plugins **vim plug** para que así culmines con el último paso.
 
-### Paso No. 6. Instalar el gestor de plugins VIM PLUG
+### Paso No. 6. Instalar el gestor de plugins VIM-PLUG
 **Vim plug** es un administrador de plugins para el editor de texto vim y neovim minimalista, de código abierto creado por **junegunn** hace tiempo. Además es totalmente libre de uso. Una de sus principales y más conmovedores funcionalidades es que puede instalar, actualizar y desinstalar complementos en paralelo. Crea clones para minimizar el uso de espacio del disco y el tiempo de descarga; para realizar una descarga limpia y ligera. Ejecuta en la pestaña PowerShell abierta como administrador, el siguiente comando:
 
 ```powershell
@@ -165,12 +165,12 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
    <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/imagenes/.png">
 </p>
 
-### ¿Necesitas ayuda?, contactate vía email.
+### ¿Necesitas ayuda?, contactame vía email.
 ```email
 josueromram@outlook.es
 ```
 
 ### Dejaré el proyecto hasta acá, realizaré una pausa por varios días para luego optimizar aún más la configuración convertiendo nvim en un Editor asombroso.
 <p align="center" width="0">
-   <img align="center" width="80" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/caricatura.png">
+   <img align="center" width="70" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/caricatura.png">
 </p> 
