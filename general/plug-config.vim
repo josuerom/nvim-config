@@ -5,7 +5,7 @@
 "██║     ███████╗╚██████╔╝╚██████╔╝      ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝██╗╚████╔╝ ██║██║ ╚═╝ ██║
 "╚═╝     ╚══════╝ ╚═════╝  ╚═════╝        ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ ╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-" configuración de la barra de estado inferioir
+" configuración de la barra de estado inferior
 let g:lightline = {
     \ 'active': {
     \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
@@ -30,7 +30,7 @@ let g:lightline = {
     \ }
     \}
 
-" si usted utiliza el autocompletado KITE descomente la sgt línea y agregue sus lenguajes.
+" si usted utiliza el autocompletado KITE descomente la sgt línea y agregue los lenguajes.
 "let g:kite_supported_languages = ['lenguaje']
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -41,15 +41,12 @@ let g:coc_global_extensions = [
 " configuración de UltiSnips
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/snips']
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<C-_>"
-let g:UltiSnipsJumpForwardTrigger="<tab"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
-" use <C-j & C-k> para saltar al siguiente y anterior marcador de posición en los Snippets
+" use <C-j & C-k> para saltar al siguiente y anterior marcador de posición en los snippets
 let g:coc_snippet_next = '<C-j>'
 let g:coc_snippet_prev = '<C-k>'
 
-" cerrado automatico de la barra lateral o árbol
+" cerrado automatico de la barra lateral o tree
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeAutoDeleteBuffer=1
@@ -57,13 +54,13 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 
-" navegación con tmux
+" navegación rápida tmux
 let g:tmux_navigator_no_mappings=1
 
-" para la búsqueda con FZF (Line Fuzzy Finder)
+" interfaz de búsqueda FZF (Line Fuzzy Finder)
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 
-"*------------------------ FUNCIÓNES PARA INTEGRAR LAS TERMINALES DE WINDOWS ---------------------------*
+"*------------------ FUNCIÓNES PARA INTEGRAR LAS TERMINALES DE WINDOWS ---------------------*
 function! OpenCmd()
   execute "normal \<C-l>"
   execute "normal \<C-l>"
@@ -130,13 +127,13 @@ function! OpenPowerShell()
   endif
 endfunction
 
-"*------------------------ SOLUCIÓN A EL ERROR DE COC-SNIPPETS -------------------------*
+"*-------------------------- SOLUCIÓN A EL ERROR DE COC-SNIPPETS ---------------------------*
 " Si al iniciar neovim te aparece siempre este molestoso error:
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
 " ejecuta el sgt comando en la PowerShell como administrador pero antes debes instalar Python: pip install pynvim
 " así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo.
 
-"*--------------------------- CONFIGURACIÓN COMPLETA DE COC ----------------------------*
+"*--------------------- CONFIGURACIÓN COMPLETA DE CONQUER OF COMPLETION) --------------------*
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("nvim-0.7.0") || has("patch-8.1.1564")
