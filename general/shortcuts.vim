@@ -8,16 +8,14 @@
 " <space> es la tecla líder
 let mapleader = " "
 
-" presione <space+jj> para ejecutar archivos (.java .py .js & .ts)
+" ejecute archivos (.java .py .js & .ts)
 " en modo NORMAL o INSERT
 imap <Leader>jj <Esc> :w<CR> :!java %<CR>
-nmap <Leader>jj :!java %<CR>
-
-imap <Leader>pp <Esc> :w<CR> :!python %<CR>
-nmap <Leader>pp :!python %<CR>
-
+nmap <Leader>jj :w<CR> :!java %<CR>
+imap <Leader>yy <Esc> :w<CR> :!python %<CR>
+nmap <Leader>yy :w<CR> :!python %<CR>
 imap <Leader>nn <Esc> :w<CR> :!node %<CR>
-nmap <Leader>nn :!node %<CR>
+nmap <Leader>nn :w<CR> :!node %<CR>
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
