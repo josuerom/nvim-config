@@ -1,41 +1,21 @@
-			"███████╗██╗  ██╗ ██████╗ ██████╗ ████████╗ ██████╗██╗   ██╗████████╗███████╗  ██╗   ██╗██╗███╗   ███╗
-			"██╔════╝██║  ██║██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██║   ██║╚══██╔══╝██╔════╝  ██║   ██║██║████╗ ████║
-			"███████╗███████║██║   ██║██████╔╝   ██║   ██║     ██║   ██║   ██║   ███████╗  ██║   ██║██║██╔████╔██║
-			"╚════██║██╔══██║██║   ██║██╔══██╗   ██║   ██║     ██║   ██║   ██║   ╚════██║  ╚██╗ ██╔╝██║██║╚██╔╝██║
-			"███████║██║  ██║╚██████╔╝██║  ██║   ██║   ╚██████╗╚██████╔╝   ██║   ███████║██╗╚████╔╝ ██║██║ ╚═╝ ██║
-			"╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
+"███████╗██╗  ██╗ ██████╗ ██████╗ ████████╗ ██████╗██╗   ██╗████████╗███████╗  ██╗   ██╗██╗███╗   ███╗
+"██╔════╝██║  ██║██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██║   ██║╚══██╔══╝██╔════╝  ██║   ██║██║████╗ ████║
+"███████╗███████║██║   ██║██████╔╝   ██║   ██║     ██║   ██║   ██║   ███████╗  ██║   ██║██║██╔████╔██║
+"╚════██║██╔══██║██║   ██║██╔══██╗   ██║   ██║     ██║   ██║   ██║   ╚════██║  ╚██╗ ██╔╝██║██║╚██╔╝██║
+"███████║██║  ██║╚██████╔╝██║  ██║   ██║   ╚██████╗╚██████╔╝   ██║   ███████║██╗╚████╔╝ ██║██║ ╚═╝ ██║
+"╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
 " <space> es la tecla líder
 let mapleader = " "
 
-" con <F1> ejecute sus archivos (.java .py .js & .ts)
-if &filetype == 'java'
-   so ~/AppData/Local/nvim/init.vim<CR>
-   imap <F1> <Esc> :w<CR> :!java %<CR>
-   nmap <F1> :w<CR> :!java %<CR>
-endif
-
-if &filetype == 'python'
-   so ~/AppData/Local/nvim/init.vim<CR>
-   imap <F1> <Esc> :w<CR> :!python %<CR>
-   nmap <F1> :w<CR> :!python %<CR>
-endif
-
-if &filetype == 'javascript' || &filetype == 'typescript'
-   so ~/AppData/Local/nvim/init.vim<CR>
-   imap <F1> <Esc> :w<CR> :!node %<CR>
-   nmap <F1> :w<CR> :!node %<CR>
-endif
-
-" si la forma anterior no le funciona, eliminela y descomente
-" las siguientes líneas para que pueda ejecutar sus archivos (.java .py .js & .ts)
+" ejecute sus programas (.java .py .js & .ts)
 " en modo NORMAL o INSERT
-"imap <F1> <Esc> :w<CR> :!java %<CR>
-"nmap <F1> :w<CR> :!java %<CR>
-"imap <F2> <Esc> :w<CR> :!python %<CR>
-"nmap <F2> :w<CR> :!python %<CR>
-"imap <F3> <Esc> :w<CR> :!node %<CR>
-"nmap <F3> :w<CR> :!node %<CR>
+imap <F1> <Esc> :w<CR> :!java %<CR>
+nmap <F1> :w<CR> :!java %<CR>
+imap <F2> <Esc> :w<CR> :!python %<CR>
+nmap <F2> :w<CR> :!python %<CR>
+imap <F3> <Esc> :w<CR> :!node %<CR>
+nmap <F3> :w<CR> :!node %<CR>
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
@@ -43,9 +23,8 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-" salir del modo INSERT con <Esc> <Ctrl+c> o <jj>
+" salir del modo INSERT con <Esc> o <Ctrl+c>
 imap <C-c> <Esc>
-imap jj <Esc>
 
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
 nnoremap <C-k> 50 <C-e>
@@ -68,32 +47,21 @@ nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
 nmap <Leader>9 :e $MYVIMRC<CR>
 
-" crear un archivo en una nueva pestaña, con <F4>
-nnoremap <F4> :tabnew
+" 
+"nnoremap <F4> :e <CR>
 " refresca neovim con <F5>
 nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
 " copia la ruta general del archivo abierto con <F6>
 nnoremap <F6>kp :let @*=expand("%")<CR>
-
 " entre al modo goyo sin distracciones, con <F7>
 nmap <F7> :Goyo<CR>
 imap <F7> <Esc> :Goyo<CR>
-" con <F8> refresca la ruta donde te encuentras
-nmap <F8> :source %<CR>
-
-" administrar todos los snippets con <F12>
-nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
-" actualizar extensiones
-nnoremap <silent><nowait> <Leader>cup :<C-u>CocUpdate<CR>
-" desintalar extensiones
-nnoremap <silent><nowait> <Leader>cun :<C-u>CocUninstall coc-
 
 " para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
 nnoremap <Leader>w :w<CR>
-imap <Leader>w <Esc> :w<CR>
+imap <C-s> <Esc> :w<CR>
 " para cerrar búfers <space+q>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>qq :q!<CR>
 " para salir rápidamente de nvim <space+x>
 nnoremap <Leader>x :qa!<CR>
 
@@ -130,7 +98,7 @@ nnoremap <Leader>gpu :Git push --set-upstream origin main<CR>
 nnoremap <Leader>gf :Git fetch<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gm :Git merge<CR>
-nnoremap <Leader>ge :Git revert 
+nnoremap <Leader>ge :Git revert
 
 " flujo instantaneo con COC
 nmap <silent> gd <Plug>(coc-definition)
@@ -181,6 +149,13 @@ nnoremap m :m .+1<CR>==
 
 " entrega o gatillado automatico de sugerencias - autocompletado COC
 imap <silent><expr> <C-space> coc#refresh()
+
+" administrar todos los snippets con <F12>
+nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
+" actualizar extensiones
+nnoremap <silent><nowait> <Leader>cuu :<C-u>CocUpdate<CR>
+" desintalar extensiones
+nnoremap <silent><nowait> <Leader>cii :<C-u>CocUninstall coc-
 
 " Use <C-j> para saltar a los demás marcadores de posición
 imap <C-j> <Plug>(coc-snippets-expand-jump)
