@@ -10,12 +10,12 @@ let mapleader = " "
 
 " ejecute archivos (.java .py .js & .ts)
 " en modo NORMAL o INSERT
-imap <Leader>jj <Esc> :w<CR> :!java %<CR>
-nmap <Leader>jj :w<CR> :!java %<CR>
-imap <Leader>yy <Esc> :w<CR> :!python %<CR>
-nmap <Leader>yy :w<CR> :!python %<CR>
-imap <Leader>nn <Esc> :w<CR> :!node %<CR>
-nmap <Leader>nn :w<CR> :!node %<CR>
+imap <F1> <Esc> :w<CR> :!java %<CR>
+nmap <F1> :w<CR> :!java %<CR>
+imap <F2> <Esc> :w<CR> :!python %<CR>
+nmap <F2> :w<CR> :!python %<CR>
+imap <F3> <Esc> :w<CR> :!node %<CR>
+nmap <F3> :w<CR> :!node %<CR>
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
@@ -46,11 +46,8 @@ nmap <C-t> :call OpenPowerShell()<CR> <Esc>
 nmap <Leader>¿ :e ~/AppData/Local/nvim/general/shortcuts.vim<CR>
 nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
+nmap <Leader>9 :e $MYVIMRC<CR>
 
-" elimina todos los espacios en blanco que contenga el archivo, con <F2>
-nnoremap <F2> :%s/\s\+$//e<CR>
-" abre el archivo de configuración inicial con <F3>
-nnoremap <F3> :e $MYVIMRC<CR>
 " crear un archivo en una nueva pestaña, con <F4>
 nnoremap <F4> :tabnew
 " refresca neovim con <F5>
