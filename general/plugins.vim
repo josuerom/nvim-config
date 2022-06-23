@@ -9,8 +9,8 @@ call plug#begin('~/AppData/Local/nvim/plugged/')
 
 " resaltado de sintaxis
 Plug 'sheerun/vim-polyglot'
-" tema
 
+" tema
 Plug 'morhetz/gruvbox'
 
 " barra de estado
@@ -22,6 +22,8 @@ Plug 'scrooloose/nerdtree'
 "Plug 'ryanoasis/vim-devicons'
 
 " búsqueda - agrupador
+Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
@@ -38,8 +40,6 @@ Plug 'junegunn/gv.vim'
 " IDE
 Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdcommenter'
-Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-Plug 'junegunn/fzf.vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'junegunn/goyo.vim'
 Plug 'jiangmiao/auto-pairs'
