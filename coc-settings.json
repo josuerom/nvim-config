@@ -1,4 +1,12 @@
 {
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  },
   "java.configuration.runtimes": [
     {
       "name": "JavaSE-14",
@@ -12,7 +20,6 @@
   "java.signatureHelp.enabled": true,
   "java.saveActions.organizeImports": true,
   "java.selectionRange.enabled": true,
-  
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
 
@@ -22,7 +29,7 @@
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"]
   },
-	
+
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "~/AppData/Local/nvim/snips"
