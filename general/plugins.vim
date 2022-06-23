@@ -9,6 +9,7 @@ call plug#begin('~/AppData/Local/nvim/plugged/')
 
 " resaltado de sintaxis
 Plug 'sheerun/vim-polyglot'
+"Plug 'kien/rainbow_parentheses.vim'
 
 " tema
 Plug 'morhetz/gruvbox'
@@ -19,11 +20,8 @@ Plug 'itchyny/lightline.vim'
 
 " barra lateral - iconos
 Plug 'scrooloose/nerdtree'
-"Plug 'ryanoasis/vim-devicons'
 
 " búsqueda - agrupador
-Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
@@ -40,7 +38,9 @@ Plug 'junegunn/gv.vim'
 " IDE
 Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdcommenter'
-Plug 'frazrepo/vim-rainbow'
+Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/syntastic'
 Plug 'junegunn/goyo.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
