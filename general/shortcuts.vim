@@ -10,12 +10,20 @@ let mapleader = " "
 
 " ejecute sus programas (.java .py .js & .ts)
 " en modo NORMAL o INSERT
-imap <F1> <Esc> :w<CR> :!java %<CR>
-nmap <F1> :w<CR> :!java %<CR>
-imap <F2> <Esc> :w<CR> :!python %<CR>
-nmap <F2> :w<CR> :!python %<CR>
-imap <F3> <Esc> :w<CR> :!node %<CR>
-nmap <F3> :w<CR> :!node %<CR>
+function! RunJava()
+	imap <F1> <Esc> :w<CR> :!java %<CR>
+	nmap <F1> :w<CR> :!java %<CR>
+endfunction
+
+function! RunPython()
+	imap <F1> <Esc> :w<CR> :!python %<CR>
+	nmap <F1> :w<CR> :!python %<CR>
+endfunction
+
+function! RunJsAndTs()
+	imap <F1> <Esc> :w<CR> :!node %<CR>
+	nmap <F1> :w<CR> :!node %<CR>
+endfunction
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
