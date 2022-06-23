@@ -8,14 +8,37 @@
 " <space> es la tecla líder
 let mapleader = " "
 
-" ejecute archivos (.java .py .js & .ts)
+" con <space+so> refresca el archivo SHORTCUTS.VIM
+nmap <Leader>so :so ~/AppData/Local/nvim/general/shortcuts.vim<CR>
+
+" con <F1> ejecute sus archivos (.java .py .js & .ts)
+if &filetype == 'java'
+   so ~/AppData/Local/nvim/init.vim<CR>
+   imap <F1> <Esc> :w<CR> :!java %<CR>
+   nmap <F1> :w<CR> :!java %<CR>
+endif
+
+if &filetype == 'python'
+   so ~/AppData/Local/nvim/init.vim<CR>
+   imap <F1> <Esc> :w<CR> :!python %<CR>
+   nmap <F1> :w<CR> :!python %<CR>
+endif
+
+if &filetype == 'javascript' || &filetype == 'typescript'
+   so ~/AppData/Local/nvim/init.vim<CR>
+   imap <F1> <Esc> :w<CR> :!node %<CR>
+   nmap <F1> :w<CR> :!node %<CR>
+endif
+
+" si la forma anterior no le funciona, eliminela y descomente
+" las siguientes líneas para que pueda ejecutar sus archivos (.java .py .js & .ts)
 " en modo NORMAL o INSERT
-imap <F1> <Esc> :w<CR> :!java %<CR>
-nmap <F1> :w<CR> :!java %<CR>
-imap <F2> <Esc> :w<CR> :!python %<CR>
-nmap <F2> :w<CR> :!python %<CR>
-imap <F3> <Esc> :w<CR> :!node %<CR>
-nmap <F3> :w<CR> :!node %<CR>
+"imap <F1> <Esc> :w<CR> :!java %<CR>
+"nmap <F1> :w<CR> :!java %<CR>
+"imap <F2> <Esc> :w<CR> :!python %<CR>
+"nmap <F2> :w<CR> :!python %<CR>
+"imap <F3> <Esc> :w<CR> :!node %<CR>
+"nmap <F3> :w<CR> :!node %<CR>
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
