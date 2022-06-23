@@ -31,7 +31,7 @@ let g:lightline = {
     \}
 
 " si usted utiliza el autocompletado KITE descomente la sgt línea y agregue los lenguajes.
-"let g:kite_supported_languages = ['lenguaje']
+"let g:kite_supported_languages = ['*']
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-tsserver',
