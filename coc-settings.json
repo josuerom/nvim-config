@@ -6,6 +6,13 @@
       "default": true
     }
   ],
+  "java.format.enabled": true,
+  "java.format.onType.enabled": true,
+  "java.format.comments.enabled": true,
+  "java.signatureHelp.enabled": true,
+  "java.saveActions.organizeImports": true,
+  "java.selectionRange.enabled": true,
+  
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
 
