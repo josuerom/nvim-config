@@ -20,6 +20,7 @@ Plug 'itchyny/lightline.vim'
 
 " barra lateral - iconos
 Plug 'scrooloose/nerdtree'
+"Plug 'ryanoasis/vim-devicons'
 
 " búsqueda - agrupador
 Plug 'easymotion/vim-easymotion'
