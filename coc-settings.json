@@ -1,4 +1,6 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": ["java", "python", "javascript", "typescript", "html", "css", "markdown", "json", "vim", "txt"],
+  "coc.preferences.formatOnType": false,
   "languageserver": {
     "go": {
       "command": "gopls",
