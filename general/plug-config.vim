@@ -5,6 +5,13 @@
 "██║     ███████╗╚██████╔╝╚██████╔╝      ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝██╗╚████╔╝ ██║██║ ╚═╝ ██║
 "╚═╝     ╚══════╝ ╚═════╝  ╚═════╝        ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ ╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
+" ajustes del tema
+let g:gruvbox_italic=1
+" soft medium hard
+let g:gruvbox_contrast_dark="hard"
+highlight Normal ctermbg=NONE
+colorscheme gruvbox
+
 " configuración de la barra de estado inferior
 let g:lightline = {
     \ 'active': {
@@ -130,7 +137,7 @@ endfunction
 "*-------------------------- SOLUCIÓN A EL ERROR DE COC-SNIPPETS ---------------------------*
 " Si al iniciar neovim te aparece siempre este molestoso error:
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
-" ejecuta el sgt comando en la PowerShell como administrador pero antes debes instalar Python: pip install pynvim
+" ejecuta el sgt comando en la PowerShell como administrador pero antes debes instalar Python: pip3 install pynvim
 " así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo.
 
 "*--------------------- CONFIGURACIÓN COMPLETA DE CONQUER OF COMPLETION) --------------------*
@@ -239,8 +246,3 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
-
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
