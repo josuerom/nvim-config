@@ -5,12 +5,7 @@
 "██║     ███████╗╚██████╔╝╚██████╔╝      ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝██╗╚████╔╝ ██║██║ ╚═╝ ██║
 "╚═╝     ╚══════╝ ╚═════╝  ╚═════╝        ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ ╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-" ajustes del tema
-let g:gruvbox_italic=1
-" soft medium hard
-let g:gruvbox_contrast_dark="hard"
-highlight Normal ctermbg=NONE
-colorscheme gruvbox
+
 
 " configuración de la barra de estado inferior
 let g:lightline = {
@@ -37,8 +32,17 @@ let g:lightline = {
     \ }
     \}
 
+" ajuste para mostrar errores una vez se guarde el archivo
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+
 " si usted utiliza el autocompletado KITE descomente la sgt línea y agregue los lenguajes.
-"let g:kite_supported_languages = ['*']
+"let g:kite_supported_languages = ['lenguaje']
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-tsserver',
@@ -137,7 +141,7 @@ endfunction
 "*-------------------------- SOLUCIÓN A EL ERROR DE COC-SNIPPETS ---------------------------*
 " Si al iniciar neovim te aparece siempre este molestoso error:
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
-" ejecuta el sgt comando en la PowerShell como administrador pero antes debes instalar Python: pip3 install pynvim
+" ejecuta el sgt comando en la PowerShell como administrador pero antes debes instalar Python: pip install pynvim
 " así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo.
 
 "*--------------------- CONFIGURACIÓN COMPLETA DE CONQUER OF COMPLETION) --------------------*
