@@ -8,9 +8,6 @@
 " <space> es la tecla líder
 let mapleader = " "
 
-" con <space+so> refresca el archivo SHORTCUTS.VIM
-nmap <Leader>so :so ~/AppData/Local/nvim/general/shortcuts.vim<CR>
-
 " con <F1> ejecute sus archivos (.java .py .js & .ts)
 if &filetype == 'java'
    so ~/AppData/Local/nvim/init.vim<CR>
@@ -81,6 +78,15 @@ nnoremap <F6>kp :let @*=expand("%")<CR>
 " entre al modo goyo sin distracciones, con <F7>
 nmap <F7> :Goyo<CR>
 imap <F7> <Esc> :Goyo<CR>
+" con <F8> refresca la ruta donde te encuentras
+nmap <F8> :source %<CR>
+
+" administrar todos los snippets con <F12>
+nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
+" actualizar extensiones
+nnoremap <silent><nowait> <Leader>cup :<C-u>CocUpdate<CR>
+" desintalar extensiones
+nnoremap <silent><nowait> <Leader>cun :<C-u>CocUninstall coc-
 
 " para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
 nnoremap <Leader>w :w<CR>
@@ -175,13 +181,6 @@ nnoremap m :m .+1<CR>==
 
 " entrega o gatillado automatico de sugerencias - autocompletado COC
 imap <silent><expr> <C-space> coc#refresh()
-
-" administrar todos los snippets con <F12>
-nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
-" actualizar extensiones
-nnoremap <silent><nowait> <Leader>cuu :<C-u>CocUpdate<CR>
-" desintalar extensiones
-nnoremap <silent><nowait> <Leader>cii :<C-u>CocUninstall coc-
 
 " Use <C-j> para saltar a los demás marcadores de posición
 imap <C-j> <Plug>(coc-snippets-expand-jump)
