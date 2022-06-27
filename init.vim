@@ -54,3 +54,11 @@ autocmd FileType typescript :call RunJsAndTs()
 so ~/AppData/Local/nvim/general/plugins.vim
 so ~/AppData/Local/nvim/general/plug-config.vim
 so ~/AppData/Local/nvim/general/shortcuts.vim
+
+" ajustes del tema
+"let g:gruvbox_italic=1
+let no_buffers_menu=1
+" soft medium hard
+let g:gruvbox_contrast_dark="hard"
+highlight Normal ctermbg=none
+colorscheme gruvbox
