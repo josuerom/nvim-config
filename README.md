@@ -58,15 +58,11 @@ Una vez finalice la instalación, ejecutala como administrador ya que dentro de 
 ### Paso No. 2. Instalar Chocolatey & Neovim.
 Chocolatey es un gestor de paquetes que nos permite instalar programas desde la terminal, en pocas palabras, nos servirá para instalar programas que no están en la tienda de microsoft; si o si debes instalarlo para luego instalar neovim valga la redundancia. OJO que debes copiar y pegar esos comandos en la pestaña PowerShell de la terminal recientemente instalada.
 
-Ejecuta éste primer comando para conocer el estado de las restricciones de tu computador:
-```powershell
-Get-ExecutionPolicy
-```  
-Ejecuta éste otro comando, para deshabilitar las restricciones y no se presenten posibles errores:
+Ejecuta éste comando, para deshabilitar las restricciones y no se presenten errores:
 ```powershell
 Set-ExecutionPolicy AllSigned
 ``` 
-Por último, añade este comando ya que contiene la instalación del gestor **Chocolatey**:
+Por último, añada este comando ya que contiene la instalación del gestor **Chocolatey**:
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
