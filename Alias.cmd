@@ -1,7 +1,7 @@
 :: Añada la ruta de este archivo en la sgt dirección de regedit.exe
 :: Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\
-:: En esa ruta, crea un (valor de cadena), con el nombre: AutoRun, y pasale la ruta
-:: De este archivo Alias.cmd. Luego, reinicie y disfrute.
+:: En esa ruta, crea un (valor de cadena), con el nombre: AutoRun, y pasale la ruta:
+:: C:\Users\nombre-de-usuario\AppData\Local\nvim\Alias.cmd y disfrute.
 
 @echo off
 cls
@@ -10,7 +10,7 @@ DOSKEY jv=java --version
 DOSKEY gv=git --version
 DOSKEY nv=node --version
 DOSKEY pv=python --version
-DOSKEY nv=nvim --version
+DOSKEY neov=nvim --version
 DOSKEY c=cls
 DOSKEY e=exit
 DOSKEY ..=cd..
@@ -29,5 +29,5 @@ DOSKEY htop=taskmgr
 DOSKEY shutdown=shutdown /P
 DOSKEY reboot=shutdown /r
 DOSKEY ls=dir
-DOSKEY rm=rmdir
+DOSKEY rd=rmdir
 DOSKEY rf=del
