@@ -45,6 +45,12 @@ let g:syntastic_check_on_wq=0
 "autocmd FileType javascript let b:coc_suggest_disable=1
 "autocmd FileType python let b:coc_suggest_disable=1
 "autocmd FileType scss setl iskeyword+=@-@
+" Use <Ctrl+space> para gatillar el autocompletado de KITE
+"if &filetype == 'javascript' || &filetype == 'python'
+"   inoremap <C-space> <C-x><C-u>
+"else
+"   inoremap <silent><expr> <C-space> coc#refresh()
+"endif
 
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -76,69 +82,69 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 
 "*------------------ FUNCIÓNES PARA INTEGRAR LAS TERMINALES DE WINDOWS ---------------------*
 function! OpenCmd()
-  execute "normal \<C-l>"
-  execute "normal \<C-l>"
-  execute "normal \<C-l>"
-  execute "normal \<C-l>"
+   execute "normal \<C-l>"
+   execute "normal \<C-l>"
+   execute "normal \<C-l>"
+   execute "normal \<C-l>"
 
-  let bufNum = bufnr("%")
-  let bufType = getbufvar(bufNum, "&buftype", "not found")
+   let bufNum = bufnr("%")
+   let bufType = getbufvar(bufNum, "&buftype", "not found")
 
-  if bufType == "terminal"
-    " cerrar terminal existente
-    execute "q"
-  else
-    " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
-    " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
-    " línea (81) así: execute 'sp term://zsh'
-    execute "sp term://cmd"
-    " apagar números
-    execute "set nonu"
-    execute "set nornu"
+   if bufType == "terminal"
+     " cerrar terminal existente
+     execute "q"
+   else
+     " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
+     " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
+     " línea (81) así: execute 'sp term://zsh'
+     execute "sp term://cmd"
+     " apagar números
+     execute "set nonu"
+     execute "set nornu"
 
-    " alternar insertar en entrar o salir
-    silent au BufLeave <buffer> stopinsert!
-    silent au BufWinEnter,WinEnter <buffer> startinsert!
+     " alternar insertar en entrar o salir
+     silent au BufLeave <buffer> stopinsert!
+     silent au BufWinEnter,WinEnter <buffer> startinsert!
 
-    " establezco atajos dentro de la terminal
-    execute "tnoremap <buffer> <Esc> <C-\\><C-n><C-w><C-h>"
-    execute "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
-    execute "tnoremap <buffer> <C-7> <C-\\><C-\\><C-n>"
-    startinsert!
-  endif
+     " establezco atajos dentro de la terminal
+     execute "tnoremap <buffer> <Esc> <C-\\><C-n><C-w><C-h>"
+     execute "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
+     execute "tnoremap <buffer> <C-7> <C-\\><C-\\><C-n>"
+     startinsert!
+   endif
 endfunction
 
 function! OpenPowerShell()
-  execute "normal \<C-l>"
-  execute "normal \<C-l>"
-  execute "normal \<C-l>"
-  execute "normal \<C-l>"
+   execute "normal \<C-l>"
+   execute "normal \<C-l>"
+   execute "normal \<C-l>"
+   execute "normal \<C-l>"
 
-  let bufNum = bufnr("%")
-  let bufType = getbufvar(bufNum, "&buftype", "not found")
+   let bufNum = bufnr("%")
+   let bufType = getbufvar(bufNum, "&buftype", "not found")
 
-  if bufType == "terminal"
-    " cerrar terminal existente
-    execute "q"
-  else
-    " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
-    " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
-    " línea (81) así: execute 'sp term://zsh'
-    execute "vsp term://powershell"
-    " apagar números
-    execute "set nonu"
-    execute "set nornu"
+   if bufType == "terminal"
+     " cerrar terminal existente
+     execute "q"
+   else
+     " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
+     " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
+     " línea (81) así: execute 'sp term://zsh'
+     execute "vsp term://powershell"
+     " apagar números
+     execute "set nonu"
+     execute "set nornu"
 
-    " alternar insertar en entrar o salir
-    silent au BufLeave <buffer> stopinsert!
-    silent au BufWinEnter,WinEnter <buffer> startinsert!
+     " alternar insertar en entrar o salir
+     silent au BufLeave <buffer> stopinsert!
+     silent au BufWinEnter,WinEnter <buffer> startinsert!
 
-    " establezco atajos dentro de la terminal
-    execute "tnoremap <buffer> <Esc> <C-\\><C-n><C-w><C-h>"
-    execute "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
-    execute "tnoremap <buffer> <C-7> <C-\\><C-\\><C-n>"
-    startinsert!
-  endif
+     " establezco atajos dentro de la terminal
+     execute "tnoremap <buffer> <Esc> <C-\\><C-n><C-w><C-h>"
+     execute "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
+     execute "tnoremap <buffer> <C-7> <C-\\><C-\\><C-n>"
+     startinsert!
+   endif
 endfunction
 
 "*-------------------------- SOLUCIÓN A EL ERROR DE COC-SNIPPETS ---------------------------*
@@ -151,31 +157,24 @@ endfunction
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("nvim-0.7.0") || has("patch-8.1.1564")
-  set signcolumn=number
+   set signcolumn=number
 else
-  set signcolumn=yes
+   set signcolumn=yes
 endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ CheckBackspace() ? "\<TAB>" :
-      \ coc#refresh()
+     \ pumvisible() ? "\<C-n>" :
+     \ CheckBackspace() ? "\<TAB>" :
+     \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+   let col = col('.') - 1
+   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
@@ -191,11 +190,11 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nnoremap <silent> K :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
-  else
-    call feedkeys('K', 'in')
-  endif
+   if CocAction('hasProvider', 'hover')
+     call CocActionAsync('doHover')
+   else
+     call feedkeys('K', 'in')
+   endif
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
@@ -209,11 +208,11 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+   autocmd!
+   " Setup formatexpr specified filetype(s).
+   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+   " Update signature help on jump placeholder.
+   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
 " Applying codeAction to the selected region.
