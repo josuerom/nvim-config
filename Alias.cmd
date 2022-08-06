@@ -34,4 +34,4 @@ DOSKEY rf=del
 DOSKEY color=color 2
 DOSKEY newfile=type nul > index.txt
 DOSKEY ipc=ipconfig /all
-DOSKEY title=MODO HACKERMEN
+DOSKEY title=title (--- MODO HACKERMEN ---)
