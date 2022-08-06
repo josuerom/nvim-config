@@ -31,3 +31,7 @@ DOSKEY reboot=shutdown /r
 DOSKEY ls=dir
 DOSKEY rd=rmdir
 DOSKEY rf=del
+DOSKEY color=color 2
+DOSKEY newfile=type nul > index.txt
+DOSKEY ipc=ipconfig /all
+DOSKEY title=MODO HACKERMEN
