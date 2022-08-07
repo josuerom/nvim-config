@@ -1,6 +1,6 @@
 :: Añada la ruta de este archivo en la sgt dirección del (regedit)
 :: Diríjase a: Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\
-:: En esa ruta, crea un (valor de cadena), con el nombre: AutoRun, y pasale la ruta:
+:: En esa ruta, crea un (valor de cadena) con el nombre: AutoRun, y pasale la ruta:
 :: %HOMEPATH%\AppData\Local\nvim\Alias.cmd   ¡Y Listo!
 
 @echo off
@@ -29,9 +29,9 @@ DOSKEY htop=taskmgr
 DOSKEY shutdown=shutdown /P
 DOSKEY reboot=shutdown /r
 DOSKEY ls=dir
-DOSKEY rd=rmdir
-DOSKEY rf=del
+DOSKEY rmdir=rmdir
+DOSKEY del=del
 DOSKEY color=color 2
 DOSKEY newfile=type nul > index.txt
 DOSKEY ipc=ipconfig /all
-DOSKEY title=title (--- MODO HACKERMEN ---)
+DOSKEY title=title INICIANDO EL MODO HACKERMEN
