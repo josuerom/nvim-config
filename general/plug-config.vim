@@ -59,8 +59,9 @@ let g:coc_global_extensions = [
   \]
 
 " configuración de UltiSnips
-let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/snips']
+let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<C-space>"
 
 " use <C-j & C-k> para saltar al siguiente y anterior marcador de posición en los snippets
 let g:coc_snippet_next = '<C-j>'
