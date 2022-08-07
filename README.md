@@ -89,7 +89,12 @@ Git es un software de control de versiones diseñado por **Linus Torvalds** qui�
 
 Para instalarlo da un [click aquí](https://nodejs.org/es/download/ "https://nodejs.org/es/download/"), este enlace te llevará directamente a su pagina oficial de descarga, si requieres más información de instalación, visualizate un video en **YouTube**.
 
-### Paso No. 5. Clona/Descarga este repositorio.
+### Paso No. 5. Instalar Python.
+Python es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código, se utiliza para desarrollar aplicaciones de todo tipo, ejemplos: Instagram, Netflix, Spotify, Panda 3D, entre otros.
+
+Para instalarlo da un [click aquí](https://www.python.org/downloads/ "https://www.python.org/downloads/"), este enlace te llevará directamente a su pagina oficial de descarga. Si requieres ayuda con el proceso, visualizate un vídeo en **YouTube**.
+
+### Paso No. 6. Clona/Descarga este repositorio.
 Esta es la personalización que actualmente tengo en neovim:
 
 <p align="center" width="0">
@@ -120,7 +125,7 @@ Luego de ejecutar el comando, te arrojará muchos errores pero _NO TE ASUSTES NI
 
 Para saltar esos errores puedes presionar varias veces la tecla **Enter** o solo una vez la tecla **Esc**, nada más faltaría instalar el gestor de plugins **vim plug** para que así culmines con el último paso.
 
-### Paso No. 6. Instalar el gestor de plugins VIM-PLUG
+### Paso No. 7. Instalar el gestor de plugins VIM-PLUG
 **Vim plug** es un administrador de plugins para el editor de texto vim y neovim minimalista, de código abierto creado por **junegunn** hace tiempo. Además es totalmente libre de uso. Una de sus principales y más conmovedores funcionalidades es que puede instalar, actualizar y desinstalar complementos en paralelo. Crea clones para minimizar el uso de espacio del disco y el tiempo de descarga; para realizar una descarga limpia y ligera. Ejecuta en la pestaña PowerShell abierta como administrador, el siguiente comando:
 
 ```powershell
