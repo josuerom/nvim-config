@@ -62,10 +62,12 @@ let g:coc_global_extensions = [
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<C-space>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " use <C-j & C-k> para saltar al siguiente y anterior marcador de posición en los snippets
-let g:coc_snippet_next = '<C-j>'
-let g:coc_snippet_prev = '<C-k>'
+"let g:coc_snippet_next = '<C-j>'
+"let g:coc_snippet_prev = '<C-k>'
 
 " cerrado automatico de la barra lateral o tree
 let NERDTreeShowHidden=1
