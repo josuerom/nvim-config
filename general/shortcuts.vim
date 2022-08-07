@@ -25,6 +25,9 @@ function! RunJsAndTs()
    nmap <F1> :w<CR> :!node %<CR>
 endfunction
 
+" gatillado de sugerencias - extensiones COC
+imap <silent><expr> <C-space> coc#refresh()
+
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
 noremap <down> <nop>
@@ -55,7 +58,6 @@ nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
 nmap <Leader>9 :e $MYVIMRC<CR>
 
-" 
 "nnoremap <F4> :e <CR>
 " refresca neovim con <F5>
 nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
@@ -91,7 +93,7 @@ nnoremap <silent><C-j> :TmuxNavigateDown<CR>
 noremap <silent><C-k> :TmuxNavigateUp<CR>
 nnoremap <silent><C-l> :TmuxNavigateRight<CR>
 
-" atajos para el flujo rápido con git
+" atajos para el flujo rápido con Git
 nnoremap <Leader>go :GV<CR>
 nnoremap <Leader>g :Git init<CR>
 nnoremap <Leader>gs :Git status<CR>
@@ -124,22 +126,22 @@ nnoremap <Leader>dl :bdelete<CR>
 " búsqueda por dos carácteres con easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
 
-" atajos para el gestor vim-plug
+" atajos para el gestor Vim-Plug
 nnoremap <Leader>pi :PlugInstall<CR>
 nnoremap <Leader>pc :PlugClean<CR>
 nnoremap <Leader>pu :PlugUpdate<CR>
 nnoremap <Leader>pp :PlugUpgrade<CR>
 
-" indentar líneas y bloques en cualquier modo VISUAL
+" indentar líneas y bloques en modo NORMAL o VISUAL
 vnoremap < <gv
 vnoremap > >gv
 
-" para multiple cursor debe poner el cursor encima de una palabra y presionar
+" para multiples cursores debe poner el cursor encima de una palabra y presionar
 " <ctrl+n> para buscar las coincidencias en el archivo y luego presione <c>
-" para cambiar su contenido
+" para editar el contenido seleccionado
 
-" para agrupar una cadena de texto con cualquier simbolo ya sea: () [] {} '' "" debes
-" selecionar la palabra hasta un carácter antes y presionar: <s+el-simbolo-a-usar>
+" para agrupar una cadena de texto con cualquier simbolo ya sea: () [] {} '' ""
+" debes selecionar la palabra hasta un carácter antes y presionar: <s+el-simbolo-a-usar>
 " por ejemplo: <s+[>
 xmap s <Plug>VSurround
 
@@ -147,16 +149,13 @@ xmap s <Plug>VSurround
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
-" cambiar la posición de las líneas
+" cambia la posición de una línea
 nnoremap n :m .-2<CR>==
 nnoremap m :m .+1<CR>==
 
 " Para camiar el carácter que contenga una cadena de texto o cambiar el carácteres que los contiene,
-" por ejemplo: si tienes un: 'Hi UserName' al presionar cs+el-simbolo-a-usar, la cadena de carácteres
-" magicamente se cambiará sin necesidad de realizarlo manualmente.
-
-" entrega o gatillado automatico de sugerencias - autocompletado COC
-imap <silent><expr> <C-space> coc#refresh()
+" por ejemplo: si tienes un: 'Hi! World' al presionar <cs+el-simbolo-a-usar> la cadena de carácteres
+" que los agrupa magicamente se cambiaran sin necesidad de realizarlo manualmente
 
 " administrar todos los snippets con <F12>
 nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
