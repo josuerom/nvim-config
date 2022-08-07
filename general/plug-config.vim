@@ -53,7 +53,6 @@ let g:syntastic_check_on_wq=0
 "endif
 
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
   \ 'coc-tsserver',
   \ 'coc-java'
   \]
@@ -64,10 +63,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<C-space>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-" use <C-j & C-k> para saltar al siguiente y anterior marcador de posición en los snippets
-"let g:coc_snippet_next = '<C-j>'
-"let g:coc_snippet_prev = '<C-k>'
 
 " cerrado automatico de la barra lateral o tree
 let NERDTreeShowHidden=1
@@ -157,3 +152,4 @@ endfunction
 " así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo.
 
 "*------------------------ ADJUNTE LA CONFIGURACIÓN DE COC QUE DESEE -----------------------*
+
