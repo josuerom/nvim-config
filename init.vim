@@ -16,25 +16,20 @@ set relativenumber
 set clipboard=unnamedplus
 set background=dark
 set ruler
-set sw=2
+set sw=3
+set tabstop=3
 set termguicolors
 set showmatch
 set showcmd
 set noshowmode
 set laststatus=2
-set tabstop=2
 set hlsearch
 set ignorecase
 set smartcase
 set splitbelow
 set splitright
-set secure
-set exrc
 set foldmethod=manual
-set mat=2
-set smarttab
-set langmenu=latin1
-let $LANG='latin1'
+set langmenu=es
 
 " Conquer Of Completion COC
 set hidden
