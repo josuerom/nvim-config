@@ -1,7 +1,7 @@
 :: Añada la ruta de este archivo en la sgt dirección del (regedit)
 :: Diríjase a: Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\
 :: En esa ruta, crea un (valor de cadena), con el nombre: AutoRun, y pasale la ruta:
-:: C:\Users\UserName\AppData\Local\nvim\Alias.cmd y listo.
+:: %HOMEPATH%\AppData\Local\nvim\Alias.cmd   ¡Y Listo!
 
 @echo off
 cls
