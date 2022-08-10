@@ -31,13 +31,13 @@ let g:lightline = {
     \}
 
 " ajuste para mostrar errores una vez se guarde el archivo
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list=1
+"let g:syntastic_auto_loc_list=1
+"let g:syntastic_check_on_open=1
+"let g:syntastic_check_on_wq=0
 
 " si usted utiliza el autocompletado KITE descomente las siguientes líneas y agregue sus lenguajes
 "let g:kite_supported_languages = ['javascript', 'python']
@@ -54,13 +54,12 @@ let g:syntastic_check_on_wq=0
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
-  \ 'coc-java'
+  \ 'coc-java',
+  \ 'coc-snippets'
   \]
 
 " configuración de UltiSnips
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<C-space>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
