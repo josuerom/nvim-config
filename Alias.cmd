@@ -32,6 +32,5 @@ DOSKEY ls=dir
 DOSKEY rmdir=rmdir
 DOSKEY del=del
 DOSKEY color=color 2
-DOSKEY newfile=type nul > index.txt
 DOSKEY ipc=ipconfig /all
 DOSKEY title=title INICIANDO EL MODO HACKERMEN
