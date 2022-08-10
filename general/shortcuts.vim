@@ -58,7 +58,7 @@ nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
 nmap <Leader>9 :e $MYVIMRC<CR>
 
-"nnoremap <F4> :e <CR>
+"nnoremap <F4> :e ~/Projetcs/<CR>
 " refresca neovim con <F5>
 nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
 " copia la ruta general del archivo abierto con <F6>
@@ -70,6 +70,7 @@ imap <F7> <Esc> :Goyo<CR>
 " para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
 nnoremap <Leader>w :w<CR>
 imap <C-s> <Esc> :w<CR>
+nmap <C-s> <Esc> :w<CR>
 " para cerrar búfers <space+q>
 nnoremap <Leader>q :q<CR>
 " para salir rápidamente de nvim <space+x>
@@ -108,7 +109,6 @@ nnoremap <Leader>gpu :Git push --set-upstream origin main<CR>
 nnoremap <Leader>gf :Git fetch<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gm :Git merge<CR>
-nnoremap <Leader>ge :Git revert
 
 " flujo instantaneo con COC
 nmap <silent> gd <Plug>(coc-definition)
@@ -164,7 +164,5 @@ nnoremap <silent><nowait> <Leader>cuu :<C-u>CocUpdate<CR>
 " desintalar extensiones
 nnoremap <silent><nowait> <Leader>cii :<C-u>CocUninstall coc-
 
-" Use <C-j> para saltar a los demás marcadores de posición
-imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Use <space+y> para convertir el código seleccionado en un snippet
 xmap <Leader>y  <Plug>(coc-convert-snippet)
