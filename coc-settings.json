@@ -1,38 +1,18 @@
 {
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-14",
-      "path": "D:\\Program Files\\Java\\jdk-14.0.2",
+      "name": "JavaSE-11",
+      "path": "D:\\Program Files\\Java\\jdk-11.0.2",
       "default": true
     }
   ],
-  "java.format.enabled": true,
-  "java.format.onType.enabled": true,
-  "java.format.comments.enabled": true,
-  "java.signatureHelp.enabled": true,
-  "java.saveActions.organizeImports": true,
-  "java.selectionRange.enabled": true,
-  "typescript.autoClosingTags": true,
-  "javascript.autoClosingTags": true,
 
   "snippets.priority": 1,
-  "snippets.extends": {
-    "cpp": ["c"],
-    "javascriptreact": ["javascript"],
-    "typescript": ["javascript"]
-  },
-
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "~/AppData/Local/nvim/UltiSnips"
   ],
   "snippets.ultisnips.enable": true,
   "snippets.ultisnips.usePythonx": true,
-  "snippets.author": "Josué Romero",
-
-  "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.formatting.provider": "black",
-  "python.linting.mypyEnabled": true,
-  "python.linting.pylintEnabled": true
+  "snippets.author": "Josué Romero <josueromram@outlook.es>",
 }
