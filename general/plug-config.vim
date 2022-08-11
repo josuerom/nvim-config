@@ -30,22 +30,13 @@ let g:lightline = {
     \ }
     \}
 
-" ajuste para mostrar errores una vez se guarde el archivo
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"let g:syntastic_always_populate_loc_list=1
-"let g:syntastic_auto_loc_list=1
-"let g:syntastic_check_on_open=1
-"let g:syntastic_check_on_wq=0
-
 " si usted utiliza el autocompletado KITE descomente las siguientes líneas y agregue sus lenguajes
 "let g:kite_supported_languages = ['javascript', 'python']
 " desabilitar la entrega de sugerencias de COC para que KITE sea quien las entrege en estos tipos de archivos
 "autocmd FileType javascript let b:coc_suggest_disable=1
 "autocmd FileType python let b:coc_suggest_disable=1
 "autocmd FileType scss setl iskeyword+=@-@
-" Use <Ctrl+space> para gatillar el autocompletado de KITE
+" use <Ctrl+space> para gatillar el autocompletado KITE
 "if &filetype == 'javascript' || &filetype == 'python'
 "   inoremap <C-space> <C-x><C-u>
 "else
@@ -144,11 +135,11 @@ function! OpenPowerShell()
    endif
 endfunction
 
-"*-------------------------- SOLUCIÓN A EL ERROR DE COC-SNIPPETS ---------------------------*
+"*------------------------- SOLUCIÓN PARA LOS ERRORES MÁS COMUNES --------------------------*
 " Si al iniciar neovim te aparece siempre este molestoso error:
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
 " ejecuta el sgt comando en la PowerShell como administrador pero antes debes instalar Python: pip install pynvim
 " así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo.
 
-"*------------------------ ADJUNTE LA CONFIGURACIÓN DE COC QUE DESEE -----------------------*
 
+"*------------------------ ADJUNTE LA CONFIGURACIÓN DE COC QUE DESEE -----------------------*
