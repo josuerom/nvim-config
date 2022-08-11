@@ -5,7 +5,7 @@
 "██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║██╗╚████╔╝ ██║██║ ╚═╝ ██║
 "╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-call plug#begin('~/AppData/Local/nvim/plugged/')
+call plug#begin('~/AppData/Local/coc/nvim-plugins/')
 
 " resaltado de sintaxis
 Plug 'sheerun/vim-polyglot'
@@ -33,16 +33,14 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 
-" historial de commits
-Plug 'junegunn/gv.vim'
-
 " IDE
 Plug 'terryma/vim-multiple-cursors'
+Plug 'eclipse/eclipse.jdt.ls'
 Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 "Plug 'scrooloose/syntastic'
-Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/goyo.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
