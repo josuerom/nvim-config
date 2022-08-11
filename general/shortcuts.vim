@@ -25,9 +25,6 @@ function! RunJsAndTs()
    nmap <F1> :w<CR> :!node %<CR>
 endfunction
 
-" gatillado de sugerencias - extensiones COC
-imap <silent><expr> <C-space> coc#refresh()
-
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
 noremap <down> <nop>
@@ -58,7 +55,7 @@ nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
 nmap <Leader>9 :e $MYVIMRC<CR>
 
-"nnoremap <F4> :e ~/Projetcs/<CR>
+"nnoremap <F4> :command-here<CR>
 " refresca neovim con <F5>
 nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
 " copia la ruta general del archivo abierto con <F6>
@@ -164,5 +161,5 @@ nnoremap <silent><nowait> <Leader>cuu :<C-u>CocUpdate<CR>
 " desintalar extensiones
 nnoremap <silent><nowait> <Leader>cii :<C-u>CocUninstall coc-
 
-" Use <space+y> para convertir el código seleccionado en un snippet
+" use <space+y> para convertir el código seleccionado en un snippet
 xmap <Leader>y  <Plug>(coc-convert-snippet)
