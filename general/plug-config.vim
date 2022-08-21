@@ -31,7 +31,7 @@ let g:lightline = {
     \}
 
 " si usted utiliza el autocompletado KITE descomente las siguientes líneas
-let g:kite_supported_languages = ['javascript', 'python', 'java']
+"let g:kite_supported_languages = ['javascript', 'python', 'java']
 " desabilitar la entrega de sugerencias de COC para que KITE sea quien las entrege en estos tipos de archivos
 "autocmd FileType javascript let b:coc_suggest_disable=1
 "autocmd FileType python let b:coc_suggest_disable=1
@@ -133,3 +133,4 @@ endfunction
 " ejecuta el sgt comando en tu terminal como administrador, pero antes debes tener instalado Python.
 " comando: pip install pynvim
 " así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo directamente.
+" RECUERDA: Entre más grande se la configuración que le des a Neovim, será más lento, así que optimiza.
