@@ -30,27 +30,16 @@ let g:lightline = {
     \ }
     \}
 
-" si usted utiliza el autocompletado KITE descomente las siguientes líneas y agregue sus lenguajes
+" si usted utiliza el autocompletado KITE descomente las siguientes líneas
 let g:kite_supported_languages = ['javascript', 'python', 'java']
-
 " desabilitar la entrega de sugerencias de COC para que KITE sea quien las entrege en estos tipos de archivos
-autocmd FileType javascript let b:coc_suggest_disable=1
-autocmd FileType python let b:coc_suggest_disable=1
-autocmd FileType java let b:coc_suggest_disable=1
-autocmd FileType scss setl iskeyword+=@-@
+"autocmd FileType javascript let b:coc_suggest_disable=1
+"autocmd FileType python let b:coc_suggest_disable=1
+"autocmd FileType java let b:coc_suggest_disable=1
 
-" use <Ctrl+space> para gatillar el autocompletado KITE
-if &filetype == 'javascript' || &filetype == 'python'
-  inoremap <C-space> <C-x><C-u>
-else
-  inoremap <silent><expr> <C-space> coc#refresh()
-endif
-
-"let g:coc_global_extensions = [
-"  \ 'coc-tsserver',
-"  \ 'coc-java',
-"  \ 'coc-snippets'
-"  \]
+let g:coc_global_extensions = [
+  \ 'coc-snippets'
+  \]
 
 " configuración de UltiSnips
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
@@ -141,8 +130,6 @@ endfunction
 "*------------------------- SOLUCIÓN PARA LOS ERRORES MÁS COMUNES --------------------------*
 " Si al iniciar neovim te aparece siempre este molestoso error:
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
-" ejecuta el sgt comando en la PowerShell como administrador pero antes debes instalar Python: pip install pynvim
-" así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo.
-
-
-"*------------------------ ADJUNTE LA CONFIGURACIÓN DE COC QUE DESEE -----------------------*
+" ejecuta el sgt comando en tu terminal como administrador, pero antes debes tener instalado Python.
+" comando: pip install pynvim
+" así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo directamente.
