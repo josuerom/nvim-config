@@ -1,4 +1,4 @@
-"*--------------------- Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL ---------------------*
+"*------------------------ Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL -------------------------*
 
 										"██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
 										"██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
@@ -6,8 +6,8 @@
 										"██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
 										"██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
 										"╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
-																"Creador >> Josué Romero
-												"Twitter >> https://twitter.com/josueromr
+														"Creador >> Josué Romero
+											"Twitter >> https://twitter.com/josueromr
 
 syntax enable
 set number
