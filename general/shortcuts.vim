@@ -8,8 +8,8 @@
 " <space> es la tecla líder
 let mapleader = " "
 
-" ejecute sus programas (.java .py .js & .ts)
-" en modo NORMAL o INSERT
+" presione <F1> para ejecutar sus programas (.java .py .js & .ts)
+" en modo NORMAL o INSERT le funcionará
 function! RunJava()
    imap <F1> <Esc> :w<CR> :!java %<CR>
    nmap <F1> :w<CR> :!java %<CR>
