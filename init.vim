@@ -33,6 +33,7 @@ set hidden
 set cmdheight=1
 set updatetime=50
 set shortmess+=c
+let g:python3_host_prog="D:\Program Files\Python3\python.exe"
 
 " importo los archivos de personalización
 so ~/AppData/Local/nvim/general/plugins.vim
@@ -47,7 +48,7 @@ autocmd FileType python :call RunPython()
 autocmd FileType javascript :call RunJsAndTs()
 
 " ajustes del tema
-"let g:gruvbox_italic=1
+let g:gruvbox_italic=1
 " soft medium hard
 let g:gruvbox_contrast_dark="hard"
 highlight Normal ctermbg=NONE
