@@ -4,7 +4,6 @@
 :: %HOMEPATH%\AppData\Local\nvim\Alias.cmd   ¡Y Listo!
 
 @echo off
-cls
 
 DOSKEY jv=java --version
 DOSKEY gv=git --version
@@ -33,4 +32,4 @@ DOSKEY rmdir=rmdir
 DOSKEY del=del
 DOSKEY color=color 2
 DOSKEY ipc=ipconfig /all
-DOSKEY title=title INICIANDO EL MODO HACKERMEN
+DOSKEY title=title INICIANDO EL MODO HACKERMEN...
