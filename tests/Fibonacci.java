@@ -5,7 +5,7 @@ import java.util.Arrays;
   *@param 13/marzo/2022 - 13:55 COL
 */
 public class Fibonacci {
-	
+
    public static void main(String[] args) {
       int fibo[] = new int[20];
       fibo[0] = 0; fibo[1] = 1;

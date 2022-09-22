@@ -31,18 +31,18 @@ let g:lightline = {
     \}
 
 " si usted utiliza el autocompletado KITE descomente las siguientes líneas
-"let g:kite_supported_languages = ['javascript', 'python', 'java']
+let g:kite_supported_languages = ['javascript', 'python', 'java']
 " desabilitar la entrega de sugerencias de COC para que KITE sea quien las entrege en estos tipos de archivos
-"autocmd FileType javascript let b:coc_suggest_disable=1
-"autocmd FileType python let b:coc_suggest_disable=1
-"autocmd FileType java let b:coc_suggest_disable=1
+autocmd FileType javascript let b:coc_suggest_disable=1
+autocmd FileType python let b:coc_suggest_disable=1
+autocmd FileType java let b:coc_suggest_disable=1
 
 let g:coc_global_extensions = [
   \ 'coc-snippets'
   \]
 
 " configuración de UltiSnips
-let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips']
+let g:UltiSnipsSnippetDirectories=['$HOME/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
