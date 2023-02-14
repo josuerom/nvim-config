@@ -6,10 +6,13 @@
 @echo off
 
 DOSKEY jv=java --version
+DOSKEY cppv=g++ --version
 DOSKEY gv=git --version
 DOSKEY nv=node --version
 DOSKEY pv=python --version
-DOSKEY nev=nvim --version
+DOSKEY nvimv=nvim --version
+DOSKEY runcpp=g++ -std=c++20 -O2 -Wall
+DOSKEY runc=gcc -std=c11 -O2 -Wall
 DOSKEY c=cls
 DOSKEY e=exit
 DOSKEY ..=cd ..
@@ -23,13 +26,15 @@ DOSKEY gl=git pull
 DOSKEY glg=git log --oneline
 DOSKEY n=nvim .
 DOSKEY cdn=cd %HOMEPATH%\AppData\Local\nvim
-DOSKEY cdp=cd D:\Projects\
-DOSKEY htop=taskmgr
+DOSKEY cdw=cd D:\Workspace\ && dir
+DOSKEY htop=taskmgr.exe
 DOSKEY shutdown=shutdown /P
 DOSKEY reboot=shutdown /r
+DOSKEY mv=move
+DOSKEY ren=move
 DOSKEY ls=dir
 DOSKEY rmdir=rmdir
 DOSKEY del=del
-DOSKEY color=color 2
+DOSKEY hakcermen=color 2
 DOSKEY ipc=ipconfig /all
-DOSKEY title=title INICIANDO EL MODO HACKERMEN...
+DOSKEY title=title EN MODO HACKERMEN...
