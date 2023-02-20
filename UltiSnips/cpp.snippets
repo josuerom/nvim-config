@@ -30,12 +30,71 @@ endglobal
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
-snippet main
-int main(int argc, char *argv[])
-{
-	${0}
-	return 0;
+snippet fm
+int main() {
+   ${0}
+   return 0;
 }
+endsnippet
+
+snippet u
+using namespace std;
+endsnippet
+
+snippet i
+#include <bits/stdc++.h>
+endsnippet
+
+snippet de
+#define ${0}
+endsnippet
+
+snippet wh
+while (${0}) {
+	${1}
+}
+endsnippet
+
+snippet cpptemplate
+/**
+ * author:  josuerom
+ * created: `!v strftime("%d/%m/%Y")` `!v strftime("%H:%M:%S")`
+**/
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+#ifndef ONLINE_JUDGE
+   freopen("inp", "r", stdin);
+#endif
+   ios::sync_with_studio(false); cin.tie(0);
+   ${0}
+   return 0;
+}
+endsnippet
+
+snippet tt
+int tt;
+cin >> tt;
+while (tt--) {
+   ${0}
+}
+endsnippet
+
+snippet fori
+for (int i = 0; i < ${0}; i++) {
+   ${1}
+}
+endsnippet
+
+snippet online_judge
+#ifndef ONLINE_JUDGE
+   freopen("inp", "r", stdin);
+#endif
+endsnippet
+
+snippet gcc
+#pragma GCC optimize("03,unroll-loops")
 endsnippet
 
 snippet forc "general for loop (for)"
