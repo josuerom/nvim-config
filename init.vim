@@ -1,13 +1,13 @@
-"*------------------------ Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL -------------------------*
+"*------- Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL -------*
 
-										"██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
-										"██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
-										"██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
-										"██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
-										"██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
-										"╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
-														"Creador >> Josué Romero
-											"Twitter >> https://twitter.com/josueromr
+				"██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
+				"██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
+				"██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
+				"██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
+				"██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
+				"╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
+								"Creador >> Josué Romero
+						"Twitter >> https://twitter.com/josueromr
 
 syntax enable
 set number
@@ -18,7 +18,6 @@ set clipboard=unnamedplus
 set background=dark
 set ruler
 set sw=3
-set tabstop=3
 set termguicolors
 set showmatch
 set showcmd
@@ -33,7 +32,7 @@ set hidden
 set cmdheight=1
 set updatetime=50
 set shortmess+=c
-let g:python3_host_prog="D:\Program Files\Python3\python.exe"
+"let g:python3_host_prog="D:\\Program Files\\Python\\python.exe"
 
 " importo los archivos de personalización
 so ~/AppData/Local/nvim/general/plugins.vim
@@ -44,6 +43,7 @@ so ~/AppData/Local/nvim/general/shortcuts.vim
 "autocmd! BufWritePost init.vim source ~/AppData/Local/nvim/init.vim
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType java :call RunJava()
+autocmd FileType cpp :call RunCpp()
 autocmd FileType python :call RunPython()
 autocmd FileType javascript :call RunJsAndTs()
 
