@@ -43,8 +43,9 @@ let g:coc_global_extensions = [
 
 " configuración de UltiSnips
 let g:UltiSnipsSnippetDirectories=['$HOME/AppData/Local/nvim/UltiSnips']
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
 " cerrado automatico de la barra lateral o tree
 let NERDTreeShowHidden=1

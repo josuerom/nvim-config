@@ -15,6 +15,11 @@ function! RunJava()
    nmap <F1> :w<CR> :!java %<CR>
 endfunction
 
+function! RunCpp()
+   imap <F1> <Esc> :w<CR> :!g++ -fsanitize=address -std=c++20 -DONPC -O2 -o %< % && ./%< < inp<CR>
+   nmap <F1> <Esc> :w<CR> :!g++ -fsanitize=address -std=c++20 -DONPC -O2 -o "%<" "%" && "./%<" < inp<CR>
+endfunction
+
 function! RunPython()
    imap <F1> <Esc> :w<CR> :!python %<CR>
    nmap <F1> :w<CR> :!python %<CR>
@@ -63,6 +68,8 @@ nnoremap <F6>kp :let @*=expand("%")<CR>
 " entre al modo goyo sin distracciones, con <F7>
 nmap <F7> :Goyo<CR>
 imap <F7> <Esc> :Goyo<CR>
+" copia todo el contenido del archivo en edicion
+nmap <F8> :%y+
 
 " para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
 nnoremap <Leader>w :w<CR>
