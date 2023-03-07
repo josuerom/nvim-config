@@ -6,9 +6,9 @@ def fibo(n):
       return n
    return fibo(n-1) + fibo(n-2)
 
-print("[", end="")
+end = ""
 for i in range(20):
    if i < 19:
-       print(fibo(i), end=", ")
+       print(fibo(i), end=" ")
    else:
-       print(fibo(i), end="]")
+       print(fibo(i), end="")
