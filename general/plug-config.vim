@@ -39,13 +39,15 @@ autocmd FileType java let b:coc_suggest_disable=1
 
 let g:coc_global_extensions = [
   \ 'coc-snippets'
+  \ 'coc-java'
+  \ 'coc-cpp'
   \]
 
 " configuración de UltiSnips
 let g:UltiSnipsSnippetDirectories=['$HOME/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<tab>'
-let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:UltiSnipsJumpForwardTrigger='<C-o>'
+let g:UltiSnipsJumpBackwardTrigger='<C-p>'
 
 " cerrado automatico de la barra lateral o tree
 let NERDTreeShowHidden=1
@@ -54,6 +56,7 @@ let NERDTreeAutoDeleteBuffer=1
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
+let g:NERDTreeWinPos="right"
 
 " navegación rápida tmux
 let g:tmux_navigator_no_mappings=1
@@ -77,7 +80,7 @@ function! OpenCmd()
    else
      " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
      " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
-     " línea (81) así: execute 'sp term://zsh'
+     " línea (81) así: execute 'sp term://powershell'
      execute "sp term://cmd"
      " apagar números
      execute "set nonu"
@@ -110,7 +113,7 @@ function! OpenPowerShell()
    else
      " se abrirá la terminal cmd, pero si usted utiliza otra terminal, debes
      " poner el nombre del .exe o ejecutable ya sea: 'cmd, zsh, bash, iTerm', quedando la
-     " línea (81) así: execute 'sp term://zsh'
+     " línea (81) así: execute 'sp term://cmd'
      execute "vsp term://powershell"
      " apagar números
      execute "set nonu"
