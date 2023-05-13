@@ -8,21 +8,25 @@
 " <space> es la tecla líder
 let mapleader = " "
 
-" presione <F1> para ejecutar sus programas (.java .py .js & .ts)
+" presione <F1> para compilar y <F2> para ejecutar sus programas (.java & .cpp)
 " en modo NORMAL o INSERT le funcionará
+" Todos los métodos están enfocados para Windows
 function! RunJava()
-   imap <F1> <Esc> :w<CR> :!java %<CR>
-   nmap <F1> :w<CR> :!java %<CR>
+   imap <F1> <Esc> :w<CR> :!javac -source 1.8 -target 1.8 -g:none -Xlint:deprecation -d .class %<CR>
+   nmap <F1> :w<CR> :!javac -source 1.8 -target 1.8 -g:none -Xlint:deprecation -d .class %<CR>
 endfunction
 
 function! RunCpp()
-   imap <F1> <Esc> :w<CR> :!g++ -std=c++20 -DONPC -Wall -O2 % -o %< && %<.exe < inp<CR>
-   nmap <F1> <Esc> :w<CR> :!g++ -std=c++20 -DONPC -Wall -O2 "%" -o "%<" && "%<.exe" < inp<CR>
+   imap <F1> <Esc> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wconversion -Wpedantic -Wl,--stack=256000000 -ggdb3 -D_GLIBCXX_DEBUG % -o .class\sol.exe<CR>
+   nmap <F1> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wconversion -Wpedantic -Wl,--stack=256000000 -ggdb3 -D_GLIBCXX_DEBUG % -o .class\sol.exe<CR>
 endfunction
 
-function! RunPython()
-   imap <F1> <Esc> :w<CR> :!python %<CR>
-   nmap <F1> :w<CR> :!python %<CR>
+function! RunJavaInp()
+   nmap <F2> :w<CR> :!cd .class && java -Xmx256M -Xss64M -DDEBUG=true -XX:-UseStringDeduplication "%"< < input<CR>
+endfunction
+
+function! RunCppInp()
+   nmap <F2> :w<CR> :!cd .class && sol.exe < input<CR>
 endfunction
 
 function! RunJsAndTs()
