@@ -38,9 +38,8 @@ autocmd FileType python let b:coc_suggest_disable=1
 autocmd FileType java let b:coc_suggest_disable=1
 
 let g:coc_global_extensions = [
-  \ 'coc-snippets'
-  \ 'coc-java'
-  \ 'coc-cpp'
+  \ 'coc-snippets',
+  \ 'coc-java',
   \]
 
 " configuración de UltiSnips

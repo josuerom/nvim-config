@@ -43,9 +43,7 @@ so ~/AppData/Local/nvim/general/shortcuts.vim
 "autocmd! BufWritePost init.vim source ~/AppData/Local/nvim/init.vim
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType java :call RunJava()
-autocmd FileType java :call RunJavaInp()
 autocmd FileType cpp :call RunCpp()
-autocmd FileType cpp :call RunCppInp()
 autocmd FileType javascript :call RunJsAndTs()
 autocmd FileType typescript :call RunJsAndTs()
 
