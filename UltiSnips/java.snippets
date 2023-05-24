@@ -158,23 +158,24 @@ if len(args) == 0:
 endsnippet
 
 ## JavaMainClass
-snippet mainclass "Plantilla JavaMainClass" b
-package ${1:interfaz};
+snippet mainclass "JavaMainClass" b
 /**
- *  author:  josuerom
- *  created: `!v strftime("%e/%B/%Y - %R")`
+ *   author:  josuerom
+ *   created: `!v strftime("%e/%B/%Y - %R")`
 **/
-$2
+package ${1:interfaz};
+
+import java.util.Scanner;
 
 public class `!p snip.rv = snip.basename` {
    public static void main (String[] args) {
-      $3
+      $2
    }
 }
 endsnippet
 
 ## JavaClass
-snippet class "Plantilla JavaClass" b
+snippet class "JavaClass" b
 package ${1:mundo};
 
 public class `!p snip.rv = snip.basename` {
@@ -187,7 +188,6 @@ public class `!p snip.rv = snip.basename` {
    }
 
    /* Métodos */
-   $5
 }
 endsnippet
 
@@ -331,7 +331,7 @@ endsnippet
 
 snippet fm "método principal" b
 public static void main (String[] args)`!p nl(snip)`{
-   ${1:¡A Codear!}
+   $1
 }
 endsnippet
 
@@ -492,7 +492,7 @@ snippet tostr "Arrays.toString()"
 Arrays.toString($1)
 endsnippet
 
-snippet sc "Scanner sc = new Scanner(System.in)" b
+snippet scan "Scanner sc = new Scanner(System.in)" b
 Scanner sc = new Scanner(System.in);$0
 endsnippet
 
@@ -710,11 +710,13 @@ endsnippet
 
 snippet tem2.java "Template 2 Java" b
 /**
- *   author:  josuerom
- *   created: `!v strftime("%e/%B/%Y - %R")`
+    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█
+    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█
+    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀
 **/
 import java.util.Scanner;
 import java.util.Arrays;
+import static java.lang.Math.*;
 
 public class `!p snip.rv = snip.basename` {
    private static final boolean DEBUG = false;
@@ -744,19 +746,20 @@ endsnippet
 
 snippet tem3.java "Template 3 Java" b
 /**
- *   author:  josuerom
- *   created: `!v strftime("%e/%B/%Y - %R")`
+    █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀  ▄▀  ▀▄ 
+    ─▄▀ 　 █▀▀▄ ▀█▀ ──█── ▀▀█  █─  ─█ 
+    █▄▄ 　 ▀▀▀─ ▀▀▀ ──▀── ▀▀▀  ▀▄  ▄▀
 **/
 import java.util.Scanner;
 import java.util.Arrays;
 import static java.lang.Math.*;
 
 public class `!p snip.rv = snip.basename` {
-   private final boolean DEBUG = false;
+   private static final boolean DEBUG = false;
 
    public static void main(String[] args) {
-	  Scanner sc = new Scanner(System.in);
-	  $1
+	   Scanner sc = new Scanner(System.in);
+	   $1
       sc.close(); System.out.close();
    }
 }

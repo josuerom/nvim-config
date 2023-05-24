@@ -71,7 +71,7 @@ nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
 nmap <Leader>9 :e $MYVIMRC<CR>
 
-" con <F4> se abre el archivo de ES input
+" con <F4> abres el archivo de ES input
 nmap <F4> :e ~/sample/input<CR>
 " refresca neovim con <F5>
 nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
@@ -79,9 +79,11 @@ nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
 nnoremap <F6>kp :let @*=expand("%")<CR>
 " entre al modo goyo sin distracciones, con <F7>
 nmap <F7> :Goyo<CR>
-imap <F7> <Esc> :Goyo<CR>
-" copia todo el contenido del archivo en edicion, con Ctrl + a
-nmap <C-a> :%y+<CR>
+imap <F7> <Esc> :Goyo<CR> i
+
+" copia todo el contenido del archivo abierto con Ctrl + a
+imap <C-a> <Esc> :w<CR> :%y+<CR>
+nmap <C-a> :w<CR> :%y+<CR>
 
 " para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
 nnoremap <Leader>w :w<CR>
@@ -117,7 +119,7 @@ nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>ga :Git add -A<CR>
 nnoremap <Leader>gc :Git commit -m "♻ Update"<CR>
 nnoremap <Leader>gcc :Git commit -v<CR>
-nnoremap <Leader>glg :Git log --oneline<CR>
+nnoremap <Leader>glo :Git log --oneline<CR>
 nnoremap <Leader>grr :Git remote add origin https://github.com/$USER$/.git
 nnoremap <Leader>gpp :Git push -u origin main<CR>
 nnoremap <Leader>gp :Git push<CR>

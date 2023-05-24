@@ -1,4 +1,4 @@
-"*------------------------ Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL ------------------------*
+"*------------------------ Configuración Inicial [init.vim] 21/Febrero/2021 8:23a.m COL ------------------------*
 
 "		██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
 "		██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
@@ -40,7 +40,7 @@ so ~/AppData/Local/nvim/general/plug-config.vim
 so ~/AppData/Local/nvim/general/shortcuts.vim
 
 " integro intrucciones para refrescar, limpiar y ejecutar archivos
-"autocmd! BufWritePost init.vim source ~/AppData/Local/nvim/init.vim
+autocmd! BufWritePost init.vim source ~/AppData/Local/nvim/init.vim
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType java :call RunJava()
 autocmd FileType cpp :call RunCpp()
