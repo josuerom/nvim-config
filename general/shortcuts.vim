@@ -8,28 +8,37 @@
 " <space> es la tecla líder
 let mapleader = " "
 
-" presione <F1> para compilar y <F2> y <F3> para ejecutar sus programas (.java .cpp .js .ts)
-" en modo NORMAL o INSERT le funcionará
-" Todos los métodos están enfocados para Windows
 function! RunJava()
-   imap <F1> <Esc> :w<CR> :!javac % -d build<CR>
-   nmap <F1> :w<CR> :!javac % -d build<CR>
-   nmap <F2> :w<CR> :!cd build && java %< < ../input<CR>
-   nmap <F3> :w<CR> :cd build<CR> :terminal<CR> ijava 
+   imap <F1> <Esc> :w<CR> :!javac % -d ~/build<CR>
+   nmap <F1> :w<CR> :!javac % -d ~/build<CR>
+
+   imap <F2> <Esc> :w<CR> :cd ~/build && java %< < ~/sample/input<CR>
+   nmap <F2> :w<CR> :cd ~/build && java %< < ~/sample/input<CR>
+   nmap <F3> :w<CR> :cd ~/build<CR> :terminal<CR> ijava 
 endfunction
 
 function! RunCpp()
-   imap <F1> <Esc> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wconversion -Wpedantic -Wl,--stack=256000000 -ggdb3 -D_GLIBCXX_DEBUG % -o build\sol.exe<CR>
-   nmap <F1> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wconversion -Wpedantic -Wl,--stack=256000000 -ggdb3 -D_GLIBCXX_DEBUG % -o build\sol.exe<CR>
-   nmap <F2> :w<CR> :!build\sol.exe < input<CR>
-   nmap <F3> :w<CR> :terminal<CR> ibuild\sol.exe<CR>
+   imap <F1> <Esc> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wformat=2 -Wconversion -Wpedantic -Wl,--stack=256000000 -ggdb3 -D_GLIBCXX_DEBUG % -o ~/build/sol.exe<CR>
+   nmap <F1> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wformat=2 -Wconversion -Wpedantic -Wl,--stack=256000000 -ggdb3 -D_GLIBCXX_DEBUG % -o ~/build/sol.exe<CR>
+
+   imap <F2> <Esc> :w<CR> :!~/build/sol.exe < ~/sample/input<CR>
+   nmap <F2> :w<CR> :!~/build/sol.exe < ~/sample/input<CR>
+   nmap <F3> :w<CR> :cd ~/build<CR> :terminal<CR> isol.exe<CR>
+endfunction
+
+function! RunPython()
+   imap <F2> <Esc> :w<CR> :!python % < ~/sample/input<CR>
+   nmap <F2> :w<CR> :!python % < ~/sample/input<CR>
+   nmap <F3> :w<CR> :cd %<CR> :terminal<CR> ipython 
 endfunction
 
 function! RunJsAndTs()
    imap <F1> <Esc> :w<CR> :!node %<CR>
    nmap <F1> :w<CR> :!node %<CR>
-   nmap <F2> :w<CR> :!node % < input<CR>
-   nmap <F3> :w<CR> :terminal<CR> inode 
+
+   imap <F2> <Esc> :w<CR> :!node % < ~/sample/input<CR>
+   nmap <F2> :w<CR> :!node % < ~/sample/input<CR>
+   nmap <F3> :w<CR> :cd %<CR> :terminal<CR> inode 
 endfunction
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
@@ -62,7 +71,8 @@ nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
 nmap <Leader>9 :e $MYVIMRC<CR>
 
-"nnoremap <F4> :command-here<CR>
+" con <F4> se abre el archivo de ES input
+nmap <F4> :e ~/sample/input<CR>
 " refresca neovim con <F5>
 nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
 " copia la ruta general del archivo abierto con <F6>
@@ -70,8 +80,8 @@ nnoremap <F6>kp :let @*=expand("%")<CR>
 " entre al modo goyo sin distracciones, con <F7>
 nmap <F7> :Goyo<CR>
 imap <F7> <Esc> :Goyo<CR>
-" copia todo el contenido del archivo en edicion, con <F8>
-nmap <F8> :%y+<CR>
+" copia todo el contenido del archivo en edicion, con Ctrl + a
+nmap <C-a> :%y+<CR>
 
 " para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
 nnoremap <Leader>w :w<CR>
@@ -108,7 +118,7 @@ nnoremap <Leader>ga :Git add -A<CR>
 nnoremap <Leader>gc :Git commit -m "♻ Update"<CR>
 nnoremap <Leader>gcc :Git commit -v<CR>
 nnoremap <Leader>glg :Git log --oneline<CR>
-nnoremap <Leader>grr :Git remote add origin https://github.com/{username}/{name_repository}.git
+nnoremap <Leader>grr :Git remote add origin https://github.com/$USER$/.git
 nnoremap <Leader>gpp :Git push -u origin main<CR>
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gpu :Git push --set-upstream origin main<CR>

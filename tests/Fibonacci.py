@@ -1,6 +1,4 @@
-# @author josuerom
-# @param 01/08/22 COL
-
+# @author josuerom @param 01/08/22 COL
 def fibo(n):
    if n < 2:
       return n

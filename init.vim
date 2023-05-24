@@ -1,13 +1,13 @@
-"*------- Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL -------*
+"*------------------------ Configuración Inicial [init.vim] 21/Febrero/2021 6:56a.m COL ------------------------*
 
-				"██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
-				"██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
-				"██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
-				"██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
-				"██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
-				"╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
-								"Creador >> Josué Romero
-						"Twitter >> https://twitter.com/josueromr
+"		██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
+"		██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
+"		██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
+"		██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
+"		██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║
+"		╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
+										"Creador >> josuerom
+							"Twitter >> https://twitter.com/josueromr
 
 syntax enable
 set number
@@ -44,12 +44,13 @@ so ~/AppData/Local/nvim/general/shortcuts.vim
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType java :call RunJava()
 autocmd FileType cpp :call RunCpp()
+autocmd FileType python :call RunPython()
 autocmd FileType javascript :call RunJsAndTs()
-autocmd FileType typescript :call RunJsAndTs()
 
 " ajustes del tema
-let g:gruvbox_italic=1
-" soft medium hard
-let g:gruvbox_contrast_dark="hard"
-highlight Normal ctermbg=NONE
+" comentarios en italica
+let g:gruvbox_italic = 1
+" contrastes para el tema: soft medium hard
+let g:gruvbox_contrast_dark = "hard"
+highlight Normal ctermbg = NONE
 colorscheme gruvbox

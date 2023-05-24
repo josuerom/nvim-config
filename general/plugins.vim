@@ -5,7 +5,7 @@
 "██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║██╗╚████╔╝ ██║██║ ╚═╝ ██║
 "╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-call plug#begin('~/AppData/Local/coc/nvim-plugins/')
+call plug#begin('~/AppData/Local/nvim/plugins/')
 
 " resaltado de sintaxis
 Plug 'sheerun/vim-polyglot'
@@ -38,7 +38,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 
 call plug#end()

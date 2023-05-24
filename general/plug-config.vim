@@ -36,17 +36,17 @@ let g:kite_supported_languages = ['javascript', 'python', 'java']
 autocmd FileType javascript let b:coc_suggest_disable=1
 autocmd FileType python let b:coc_suggest_disable=1
 autocmd FileType java let b:coc_suggest_disable=1
+autocmd FileType cpp let b:coc_suggest_disable=1
 
 let g:coc_global_extensions = [
   \ 'coc-snippets',
-  \ 'coc-java',
   \]
 
 " configuración de UltiSnips
 let g:UltiSnipsSnippetDirectories=['$HOME/AppData/Local/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<C-o>'
-let g:UltiSnipsJumpBackwardTrigger='<C-p>'
+let g:UltiSnipsJumpForwardTrigger='<C-j>'
+let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 
 " cerrado automatico de la barra lateral o tree
 let NERDTreeShowHidden=1
