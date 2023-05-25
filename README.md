@@ -95,7 +95,17 @@ Python es un lenguaje de alto nivel de programación interpretado cuya filosofí
 
 Para instalarlo da un [click aquí](https://www.python.org/downloads/ "https://www.python.org/downloads/"), este enlace te llevará directamente a su pagina oficial de descarga. Si requieres ayuda con el proceso, visualizate un vídeo en **YouTube**.
 
-### Paso No. 6. Clona/Descarga este repositorio.
+### Paso No. 6. Clona este repositorio.
+
+```powershell
+cd ~\AppData\Local
+git clone https://github.com/josuerom/nvim-config.git
+move nvim-config nvim
+cd nvim
+nvim
+
+```
+
 Esta es la personalización que actualmente tengo en neovim:
 
 <p align="center" width="0">
