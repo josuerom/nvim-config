@@ -96,6 +96,7 @@ Python es un lenguaje de alto nivel de programación interpretado cuya filosofí
 Para instalarlo da un [click aquí](https://www.python.org/downloads/ "https://www.python.org/downloads/"), este enlace te llevará directamente a su pagina oficial de descarga. Si requieres ayuda con el proceso, visualizate un vídeo en **YouTube**.
 
 ### Paso No. 6. Clona este repositorio.
+Copie y pegue en la powershell
 
 ```powershell
 cd ~\AppData\Local
