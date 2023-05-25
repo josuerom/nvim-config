@@ -9,12 +9,12 @@
 let mapleader = " "
 
 function! RunJava()
-   imap <F1> <Esc> :w<CR> :!javac % -d ~/build<CR>
-   nmap <F1> :w<CR> :!javac % -d ~/build<CR>
+   imap <F1> <Esc> :w<CR> :!javac -d d:\workspace\build -s main.class %<CR>
+   nmap <F1> :w<CR> :!javac -d d:\workspace\build -s main.class %<CR>
 
-   imap <F2> <Esc> :w<CR> :cd ~/build && java %< < ~/sample/input<CR>
-   nmap <F2> :w<CR> :cd ~/build && java %< < ~/sample/input<CR>
-   nmap <F3> :w<CR> :cd ~/build<CR> :terminal<CR> ijava 
+   imap <F2> <Esc> :w<CR> :cd d:\workspace\build<CR> :!java main < d:\workspace\sample\input<CR>
+   nmap <F2> :w<CR> :cd d:\workspace\build<CR> :!java main < d:\workspace\sample\input<CR>
+   nmap <F3> :w<CR> :cd d:\workpace\build<CR> :terminal<CR> ijava
 endfunction
 
 function! RunCpp()
@@ -29,7 +29,7 @@ endfunction
 function! RunPython()
    imap <F2> <Esc> :w<CR> :!python % < ~/sample/input<CR>
    nmap <F2> :w<CR> :!python % < ~/sample/input<CR>
-   nmap <F3> :w<CR> :cd %<CR> :terminal<CR> ipython 
+   nmap <F3> :w<CR> :cd %<CR> :terminal<CR> ipython
 endfunction
 
 function! RunJsAndTs()
@@ -38,7 +38,7 @@ function! RunJsAndTs()
 
    imap <F2> <Esc> :w<CR> :!node % < ~/sample/input<CR>
    nmap <F2> :w<CR> :!node % < ~/sample/input<CR>
-   nmap <F3> :w<CR> :cd %<CR> :terminal<CR> inode 
+   nmap <F3> :w<CR> :cd %<CR> :terminal<CR> inode
 endfunction
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
