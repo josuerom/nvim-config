@@ -134,7 +134,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " dividir pantalla en dos [vertical] con <space+ii>
-nnoremap <Leader>ii :vsplit<CR>
+nnoremap <Leader>ii :vsp<CR>
 
 " navegación entre pestañas abiertas con <spacer+l> y <space+h>
 nnoremap <Leader>l :bnext<CR>
@@ -178,9 +178,9 @@ nnoremap m :m .+1<CR>==
 " administrar todos los snippets con <F12>
 nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
 " actualizar extensiones
-nnoremap <silent><nowait> <Leader>cuu :<C-u>CocUpdate<CR>
+nnoremap <silent><nowait> <Leader>cup :<C-u>CocUpdate<CR>
 " desintalar extensiones
-nnoremap <silent><nowait> <Leader>cii :<C-u>CocUninstall coc-
+nnoremap <silent><nowait> <Leader>cun :<C-u>CocUninstall coc-
 
 " use <space+y> para convertir el código seleccionado en un snippet
 xmap <Leader>y  <Plug>(coc-convert-snippet)

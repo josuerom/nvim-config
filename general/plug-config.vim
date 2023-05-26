@@ -42,11 +42,17 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \]
 
-" configuración de UltiSnips
-let g:UltiSnipsSnippetDirectories=['$HOME/AppData/Local/nvim/UltiSnips']
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<C-j>'
-let g:UltiSnipsJumpBackwardTrigger='<C-k>'
+" configuración de ultisnips
+"let g:UltiSnipsSnippetDirectories=['$HOME/AppData/Local/nvim/UltiSnips']
+"let g:UltiSnipsExpandTrigger='<tab>'
+"let g:UltiSnipsJumpForwardTrigger='<C-j>'
+"let g:UltiSnipsJumpBackwardTrigger='<C-k>'
+
+" configuración de coc-snippets
+imap <C-l> <Plug>(coc-snippets-expand)
+let g:coc_snippets_next = '<c-j>'
+let g:coc_snippets_prev = '<c-k>'
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " cerrado automatico de la barra lateral o tree
 let NERDTreeShowHidden=1
@@ -136,4 +142,4 @@ endfunction
 " ejecuta el sgt comando en tu terminal como administrador, pero antes debes tener instalado Python.
 " comando: pip install pynvim
 " así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo directamente.
-" RECUERDA: Entre más grande se la configuración que le des a Neovim, será más lento, así que optimiza.
+" RECUERDA: Entre más grande se la configuración que le agregues a neovim, será más lento, así que optimiza.
