@@ -1,0 +1,559 @@
+{ // @author josuerom
+  "System.out.print()": {
+  "prefix": "s",
+  "body": [
+  "System.out.print($1);"
+  ],
+  "description": "Standard data output"
+  },
+  "System.out.println()": {
+  "prefix": "ss",
+  "body": [
+  "System.out.println($1);"
+  ],
+  "description": "Standard output with line break"
+  },
+  "System.out.prinf()": {
+  "prefix": "sf",
+  "body": [
+  "System.out.printf(\"%$1\", $2);"
+  ],
+  "description": "Formatted standard output"
+  },
+  "pw.print()": {
+  "prefix": "p",
+  "body": [
+  "pw.print($1);"
+  ],
+  "description": "Print standard output"
+  },
+  "pw.println()": {
+  "prefix": "pp",
+  "body": [
+  "pw.println($1);"
+  ],
+  "description": "Println standard output"
+  },
+  "pw.printf()": {
+  "prefix": "pf",
+  "body": [
+  "pw.printf(\"%$1\", $2);"
+  ],
+  "description": "Printf standard output"
+  },
+  "Scanner(System.in)": {
+  "prefix": "sc",
+  "body": [
+  "Scanner sc = new Scanner(System.in);$1"
+  ],
+  "description": "Standard input using the Scanner method"
+  },
+  "BufferedReader(new InputStreamReader(System.in))": {
+  "prefix": "buffer",
+  "body": [
+  "BufferedReader br = new BufferedReader(new InputStreamReader(System.in));$1"
+  ],
+  "description": "Improved standard input using the (BufferedReader, InputStreamReader, IOException) methods"
+  },
+  "main() method": {
+  "prefix": "fm",
+  "body": [
+  "public static void main(String[] args) {",
+  "\t$1",
+  "}"
+  ],
+  "description": "This is the main method that java executes"
+  },
+  "solve() method": {
+  "prefix": "fsol",
+  "body": [
+  "public static void solve($1) {",
+  "}"
+  ]
+  },
+  "public static void nameMethod": {
+  "prefix": "psv",
+  "body": [
+  "public static void ${1:nameMethod}($2) {",
+  "}"
+  ],
+  "description": "Method I use most often"
+  },
+  "Method template": {
+  "prefix": "me",
+  "body": [
+  "public ${1:static} ${2:void} ${3:name}($4) {",
+  "}"
+  ],
+  "description": "Template for create methods"
+  },
+  "try catch": {
+  "prefix": "try",
+  "body": [
+  "try {",
+  "\t$1",
+  "} catch (${2:Exeption} e) {",
+  "\te.printStackTrace();",
+  "}"
+  ],
+  "description": "Methods for handling exceptions"
+  },
+  "catch": {
+  "prefix": "cat",
+  "body": [
+  "catch ($1 e) {",
+  "}"
+  ],
+  },
+  "if": {
+  "prefix": "if",
+  "body": [
+  "if (${1:condition}) $2"
+  ],
+  },
+  "else": {
+  "prefix": "el",
+  "body": [
+  "else $2",
+  ],
+  },
+  "else if ()": {
+  "prefix": "eli",
+  "body": [
+  "else if ($1) $2",
+  ],
+  },
+  "do while": {
+  "prefix": "do",
+  "body": [
+  "do {\n\t$1",
+  "} while (${2:condition});"
+  ],
+  },
+  "while": {
+  "prefix": "wh",
+  "body": [
+  "while ($1) {$2",
+  "}"
+  ],
+  },
+  "read test cases": {
+  "prefix": "tt",
+  "body": [
+  "int tt = fr.readInt();",
+  "while (tt-- > 0) {",
+  "\t$1",
+  "}"
+  ],
+  },
+  "for iterator": {
+  "prefix": "fori",
+  "body": [
+  "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {",
+  "}"
+  ],
+  },
+  "for each": {
+  "prefix": "fore",
+  "body": [
+  "for (${1:int} e : $2) {",
+  "}"
+  ],
+  },
+  "Ternary operator": {
+  "prefix": "ter",
+  "body": [
+  "${1:boolean name} = (${2:condition}) ? $3 : $4;"
+  ],
+  },
+  "Object creation": {
+  "prefix": "obj",
+  "body": [
+  "${1:nameClass} ${2:name} = new ${1:nameConstructor}($3);"
+  ],
+  },
+  "Constructor ()": {
+  "prefix": "const",
+  "body": [
+  "public ${TM_FILENAME_BASE}($1) {",
+  "\tthis.$2 = $2;",
+  "}"
+  ],
+  },
+  "import": {
+  "prefix": "im",
+  "body": [
+  "import java$1;",
+  ],
+  "description": "Import packages"
+  },
+  "JavaClass Template": {
+  "prefix": "class",
+  "body": [
+  "public class ${TM_FILENAME_BASE} {",
+  "\t$1",
+  "}"
+  ],
+  "description": "JavaClass template"
+  },
+  "JavaMainClass Template": {
+  "prefix": "mainclass",
+  "body": [
+  "public class ${TM_FILENAME_BASE} {",
+  "\tpublic static void main(String[] args) {",
+  "\t\t$1",
+  "\t}",
+  "}"
+  ],
+  "description": "JavaMainClass template"
+  },
+  "JavaDocs": {
+  "prefix": "author",
+  "body": [
+  "/**",
+  " *   author:  josuerom",
+  " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+  "**/"
+  ],
+  "description": "Encabezado"
+  },
+  "Array": {
+  "prefix": "ar",
+  "body": [
+  "${1:int}[] $2 = new ${1:int}[N$3];"
+  ],
+  },
+  "Arrays()": {
+  "prefix": "arr",
+  "body": [
+  "Arrays.$1($2);"
+  ],
+  },
+  "Arrays.toString()": {
+  "prefix": "tostr",
+  "body": [
+  "Arrays.toString($1)"
+  ],
+  },
+  "Read Int Scanner()": {
+  "prefix": "ri",
+  "body": [
+  "fr.readInt();"
+  ],
+  },
+  "Read String Scanner()": {
+  "prefix": "rstr",
+  "body": [
+  "fr.readLine();"
+  ],
+  },
+  "Read String-N Scanner()": {
+  "prefix": "rn",
+  "body": [
+  "fr.next();"
+  ],
+  },
+  "Read Long Scanner()": {
+  "prefix": "rl",
+  "body": [
+  "fr.readLong();"
+  ],
+  },
+  "Read Double Scanner()": {
+  "prefix": "rd",
+  "body": [
+  "fr.readDouble();"
+  ],
+  },
+  "Read int array": {
+  "prefix": "ra",
+  "body": [
+  "fr.readArray();"
+  ],
+  },
+  "Read char[] array": {
+  "prefix": "rac",
+  "body": [
+  "fr.next().toCharArray();"
+  ],
+  },
+  "Check execution time": {
+  "prefix": "time",
+  "body": [
+  "long start = System.currentTimeMillis();",
+  "System.err.println(\"time: \" + System.currentTimeMillis()-start);"
+  ],
+  },
+  "signature": {
+  "prefix": "signature",
+  "body": [
+  "/**",
+  "\t\t\t░░░░░██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
+  "\t\t\t░░░░░██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
+  "\t\t\t░░░░░██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
+  "\t\t\t██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
+  "\t\t\t╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
+  "\t\t\t░╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
+  "**/",
+  ],
+  },
+  "style josuerom": {
+    "prefix": "style_josuerom",
+    "body": [
+    "/**",
+    "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
+    "    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█",
+    "    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀",
+    "**/",
+    ]
+    },
+  "Template 1 Codeforces": {
+  "prefix": "tem1.java",
+  "body": [
+  "/**",
+  " *   author:  josuerom",
+  " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+  "**/",
+  "import java.io.BufferedReader;",
+  "import java.io.IOException;",
+  "import java.io.InputStreamReader;",
+  "import java.io.PrintWriter;",
+  "import java.util.Arrays;",
+  "import java.util.Random;",
+  "import java.util.StringTokenizer;",
+  "import java.util.Collections;",
+  "import static java.lang.Math.*;\n",
+  "public class ${TM_FILENAME_BASE} {",
+  "\tpublic static void main(String[] args) {",
+  "\t\tFastReader fr = new FastReader();",
+  "\t\tPrintWriter pw = new PrintWriter(System.out);",
+  "\t\t$1",
+  "\t\tpw.flush(); pw.close();",
+  "\t}\n",
+  "\tstatic final Random random = new Random();",
+  "\tstatic final int MOD = 1_000_000_007;",
+  "\tstatic final int MAX = 1_000_007;",
+  "\tstatic final boolean DEBUG = false;\n",
+  "\tstatic class Treasure {",
+  "\t\tpublic Treasure() { }\n",
+  "\t\tstatic void ruffleSort(int[] a) {",
+  "\t\t\tint n = a.length;",
+  "\t\t\tfor (int i = 0; i < n; i++) {",
+  "\t\t\t\tint oi = random.nextInt(n), temp = a[oi];",
+  "\t\t\t\ta[oi] = a[i]; a[i] = temp;",
+  "\t\t\t}",
+  "\t\t\tArrays.sort(a);",
+  "\t\t}\n",
+  "\t\tstatic long add(long a, long b) {",
+  "\t\t\treturn (a+b) % MOD;",
+  "\t\t}",
+  "\t\tstatic long sub(long a, long b) {",
+  "\t\t\treturn ((a-b) % MOD + MOD) % MOD;",
+  "\t\t}",
+  "\t\tstatic long mul(long a, long b) {",
+  "\t\t\treturn (a*b) % MOD;",
+  "\t\t}",
+  "\t\tstatic long exp(long base, long exp) {",
+  "\t\t\tif (exp==0) return 1;",
+  "\t\t\tlong half=exp(base, exp/2);",
+  "\t\t\tif (exp%2==0) return mul(half, half);",
+  "\t\t\treturn mul(half, mul(half, base));",
+  "\t\t}\n",
+  "\t\tstatic long[] factorials = new long[2_000_007];",
+  "\t\tstatic long[] invFactorials = new long[2_000_007];\n",
+  "\t\tstatic void precompFacts() {",
+  "\t\t\tfactorials[0] = invFactorials[0] = 1;",
+  "\t\t\tfor (int i = 1; i < factorials.length; i++) factorials[i] = mul(factorials[i-1], i);",
+  "\t\t\tinvFactorials[factorials.length-1] = exp(factorials[factorials.length-1], MOD-2);",
+  "\t\t\tfor (int i = invFactorials.length-2; i >= 0; i--) invFactorials[i] = mul(invFactorials[i+1], i+1);",
+  "\t\t}",
+  "\t\tstatic long nCr(int n, int r) {",
+  "\t\t\treturn mul(factorials[n], mul(invFactorials[r], invFactorials[n-r]));",
+  "\t\t}",
+  "\t}\n",
+  "\tstatic class FastReader {",
+  "\t\tBufferedReader br;",
+  "\t\tStringTokenizer st;\n",
+  "\t\tpublic FastReader() {",
+  "\t\t\tbr = new BufferedReader(new InputStreamReader(System.in));",
+  "\t\t\tst = new StringTokenizer(\"\");",
+  "\t\t}\n",
+  "\t\tString next() {",
+  "\t\t\twhile (!st.hasMoreTokens()) {",
+  "\t\t\t\ttry { st = new StringTokenizer(br.readLine()); }",
+  "\t\t\t\tcatch (IOException e) { e.printStackTrace(); }",
+  "\t\t\t}",
+  "\t\t\treturn st.nextToken();",
+  "\t\t}",
+  "\t\tString readLine() {",
+  "\t\t\tString line = null;",
+  "\t\t\ttry { line = br.readLine(); }",
+  "\t\t\tcatch (IOException e) { e.printStackTrace(); }",
+  "\t\t\treturn line;",
+  "\t\t}\n",
+  "\t\tdouble readDouble() { return Double.parseDouble(next()); }",
+  "\t\tlong readLong() { return Long.parseLong(next()); }",
+  "\t\tint readInt() { return Integer.parseInt(next()); }",
+  "\t\tint[] readArray(int n) {",
+  "\t\t\tint[] a = new int[n];",
+  "\t\t\tfor (int i = 0; i < n; i++) { a[i] = readInt(); }",
+  "\t\t\treturn a;",
+  "\t\t}",
+  "\t}",
+  "}",
+  ],
+  "description": "Plantilla para soluciones más rápidas en java 1.8.0_241",
+  },
+  "Template 2 With All": {
+    "prefix": "tem2.java",
+    "body": [
+  "/**",
+  "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
+  "    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█",
+  "    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀",
+  "**/",
+  "import java.util.Scanner;",
+  "import java.util.Arrays;",
+  "import static java.lang.Math.*;\n",
+  "public class ${TM_FILENAME_BASE} {",
+  "\tprivate static final boolean DEBUG = false;\n",
+  "\tpublic static void main(String[] args) {",
+  "\t\treadInput();",
+  "\t}\n",
+  "\tpublic static void solve(int[] p$2) {",
+  "\t}\n",
+  "\tpublic static void readInput() {",
+  "\t\tScanner sc = new Scanner(System.in);",
+  "\t\tint tt = sc.nextInt();",
+  "\t\twhile (tt-- > 0) {",
+  "\t\t\tint N = sc.nextInt();",
+  "\t\t\tint vi = new int[N];",
+  "\t\t\tfor (int i = 0; i < N$1; i++) {",
+  "\t\t\t\tvi[i] = sc.nextInt();",
+  "\t\t\t}",
+  "\t\t\tsolve(vi);",
+  "\t\t}",
+  "\t\tsc.close(); System.out.close();",
+  "\t}",
+  "}"
+],
+"description": "Plantilla estructurada para depurar valores",
+},
+"Template 3 Simple": {
+"prefix": "tem3.java",
+"body": [
+"/**",
+" *   author:  josuerom",
+" *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+"**/",
+"import java.util.Scanner;\n",
+"public class ${TM_FILENAME_BASE} {",
+"\tprivate static Scanner sc = new Scanner(System.in);",
+"\tprivate static final boolean DEBUG = false;\n",
+"\tpublic static void main(String[] args) {",
+"\t\t$1",
+"\t\tsc.close(); System.out.close();",
+"\t}",
+"}"  
+],
+"description": "Plantilla estructurada para depurar valores",
+},
+"Template 2 Bits()": {
+  "prefix": "tem4.java",
+  "body": [
+  "/**",
+  "    █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ 　 ▄▀ ▀▄",
+  "    ─▄▀ 　 █▀▀▄ ▀█▀ ──█── ▀▀█ 　 █─ ─█",
+  "    █▄▄ 　 ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ 　 ▀▄ ▄▀",
+  "**/",
+  "import java.io.BufferedReader;",
+  "import java.io.IOException;",
+  "import java.io.InputStreamReader;",
+  "import java.io.PrintWriter;",
+  "import java.util.Arrays;",
+  "import java.util.Random;",
+  "import java.util.StringTokenizer;",
+  "import java.util.Collections;",
+  "import static java.lang.Math.*;\n",
+  "public class ${TM_FILENAME_BASE} {",
+  "\tpublic static void main(String[] args) {",
+  "\t\tFastReader fr = new FastReader();",
+  "\t\tPrintWriter pw = new PrintWriter(System.out);",
+  "\t\t$1",
+  "\t\tpw.flush(); pw.close();",
+  "\t}\n",
+  "\tstatic final Random random = new Random();",
+  "\tstatic final int MOD = 1_000_000_007;",
+  "\tstatic final int MAX = 1_000_007;",
+  "\tstatic final boolean DEBUG = false;\n",
+  "\tstatic class Treasure {",
+  "\t\tpublic Treasure() { }\n",
+  "\t\tstatic void ruffleSort(int[] a) {",
+  "\t\t\tint n = a.length;",
+  "\t\t\tfor (int i = 0; i < n; i++) {",
+  "\t\t\t\tint oi = random.nextInt(n), temp = a[oi];",
+  "\t\t\t\ta[oi] = a[i]; a[i] = temp;",
+  "\t\t\t}",
+  "\t\t\tArrays.sort(a);",
+  "\t\t}\n",
+  "\t\tstatic long add(long a, long b) {",
+  "\t\t\treturn (a+b) % MOD;",
+  "\t\t}",
+  "\t\tstatic long sub(long a, long b) {",
+  "\t\t\treturn ((a-b) % MOD + MOD) % MOD;",
+  "\t\t}",
+  "\t\tstatic long mul(long a, long b) {",
+  "\t\t\treturn (a*b) % MOD;",
+  "\t\t}",
+  "\t\tstatic long exp(long base, long exp) {",
+  "\t\t\tif (exp==0) return 1;",
+  "\t\t\tlong half=exp(base, exp/2);",
+  "\t\t\tif (exp%2==0) return mul(half, half);",
+  "\t\t\treturn mul(half, mul(half, base));",
+  "\t\t}\n",
+  "\t\tstatic long[] factorials = new long[2_000_007];",
+  "\t\tstatic long[] invFactorials = new long[2_000_007];\n",
+  "\t\tstatic void precompFacts() {",
+  "\t\t\tfactorials[0] = invFactorials[0] = 1;",
+  "\t\t\tfor (int i = 1; i < factorials.length; i++) factorials[i] = mul(factorials[i-1], i);",
+  "\t\t\tinvFactorials[factorials.length-1] = exp(factorials[factorials.length-1], MOD-2);",
+  "\t\t\tfor (int i = invFactorials.length-2; i >= 0; i--) invFactorials[i] = mul(invFactorials[i+1], i+1);",
+  "\t\t}",
+  "\t\tstatic long nCr(int n, int r) {",
+  "\t\t\treturn mul(factorials[n], mul(invFactorials[r], invFactorials[n-r]));",
+  "\t\t}",
+  "\t}\n",
+  "\tstatic class FastReader {",
+  "\t\tBufferedReader br;",
+  "\t\tStringTokenizer st;\n",
+  "\t\tpublic FastReader() {",
+  "\t\t\tbr = new BufferedReader(new InputStreamReader(System.in));",
+  "\t\t\tst = new StringTokenizer(\"\");",
+  "\t\t}\n",
+  "\t\tString next() {",
+  "\t\t\twhile (!st.hasMoreTokens()) {",
+  "\t\t\t\ttry { st = new StringTokenizer(br.readLine()); }",
+  "\t\t\t\tcatch (IOException e) { e.printStackTrace(); }",
+  "\t\t\t}",
+  "\t\t\treturn st.nextToken();",
+  "\t\t}",
+  "\t\tString readLine() {",
+  "\t\t\tString line = null;",
+  "\t\t\ttry { line = br.readLine(); }",
+  "\t\t\tcatch (IOException e) { e.printStackTrace(); }",
+  "\t\t\treturn line;",
+  "\t\t}\n",
+  "\t\tdouble readDouble() { return Double.parseDouble(next()); }",
+  "\t\tlong readLong() { return Long.parseLong(next()); }",
+  "\t\tint readInt() { return Integer.parseInt(next()); }",
+  "\t\tint[] readArray(int n) {",
+  "\t\t\tint[] a = new int[n];",
+  "\t\t\tfor (int i = 0; i < n; i++) { a[i] = readInt(); }",
+  "\t\t\treturn a;",
+  "\t\t}",
+  "\t}",
+  "}",
+  ],
+  "description": "Plantilla para explicar soluciones",
+  }
+}

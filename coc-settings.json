@@ -1,3 +1,37 @@
 {
-  "snippets.ultisnips.pythonPrompt": false
+  // Java
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-14",
+      "path": "D:\\Program Files\\Compilers\\Jdk-19.0.1\\",
+      "default": true
+    }
+  ],
+
+  // Python
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider": "black",
+  // "python.formatting.blackPath": "black",
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": true,
+
+  // Snippets
+  "snippets.priority": 1,
+  "snippets.extends": {
+    "cpp": ["c"],
+    "javascriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/snippets/ultisnips",
+  "snippets.shortcut": "S",
+  "snippets.autoTrigger": true,
+  "snippets.triggerCharacters": [],
+  "snippets.loadFromExtensions": true,
+  "snippets.textmateSnippetsRoots": ["~/AppData/Local/nvim/snippets/vscode"],
+  "snippets.ultisnips.enable": true,
+  "snippets.ultisnips.usePythonx": true,
+  "snippets.ultisnips.directories": ["UltiSnips"],
+  "snippets.snipmate.enable": true,
+  "snippets.snipmate.author": "josuerom"
 }
