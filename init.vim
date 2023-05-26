@@ -9,6 +9,11 @@
 " 															Creador >> josuerom
 " 															Twitter >> https://twitter.com/josueromr
 
+" importo los archivos configuración
+so ~/AppData/Local/nvim/general/plugins.vim
+so ~/AppData/Local/nvim/general/plug-config.vim
+so ~/AppData/Local/nvim/general/shortcuts.vim
+
 syntax enable
 set number
 set mouse=a
@@ -33,12 +38,7 @@ set cmdheight=1
 set updatetime=50
 set shortmess+=c
 set background=dark
-"let g:python3_host_prog="D:\\Program Files\\Python3\\python.exe"
-
-" importo los demás archivos configuración
-so ~/AppData/Local/nvim/general/plugins.vim
-so ~/AppData/Local/nvim/general/plug-config.vim
-so ~/AppData/Local/nvim/general/shortcuts.vim
+"let g:python3_host_prog="D:\\Program Files\\Compilers\\Python3\\python.exe"
 
 " integro intrucciones para refrescar, limpiar y ejecutar archivos
 autocmd! BufWritePost init.vim source ~/AppData/Local/nvim/init.vim
@@ -56,4 +56,4 @@ colorscheme gruvbox
 
 " comentarios en italica
 let g:gruvbox_italic = 1
-"let g.gruvbox_ =
+"let g.gruvbox_invert_selection = 1

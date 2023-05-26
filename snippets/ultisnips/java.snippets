@@ -607,10 +607,17 @@ while (tt-- > 0) {
 }
 endsnippet
 
+snippet author "header file" b
+/**
+ *   author:  josuerom
+ *   created: `!v strftime("%d/%m/%Y %H:%M:%S")`
+**/
+endsnippet
+
 snippet tem1.java "Template 1 Java" b
 /**
  *   author:  josuerom
- *   created: `!v strftime("%e/%B/%Y - %R")`
+ *   created: `!v strftime("%d/%m/%Y %H:%M:%S")`
 **/
 import java.io.BufferedReader;
 import java.io.IOException;

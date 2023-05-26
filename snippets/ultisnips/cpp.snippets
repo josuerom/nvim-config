@@ -192,10 +192,17 @@ snippet pai
 pair<$1, $2>$3
 endsnippet
 
+snippet author
+/**
+ *   author:  josuerom
+ *   created: `!v strftime("%d/%m/%Y %H:%M:%S")`
+**/
+endsnippet
+
 snippet tem1.cpp
 /**
  *   author:  josuerom
- *   created: `!v strftime("%e/%B/%Y - %R")`
+ *   created: `!v strftime("%d/%m/%Y %H:%M:%S")`
 **/
 #pragma GCC optimize("O3,unroll-loops")
 
@@ -258,7 +265,7 @@ endsnippet
 snippet tem3.cpp
 /**
  *   author:  josuerom
- *   created: `!v strftime("%e/%B/%Y - %R")`
+ *   created: `!v strftime("%d/%m/%Y %H:%M:%S")`
 **/
 #include <bits/stdc++.h>
 
