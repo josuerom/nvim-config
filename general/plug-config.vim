@@ -53,6 +53,7 @@ imap <C-l> <Plug>(coc-snippets-expand)
 let g:coc_snippets_next = '<c-j>'
 let g:coc_snippets_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+xmap <Leader>y  <Plug>(coc-convert-snippet)
 
 " cerrado automatico de la barra lateral o tree
 let NERDTreeShowHidden=1

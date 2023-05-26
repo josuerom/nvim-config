@@ -14,21 +14,21 @@ function! RunJava()
 
    imap <F2> <Esc> :w<CR> :cd d:\workspace\build<CR> :!java main < d:\workspace\sample\input<CR>
    nmap <F2> :w<CR> :cd d:\workspace\build<CR> :!java main < d:\workspace\sample\input<CR>
-   nmap <F3> :w<CR> :cd d:\workpace\build<CR> :terminal<CR> ijava
+   nmap <F3> :w<CR> :cd d:\workpace\build<CR> :terminal<CR> ijava 
 endfunction
 
 function! RunCpp()
-   imap <F1> <Esc> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wformat=2 -Wconversion -Wpedantic -Wl,--stack=256000000 -ggdb3 -D_GLIBCXX_DEBUG % -o ~/build/sol.exe<CR>
-   nmap <F1> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wformat=2 -Wconversion -Wpedantic -Wl,--stack=256000000 -ggdb3 -D_GLIBCXX_DEBUG % -o ~/build/sol.exe<CR>
+   imap <F1> <Esc> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wformat=2 -Wconversion -Wpedantic -ggdb3 -D_GLIBCXX_DEBUG % -o d:\workspace\build\sol.exe<CR>
+   nmap <F1> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wformat=2 -Wconversion -Wpedantic -ggdb3 -D_GLIBCXX_DEBUG % -o d:\workspace\build\sol.exe<CR>
 
-   imap <F2> <Esc> :w<CR> :!~/build/sol.exe < ~/sample/input<CR>
-   nmap <F2> :w<CR> :!~/build/sol.exe < ~/sample/input<CR>
-   nmap <F3> :w<CR> :cd ~/build<CR> :terminal<CR> isol.exe<CR>
+   imap <F2> <Esc> :w<CR> :!d:\workspace\build\sol.exe < d:\workspace\sample\input<CR>
+   nmap <F2> :w<CR> :!d:\workspace\build\sol.exe < d:\workspace\sample\input<CR>
+   nmap <F3> :w<CR> :cd d:\workspace\sample\build<CR> :terminal<CR> isol.exe<CR>
 endfunction
 
 function! RunPython()
-   imap <F2> <Esc> :w<CR> :!python % < ~/sample/input<CR>
-   nmap <F2> :w<CR> :!python % < ~/sample/input<CR>
+   imap <F2> <Esc> :w<CR> :!python % < d:\workspace\sample\input<CR>
+   nmap <F2> :w<CR> :!python % < d:\workspace\sample\input<CR>
    nmap <F3> :w<CR> :cd %<CR> :terminal<CR> ipython
 endfunction
 
@@ -36,8 +36,8 @@ function! RunJsAndTs()
    imap <F1> <Esc> :w<CR> :!node %<CR>
    nmap <F1> :w<CR> :!node %<CR>
 
-   imap <F2> <Esc> :w<CR> :!node % < ~/sample/input<CR>
-   nmap <F2> :w<CR> :!node % < ~/sample/input<CR>
+   imap <F2> <Esc> :w<CR> :!node % < d:\workspace\\input<CR>
+   nmap <F2> :w<CR> :!node % < d:\workspace\\input<CR>
    nmap <F3> :w<CR> :cd %<CR> :terminal<CR> inode
 endfunction
 
@@ -72,7 +72,7 @@ nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
 nmap <Leader>9 :e $MYVIMRC<CR>
 
 " con <F4> abres el archivo de ES input
-nmap <F4> :e ~/sample/input<CR>
+nmap <F4> :e d:\workspace\sample\input<CR>
 " refresca neovim con <F5>
 nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
 " copia la ruta general del archivo abierto con <F6>
@@ -90,9 +90,11 @@ nnoremap <Leader>w :w<CR>
 imap <C-s> <Esc> :w<CR>
 nmap <C-s> <Esc> :w<CR>
 " para cerrar búfers <space+q>
-nnoremap <Leader>q :q<CR>
+imap <C-q> <Esc> :q<CR>
+nmap <Leader>q :q<CR>
 " para salir rápidamente de nvim <space+x>
-nnoremap <Leader>x :qa!<CR>
+imap <C-x> <Esc> :qa!<CR>
+nmap <Leader>x :qa!<CR>
 
 " abre el árbol, side bar o NERDTree
 nmap <Leader>e :NERDTreeToggle<CR>
@@ -181,6 +183,3 @@ nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
 nnoremap <silent><nowait> <Leader>cup :<C-u>CocUpdate<CR>
 " desintalar extensiones
 nnoremap <silent><nowait> <Leader>cun :<C-u>CocUninstall coc-
-
-" use <space+y> para convertir el código seleccionado en un snippet
-xmap <Leader>y  <Plug>(coc-convert-snippet)
