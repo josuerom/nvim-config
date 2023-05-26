@@ -9,12 +9,9 @@
 let mapleader = " "
 
 function! RunJava()
-   imap <F1> <Esc> :w<CR> :!javac -d d:\workspace\build -s main.class %<CR>
-   nmap <F1> :w<CR> :!javac -d d:\workspace\build -s main.class %<CR>
-
-   imap <F2> <Esc> :w<CR> :cd d:\workspace\build<CR> :!java main < d:\workspace\sample\input<CR>
-   nmap <F2> :w<CR> :cd d:\workspace\build<CR> :!java main < d:\workspace\sample\input<CR>
-   nmap <F3> :w<CR> :cd d:\workpace\build<CR> :terminal<CR> ijava 
+   imap <F2> <Esc> :w<CR> :!java % < d:\workspace\sample\input<CR>
+   nmap <F2> :w<CR> ::!java % < d:\workspace\sample\input<CR>
+   nmap <F3> :w<CR> :cd %<CR> :terminal<CR>idir<CR>java 
 endfunction
 
 function! RunCpp()
@@ -49,6 +46,7 @@ noremap <right> <nop>
 
 " salir del modo INSERT con <Esc> o <Ctrl+c>
 imap <C-c> <Esc>
+imap ññ <Esc>
 
 " desplazamiento vertical rápido con (hacia abajo -> ctrl+e) (hacia arriba -> ctrl+y)
 nnoremap <C-k> 50 <C-e>
@@ -86,15 +84,17 @@ imap <C-a> <Esc> :w<CR> :%y+<CR>
 nmap <C-a> :w<CR> :%y+<CR>
 
 " para guardar los cambios del archivo presione <space+w> en modeo INSERT o NORMAL
-nnoremap <Leader>w :w<CR>
-imap <C-s> <Esc> :w<CR>
+nmap <Leader>w :w<CR>
 nmap <C-s> <Esc> :w<CR>
+imap <C-s> <Esc> :w<CR>
 " para cerrar búfers <space+q>
-imap <C-q> <Esc> :q<CR>
+nmap <C-q> :q<CR>
 nmap <Leader>q :q<CR>
+imap <C-q> <Esc> :q<CR>
 " para salir rápidamente de nvim <space+x>
-imap <C-x> <Esc> :qa!<CR>
+nmap <C-x> :qa!<CR>
 nmap <Leader>x :qa!<CR>
+imap <C-x> <Esc> :qa!<CR>
 
 " abre el árbol, side bar o NERDTree
 nmap <Leader>e :NERDTreeToggle<CR>

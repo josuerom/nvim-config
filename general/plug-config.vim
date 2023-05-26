@@ -61,7 +61,7 @@ let NERDTreeAutoDeleteBuffer=1
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
-let g:NERDTreeWinPos="right"
+let NERDTreeWinPos="right"
 
 " navegación rápida tmux
 let g:tmux_navigator_no_mappings=1
