@@ -31,7 +31,7 @@
   "snippets.textmateSnippetsRoots": ["~/AppData/Local/nvim/snippets/vscode"],
   "snippets.ultisnips.enable": true,
   "snippets.ultisnips.usePythonx": true,
-  "snippets.ultisnips.directories": ["UltiSnips"],
+  "snippets.ultisnips.directories": ["ultisnips"],
   "snippets.snipmate.enable": true,
   "snippets.snipmate.author": "josuerom"
 }
