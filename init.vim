@@ -38,19 +38,16 @@ set cmdheight=1
 set updatetime=50
 set shortmess+=c
 set background=dark
-"let g:python3_host_prog="D:\\Program Files\\Compilers\\Python3\\python.exe"
 
-" integro intrucciones para refrescar, limpiar y ejecutar archivos
-autocmd! BufWritePost init.vim source ~/AppData/Local/nvim/init.vim
+" integro intrucciones para refrescar, limpiar espacios en blancos y ejecutar programas
 "autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType java :call RunJava()
 autocmd FileType cpp :call RunCpp()
 autocmd FileType python :call RunPython()
-autocmd FileType javascript :call RunJsAndTs()
-autocmd FileType typescript :call RunJsAndTs()
+autocmd FileType javascript,typescript :call RunJsAndTs()
 
 " ajustes del tema
-" contrastes del tema: soft medium hard
+" contrastes: soft medium hard
 let g:gruvbox_contrast_dark = "hard"
 highlight Normal ctermbg = NONE
 colorscheme gruvbox

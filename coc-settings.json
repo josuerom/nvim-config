@@ -33,6 +33,6 @@
   "snippets.ultisnips.usePythonx": true,
   "snippets.ultisnips.directories": ["ultisnips"],
   "snippets.snipmate.enable": true,
-  "snippets.snipmate.author": "josuerom",
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "snippets.snipmate.author": "josuerom"
 }

@@ -19,7 +19,7 @@ function! RunCpp()
 
    imap <F2> <Esc> :w<CR> <F1> :!d:\workspace\build\nvim-sol.exe < d:\workspace\sample\input<CR>
    nmap <F2> :w<CR> :!d:\workspace\build\nvim-sol.exe < d:\workspace\sample\input<CR>
-   nmap <F3> :w<CR> :cd d:\workspace\sample\build<CR> :terminal<CR>invim-sol.exe<CR>
+   nmap <F3> :w<CR> :terminal<CR>id:\workspace\build\nvim-sol.exe<CR>
 endfunction
 
 function! RunPython()
