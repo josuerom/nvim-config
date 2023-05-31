@@ -308,7 +308,7 @@
     ]
     },
   "Template 1 Codeforces": {
-  "prefix": "tem1.java",
+  "prefix": "tem1",
   "body": [
   "/**",
   " *   author:  josuerom",
@@ -405,7 +405,7 @@
   "description": "Plantilla para soluciones más rápidas en java 1.8.0_241",
   },
   "Template 2 With All": {
-    "prefix": "tem2.java",
+    "prefix": "tem2",
     "body": [
   "/**",
   "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
@@ -440,7 +440,7 @@
 "description": "Plantilla estructurada para depurar valores",
 },
 "Template 3 Simple": {
-"prefix": "tem3.java",
+"prefix": "tem3",
 "body": [
 "/**",
 " *   author:  josuerom",
@@ -459,7 +459,7 @@
 "description": "Plantilla estructurada para depurar valores",
 },
 "Template 2 Bits()": {
-  "prefix": "tem4.java",
+  "prefix": "tem4",
   "body": [
   "/**",
   "    █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ 　 ▄▀ ▀▄",

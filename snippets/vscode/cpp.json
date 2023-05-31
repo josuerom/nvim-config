@@ -202,7 +202,7 @@
   },
 
   "Template 1 Codeforces": {
-  "prefix": "tem1.cpp",
+  "prefix": "tem1",
   "body": [
   "/**",
   " *   author:  josuerom",
@@ -236,7 +236,7 @@
   },
 
   "Template 2 With All": {
-  "prefix": "tem2.cpp",
+  "prefix": "tem2",
   "body": [
   "/**",
   " *   author:  josuerom",
@@ -313,7 +313,7 @@
   },
 
   "Template 3 Simple": {
-  "prefix": "tem3.cpp",
+  "prefix": "tem3",
   "body": [
   "/**",
   "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
@@ -337,7 +337,7 @@
   },
   
   "Template 2 Bits()": {
-  "prefix": "tem4.cpp",
+  "prefix": "tem4",
   "body": [
   "/**",
   "    █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ 　 ▄▀ ▀▄",
