@@ -34,18 +34,14 @@ let g:lightline = {
 let g:kite_supported_languages = ['javascript', 'python', 'java']
 
 " desabilitar la entrega de sugerencias de COC para que KITE sea quien las entrege en estos tipos de archivos
-autocmd FileType java let b:coc_suggest_disable=1
-autocmd FileType cpp let b:coc_suggest_disable=1
+"autocmd FileType java let b:coc_suggest_disable=1
+"autocmd FileType cpp let b:coc_suggest_disable=1
 
 let g:coc_global_extensions = [
   \ 'coc-snippets',
+  \ 'coc-java',
+  \ 'coc-clangd',
   \]
-
-" configuración de ultisnips
-"let g:UltiSnipsSnippetDirectories=['$HOME/AppData/Local/nvim/UltiSnips']
-"let g:UltiSnipsExpandTrigger='<tab>'
-"let g:UltiSnipsJumpForwardTrigger='<C-j>'
-"let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 
 " configuración de coc-snippets
 imap <C-l> <Plug>(coc-snippets-expand)

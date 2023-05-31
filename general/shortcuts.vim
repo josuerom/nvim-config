@@ -5,37 +5,36 @@
 "███████║██║  ██║╚██████╔╝██║  ██║   ██║   ╚██████╗╚██████╔╝   ██║   ███████║██╗╚████╔╝ ██║██║ ╚═╝ ██║
 "╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═════╝    ╚═╝   ╚══════╝╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-" <space> es la tecla líder
 let mapleader = " "
 
 function! RunJava()
    imap <F2> <Esc> :w<CR> :!java % < d:\workspace\sample\input<CR>
-   nmap <F2> :w<CR> ::!java % < d:\workspace\sample\input<CR>
-   nmap <F3> :w<CR> :cd %<CR> :terminal<CR>idir<CR>java 
+   nmap <F2> :w<CR> :!java % < d:\workspace\sample\input<CR>
+   nmap <F3> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>java 
 endfunction
 
 function! RunCpp()
-   imap <F1> <Esc> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wformat=2 -Wconversion -Wpedantic -ggdb3 -D_GLIBCXX_DEBUG % -o d:\workspace\build\sol.exe<CR>
-   nmap <F1> :w<CR> :!g++ -std=c++20 -march=native -Djosuerom -Wall -Wshadow -Wextra -Weffc++ -Wformat=2 -Wconversion -Wpedantic -ggdb3 -D_GLIBCXX_DEBUG % -o d:\workspace\build\sol.exe<CR>
+   imap <F1> <Esc> :w<CR> :!g++ % -o d:\workspace\build\nvim-sol.exe -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom<CR>
+   nmap <F1> :w<CR> :!g++ % -o d:\workspace\build\nvim-sol.exe -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom<CR>
 
-   imap <F2> <Esc> :w<CR> :!d:\workspace\build\sol.exe < d:\workspace\sample\input<CR>
-   nmap <F2> :w<CR> :!d:\workspace\build\sol.exe < d:\workspace\sample\input<CR>
-   nmap <F3> :w<CR> :cd d:\workspace\sample\build<CR> :terminal<CR> isol.exe<CR>
+   imap <F2> <Esc> :w<CR> <F1> :!d:\workspace\build\nvim-sol.exe < d:\workspace\sample\input<CR>
+   nmap <F2> :w<CR> :!d:\workspace\build\nvim-sol.exe < d:\workspace\sample\input<CR>
+   nmap <F3> :w<CR> :cd d:\workspace\sample\build<CR> :terminal<CR>invim-sol.exe<CR>
 endfunction
 
 function! RunPython()
    imap <F2> <Esc> :w<CR> :!python % < d:\workspace\sample\input<CR>
    nmap <F2> :w<CR> :!python % < d:\workspace\sample\input<CR>
-   nmap <F3> :w<CR> :cd %<CR> :terminal<CR> ipython
+   nmap <F3> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>python 
 endfunction
 
 function! RunJsAndTs()
    imap <F1> <Esc> :w<CR> :!node %<CR>
    nmap <F1> :w<CR> :!node %<CR>
 
-   imap <F2> <Esc> :w<CR> :!node % < d:\workspace\\input<CR>
-   nmap <F2> :w<CR> :!node % < d:\workspace\\input<CR>
-   nmap <F3> :w<CR> :cd %<CR> :terminal<CR> inode
+   imap <F2> <Esc> :w<CR> :!node % < d:\workspace\input<CR>
+   nmap <F2> :w<CR> :!node % < d:\workspace\input<CR>
+   nmap <F3> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>node 
 endfunction
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas

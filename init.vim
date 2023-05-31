@@ -1,13 +1,13 @@
-"*------------------------ Configuración Inicial [init.vim] 21/Febrero/2021 8:23a.m COL ------------------------*
+"*----------------------- Configuración Inicial [init.vim] 21/Febrero/2021 8:23a.m COL -----------------------*
 
-" 						██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
-" 						██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
-" 						██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
-" 						██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
-" 						██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║
-" 						╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
-" 															Creador >> josuerom
-" 															Twitter >> https://twitter.com/josueromr
+"									 						██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
+"									 						██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
+" 														██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
+" 														██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
+" 														██║██║░╚███║██║░░░██║░░░██╗░░╚██╔╝░░██║██║░╚═╝░██║
+" 														╚═╝╚═╝░░╚══╝╚═╝░░░╚═╝░░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
+" 																					Creador >> josuerom
+" 																Twitter >> https://twitter.com/josueromr
 
 " importo los archivos configuración
 so ~/AppData/Local/nvim/general/plugins.vim
@@ -42,11 +42,12 @@ set background=dark
 
 " integro intrucciones para refrescar, limpiar y ejecutar archivos
 autocmd! BufWritePost init.vim source ~/AppData/Local/nvim/init.vim
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType java :call RunJava()
 autocmd FileType cpp :call RunCpp()
 autocmd FileType python :call RunPython()
 autocmd FileType javascript :call RunJsAndTs()
+autocmd FileType typescript :call RunJsAndTs()
 
 " ajustes del tema
 " contrastes del tema: soft medium hard
