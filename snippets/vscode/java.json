@@ -149,14 +149,14 @@
   "for iterator": {
   "prefix": "fori",
   "body": [
-  "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {",
+  "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {$3",
   "}"
   ],
   },
   "for each": {
   "prefix": "fore",
   "body": [
-  "for (${1:int} e : $2) {",
+  "for (${1:int} e : $2) {$3",
   "}"
   ],
   },
@@ -183,7 +183,7 @@
   "import": {
   "prefix": "im",
   "body": [
-  "import java$1;",
+  "import java.$1;",
   ],
   "description": "Import packages"
   },
@@ -242,7 +242,7 @@
   ],
   },
   "Read String Scanner()": {
-  "prefix": "rstr",
+  "prefix": "rln",
   "body": [
   "fr.readLine();"
   ],
@@ -411,6 +411,7 @@
   "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
   "    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█",
   "    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀",
+  "    created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
   "**/",
   "import java.util.Scanner;",
   "import java.util.Arrays;",
@@ -465,6 +466,7 @@
   "    █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ 　 ▄▀ ▀▄",
   "    ─▄▀ 　 █▀▀▄ ▀█▀ ──█── ▀▀█ 　 █─ ─█",
   "    █▄▄ 　 ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ 　 ▀▄ ▄▀",
+  "    created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
   "**/",
   "import java.io.BufferedReader;",
   "import java.io.IOException;",

@@ -9,11 +9,11 @@
   ]
   },
 
-  "ios::sync_with_stdio(false); cin.tie(0);": {
+  "ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);": {
   "prefix": "ioc",
   "body": [
   "ios::sync_with_stdio(false);",
-  "cin.tie(0); cout.tie(0);$1"
+  "cin.tie(nullptr); cout.tie(nullptr);"
   ]
   },
 
@@ -188,7 +188,7 @@
   "\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
   "}",
   "\t$1startTime = clock();",
-  "\t// printf(\"\\ntime = %.4lf ms\\n\", getCurrentTime());"
+  "\t// printf(\"time = %.5lf ms\", getCurrentTime());"
   ]
   },
 
@@ -201,6 +201,13 @@
   ]
   },
 
+  "begin(), end()": {
+  "prefix": "begin",
+  "body": [
+  "begin($1), end($1)",
+  ]
+  },
+  
   "Template 1 Codeforces": {
   "prefix": "tem1",
   "body": [
@@ -229,8 +236,9 @@
   "",
   "int main() {",
   "\tios::sync_with_stdio(false);",
-  "\tcin.tie(0); cout.tie(0);",
+  "\tcin.tie(nullptr); cout.tie(nullptr);",
   "\t$1",
+  "\treturn 0;",
   "}"
   ]
   },
@@ -305,7 +313,7 @@
   "\tSPEED_IO();",
   "\t$3",
   "\t#ifdef josuerom",
-  "\t\tprintf(\"\\ntime = %.4lf ms\\n\", getCurrentTime());",
+  "\t\tprintf(\"\time = %.5lf ms\", getCurrentTime());",
   "\t#endif",
   "}"
   ],
@@ -319,18 +327,17 @@
   "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
   "    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█",
   "    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀",
+  "    created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+  "**/",
   "#pragma GCC optimize(\"O3,unroll-loops\")",
   "",
   "#include <bits/stdc++.h>",
-  "using namespace std;",
   "",
-  "#ifdef josuerom",
-  "\t#include \"debug.h\"",
-  "#endif",
+  "using namespace std;",
   "",
   "int main() {",
   "\tios::sync_with_stdio(false);",
-  "\tcin.tie(0); cout.tie(0);",
+  "\tcin.tie(nullptr); cout.tie(nullptr);",
   "\t$1",
   "}"
 ]
@@ -343,6 +350,7 @@
   "    █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ 　 ▄▀ ▀▄",
   "    ─▄▀ 　 █▀▀▄ ▀█▀ ──█── ▀▀█ 　 █─ ─█",
   "    █▄▄ 　 ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ 　 ▀▄ ▄▀",
+  "    created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
   "**/",
   "#pragma GCC optimize(\"O3,unroll-loops,unsafe-loop-optimizations,inline-functions,-march=native\")\n",
   "#include <bits/stdc++.h>",
@@ -361,8 +369,9 @@
   "#define f first\n",
   "int main() {",
   "\tios::sync_with_stdio(false);",
-  "\tcin.tie(0); cout.tie(0);",
+  "\tcin.tie(nullptr); cout.tie(nullptr);",
   "\t$1",
+  "\treturn 0;",
   "}"
   ]
   },
