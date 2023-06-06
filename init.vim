@@ -9,7 +9,7 @@
 " 																					Creador >> josuerom
 " 																Twitter >> https://twitter.com/josueromr
 
-" importo los archivos configuración
+" importo archivos de configuración
 so ~/AppData/Local/nvim/general/plugins.vim
 so ~/AppData/Local/nvim/general/plug-config.vim
 so ~/AppData/Local/nvim/general/shortcuts.vim
