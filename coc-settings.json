@@ -2,7 +2,7 @@
   // Java
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-14",
+      "name": "JavaSE-19",
       "path": "D:\\Program Files\\Compilers\\Jdk-19.0.1\\",
       "default": true
     }
