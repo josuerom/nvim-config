@@ -7,8 +7,8 @@
 
 cls
 @echo off
-DOSKEY comcpp=g++ -Wall -Wextra -Wshadow -Wpedantic -Wconversion -Djosuerom -o d:\workspace\build\cmd-sol.exe
-DOSKEY runcpp=d:\workspace\build\cmd-sol.exe
+DOSKEY comcpp=g++ -march=native -Wall -Wextra -Wshadow -Wlva -Wconversion -Djosuerom -o d:\workspace\build\cmd-sol.exe
+DOSKEY runcpp=d:\workspace\build\cmd-sol.exe
 DOSKEY c=cls
 DOSKEY e=exit
 DOSKEY ..=cd ..
@@ -30,8 +30,8 @@ DOSKEY cgitc=nvim %HOMEPATH%\.gitconfig
 DOSKEY cnvim=cd %HOMEPATH%\AppData\Local\nvim\
 DOSKEY cwork=cd d:\workspace\
 DOSKEY chome=cd %HOMEPATH%
-DOSKEY tem-cpp=copy d:\workspace\templates\tem.cpp A_
-DOSKEY tem-java=copy d:\workspace\templates\tem.java A_
+DOSKEY tem-cpp=copy d:\workspace\templates\tem.cpp A_ && nvim A_
+DOSKEY tem-java=copy d:\workspace\templates\tem.java A_ && nvim A_
 DOSKEY htop=taskmgr.exe
 DOSKEY poweroff=shutdown /P
 DOSKEY reboot=shutdown /r
@@ -41,8 +41,8 @@ DOSKEY cp=copy
 DOSKEY nf=copy >
 DOSKEY ls=dir
 DOSKEY df=del
+DOSKEY dd=rd
 DOSKEY cat=type
-DOSKEY dd=rmdir
 DOSKEY mhacker=color 2
 DOSKEY ip=ipconfig /all
 DOSKEY title=title ¡EN MODO HACKERMEN...!
