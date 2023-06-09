@@ -154,9 +154,8 @@
     "prefix": "style_josuerom",
     "body": [
       "/**",
-      "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
-      "    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█",
-      "    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀",
+      "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
+      "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
       "**/",
     ]
   },
@@ -174,7 +173,7 @@
       "\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
       "}",
       "\t${1:startTime = clock();",
-      "\tcout << \"time: \" << setprecision(5) << getCurrentTime() << \" ms\\n\";}"
+      "\tcout << \"time \" << setprecision(5) << getCurrentTime() << \" ms\\n\";}"
     ]
   },
   "data/debug.h": {
@@ -191,7 +190,7 @@
       "begin($1), end($1)",
     ]
   },
-  "Template 1 Codeforces": {
+  "Template 1 for codeforces": {
     "prefix": "tem1",
     "body": [
       "/**",
@@ -214,8 +213,8 @@
       "#define ll long long int",
       "#define pb push_back",
       "#define mp make_pair",
-      "#define ss second",
-      "#define ff first",
+      "#define se second",
+      "#define fi first",
       "",
       "int main() {",
       "\tios::sync_with_stdio(false);",
@@ -274,7 +273,7 @@
       "#define sbl(x, b) (x << b)",
       "#define sbr(x, b) (x >> b)",
       "#define ll long long int",
-      "#define MAX (int) 1e6+7$1",
+      "#define MAX (int) 1e$1",
       "#define eb emplace_back",
       "#define mxe max_element",
       "#define mne min_element",
@@ -282,8 +281,8 @@
       "#define END return 0",
       "#define pb push_back",
       "#define mb make_pair",
-      "#define ss second",
-      "#define ff first",
+      "#define se second",
+      "#define fi first",
       "",
       "clock_t startTime;",
       "double getCurrentTime() {",
@@ -296,20 +295,19 @@
       "\tSPEED_IO();",
       "\t$3",
       "\t#ifdef josuerom",
-      "\t\tcout << \"time: \" << setprecision(5) << getCurrentTime() << \" ms\\n\";",
+      "\t\tcout << \"time \" << setprecision(5) << getCurrentTime() << \" ms\\n\";",
       "\t#endif",
       "}"
     ],
-    "description": "Plantilla con todo para competir"
+    "description": "Plantilla de con todo para competencias"
   },
-  "Template 3 Simple": {
+  "Template 3 simple and light": {
     "prefix": "tem3",
     "body": [
       "/**",
-      "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
-      "    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█",
-      "    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀",
-      "    created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
+      "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
       "#pragma GCC optimize(\"O3,unroll-loops\")",
       "",
@@ -326,7 +324,7 @@
     ],
     "description": "Plantilla de sencilla y liviana"
   },
-  "Template 2 Bits()": {
+  "Template 4 team 2 bits()": {
     "prefix": "tem4",
     "body": [
       "/**",
@@ -345,8 +343,8 @@
       "#define ll long long int",
       "#define pb push_back",
       "#define mp make_pair",
-      "#define ss second",
-      "#define ff first\n",
+      "#define se second",
+      "#define fi first\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",

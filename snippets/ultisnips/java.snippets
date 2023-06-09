@@ -27,7 +27,7 @@ def mixedCase(word):
 endglobal
 
 ###########################################################################
-#                             Java Snippets                               #
+#                      Java Snippets by JOSUEROM                          #
 ###########################################################################
 
 snippet sleep "try sleep catch" b
@@ -496,8 +496,8 @@ snippet sc "Scanner sc = new Scanner(System.in)" b
 Scanner sc = new Scanner(System.in);$0
 endsnippet
 
-snippet df "DecimalFormat df = new DecimalFormat(###,###.##)" b
-DecimalFormat df = new DecimalFormat("#.#########"); // (EA) Error Absolute 10^-9
+snippet df "DecimalFormat df = new DecimalFormat(#.###,##)" b
+DecimalFormat df = new DecimalFormat("#.#########"); // Error absolute 10^-9
 endsnippet
 
 snippet joi "JOptionPane.showInputDialog()" b
@@ -520,8 +520,16 @@ snippet rd "fr.readDouble()" b
 fr.readDouble();
 endsnippet
 
-snippet ra "fr.readArray()" b
-fr.readArray():
+snippet rai "fr.readArrayInt()" b
+fr.readArrayInt():
+endsnippet
+
+snippet ral "fr.readArrayLong()" b
+fr.readArrayLong():
+endsnippet
+
+snippet rad "fr.readArrayDouble()" b
+fr.readArrayDouble():
 endsnippet
 
 snippet rac "fr.next().toCharArray()" b
@@ -604,6 +612,7 @@ snippet tt "Read test case" b
 int tt = fr.readInt();
 while (tt-- > 0) {
    $1
+   solve($2);
 }
 endsnippet
 
@@ -614,7 +623,7 @@ snippet author "header file" b
 **/
 endsnippet
 
-snippet tem1.java "Template 1 Java" b
+snippet tem1 "Template 1 for the CP" b
 /**
  *   author:  josuerom
  *   created: `!v strftime("%d/%m/%Y %H:%M:%S")`
@@ -630,19 +639,23 @@ import java.util.Collections;
 import static java.lang.Math.*;
 
 public class `!p snip.rv = snip.basename` {
-   public static void main(String[] args) {
-      FastReader fr = new FastReader();
-      PrintWriter pw = new PrintWriter(System.out);
+   static FastReader fr = new FastReader();
+   static PrintWriter pw = new PrintWriter(System.out);
+   static final boolean DEBUG = false;
+   static final int MAX = 1_000_007;
+
+   public static void main(String[] authorJosuerom) {
       $1
       pw.flush(); pw.close();
    }
 
-   static final Random random = new Random();
-   static final int MOD = 1_000_000_007;
-   static final int MAX = 1_000_007;
-   static final boolean DEBUG = false;
+   public static void solve($3) {
+   }
 
    static class Treasure {
+      static final Random random = new Random();
+      static final int MOD = 1_000_000_007;
+
       public Treasure() { }
 
       static void ruffleSort(int[] a) {
@@ -662,6 +675,9 @@ public class `!p snip.rv = snip.basename` {
       }
       static long mul(long a, long b) {
          return (a*b) % MOD;
+      }
+      static long div(long a, long b) {
+         return (a/b) % MOD;
       }
       static long exp(long base, long exp) {
          if (exp==0) return 1;
@@ -710,33 +726,37 @@ public class `!p snip.rv = snip.basename` {
       double readDouble() { return Double.parseDouble(next()); }
       long readLong() { return Long.parseLong(next()); }
       int readInt() { return Integer.parseInt(next()); }
-      int[] readArray(int n) {
-         int[] a = new int[n];
-         for (int i = 0; i < n; i++) { a[i] = readInt(); }
+
+      int[] readArrayInt(int N) {
+         int[] a = new int[N];
+         for (int i = 0; i < N; i++) { a[i] = readInt(); }
          return a;
       }
    }
 }
 endsnippet
 
-snippet tem2.java "Template 2 Java" b
+snippet tem2 "Template 2 medium level" b
 /**
-    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█
-    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█
-    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀
+   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█
+   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█
+   created: `!v strftime("%d/%m/%Y %H:%M:%S")`
 **/
 import java.util.Scanner;
 import java.util.Arrays;
-import static java.lang.Math.*;
+import static java.lang.Math.min;
+import static java.lang.Math.max;
+import static java.lang.Math.abs;
 
 public class `!p snip.rv = snip.basename` {
-   private static final boolean DEBUG = false;
+   static final boolean DEBUG = false;
 
-   public static void main(String[] args) {
+   public static void main(String[] authorJosuerom) {
       readInput();
    }
 
-   public static void solve(int[] a) {$2
+   public static void solve(int[] a$2) {
+      $3
    }
 
    public static void readInput() {
@@ -755,21 +775,45 @@ public class `!p snip.rv = snip.basename` {
 }
 endsnippet
 
-snippet tem3.java "Template 3 Java" b
+snippet tem3 "Template 3 simple and ligth" b
 /**
-    █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀  ▄▀  ▀▄ 
-    ─▄▀ 　 █▀▀▄ ▀█▀ ──█── ▀▀█  █─  ─█ 
-    █▄▄ 　 ▀▀▀─ ▀▀▀ ──▀── ▀▀▀  ▀▄  ▄▀
+ *   author:  josuerom
+ *   created: `!v strftime("%d/%m/%Y %H:%M:%S")`
+**/
+import java.util.Scanner;
+
+public class `!p snip.rv = snip.basename` {
+   public static void main(String[] authorJosuerom) {
+      Scanner sc = new Scanner(System.in);
+      $1
+      sc.close(); System.out.close();
+   }
+}
+endsnippet
+
+snippet tem4 "Template 4 team 2 bits" b
+/**
+     ▀█  █▄▄ █ ▀█▀ █▀ ▄▀ ▀▄
+     █▄  █▄█ █ ░█░ ▄█ ▀▄ ▄▀
+   created: `!v strftime("%d/%m/%Y %H:%M:%S")`
 **/
 import java.util.Scanner;
 import java.util.Arrays;
-import static java.lang.Math.*;
+import static java.lang.Math.min;
+import static java.lang.Math.max;
+import static java.lang.Math.abs;
 
 public class `!p snip.rv = snip.basename` {
-   public static void main(String[] args) {
-	   Scanner sc = new Scanner(System.in);
+   static Scanner sc = new Scanner(System.in);
+
+   public static void main(String[] authorJosuerom) {
 	   $1
+      solve();
       sc.close(); System.out.close();
+   }
+
+   public static void solve() {
+      $2
    }
 }
 endsnippet

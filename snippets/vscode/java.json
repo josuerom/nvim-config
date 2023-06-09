@@ -144,6 +144,13 @@
       "}"
     ],
   },
+  "for reverse iterator": {
+    "prefix": "forr",
+    "body": [
+      "for (int ${1:i} = n-1; ${1:i} >= 0$2; ${1:i}--) {$3",
+      "}"
+    ],
+  },
   "for each": {
     "prefix": "fore",
     "body": [
@@ -288,7 +295,7 @@
     ],
   },
   "read test cases": {
-    "prefix": "tc",
+    "prefix": "tt",
     "body": [
       "int tt = fr.readInt();",
       "while (tt-- > 0) {",
@@ -297,7 +304,7 @@
     ],
   },
   "read test cases and solve()": {
-    "prefix": "tt",
+    "prefix": "tc",
     "body": [
       "int tt = fr.readInt();",
       "while (tt-- > 0) {",
@@ -307,7 +314,7 @@
   },
   "signature": {
     "prefix": "signature",
-    "body": [ // font style --> https://fsymbols.com/
+    "body": [
       "/**",
       "\t\t\t░░░░░██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
       "\t\t\t░░░░░██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
@@ -322,13 +329,12 @@
     "prefix": "style_josuerom",
     "body": [
       "/**",
-      "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
-      "    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█",
-      "    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀",
+      "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
+      "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
       "**/",
     ]
   },
-  "Template 1 Codeforces": {
+  "Template 1 for codeforces": {
     "prefix": "tem1",
     "body": [
       "/**",
@@ -423,10 +429,6 @@
       "\t\tdouble readDouble() { return Double.parseDouble(next()); }",
       "\t\tlong readLong() { return Long.parseLong(next()); }",
       "\t\tint readInt() { return Integer.parseInt(next()); }\n",
-      "\t\tchar[] readArrayChar() {",
-      "\t\t\tchar[] a = next().toCharArray();",
-      "\t\t\treturn a;",
-      "\t\t}",
       "\t\tdouble[] readArrayDouble(int N) {",
       "\t\t\tdouble[] a = new double[N];",
       "\t\t\tfor (int i = 0; i < N; i++) { a[i] = readDouble(); }",
@@ -447,14 +449,13 @@
     ],
     "description": "Plantilla para soluciones efectivas y rápidas",
   },
-  "Template 2 With All": {
+  "Template 2 with all": {
     "prefix": "tem2",
     "body": [
       "/**",
-      "    ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█",
-      "    ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█",
-      "    █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀",
-      "    created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
+      "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
       "import java.util.Scanner;",
       "import java.util.Arrays;",
@@ -464,26 +465,26 @@
       "\tpublic static void main(String[] args) {",
       "\t\treadInput();",
       "\t}\n",
-      "\tpublic static void solve(int[] a$2) {",
+      "\tpublic static void solve(int[] vi$2) {",
       "\t}\n",
       "\tpublic static void readInput() {",
       "\t\tScanner sc = new Scanner(System.in);",
-      "\t\tint tt = sc.nextInt();",
-      "\t\twhile (tt-- > 0) {",
+      "\t\tint tc = sc.nextInt();",
+      "\t\twhile(tc-- > 0) {",
       "\t\t\tint N = sc.nextInt();",
-      "\t\t\tint[] array = new int[N];",
-      "\t\t\tfor (int i = 0; i < N$1; i++) {",
-      "\t\t\t\tarray[i] = sc.nextInt();",
+      "\t\t\t$1int[] vi = new int[N];",
+      "\t\t\tfor (int index = 0; index < N; index++) {",
+      "\t\t\t\tvi[index] = sc.nextInt();",
       "\t\t\t}",
-      "\t\t\tsolve(array);",
+      "\t\t\tsolve(vi);",
       "\t\t}",
       "\t\tsc.close(); System.out.close();",
       "\t}",
       "}"
     ],
-    "description": "Plantilla estructurada para la CP (competitive programming)",
+    "description": "Plantilla estructurada para la CP(competitive programming)",
   },
-  "Template 3 Simple": {
+  "Template 3 simple and ligth": {
     "prefix": "tem3",
     "body": [
       "/**",
@@ -495,16 +496,16 @@
       "\tstatic Scanner sc = new Scanner(System.in);\n",
       "\tpublic static void main(String[] args) {",
       "\t\t$1",
-      "\t\tend();",
+      "\t\tkillThreads();",
       "\t}\n",
-      "\tpublic static void end() {",
+      "\tpublic static void killThreads() {",
       "\t\tsc.close(); System.out.close();",
       "\t}",
       "}"
     ],
     "description": "Plantilla sencilla y liviana",
   },
-  "Template 2 Bits()": {
+  "Template 4 team 2 bits()": {
     "prefix": "tem4",
     "body": [
       "/**",
