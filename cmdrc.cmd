@@ -1,5 +1,4 @@
 :: El siguiente archivo es para poder usar alias dentro de la cmd en Windows
-
 :: Añada la ruta de este archivo en la sgt dirección del regedit
 :: Diríjase a: Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\
 :: En esa ruta, crea un (valor de cadena) con el nombre: AutoRun, y peguele la ruta de este archivo:
