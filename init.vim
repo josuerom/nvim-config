@@ -9,7 +9,7 @@
 " 																					Creador >> josuerom
 " 																Twitter >> https://twitter.com/josueromr
 
-" importo archivos de configuración
+" importo archivos de configuración adicional
 so ~/AppData/Local/nvim/general/plugins.vim
 so ~/AppData/Local/nvim/general/plug-config.vim
 so ~/AppData/Local/nvim/general/shortcuts.vim
@@ -52,6 +52,6 @@ let g:gruvbox_contrast_dark = "hard"
 highlight Normal ctermbg = NONE
 colorscheme gruvbox
 
-" comentarios en italica
+" otros ajustes
 let g:gruvbox_italic = 1
 "let g.gruvbox_invert_selection = 1
