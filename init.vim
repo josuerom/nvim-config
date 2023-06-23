@@ -9,7 +9,7 @@
 " 																					Creador >> josuerom
 " 																Twitter >> https://twitter.com/josueromr
 
-" importo archivos de configuración adicional
+" importo los 3 archivos de configuración adicional
 so ~/AppData/Local/nvim/general/plugins.vim
 so ~/AppData/Local/nvim/general/plug-config.vim
 so ~/AppData/Local/nvim/general/shortcuts.vim
@@ -37,7 +37,6 @@ set hidden
 set cmdheight=1
 set updatetime=50
 set shortmess+=c
-set background=dark
 
 " integro intrucciones para refrescar, limpiar espacios en blancos y ejecutar programas
 "autocmd BufWritePre * :%s/\s\+$//e
