@@ -2,8 +2,8 @@
   // Java
   "java.configuration.runtimes": [
     {
-      "name": "JavaSE-19",
-      "path": "D:\\Program Files\\Compilers\\Jdk-19.0.1\\",
+      "name": "JavaSE-17",
+      "path": "C:\\Program Files\\Java\\jdk-17\\",
       "default": true
     }
   ],
@@ -34,5 +34,5 @@
   "snippets.ultisnips.directories": ["ultisnips"],
   "snippets.snipmate.enable": true,
   "snippets.ultisnips.pythonPrompt": false,
-  "snippets.snipmate.author": "josuerom"
+  "snippets.snipmate.author": "Josué Romero"
 }
