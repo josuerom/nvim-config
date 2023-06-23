@@ -182,7 +182,7 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
 josueromram@outlook.es
 ```
 
-### Dejaré el proyecto hasta acá, realizaré una pausa por varios días para luego optimizar aún más la configuración convertiendo nvim en un Editor asombroso.
+##### Dejaré el proyecto hasta este punto, realizaré una pausa para luego optimizar aún más la configuración, convertiendo neovim en un editor asombroso.
 <p align="center" width="0">
    <img align="center" width="70" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/caricatura.png">
 </p> 
