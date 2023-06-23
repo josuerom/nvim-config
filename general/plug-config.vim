@@ -30,10 +30,10 @@ let g:lightline = {
     \ }
     \}
 
-" si usted utiliza el autocompletado KITE descomente las siguientes líneas
-let g:kite_supported_languages = ['javascript', 'python', 'java']
+" si usted utiliza el autocompletado KITE descomente la siguiente línea
+"let g:kite_supported_languages = ['javascript', 'python', 'java']
 
-" desabilitar la entrega de sugerencias de COC para que KITE sea quien las entrege en estos tipos de archivos
+" desabilita la entrega de sugerencias de COC para que KITE sea quien las entrege para tus lenguajes
 "autocmd FileType java let b:coc_suggest_disable=1
 "autocmd FileType cpp let b:coc_suggest_disable=1
 
@@ -48,9 +48,9 @@ let g:coc_snippets_next = '<c-j>'
 let g:coc_snippets_prev = '<c-k>'
 imap <C-l> <Plug>(coc-snippets-expand)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
-xmap <Leader>y  <Plug>(coc-convert-snippet)
+xmap <Leader>csn  <Plug>(coc-convert-snippet)
 
-" cerrado automatico de la barra lateral o tree
+" configuración de la barra lateral o árbol de archivos
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
 let NERDTreeAutoDeleteBuffer=1
@@ -132,10 +132,10 @@ function! OpenPowerShell()
    endif
 endfunction
 
-"*------------------------- SOLUCIÓN PARA LOS ERRORES MÁS COMUNES --------------------------*
+"*------------------------- SOLUCIÓN DEL ERROR MÁS COMUNES EN NEOVIM --------------------------*
 " Si al iniciar neovim te aparece siempre este molestoso error:
 " [coc.nvim] Error on execute :pyx command, ultisnips feature of coc-snippets requires pyx support on vim.
-" ejecuta el sgt comando en tu terminal como administrador, pero antes debes tener instalado Python.
-" comando: pip install pynvim
-" así no deberá aparecerte más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo directamente.
-" RECUERDA: Entre más grande se la configuración que le agregues a neovim, será más lento, así que optimiza.
+" EJECUTA el sgt comando en tu terminal como administrador, pero antes debes tener instalado python y pip.
+" comando -> pip install pynvim
+" así no deberá aparecer más. Si aparece otro error consulta en StackOverFlow o comuniqueme lo directamente.
+" RECUERDE: Entre más grande se la configuración que le agregues a neovim, más lento se volverá, así que optimiza.
