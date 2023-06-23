@@ -34,7 +34,7 @@
     ]
   },
   "read string": {
-    "prefix": "rl",
+    "prefix": "rln",
     "body": [
       "getline(cin, s$1);"
     ]
@@ -46,6 +46,13 @@
       "}",
     ]
   },
+  "for (int i = n; i >= 0; i--)": {
+    "prefix": "forr",
+    "body": [
+      "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--) {",
+      "}",
+    ]
+  },
   "for (auto $e : vec)": {
     "prefix": "fore",
     "body": [
@@ -53,21 +60,22 @@
     ]
   },
   "read tests case": {
-    "prefix": "tc",
+    "prefix": "tt",
     "body": [
       "int tt;",
       "cin >> tt;",
       "while (tt--) {",
       "\t$1",
+      "\tsolve($2);",
       "}",
     ]
   },
   "read tests case and solve()": {
-    "prefix": "tt",
+    "prefix": "tc",
     "body": [
-      "int tt;",
-      "cin >> tt;",
-      "while (tt--) solve();",
+      "int tc;",
+      "cin >> tc;",
+      "while (tc--) solve();",
     ]
   },
   "#include <bits/stdc++.h>": {
@@ -113,11 +121,10 @@
     ]
   },
   "void solve() { body }": {
-    "prefix": "fsol",
+    "prefix": "fs",
     "body": [
-      "void solve() {",
-      "\t$1",
-      "}"
+      "\n${1:void} solve($2) {",
+      "}\n",
     ]
   },
   "function main": {
@@ -137,6 +144,12 @@
       "**/",
     ]
   },
+  "set hour and date": {
+    "prefix": "date",
+    "body": [
+      " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}"
+    ]
+  },
   "signature": {
     "prefix": "signature",
     "body": [
@@ -151,7 +164,7 @@
     ]
   },
   "style josuerom": {
-    "prefix": "style_josuerom",
+    "prefix": "style",
     "body": [
       "/**",
       "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
@@ -180,14 +193,10 @@
     "prefix": "josuerom",
     "body": [
       "#ifdef josuerom",
-      "\t#include \"debug.h\"",
+      "#include \"debug.h\"",
+      "#else",
+      "#define debug(...) 42",
       "#endif"
-    ]
-  },
-  "begin(), end()": {
-    "prefix": "beg",
-    "body": [
-      "begin($1), end($1)",
     ]
   },
   "Template 1 for codeforces": {
@@ -197,25 +206,22 @@
       " *   author:  josuerom",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#pragma GCC optimize(\"O3,unroll-loops\")",
-      "",
-      "#include <bits/stdc++.h>",
-      "using namespace std;",
-      "",
+      "#include <bits/stdc++.h>\n",
+      "using namespace std;\n",
       "#ifdef josuerom",
-      "\t#include \"debug.h\"",
-      "#endif",
-      "",
+      "#include \"debug.h\"",
+      "#else",
+      "#define debug(...) 42",
+      "#endif\n",
       "#define rall(x) (x).rbegin(),(x).rend()",
       "#define all(x) (x).begin(),(x).end()",
       "#define ull unsigned long long int",
-      "#define len(x) (int) (x).size()",
+      "#define len(x) (int)(x).size()",
       "#define ll long long int",
       "#define pb push_back",
       "#define mp make_pair",
       "#define se second",
-      "#define fi first",
-      "",
+      "#define fi first\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
@@ -232,28 +238,29 @@
       " *   author:  josuerom",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#pragma GCC optimize(\"O3,unroll-loops\")",
-      "",
-      "#include <bits/stdc++.h>            //          ██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
-      "using namespace std;                //          ██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
-      "                                    //          ██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
-      "#ifdef josuerom                     //     ██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
-      "   #include \"debug.h\"              //     ╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
-      "#endif                              //      ╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
+      "#pragma GCC optimize(\"O3,unroll-loops\")\n",
+      "#include <bits/stdc++.h>             //          ██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
+      "using namespace std;                 //          ██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
+      "                                     //          ██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
+      "#ifdef josuerom                      //     ██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
+      "#include \"debug.h\"                   //     ╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
+      "#else                                //      ╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
+      "#define debug(...) 42",
+      "#endif",
       "",
       "#define readArray(x) void template<typename T> void read(xtor<T>&(x)){int n=(x).size();for(auto&e:x) cin >> e;}",
       "#define SPEED_IO() ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); cerr.tie(nullptr);",
       "#define VEREDICT(condition) cout << ((condition) ? \"YES\" : \"NO\") << '\\n'",
       "#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n);",
       "#define binarySearch(vec, key) sort(all(vec)); binary_search(all(vec), (key));",
-      "#define forr(i, vec) for(int i = (int)(vec).size()-1; i >= 0; i--)",
+      "#define FORR(i, vec) for(int (i) = (int)(vec).size()-1; (i) >= 0; (i)--)",
       "#define uniq(x) sort(all(x)); (x).erase(unique(all(x)),(x).end())",
       "#define mod(a, b, mod) ((((a) % (mod)) + ((b) % (mod))) % (mod))",
-      "#define fori(i, b, c) for(int (i) = (b); (i) < (c); (i)++)",
+      "#define FORI(i, b, c) for(int (i) = (b); (i) < (c); (i)++)",
       "#define memset(a, v) memset((a),(v), sizeof(a))",
       "#define countbits(x) __builtin_popcountll(x)",
-      "#define TC int tt; cin >> tt; while((tt)--)",
-      "#define fore(e, vec) for (auto &(e): (vec))",
+      "#define TC int tt; cin >> tt; while(tt--)",
+      "#define FORE(e, vec) for (auto &(e): (vec))",
       "#define isOrdered(vec) is_sorted(all(vec))",
       "#define rall(x) (x).rbegin(),(x).rend()",
       "#define lbd(x, y) lower_bound(all(x), y)",
@@ -269,32 +276,28 @@
       "#define len(x) (int)(x).size()",
       "#define sort(x) sort(all(x))",
       "#define lowbit(x) (x & (-x))",
-      "#define MOD (int) 1000000007",
       "#define sbl(x, b) (x << b)",
       "#define sbr(x, b) (x >> b)",
       "#define ll long long int",
-      "#define MAX (int) 1e$1",
       "#define eb emplace_back",
       "#define mxe max_element",
       "#define mne min_element",
-      "#define vi vector<int>",
+      "#define MOD 1000000007",
       "#define END return 0",
       "#define pb push_back",
       "#define mb make_pair",
       "#define se second",
-      "#define fi first",
-      "",
+      "#define fi first\n",
       "clock_t startTime;",
       "double getCurrentTime() {",
       "\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
-      "}",
-      "$2",
-      "",
+      "}\n",
+      "const int MAX = 1e$1;\n",
       "int main() {",
       "\tstartTime = clock();",
       "\tSPEED_IO();",
-      "\t$3",
-      "\t#ifdef josuerom",
+      "\t$2",
+      "\t#ifndef ONLINE_JUDGE",
       "\t\tcout << \"time \" << setprecision(5) << getCurrentTime() << \" ms\\n\";",
       "\t#endif",
       "}"
@@ -309,12 +312,8 @@
       "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
       "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#pragma GCC optimize(\"O3,unroll-loops\")",
-      "",
-      "#include <bits/stdc++.h>",
-      "",
-      "using namespace std;",
-      "",
+      "#include <bits/stdc++.h>\n",
+      "using namespace std;\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
@@ -339,7 +338,7 @@
       "#define rall(x) (x).rbegin(),(x).rend()",
       "#define all(x) (x).begin(),(x).end()",
       "#define ull unsigned long long int",
-      "#define len(x) (int) (x).size()",
+      "#define len(x) (int)(x).size()",
       "#define ll long long int",
       "#define pb push_back",
       "#define mp make_pair",
