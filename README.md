@@ -16,7 +16,7 @@
       <img alt="Stars" src="https://badgen.net/github/stars/josuerom/nvim-config">
     </a>
     <a href="https://github.com/neovim/neovim/releases/tag/stable">
-      <img src="https://img.shields.io/badge/Neovim-0.7.0-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=green" alt="Neovim minimum version"/>
+      <img src="https://img.shields.io/badge/Neovim-0.9.0-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=green" alt="Neovim minimum version"/>
     </a>
 </p>
 </div>
@@ -96,18 +96,17 @@ Python es un lenguaje de alto nivel de programación interpretado cuya filosofí
 Para instalarlo da un [click aquí](https://www.python.org/downloads/ "https://www.python.org/downloads/"), este enlace te llevará directamente a su pagina oficial de descarga. Si requieres ayuda con el proceso, visualizate un vídeo en **YouTube**.
 
 ### Paso No. 6. Clone esta configuración.
-Copie y pegue en la powershell o cmd lo siguiente:
+Copie y pegue solo en la PowerShell lo siguiente:
 
 ```powershell
 cd ~\AppData\Local
-git clone https://github.com/josuerom/nvim-config.git
-move nvim-config nvim
+git clone https://github.com/josuerom/nvim-config.git nvim --depth 1
 cd nvim
 nvim
 
 ```
 
-Esta es la personalización que actualmente tengo en neovim:
+Ésta es la personalización que actualmente tengo en neovim:
 
 <p align="center" width="0">
    <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/nvim-completo.png">
@@ -115,7 +114,7 @@ Esta es la personalización que actualmente tengo en neovim:
 
 **PREGUNTA:** ¿Te gustaría tener neovim como lo tengo yo?. Si tu respuesta es un **SÍ** deberás descargarte los archivos de este repositorio ya que son necesarios para que tu Neovim tenga una buena interfaz bacana y las mismas funcionalidades que manejo como: atajos y plugins. Una vez se haya descargado debes extraer el archivo _(nvim-config-windows7-8-10-11-nvim.zip)._ Luego de ello, la carpeta extraída obligatoriamente cambiale el nombre por: **nvim** (en minúsculas).
 
-Ahora bien, corta o copia esa carpeta renombrada 'nvim'. A continuación, dirígete a la siguiente ruta en el Explorador de Archivos: **C:\Users/TuNombreDeUsuario\AppData\Local\** cuando estes ubicado ahí pegas la carpeta. OJO que si no pegas la carpeta en esa ruta que te dije, no podrás abrir NEOVIM.
+Ahora bien, corta o copia esa carpeta renombrada 'nvim'. A continuación, dirígete a la siguiente ruta en el Explorador de Archivos: **C:\Users\TuNombreDeUsuario\AppData\Local\** cuando estes ubicado ahí pegas la carpeta. OJO que si no pegas la carpeta en esa ruta que te dije, no podrás abrir NEOVIM.
 
 Para abrir neovim lleva a cabo un comando sencillo en la _Consola/Terminal PowerShell o Símbolo del Sistema_, debes ubicarte en la ruta donde colocaron neovim. La ruta tuya es, ¡la misma mía solo que cambia el nombre de usuario y debes entrar a carpeta nvim! **C:\Users\josue\AppData\Local\nvim\**. Cuando estes ahí debes ingresar el siguiente comando y presionar enter:
 
@@ -175,7 +174,7 @@ En términos generales, veraz el cambio justo como en las imágenes que proporci
 </p>
 
 <p align="center" width="0">
-   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/.config/imagenes/nvim-file02.png">
+   <img align="center" src="https://github.com/josuerom/nvim-config/blob/main/imagenes/nvim-file02.png">
 </p>
 
 ### ¿Necesitas ayuda?, contactame vía email.
