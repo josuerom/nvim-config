@@ -1,176 +1,186 @@
-{ // @author: josuerom
-	"read int": {
-		"prefix": "ri",
-		"body": [
-			"int(input())"
-		],
-	},
-	"read str": {
-		"prefix": "rs",
-		"body": [
-			"input(\"\")"
-		],
-	},
-	"read decimal": {
-		"prefix": "rd",
-		"body": [
-			"float(input())"
-		],
-	},
-	"read N": {
-		"prefix": "rn",
-		"body": [
-			"N = int(input())"
-		],
-	},
-	"read list of strings": {
-		"prefix": "rls",
-		"body": [
-			"ls = input().split(\" \")"
-		],
-	},
-	"read list int": {
-		"prefix": "rli",
-		"body": [
-			"li$1 = map(${2:int}, input().split())"
-		],
-	},
-	"read list decimals": {
-		"prefix": "rld",
-		"body": [
-			"ld$1 = map(${2:float}, input().split())"
-		],
-	},
-	"read list characters": {
-		"prefix": "rlc",
-		"body": [
-			"lc$1 = input().split(\"\")"
-		],
-	},
-	"read test case": {
-		"prefix": "rtc",
-		"body": [
-			"tc = int(input())",
-			"while tc > 0:",
-			"\t$1",
-			"\ttc -= 1",
-		],
-	},
-	"print()": {
-		"prefix": "p",
-		"body": [
-			"print($1)"
-		],
-	},
-	"printf()": {
-		"prefix": "pf",
-		"body": [
-			"print('{0} {1}$1\\n'.format($2))"
-		],
-	},
-	"if": {
-		"prefix": "if",
-		"body": [
-			"if $1:",
-			"\t$2"
-		],
-	},
-	"ifel": {
-		"prefix": "ifel",
-		"body": [
-			"if $1:",
-			"\t",
-			"else $2:",
-			"\t"
-		],
-	},
-	"for": {
-		"prefix": "for",
-		"body": [
-			"for i in $2:",
-			"\t$3"
-		],
-	},
-	"fori": {
-		"prefix": "fori",
-		"body": [
-			"for ${1:i} in range(0, N+1$2):",
-			"\t$3"
-		],
-	},
-	"fore": {
-		"prefix": "fore",
-		"body": [
-			"for e in ${1:array}:",
-			"\t$2"
-		],
-	},
-	"while": {
-		"prefix": "wh",
-		"body": [
-			"while $1:",
-			"\t$2"
-		],
-	},
-	"test cases": {
-		"prefix": "tt",
-		"body": [
-			"tt = int(input())$1"
-		],
-	},
-	"complexity": {
-		"prefix": "com",
-		"body": [
-			"#   author: josuerom - complexity: O($1)",
-		],
-	},
-	"@PythonDocs": {
-		"prefix": "author",
-		"body": [
-			"#   author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-		],
-	},
-	"template 1 cp": {
-		"prefix": "tem1",
-		"body": [
-			"#   author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-			"",
-			"def solve(self):",
-			"\t$1",
-			"",
-			"if __name__ == '__main__':",
-			"\ttt = int(input())",
-			"\twhile tt > 0:",
-			"\t\tsolve()",
-			"\t\ttt -= 1",
-		],
-	},
-	"template 2 free": {
-		"prefix": "tem2",
-		"body": [
-			"#   author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-			"$1"
-		],
-	},
-	"def": {
-		"prefix": "def",
-		"body": [
-			"def $1():",
-			"\t$2",
-		],
-	},
-	"def solve()": {
-		"prefix": "fsol",
-		"body": [
-			"def solve(self):",
-			"\t$1",
-		],
-	},
-	"function main": {
-		"prefix": "fm",
-		"body": [
-			"if __name__ == '__main__':",
-			"\tsolve()"
-		],
-	},
+{ // @author josuerom
+  "read int": {
+    "prefix": "ri",
+    "body": [
+      "int(input())"
+    ],
+  },
+  "read str": {
+    "prefix": "rs",
+    "body": [
+      "input(\"\")"
+    ],
+  },
+  "read decimal": {
+    "prefix": "rd",
+    "body": [
+      "float(input())"
+    ],
+  },
+  "read N": {
+    "prefix": "rn",
+    "body": [
+      "n = int(input())"
+    ],
+  },
+  "read list of strings": {
+    "prefix": "rls",
+    "body": [
+      "ls = input().split(\" \")"
+    ],
+  },
+  "read list int": {
+    "prefix": "rli",
+    "body": [
+      "li$1 = map(${2:int}, input().split())"
+    ],
+  },
+  "read list decimals": {
+    "prefix": "rld",
+    "body": [
+      "ld$1 = map(${2:float}, input().split())"
+    ],
+  },
+  "read list characters": {
+    "prefix": "rlc",
+    "body": [
+      "lc$1 = input().split(\"\")"
+    ],
+  },
+  "read test case": {
+    "prefix": "tc",
+    "body": [
+      "tc = int(input())",
+      "while tc > 0:",
+      "\t$1",
+      "\ttc -= 1",
+    ],
+  },
+  "read test case call solve()": {
+    "prefix": "tt",
+    "body": [
+      "tt = int(input())",
+      "while tt > 0:",
+      "\t$1",
+      "\tsolve($2)",
+      "\ttc -= 1",
+    ],
+  },
+  "print()": {
+    "prefix": "p",
+    "body": [
+      "print($1)"
+    ],
+  },
+  "printf()": {
+    "prefix": "pf",
+    "body": [
+      "print('{0} {1}$1\\n'.format($2))"
+    ],
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if $1:",
+      "\t$2"
+    ],
+  },
+  "ifel": {
+    "prefix": "ifel",
+    "body": [
+      "if $1:",
+      "\t",
+      "else $2:",
+      "\t"
+    ],
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for i in $2:",
+      "\t$3"
+    ],
+  },
+  "fori": {
+    "prefix": "fori",
+    "body": [
+      "for ${1:i} in range(0, N+1$2):",
+      "\t$3"
+    ],
+  },
+  "fore": {
+    "prefix": "fore",
+    "body": [
+      "for e in ${1:array}:",
+      "\t$2"
+    ],
+  },
+  "while": {
+    "prefix": "wh",
+    "body": [
+      "while $1:",
+      "\t$2"
+    ],
+  },
+  "test cases": {
+    "prefix": "tt",
+    "body": [
+      "tt = int(input())$1"
+    ],
+  },
+  "complexity": {
+    "prefix": "com",
+    "body": [
+      "#   author: josuerom - complexity: O($1)",
+    ],
+  },
+  "@PythonDocs": {
+    "prefix": "author",
+    "body": [
+      "#   author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+    ],
+  },
+  "template 1 cp": {
+    "prefix": "tem1",
+    "body": [
+      "#   author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "",
+      "def solve(self):",
+      "\t$1",
+      "",
+      "if __name__ == '__main__':",
+      "\ttt = int(input())",
+      "\twhile tt > 0:",
+      "\t\tsolve()",
+      "\t\ttt -= 1",
+    ],
+  },
+  "template 2 free": {
+    "prefix": "tem2",
+    "body": [
+      "#   author: josuerom - created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "$1"
+    ],
+  },
+  "def": {
+    "prefix": "def",
+    "body": [
+      "def $1():",
+      "\t$2",
+    ],
+  },
+  "def solve()": {
+    "prefix": "fsol",
+    "body": [
+      "def solve(self):",
+      "\t$1",
+    ],
+  },
+  "function main": {
+    "prefix": "fm",
+    "body": [
+      "if __name__ == '__main__':",
+      "\tsolve()"
+    ],
+  },
 }
