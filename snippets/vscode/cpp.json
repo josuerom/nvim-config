@@ -65,17 +65,8 @@
       "int tt;",
       "cin >> tt;",
       "while (tt--) {",
-      "\t$1",
-      "\tsolve($2);",
+      "\tsolve($2);$4",
       "}",
-    ]
-  },
-  "read tests case and solve()": {
-    "prefix": "tc",
-    "body": [
-      "int tc;",
-      "cin >> tc;",
-      "while (tc--) solve();",
     ]
   },
   "#include <bits/stdc++.h>": {
@@ -222,6 +213,9 @@
       "#define mp make_pair",
       "#define se second",
       "#define fi first\n",
+      "${2:void} solve() {",
+      "\t$3",
+      "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
