@@ -91,11 +91,10 @@ nmap <Leader>w :w<CR>
 nmap <C-s> <Esc> :w<CR>
 imap <C-s> <Esc> :w<CR>
 " para cerrar búfers <space+q> o <Ctrl+q>
-nmap <C-q> :q<CR>
+nmap <C-q> :qa!<CR>
 nmap <Leader>q :q<CR>
 imap <C-q> <Esc> :q<CR>
 " para salir rápidamente de nvim <space+x> o <Ctrl+x>
-nmap <C-x> :qa!<CR>
 nmap <Leader>x :qa!<CR>
 imap <C-x> <Esc> :qa!<CR>
 
