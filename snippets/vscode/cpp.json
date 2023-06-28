@@ -22,7 +22,7 @@
     ]
   },
   "return": {
-    "prefix": "re",
+    "prefix": "rr",
     "body": [
       "return$1;"
     ]
@@ -30,7 +30,7 @@
   "read char[]": {
     "prefix": "rac",
     "body": [
-      "cin.getline($1, N$2, '\\n');"
+      "cin.getline(s$1, n$2, '\\n');"
     ]
   },
   "read string": {
@@ -39,34 +39,49 @@
       "getline(cin, s$1);"
     ]
   },
+  "read n": {
+    "prefix": "rni",
+    "body": [
+      "int n;",
+      "cin >> n;"
+    ]
+  },
   "for (int i = 0; i < n; i++)": {
     "prefix": "fori",
     "body": [
-      "for (int ${1:i} = 0; ${1:i} < ${2:n}; ${1:i}++) {",
-      "}",
+      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {",
+      "}"
     ]
   },
   "for (int i = n; i >= 0; i--)": {
     "prefix": "forr",
     "body": [
       "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--) {",
-      "}",
+      "}"
     ]
   },
   "for (auto $e : vec)": {
     "prefix": "fore",
     "body": [
-      "for (auto &e : ${1:array}) cin >> e;",
+      "for (auto &e : $1) cin >> e;"
     ]
   },
   "read tests case": {
-    "prefix": "tt",
+    "prefix": "tc",
     "body": [
       "int tt;",
       "cin >> tt;",
       "while (tt--) {",
-      "\tsolve($2);$4",
+      "\t$1",
       "}",
+    ]
+  },
+  "read tests case and solve()": {
+    "prefix": "tt",
+    "body": [
+      "int tt;",
+      "cin >> tt;",
+      "while (tt--) solve();",
     ]
   },
   "#include <bits/stdc++.h>": {
@@ -105,17 +120,28 @@
       "cout << $1 << '\\n';"
     ]
   },
-  "size": {
-    "prefix": "sz",
+  "scanf": {
+    "prefix": "scc",
     "body": [
-      "(int) $1.size();$2"
+      "scanf(\"%d$1\", &$2);"
     ]
   },
-  "void solve() { body }": {
-    "prefix": "fs",
+  "printf": {
+    "prefix": "prr",
     "body": [
-      "\n${1:void} solve($2) {",
-      "}\n",
+      "printf(\"%d$1\", $2);"
+    ]
+  },
+  "cout ternary operator": {
+    "prefix": "cot",
+    "body": [
+      "cout << ($1 ? $2 : $3) << '\\n';"
+    ]
+  },
+  "printf ternary operator": {
+    "prefix": "pot",
+    "body": [
+      "printf(\"%d$1\", ($2 ? $3 : $4));"
     ]
   },
   "function main": {
@@ -126,8 +152,20 @@
       "}"
     ]
   },
-  "@author": {
-    "prefix": "author",
+  "set const MAX": {
+    "prefix": "setc",
+    "body": [
+      "const int MAX = $1;"
+    ]
+  },
+  "set int[]": {
+    "prefix": "ar",
+    "body": [
+      "int a[$1];"
+    ]
+  },
+  "Header": {
+    "prefix": "@",
     "body": [
       "/**",
       " *   author:  josuerom",
@@ -169,182 +207,173 @@
       "#pragma GCC optimize(\"O3,unroll-loops\")",
     ]
   },
-  "program time()": {
-    "prefix": "time",
-    "body": [
-      "clock_t startTime;",
-      "double getCurrentTime() {",
-      "\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
-      "}",
-      "\t${1:startTime = clock();",
-      "\tcout << \"time \" << setprecision(5) << getCurrentTime() << \" ms\\n\";}"
-    ]
-  },
-  "data/debug.h": {
-    "prefix": "josuerom",
-    "body": [
-      "#ifdef josuerom",
-      "#include \"debug.h\"",
-      "#else",
-      "#define debug(...) 42",
-      "#endif"
-    ]
-  },
   "Template 1 for codeforces": {
     "prefix": "tem1",
     "body": [
       "/**",
-      "--  author:  josuerom",
-      "--  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      " *   author:  josuerom",
+      " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>\n",
+      "#include <bits/stdc++.h>",
       "using namespace std;\n",
       "#ifdef josuerom",
       "#include \"debug.h\"",
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "#define rall(x) (x).rbegin(),(x).rend()",
-      "#define all(x) (x).begin(),(x).end()",
-      "#define ull unsigned long long int",
-      "#define len(x) (int)(x).size()",
-      "#define ll long long int",
-      "#define pb push_back",
-      "#define mp make_pair",
-      "#define se second",
-      "#define fi first\n",
-      "${2:void} solve() {",
-      "\t$3",
+      "#define all(x)   (x).begin(),(x).end()",
+      "#define rall(x)  (x).rbegin(),(x).rend()",
+      "#define sort(x)  sort(all(x))",
+      "#define rsort(x) sort(rall(x))",
+      "#define ull      unsigned long long int",
+      "#define ll       long long int",
+      "#define mp       make_pair",
+      "#define se       second",
+      "#define fi       first\n",
+      "$2\n",
+      "void$3 solve() {",
       "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
-      "\t$1",
+      "\tint tt = 1;",
+      "\tcin >> tt;$1",
+      "\t#ifdef josuerom",
+      "\t\tfor (int nc = 1; nc <= tt; nc++) {",
+      "\t\t\tcout << \"----- Case #\" << nc << \" -----\\n\";",
+      "\t\t\tsolve();",
+      "\t\t}",
+      "\t#else",
+      "\t\twhile (tt--) solve();",
+      "\t#endif",
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla para soluciones CF efectivas y rápidas"
+    "description": "Plantilla óptima enfocada para codeforces"
   },
   "Template 2 with all": {
     "prefix": "tem2",
     "body": [
-      "/**",
-      "--  author:  josuerom",
-      "--  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
-      "**/",
-      "#pragma GCC optimize(\"O3,unroll-loops\")\n",
+      "#pragma GCC optimize(\"O3,unroll-loops,unsafe-loop-optimizations,inline-functions,-march=native\")\n",
       "#include <bits/stdc++.h>             //          ██╗░█████╗░░██████╗██╗░░░██╗███████╗██████╗░░█████╗░███╗░░░███╗",
       "using namespace std;                 //          ██║██╔══██╗██╔════╝██║░░░██║██╔════╝██╔══██╗██╔══██╗████╗░████║",
       "                                     //          ██║██║░░██║╚█████╗░██║░░░██║█████╗░░██████╔╝██║░░██║██╔████╔██║",
       "#ifdef josuerom                      //     ██╗░░██║██║░░██║░╚═══██╗██║░░░██║██╔══╝░░██╔══██╗██║░░██║██║╚██╔╝██║",
       "#include \"debug.h\"                   //     ╚█████╔╝╚█████╔╝██████╔╝╚██████╔╝███████╗██║░░██║╚█████╔╝██║░╚═╝░██║",
       "#else                                //      ╚════╝░░╚════╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═╝",
-      "#define debug(...) 42",
-      "#endif",
-      "",
-      "#define readArray(x) void template<typename T> void read(xtor<T>&(x)){int n=(x).size();for(auto&e:x) cin >> e;}",
-      "#define SPEED_IO() ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr); cerr.tie(nullptr);",
-      "#define VEREDICT(condition) cout << ((condition) ? \"YES\" : \"NO\") << '\\n'",
-      "#define decimals(n) cout.setf(ios::fixed, ios::floatfield); cout.precision(n);",
-      "#define binarySearch(vec, key) sort(all(vec)); binary_search(all(vec), (key));",
-      "#define FORR(i, vec) for(int (i) = (int)(vec).size()-1; (i) >= 0; (i)--)",
-      "#define uniq(x) sort(all(x)); (x).erase(unique(all(x)),(x).end())",
-      "#define mod(a, b, mod) ((((a) % (mod)) + ((b) % (mod))) % (mod))",
-      "#define FORI(i, b, c) for(int (i) = (b); (i) < (c); (i)++)",
-      "#define memset(a, v) memset((a),(v), sizeof(a))",
-      "#define countbits(x) __builtin_popcountll(x)",
-      "#define TC int tt; cin >> tt; while(tt--)",
-      "#define FORE(e, vec) for (auto &(e): (vec))",
-      "#define isOrdered(vec) is_sorted(all(vec))",
-      "#define rall(x) (x).rbegin(),(x).rend()",
-      "#define lbd(x, y) lower_bound(all(x), y)",
-      "#define ubd(x, y) upper_bound(all(x), y)",
-      "#define log(x) 63 - __builtin_clzll(x)",
-      "#define all(x) (x).begin(),(x).end()",
-      "#define ull unsigned long long int",
-      "#define PI 3.14159265358979323846L;",
-      "#define E 2.71828182845904523536L;",
-      "#define mcm(a, b) (a*b)/gcd(a, b)",
-      "#define mcd(a, b) (int) gcd(a, b)",
-      "#define rsort(x) short(rall(x))",
-      "#define len(x) (int)(x).size()",
-      "#define sort(x) sort(all(x))",
-      "#define lowbit(x) (x & (-x))",
-      "#define sbl(x, b) (x << b)",
-      "#define sbr(x, b) (x >> b)",
-      "#define ll long long int",
-      "#define eb emplace_back",
-      "#define mxe max_element",
-      "#define mne min_element",
-      "#define MOD 1000000007",
-      "#define END return 0",
-      "#define pb push_back",
-      "#define mb make_pair",
-      "#define se second",
-      "#define fi first\n",
-      "clock_t startTime;",
-      "double getCurrentTime() {",
-      "\treturn (double) (clock() - startTime)/CLOCKS_PER_SEC;",
+      "#define debug(...) 42                //                         created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "#endif\n",
+      "#define io_speed            ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);",
+      "#define decimals(n)         cout.setf(ios::fixed, ios::floatfield); cout.precision(n);",
+      "#define uniq(v)             sort(all(v)); (v).erase(unique(all(v)),(v).end())",
+      "#define forr(i, v)          for(int (i) = (int)(v).size()-1; (i) >= 0; (i)--)",
+      "#define mod(a, b)           ((((a) % (MOD)) + ((b) % (MOD))) % (MOD))",
+      "#define veredict(cond)      cout << ((cond) ? \"YES\" : \"NO\") << '\\n'",
+      "#define fori(i, b, n)       for(int (i) = (b); (i) < (n); (i)++)",
+      "#define binary_search(v, k) sort(v); binary_search(all(v), (k))",
+      "#define mcm(a, b)           ((a) * (b)) / gcd((a), (b))",
+      "#define memset(ar, n)       memset((ar),(n),sizeof(ar))",
+      "#define rall(v)             (v).rbegin(),(v).rend()",
+      "#define PI                  3.14159265358979323846L",
+      "#define EULER               2.71828182845904523536L",
+      "#define count_bits(n)       __builtin_popcountll(n)",
+      "#define lbd(v, n)           lower_bound(all(v), (n))",
+      "#define ubd(v, n)           upper_bound(all(v), (n))",
+      "#define ull                 unsigned long long int",
+      "#define all(v)              (v).begin(),(v).end()",
+      "#define fore(e, va)         for (auto &(e): (va))",
+      "#define mxe(v)              max_element(all(v))",
+      "#define mne(v)              min_element(all(v))",
+      "#define log(n)              __builtin_clzll(n)",
+      "#define is_ordered(v)       is_sorted(all(v))",
+      "#define rsort(v)            short(rall(v))",
+      "#define lowbit(x)           ((x) & ((-x)))",
+      "#define mcd(a, b)           gcd((a), (b))",
+      "#define ll                  long long int",
+      "#define sort(v)             sort(all(v))",
+      "#define eb                  emplace_back",
+      "#define sbl(a, b)           ((a) << (b))",
+      "#define sbr(a, b)           ((a) >> (b))",
+      "#define pf                  push_front",
+      "#define MOD                 1000000007",
+      "#define pb                  push_back",
+      "#define mp                  make_pair",
+      "#define se                  second",
+      "#define fi                  first\n",
+      "const int N = $2;\n",
+      "void$3 solve() {",
       "}\n",
-      "const int MAX = 1e$1;\n",
       "int main() {",
-      "\tstartTime = clock();",
-      "\tSPEED_IO();",
-      "\t$2",
-      "\t#ifndef ONLINE_JUDGE",
-      "\t\tcout << \"time \" << setprecision(5) << getCurrentTime() << \" ms\\n\";",
+      "\tio_speed;",
+      "\tint tt = 1;",
+      "\tcin >> tt;$1",
+      "\t#ifdef josuerom",
+      "\t\tfor (int nc = 1; nc <= tt; nc++) {",
+      "\t\t\tcout << \"----- Case #\" << nc << \" -----\\n\";",
+      "\t\t\tsolve();",
+      "\t\t}",
+      "\t#else",
+      "\t\twhile (tt--) solve();",
       "\t#endif",
+      "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla con todo para competir"
+    "description": "Plantilla para contests"
   },
-  "Template 3 simple and light": {
+  "Template 3 ultra-light": {
     "prefix": "tem3",
     "body": [
       "/**",
-      "--  ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
-      "--  █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
-      "--  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
+      "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>\n",
-      "using namespace std;\n",
+      "#include <iostream>",
+      "",
+      "using namespace std;",
+      "",
       "int main() {",
-      "\tios::sync_with_stdio(false);",
-      "\tcin.tie(nullptr); cout.tie(nullptr);",
       "\t$1",
       "\treturn 0;",
       "}",
     ],
-    "description": "Plantilla sencilla y liviana"
+    "description": "Plantilla estándar simple"
   },
   "Template 4 team 2 bits()": {
     "prefix": "tem4",
     "body": [
       "/**",
-      "--  █▀█ 　 █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ 　 ▄▀ ▀▄",
-      "--  ─▄▀ 　 █▀▀▄ ▀█▀ ──█── ▀▀█ 　 █─ ─█",
-      "--  █▄▄ 　 ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ 　 ▀▄ ▄▀",
-      "--  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      "   █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
+      "   ─▄▀  █▀▀▄ ▀█▀ ──█── ▀▀█ █─ ─█",
+      "   █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#pragma GCC optimize(\"O3,unroll-loops,unsafe-loop-optimizations,inline-functions,-march=native\")\n",
-      "#include <bits/stdc++.h>",
+      "#include <bits/stdc++.h>\n",
       "using namespace std;\n",
-      "#define rall(x) (x).rbegin(),(x).rend()",
-      "#define all(x) (x).begin(),(x).end()",
-      "#define ull unsigned long long int",
-      "#define len(x) (int)(x).size()",
-      "#define ll long long int",
-      "#define pb push_back",
-      "#define mp make_pair",
-      "#define se second",
-      "#define fi first\n",
+      "#ifdef _2BITS",
+      "#include \"../debug.h\"",
+      "#else",
+      "#define debug(...) 42",
+      "#endif\n",
+      "$2\n",
+      "void$3 solve() {",
+      "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(nullptr); cout.tie(nullptr);",
-      "\t$1",
+      "\tint tt = 1;",
+      "\tcin >> tt;$1",
+      "\t#ifdef _2BITS",
+      "\t\tfor (int nc = 1; nc <= tt; nc++) {",
+      "\t\t\tcout << \"----- Case #\" << nc << \" -----\\n\";",
+      "\t\t\tsolve();",
+      "\t\t}",
+      "\t#else",
+      "\t\twhile (tt--) solve();",
+      "\t#endif",
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla del equipo 2 Bits UNIMINUTO"
+    "description": "Plantilla del equipo 2 Bits() RPC"
   },
 }
