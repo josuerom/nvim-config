@@ -43,14 +43,16 @@ set shortmess+=c
 autocmd FileType java :call RunJava()
 autocmd FileType cpp :call RunCpp()
 autocmd FileType python :call RunPython()
-autocmd FileType javascript,typescript :call RunJsAndTs()
+autocmd FileType cpp,java,python :call EditInputFiles()
+"autocmd FileType javascript,typescript :call RunJsAndTs()
 
 " ajustes del tema
-" contrastes: soft medium hard
 let g:gruvbox_contrast_dark = "hard"
 highlight Normal ctermbg = NONE
+let g:gruvbox_italic = 1
 colorscheme gruvbox
 
-" otros ajustes
-let g:gruvbox_italic = 1
-"let g.gruvbox_invert_selection = 1
+"let g:onedark_config = {
+"  \ 'style': 'darker',
+"\}
+"colorscheme onedark
