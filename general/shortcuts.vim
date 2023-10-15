@@ -46,18 +46,18 @@ function! RunPython()
 endfunction
 
 function! RunJsAndTs()
+   imap <F1> <Esc> :w<CR> :!node %<CR>
+   nmap <F1> :w<CR> :!node %<CR>
+   nmap <F2> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>node 
+endfunction
+
+function! EditInputFiles()
    imap <F6> <Esc> :w<CR> :e %:r\samples\in1<CR>
    nmap <F6> :w<CR> :e %:r\samples\in1<CR>
    imap <F7> <Esc> :w<CR> :e %:r\samples\in2<CR>
    nmap <F7> :w<CR> :e %:r\samples\in2<CR>
    imap <F8> <Esc> :w<CR> :e %:r\samples\in3<CR>
    nmap <F8> :w<CR> :e %:r\samples\in3<CR>
-endfunction
-
-function! EditInputFiles()
-   imap <F1> <Esc> :w<CR> :!node %<CR>
-   nmap <F1> :w<CR> :!node %<CR>
-   nmap <F3> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>node 
 endfunction
 
 " para el modo NORMAL desabilito el desplazamiento con las flechas
