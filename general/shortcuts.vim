@@ -7,37 +7,56 @@
 
 let mapleader = " "
 
-" ATAJOS de teclado compilar y ejecutar programas solo con extensiones (.java .cpp .py .js & .ts):
+" ATAJOS de teclado compilar y ejecutar programas solo con extensiones (.java .cpp .py):
 " <F1> compila el programa
-" <F2> ejecuta el programa pero con archivo de entrada
-" <F3> ejecuta el programa con entrada manual por terminal
-" <F4> abre el archivo de entrada para modificar
+" <F2> <F3> <F4> ejecutan el programa pero con archivos de entrada
+" <F5> ejecuta el programa en una terminal para entrada manual
+" <F6> <F7> <F8> para editar los archivos de entrada
 function! RunJava()
    " para versiones de java superiores a la 8
-   imap <F2> <Esc> :w<CR> :!java % < d:\workspace\sample\input<CR>
-   nmap <F2> :w<CR> :!java % < d:\workspace\sample\input<CR>
-   nmap <F3> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>java 
+   imap <F2> <Esc> :w<CR> :!java % < samples\in1<CR>
+   nmap <F2> :w<CR> :!java % < samples\in1<CR>
+   imap <F3> <Esc> :w<CR> :!java % < samples\in2<CR>
+   nmap <F3> :w<CR> :!java % < samples\in2<CR>
+   imap <F4> <Esc> :w<CR> :!java % < samples\in3<CR>
+   nmap <F4> :w<CR> :!java % < samples\in3<CR>
+   nmap <F5> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>java 
 endfunction
 
 function! RunCpp()
-   imap <F1> <Esc> :w<CR> :!g++ % -o d:\workspace\build\nvim-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom<CR>
-   nmap <F1> :w<CR> :!g++ % -o d:\workspace\build\nvim-sol.exe -std=c++17 -march=native -Wall -Wextra -Wshadow -Wvla -Djosuerom<CR>
-   imap <F2> <Esc> :w<CR> <F1> :!d:\workspace\build\nvim-sol.exe < d:\workspace\sample\input<CR>
-   nmap <F2> :w<CR> :!d:\workspace\build\nvim-sol.exe < d:\workspace\sample\input<CR>
-   nmap <F3> :w<CR> :terminal<CR>icls<CR>d:\workspace\build\nvim-sol.exe<CR>
+   imap <F1> <Esc> :w<CR> :!g++ % -o d:\workspace\bin\nvim-sol.exe -std=c++17 -march=native -Wall -pedantic -DDEBUG -DLOCAL<CR>
+   nmap <F1> :w<CR> :!g++ % -o d:\workspace\bin\nvim-sol.exe -std=c++17 -march=native -Wall -pedantic -DDEBUG -DLOCAL<CR>
+   imap <F2> <Esc> :w<CR> <F1> :!d:\workspace\bin\nvim-sol.exe < samples\in1<CR>
+   nmap <F2> :w<CR> :!d:\workspace\bin\nvim-sol.exe < samples\in1<CR>
+   imap <F3> <Esc> :w<CR> <F1> :!d:\workspace\bin\nvim-sol.exe < samples\in2<CR>
+   nmap <F3> :w<CR> :!d:\workspace\bin\nvim-sol.exe < samples\in2<CR>
+   imap <F4> <Esc> :w<CR> <F1> :!d:\workspace\bin\nvim-sol.exe < samples\in3<CR>
+   nmap <F4> :w<CR> :!d:\workspace\bin\nvim-sol.exe < samples\in3<CR>
+   nmap <F5> :w<CR> :terminal<CR>icls<CR>d:\workspace\bin\nvim-sol.exe<CR>
 endfunction
 
 function! RunPython()
-   imap <F2> <Esc> :w<CR> :!python % < d:\workspace\sample\input<CR>
-   nmap <F2> :w<CR> :!python % < d:\workspace\sample\input<CR>
-   nmap <F3> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>python 
+   imap <F2> <Esc> :w<CR> :!python % < samples\in1<CR>
+   nmap <F2> :w<CR> :!python % < samples\in1<CR>
+   imap <F3> <Esc> :w<CR> :!python % < samples\in2<CR>
+   nmap <F3> :w<CR> :!python % < samples\in2<CR>
+   imap <F4> <Esc> :w<CR> :!python % < samples\in3<CR>
+   nmap <F4> :w<CR> :!python % < samples\in3<CR>
+   nmap <F5> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>python 
 endfunction
 
 function! RunJsAndTs()
+   imap <F6> <Esc> :w<CR> :e %:r\samples\in1<CR>
+   nmap <F6> :w<CR> :e %:r\samples\in1<CR>
+   imap <F7> <Esc> :w<CR> :e %:r\samples\in2<CR>
+   nmap <F7> :w<CR> :e %:r\samples\in2<CR>
+   imap <F8> <Esc> :w<CR> :e %:r\samples\in3<CR>
+   nmap <F8> :w<CR> :e %:r\samples\in3<CR>
+endfunction
+
+function! EditInputFiles()
    imap <F1> <Esc> :w<CR> :!node %<CR>
    nmap <F1> :w<CR> :!node %<CR>
-   imap <F2> <Esc> :w<CR> :!node % < d:\workspace\input<CR>
-   nmap <F2> :w<CR> :!node % < d:\workspace\input<CR>
    nmap <F3> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>node 
 endfunction
 
@@ -72,15 +91,13 @@ nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
 nmap <Leader>9 :e $MYVIMRC<CR>
 
-" <F4> abre el archivo de entrada
-nmap <F4> :e d:\workspace\sample\input<CR>
-" refresca neovim con <F5>
-nmap <F5> :so ~/AppData/Local/nvim/init.vim<CR>
+" refresca neovim con space + <F5>
+nmap <Leader> <F5> :so ~/AppData/Local/nvim/init.vim<CR>
 " copia la ruta general del archivo abierto con <F6>
-nnoremap <F6>kp :let @*=expand("%")<CR>
+nnoremap <Leader> <F6>kp :let @*=expand("%")<CR>
 " entre al modo goyo sin distracciones, con <F7>
-nmap <F7> :Goyo<CR>
-imap <F7> <Esc> :Goyo<CR>i
+nmap <Leader> <F7> :Goyo<CR>
+imap <Leader> <F7> <Esc> :Goyo<CR>i
 
 " copia todo el contenido del archivo abierto con Ctrl + a
 imap <C-a> <Esc> :w<CR> :%y+<CR>
@@ -121,8 +138,7 @@ nnoremap <Leader>go :GV<CR>
 nnoremap <Leader>g :Git init<CR>
 nnoremap <Leader>gs :Git status<CR>
 nnoremap <Leader>ga :Git add -A<CR>
-nnoremap <Leader>gc :Git commit -m "♻ Update"<CR>
-nnoremap <Leader>gcc :Git commit -v<CR>
+nnoremap <Leader>gc :Git commit -m "♻ Update files"<CR>
 nnoremap <Leader>glo :Git log --oneline<CR>
 nnoremap <Leader>grr :Git remote add origin https://github.com/$USER$/.git
 nnoremap <Leader>gpp :Git push -u origin main<CR>
@@ -175,8 +191,6 @@ xnoremap J :move '>+1<CR>gv-gv
 nnoremap n :m .-2<CR>==
 nnoremap m :m .+1<CR>==
 
-" administrar todos los snippets con <F12>
-nnoremap <silent><nowait> <F12> :<C-u>CocList snippets<CR>
 " actualizar extensiones
 nnoremap <silent><nowait> <Leader>cup :<C-u>CocUpdate<CR>
 " desintalar extensiones
