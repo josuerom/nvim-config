@@ -46,13 +46,6 @@
     ],
     "description": "Println standard output"
   },
-  "pw.printf()": {
-    "prefix": "pf",
-    "body": [
-      "io.printf(\"%$1\", $2);"
-    ],
-    "description": "Printf standard output"
-  },
   "Print ternary operator": {
     "prefix": "ppt",
     "body": [
@@ -64,6 +57,13 @@
     "body": [
       "io.println($1 ? \"YES\" : \"NO\");"
     ],
+  },
+  "pw.printf()": {
+    "prefix": "pf",
+    "body": [
+      "io.printf(\"%d$1\\n\", $2);"
+    ],
+    "description": "Printf with format"
   },
   "Return ternary operator": {
     "prefix": "rot",
@@ -81,7 +81,7 @@
   "main() method": {
     "prefix": "fm",
     "body": [
-      "public static void main(String[] authorJosuerom) {",
+      "public static void main(String[] args) {",
       "\t$1",
       "}"
     ],
@@ -90,7 +90,7 @@
   "solve() method": {
     "prefix": "fsol",
     "body": [
-      "static ${1:void} solve($2) {",
+      "public static ${1:void} solve($2) {",
       "}"
     ]
   },
@@ -103,9 +103,9 @@
     "description": "Method I use most often"
   },
   "Method template": {
-    "prefix": "temf",
+    "prefix": "temfun",
     "body": [
-      "public ${1:static} ${2:void} ${3:name}($4) {",
+      "public ${1:static} ${2:void} ${3}($4) {",
       "}"
     ],
     "description": "Template for create methods"
@@ -115,7 +115,7 @@
     "body": [
       "try {",
       "\t$1",
-      "} catch ($2 e) {",
+      "} catch (Exception$2 e) {",
       "\te.printStackTrace();",
       "}"
     ],
@@ -156,14 +156,14 @@
   "for iterator": {
     "prefix": "fori",
     "body": [
-      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {",
+      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) $3{",
       "}"
     ],
   },
   "for reverse iterator": {
     "prefix": "forr",
     "body": [
-      "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--) {",
+      "for (int ${1:i} = $2 - 1; ${1:i} >= 0; ${1:i}--) $3{",
       "}"
     ],
   },
@@ -171,17 +171,19 @@
     "prefix": "fore",
     "body": [
       "for (${1:int} e : $2) {",
+      "\t${3:System.out}.print(e + \" \");"
       "}"
+      "${3:System.out}.println();"
     ],
   },
   "Object creation": {
     "prefix": "obj",
     "body": [
-      "${1:nameClass} ${2:name} = new ${1:nameConstructor}($3);"
+      "${1:nameClass} ${2:name} = new ${1:nameConstructor}();"
     ],
   },
   "Constructor ()": {
-    "prefix": "truc",
+    "prefix": "construct",
     "body": [
       "public ${TM_FILENAME_BASE}($1) {",
       "\tthis.$2 = $2;",
@@ -241,7 +243,7 @@
   "Set static array": {
     "prefix": "arr",
     "body": [
-      "{$1:int} a$2 = new {$1:int}[$3];"
+      "${1:int}[] a$2 = new ${1:int}[MAX$3];"
     ],
   },
   "Read int": {
@@ -250,10 +252,10 @@
       "int $1 = io.nextInt();"
     ],
   },
-  "Read String line": {
+  "Read Line": {
     "prefix": "rln",
     "body": [
-      "String ln = io.nextLine();"
+      "String line = io.nextLine();"
     ],
   },
   "Read long": {
@@ -280,6 +282,12 @@
       "char[] $2 = io.next().toCharArray();"
     ],
   },
+  "Set constant int": {
+    "prefix": "MAX",
+    "body": [
+      "final int MAX = 100000$1_7;"
+    ],
+  },
   "read test cases": {
     "prefix": "tt",
     "body": [
@@ -291,25 +299,25 @@
     ],
   },
   "read test cases with Scanner": {
-    "prefix": "tc",
+    "prefix": "ttt",
     "body": [
-      "int tc = sc.nextInt();",
-      "while (tc-- > 0) {",
+      "int tt = sc.nextInt();",
+      "while (tt-- > 0) {",
       "\t$1",
-      "\tsolve($2);",
       "}"
     ],
   },
   "style josuerom": {
-    "prefix": "josuerom",
+    "prefix": "header",
     "body": [
       "/**",
       "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
       "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
     ]
   },
-  "Template 1 for CP": {
+  "Template for codeforces": {
     "prefix": "tem1",
     "body": [
       "/**",
@@ -393,20 +401,20 @@
     ],
     "description": "Plantilla efectiva y efizaz",
   },
-  "Template 2 team 2 Bits()": {
+  "Template 2 BITS()": {
     "prefix": "tem2",
     "body": [
       "/**",
-      " *  █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
-      " *  ─▄▀  █▀▀▄ ▀█▀ ──█── ▀▀█ █─ ─█",
-      " *  █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
-      " *  created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
+      " *   █▀█  █▀▀▄ ─▀─ ▀▀█▀▀ █▀▀ ▄▀ ▀▄",
+      " *   ─▄▀  █▀▀▄ ▀█▀ ──█── ▀▀█ █─ ─█",
+      " *   █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
+      " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       " **/",
       "import java.io.*;",
       "import java.util.*;",
       "import static java.lang.Math.*;\n",
       "public class ${TM_FILENAME_BASE} {",
-      "   public static void main(String[] _2BITS) {",
+      "   public static void main(String[] args) {",
       "      try (FastReader io = new FastReader()) {",
       "         $1",
       "      }",
@@ -477,26 +485,25 @@
       "   }",
       "}"
     ],
-    "description": "Plantilla equipo 2 Bits() RPC",
+    "description": "Plantilla equipo 2 Bits()",
   },
-  "Template 3 simple and ligth": {
+  "Template Ultra-Ligth": {
     "prefix": "tem3",
     "body": [
       "/**",
       "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
       "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "import java.util.Scanner;\n",
+      "import java.util.*;\n",
       "public class ${TM_FILENAME_BASE} {",
       "\tpublic static void main(String[] args) {",
       "\t\tScanner sc = new Scanner(System.in);",
-      "\t\tint tt = sc.nextInt();$1",
-      "\t\twhile (tt-- > 0) {",
-      "\t\t}",
+      "\t\t$1",
       "\t\tSystem.exit(0);",
       "\t}",
       "}",
     ],
-    "description": "Plantilla sencilla y liviana",
+    "description": "Plantilla estandar simple",
   }
 }
