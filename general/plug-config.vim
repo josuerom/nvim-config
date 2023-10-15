@@ -39,8 +39,6 @@ let g:lightline = {
 
 let g:coc_global_extensions = [
   \ 'coc-snippets',
-  \ 'coc-java',
-  \ 'coc-clangd',
   \]
 
 " configuración de coc-snippets
