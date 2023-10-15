@@ -1,14 +1,23 @@
 { // @author josuerom
-  "#ifdef ONLINE_JUDGE": {
+  "#ifndef ONLINE_JUDGE": {
     "prefix": "online",
     "body": [
       "#ifndef ONLINE_JUDGE",
+      "\tfreopen(\"samples/in1\", \"r\", stdin);",
+      "\tfreopen(\"samples/output\", \"w\", stdout);",
+      "#endif"
+    ]
+  },
+  "#ifdef LOCAL": {
+    "prefix": "local",
+    "body": [
+      "#ifdef LOCAL",
       "\tfreopen(\"samples/in1\", \"r\", stdin);",
       "\t// freopen(\"samples/output\", \"w\", stdout);",
       "#endif"
     ]
   },
-  "ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);": {
+  "ios::sync_with_stdio(false); cin.tie(0);": {
     "prefix": "ioc",
     "body": [
       "ios::sync_with_stdio(false);",
@@ -27,17 +36,16 @@
       "cin.getline(s$1, n$2, '\\n');"
     ]
   },
-  "read string": {
+  "read line": {
     "prefix": "rln",
     "body": [
       "getline(cin, s$1);"
     ]
   },
-  "read n": {
-    "prefix": "ri",
+  "read varius int": {
+    "prefix": "rvi",
     "body": [
-      "int $1;",
-      "cin >> $1;"
+      "cin >> $1 >> $2 >> $3 >> $4;"
     ]
   },
   "for (int i = 0; i < n; i++)": {
@@ -50,7 +58,7 @@
   "for (int i = n; i >= 0; i--)": {
     "prefix": "forr",
     "body": [
-      "for (int ${1:i} = $2; ${1:i} >= 0; ${1:i}--) $3{",
+      "for (int ${1:i} = $2 - 1; ${1:i} >= 0; ${1:i}--) $3{",
       "}"
     ]
   },
@@ -73,33 +81,24 @@
   "while": {
     "prefix": "wh",
     "body": [
-      "while ($1) $2",
+      "while ($1) {",
+      "}",
     ]
   },
-  "function preCal": {
+  "function preCalculate": {
     "prefix": "funpre",
     "body": [
       "function<int$1(int)> preCalculate = [&](int n) {",
       "};"
     ]
   },
-  "read tests case": {
-    "prefix": "tc",
-    "body": [
-      "int tc;",
-      "cin >> tc;",
-      "while (tc--) {",
-      "\t$1",
-      "}",
-    ]
-  },
-  "read tests case and solve()": {
+  "read test case": {
     "prefix": "tt",
     "body": [
       "int tt;",
       "cin >> tt;",
       "while (tt--) {",
-      "\tsolve();",
+      "\t$1",
       "}",
     ]
   },
@@ -109,7 +108,7 @@
       "#include <bits/stdc++.h>$1"
     ]
   },
-  "#include ": {
+  "#include": {
     "prefix": "in",
     "body": [
       "#include $1"
@@ -127,13 +126,13 @@
       "#define $1"
     ]
   },
-  "cin": {
+  "cin >>": {
     "prefix": "cii",
     "body": [
       "cin >> $1;"
     ]
   },
-  "cout": {
+  "cout <<": {
     "prefix": "coo",
     "body": [
       "cout << $1;"
@@ -202,6 +201,7 @@
       "/**",
       "   ░░█ █▀█ █▀ █░█ █▀▀ █▀█ █▀█ █▀▄▀█",
       "   █▄█ █▄█ ▄█ █▄█ ██▄ █▀▄ █▄█ █░▀░█",
+      "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}"
       "**/",
     ]
   },
@@ -211,7 +211,7 @@
       "#pragma GCC optimize(\"Ofast\")",
     ]
   },
-  "Template 1 for codeforces": {
+  "Template for codeforces": {
     "prefix": "tem1",
     "body": [
       "/**",
@@ -220,15 +220,14 @@
       "**/",
       "#include <bits/stdc++.h>",
       "using namespace std;\n",
-      "#ifdef josuerom",
+      "#ifdef DEBUG",
       "#include \"debug.h\"",
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "#define ll  long long",
-      "#define pb  push_back",
-      "#define br  '\\n'",
-      "\n$3\n",
+      "#define long  long long",
+      "#define endl  '\\n'",
+      "\n$2\n",
       "void solve() {",
       "}\n",
       "int main() {",
@@ -237,8 +236,8 @@
       "\tint tt = 1;",
       "\tcin >> tt;$1",
       "\tfor (int nc = 1; nc <= tt; nc++) {",
-      "#ifdef josuerom",
-      "\t\tcout << \"-- Case #\" << nc << \" --\\n\";",
+      "#ifdef LOCAL",
+      "\t\tcout << \"Case #\" << nc << \": \";",
       "\t\tsolve();",
       "#else",
       "\t\tsolve();",
@@ -249,7 +248,7 @@
     ],
     "description": "Plantilla efectiva y eficaz para la CP"
   },
-  "Template 2 Ultra Light": {
+  "Template Ultra-Light": {
     "prefix": "tem2",
     "body": [
       "/**",
@@ -268,7 +267,7 @@
     ],
     "description": "Plantilla estándar simple"
   },
-  "Template 3 2BITS": {
+  "Template 2 BITS()": {
     "prefix": "tem3",
     "body": [
       "/**",
@@ -277,12 +276,15 @@
       " *   █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>\n",
+      "#include <bits/stdc++.h>",
       "using namespace std;\n",
-      "#define ll  long long",
-      "#define pb  push_back",
-      "#define br  '\\n'",
-      "\n$3\n",
+      "#ifdef DEBUG",
+      "#include \"../debug.h\"",
+      "#else",
+      "#define debug(...) 42",
+      "#endif\n",
+      "const int N = 1e6$2 + 7;",
+      "int a[N], n;\n"
       "void solve() {",
       "}\n",
       "int main() {",
@@ -291,8 +293,8 @@
       "\tint tt = 1;",
       "\tcin >> tt;$1",
       "\tfor (int nc = 1; nc <= tt; nc++) {",
-      "#ifdef _2BITS",
-      "\t\tcout << \"-- Case #\" << nc << \" --\\n\";",
+      "#ifdef LOCAL",
+      "\t\tcout << \"Case #\" << nc << \": \";",
       "\t\tsolve();",
       "#else",
       "\t\tsolve();",
@@ -303,38 +305,17 @@
     ],
     "description": "Plantilla del equipo 2 Bits() RPC"
   },
-  "Template 4 Um_nik CF": {
+  "Template Um_nik CF": {
     "prefix": "tem4",
     "body": [
       "/**",
       " *   author:  josuerom",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <iostream>",
-      "#include <cstdio>",
-      "#include <cstdlib>",
-      "#include <algorithm>",
-      "#include <cmath>",
-      "#include <vector>",
-      "#include <set>",
-      "#include <map>",
-      "#include <unordered_set>",
-      "#include <unordered_map>",
-      "#include <queue>",
-      "#include <stack>",
-      "#include <ctime>",
-      "#include <cassert>",
-      "#include <complex>",
-      "#include <string>",
-      "#include <functional>",
-      "#include <cstring>",
-      "#include <chrono>",
-      "#include <random>",
-      "#include <bitset>",
-      "#include <climits>",
+      "#include <bits/stdc++.h>",
       "using namespace std;",
       "",
-      "#ifdef josuerom",
+      "#ifdef LOCAL",
       "\t#define eprintf(...) {fprintf(stderr, __VA_ARGS__); fflush(stderr);}",
       "#else",
       "\t#define eprintf(...) 42",
@@ -359,9 +340,9 @@
       "clock_t startTime;",
       "double getSolutionTime() {",
       "   return (double)(clock() - startTime) / CLOCKS_PER_SEC;",
-      "}",
-      "$2",
-      "void solve() {$3",
+      "}\n",
+      "$2\n",
+      "void solve() {",
       "}",
       "",
       "int main() {",
@@ -376,9 +357,9 @@
       "  return 0;",
       "}"
     ],
-    "description": "Plantilla Um_nik C++17"
+    "description": "Plantilla de Um_nik C++17"
   },
-  "Template 5 by JHelper": {
+  "Template JHelper Petr": {
     "prefix": "tem5",
     "body": [
       "/**",
