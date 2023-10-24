@@ -41,7 +41,7 @@ set shortmess+=c
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType java :call RunJava()
 autocmd FileType cpp :call RunCpp()
-autocmd FileType cpp,java :call EditInputFiles()
+autocmd FileType cpp,java,txt,in :call EditInputFiles()
 
 let g:gruvbox_contrast_dark = "hard"
 highlight Normal ctermbg = NONE
