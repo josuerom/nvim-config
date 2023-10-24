@@ -212,16 +212,16 @@
       "-*   author:  josuerom",
       "-*   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>",
-      "using namespace std;\n",
+      "#include <bits/stdc++.h>\n",
       "#ifdef DEBUG",
       "#include \"debug.h\"",
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "#define long  long long",
-      "#define endl  '\\n'",
-      "\n$2\n",
+      "#define ll  long long",
+      "#define br  '\\n'\n",
+			"using namespace std;\n",
+      "$2\n",
       "void solve() {\n\t$3",
       "}\n",
       "int main() {",
@@ -240,7 +240,7 @@
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla efectiva y eficaz para la CP"
+    "description": "Plantilla especial para CF"
   },
   "Template Ultra-Light": {
     "prefix": "tem2",
@@ -270,15 +270,14 @@
       "-*   █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
       "-*   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>",
-      "using namespace std;\n",
+      "#include <bits/stdc++.h>\n",
       "#ifdef DEBUG",
       "#include \"../debug.h\"",
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "const int N = 1e6$2 + 7;",
-      "int a[N], n;\n",
+			"using namespace std;\n",
+      "$2\n",
       "void solve() {\n\t$3",
       "}\n",
       "int main() {",
@@ -297,7 +296,7 @@
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla del equipo 2 Bits() RPC"
+    "description": "Plantilla equipo 2 Bits() RPC"
   },
   "Template Um_nik CF": {
     "prefix": "tem4",

@@ -6,16 +6,16 @@
 
 cls
 @echo off
-DOSKEY comcpp=g++ -march=native -Wall -Wextra -Wshadow -Wlva -Wconversion -Djosuerom -o d:\workspace\build\cmd-sol.exe
-DOSKEY runcpp=d:\workspace\build\cmd-sol.exe
+DOSKEY comcpp=g++ -std=c++17 -march=native -Wall -Wlva -Wconversion -DDEBUG -DLOCAL -o d:\workspace\bin\cmd-sol.exe
+DOSKEY runcpp=d:\workspace\bin\cmd-sol.exe
 DOSKEY c=cls
 DOSKEY e=exit
 DOSKEY ..=cd ..
 DOSKEY gi=git init
 DOSKEY gs=git status
 DOSKEY ga=git add .
-DOSKEY gc=git commit -m 
-DOSKEY gcm=git commit -m "♻ Update"
+DOSKEY gc=git commit -m
+DOSKEY gcm=git commit -m "♻ Update files"
 DOSKEY gp=git push
 DOSKEY gl=git pull
 DOSKEY gcl=git clone
@@ -23,14 +23,14 @@ DOSKEY glo=git log --oneline
 DOSKEY gbr=git branch
 DOSKEY gd=git diff
 DOSKEY gst=git stash
-DOSKEY n=nvim .
+DOSKEY n=nvim
 DOSKEY ccmdrc=nvim %HOMEPATH%\AppData\Local\nvim\cmdrc.cmd
-DOSKEY cgitc=nvim %HOMEPATH%\.gitconfig
-DOSKEY cnvim=cd %HOMEPATH%\AppData\Local\nvim\
-DOSKEY cwork=cd d:\workspace\
-DOSKEY chome=cd %HOMEPATH%
-DOSKEY tem-cpp=copy d:\workspace\templates\tem.cpp A_ && nvim A_
-DOSKEY tem-java=copy d:\workspace\templates\tem.java A_ && nvim A_
+DOSKEY cgit=nvim %HOMEPATH%\.gitconfig
+DOSKEY cnvim=cd %HOMEPATH%\AppData\Local\nvim\ && nvim .
+DOSKEY cw=cd d:\workspace\
+DOSKEY cdh=cd %HOMEPATH%
+DOSKEY temcpp=copy d:\workspace\templates\tem.cpp A_ && nvim A_
+DOSKEY temjava=copy d:\workspace\templates\tem.java A_ && nvim A_
 DOSKEY htop=taskmgr.exe
 DOSKEY poweroff=shutdown /P
 DOSKEY reboot=shutdown /r
