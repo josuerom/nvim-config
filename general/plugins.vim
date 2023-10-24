@@ -35,8 +35,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " IDE
 Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdcommenter'
-Plug 'junegunn/fzf', {'do': {-> fzf#install()}}
-Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'yggdroot/indentline'
 
