@@ -9,9 +9,9 @@
 " 																					Creador >> josuerom
 " 																Twitter >> https://twitter.com/josueromr
 
-" importo los 3 archivos de configuración adicional
 so ~/AppData/Local/nvim/general/plugins.vim
 so ~/AppData/Local/nvim/general/plug-config.vim
+so ~/AppData/Local/nvim/general/compiler.vim
 so ~/AppData/Local/nvim/general/shortcuts.vim
 
 syntax enable
