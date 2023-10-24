@@ -6,7 +6,7 @@
 
 cls
 @echo off
-DOSKEY comcpp=g++ -std=c++17 -march=native -Wall -Wlva -Wconversion -DDEBUG -DLOCAL -o d:\workspace\bin\cmd-sol.exe
+DOSKEY comcpp=g++ -std=c++17 -Wall -DDEBUG -DLOCAL -o d:\workspace\bin\cmd-sol.exe
 DOSKEY runcpp=d:\workspace\bin\cmd-sol.exe
 DOSKEY c=cls
 DOSKEY e=exit
