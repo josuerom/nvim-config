@@ -35,11 +35,8 @@ let g:lightline = {
 
 " desabilita la entrega de sugerencias de COC para que KITE sea quien las entrege para tus lenguajes
 "autocmd FileType java let b:coc_suggest_disable=1
-"autocmd FileType cpp let b:coc_suggest_disable=1
 
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \]
+let g:coc_global_extensions = [ 'coc-snippets' ]
 
 " configuración de coc-snippets
 let g:coc_snippets_next = '<c-j>'
