@@ -7,59 +7,6 @@
 
 let mapleader = " "
 
-" ATAJOS de teclado compilar y ejecutar programas solo con extensiones (.java .cpp .py):
-" <F1> compila el programa
-" <F2> <F3> <F4> ejecutan el programa pero con archivos de entrada
-" <F5> ejecuta el programa en una terminal para entrada manual
-" <F6> <F7> <F8> para editar los archivos de entrada
-function! RunJava()
-   " para versiones de java superiores a la 8
-   imap <F2> <Esc> :w<CR> :!java % < samples\in1<CR>
-   nmap <F2> :w<CR> :!java % < samples\in1<CR>
-   imap <F3> <Esc> :w<CR> :!java % < samples\in2<CR>
-   nmap <F3> :w<CR> :!java % < samples\in2<CR>
-   imap <F4> <Esc> :w<CR> :!java % < samples\in3<CR>
-   nmap <F4> :w<CR> :!java % < samples\in3<CR>
-   nmap <F5> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>java 
-endfunction
-
-function! RunCpp()
-   imap <F1> <Esc> :w<CR> :!g++ % -o d:\workspace\bin\nvim-sol.exe -std=c++17 -march=native -Wall -pedantic -DDEBUG -DLOCAL<CR>
-   nmap <F1> :w<CR> :!g++ % -o d:\workspace\bin\nvim-sol.exe -std=c++17 -march=native -Wall -pedantic -DDEBUG -DLOCAL<CR>
-   imap <F2> <Esc> :w<CR> <F1> :!d:\workspace\bin\nvim-sol.exe < samples\in1<CR>
-   nmap <F2> :w<CR> :!d:\workspace\bin\nvim-sol.exe < samples\in1<CR>
-   imap <F3> <Esc> :w<CR> <F1> :!d:\workspace\bin\nvim-sol.exe < samples\in2<CR>
-   nmap <F3> :w<CR> :!d:\workspace\bin\nvim-sol.exe < samples\in2<CR>
-   imap <F4> <Esc> :w<CR> <F1> :!d:\workspace\bin\nvim-sol.exe < samples\in3<CR>
-   nmap <F4> :w<CR> :!d:\workspace\bin\nvim-sol.exe < samples\in3<CR>
-   nmap <F5> :w<CR> :terminal<CR>icls<CR>d:\workspace\bin\nvim-sol.exe<CR>
-endfunction
-
-function! RunPython()
-   imap <F2> <Esc> :w<CR> :!python % < samples\in1<CR>
-   nmap <F2> :w<CR> :!python % < samples\in1<CR>
-   imap <F3> <Esc> :w<CR> :!python % < samples\in2<CR>
-   nmap <F3> :w<CR> :!python % < samples\in2<CR>
-   imap <F4> <Esc> :w<CR> :!python % < samples\in3<CR>
-   nmap <F4> :w<CR> :!python % < samples\in3<CR>
-   nmap <F5> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>python 
-endfunction
-
-function! RunJsAndTs()
-   imap <F1> <Esc> :w<CR> :!node %<CR>
-   nmap <F1> :w<CR> :!node %<CR>
-   nmap <F2> :w<CR> :cd %:h<CR> :terminal<CR>icls<CR>node 
-endfunction
-
-function! EditInputFiles()
-   imap <F6> <Esc> :w<CR> :e %:r\samples\in1<CR>
-   nmap <F6> :w<CR> :e %:r\samples\in1<CR>
-   imap <F7> <Esc> :w<CR> :e %:r\samples\in2<CR>
-   nmap <F7> :w<CR> :e %:r\samples\in2<CR>
-   imap <F8> <Esc> :w<CR> :e %:r\samples\in3<CR>
-   nmap <F8> :w<CR> :e %:r\samples\in3<CR>
-endfunction
-
 " para el modo NORMAL desabilito el desplazamiento con las flechas
 noremap <up> <nop>
 noremap <down> <nop>
@@ -89,15 +36,16 @@ nmap <C-t> :call OpenPowerShell()<CR> <Esc>
 nmap <Leader>¿ :e ~/AppData/Local/nvim/general/shortcuts.vim<CR>
 nmap <Leader>' :e ~/AppData/Local/nvim/general/plug-config.vim<CR>
 nmap <Leader>0 :e ~/AppData/Local/nvim/general/plugins.vim<CR>
-nmap <Leader>9 :e $MYVIMRC<CR>
+nmap <Leader>9 :e ~/AppData/Local/nvim/general/compiler.vim<CR>
+nmap <Leader>8 :e $MYVIMRC<CR>
 
 " refresca neovim con space + <F5>
-nmap <Leader> <F5> :so ~/AppData/Local/nvim/init.vim<CR>
+nmap <Leader><F5> :so ~/AppData/Local/nvim/init.vim<CR>
 " copia la ruta general del archivo abierto con <F6>
-nnoremap <Leader> <F6>kp :let @*=expand("%")<CR>
+nnoremap <Leader><F6>kp :let @*=expand("%")<CR>
 " entre al modo goyo sin distracciones, con <F7>
-nmap <Leader> <F7> :Goyo<CR>
-imap <Leader> <F7> <Esc> :Goyo<CR>i
+nmap <Leader><F7> :Goyo<CR>
+imap <Leader><F7> <Esc> :Goyo<CR>i
 
 " copia todo el contenido del archivo abierto con Ctrl + a
 imap <C-a> <Esc> :w<CR> :%y+<CR>
@@ -119,8 +67,6 @@ imap <C-x> <Esc> :qa!<CR>
 nmap <Leader>e :NERDTreeToggle<CR>
 " abre arbol de nvim
 nmap <Leader>p :Explore<CR>
-" ejecute FZF (Fuzy Find Files)
-nmap <Leader>f :FZF<CR>
 
 " comentar línea con <}+}>
 vmap }} <plug>NERDCommenterToggle
@@ -193,5 +139,3 @@ nnoremap m :m .+1<CR>==
 
 " actualizar extensiones
 nnoremap <silent><nowait> <Leader>cup :<C-u>CocUpdate<CR>
-" desintalar extensiones
-nnoremap <silent><nowait> <Leader>cun :<C-u>CocUninstall coc-
