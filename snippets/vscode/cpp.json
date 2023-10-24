@@ -42,24 +42,28 @@
       "getline(cin, s$1);"
     ]
   },
-  "read varius int": {
-    "prefix": "rvi",
+  "read multiple variables": {
+    "prefix": "rmv",
     "body": [
       "cin >> $1 >> $2 >> $3 >> $4;"
+    ]
+  },
+  "output multiple variables": {
+    "prefix": "omv",
+    "body": [
+      "cout << $1 << $2 << $3 << $4;"
     ]
   },
   "for (int i = 0; i < n; i++)": {
     "prefix": "fori",
     "body": [
-      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) $3{",
-      "}"
+      "for (int ${1:i} = 0; ${1:i} < $2; ${1:i}++) {$3}",
     ]
   },
   "for (int i = n; i >= 0; i--)": {
     "prefix": "forr",
     "body": [
-      "for (int ${1:i} = $2 - 1; ${1:i} >= 0; ${1:i}--) $3{",
-      "}"
+      "for (int ${1:i} = $2 - 1; ${1:i} >= 0; ${1:i}--) {$3}",
     ]
   },
   "for (auto $e : con)": {
@@ -83,6 +87,13 @@
     "body": [
       "while ($1) {",
       "}",
+    ]
+  },
+  "void preCalculate()": {
+    "prefix": "fpre",
+    "body": [
+      "void preCalculate($3) {",
+      "};"
     ]
   },
   "function preCalculate": {
@@ -141,13 +152,13 @@
   "scanf": {
     "prefix": "ss",
     "body": [
-      "scanf(\"%d$1\", &$2);"
+      "scanf(\"%d$1\\n\", &$2);"
     ]
   },
   "printf": {
     "prefix": "pp",
     "body": [
-      "printf(\"%d$1\", $2);"
+      "printf(\"%d\\n$1\", $2);"
     ]
   },
   "cout ternary operator": {
@@ -168,6 +179,18 @@
       "printf(\"%d$1\\n\", ($2 ? $3 : $4));"
     ]
   },
+  "$.begin(), $.end()": {
+    "prefix": "all",
+    "body": [
+      "$1.begin(), $1.end()$2"
+    ]
+  },
+  "$.rbegin(), $.rend()": {
+    "prefix": "rall",
+    "body": [
+      "$1.rbegin(), $1.rend()$2"
+    ]
+  },
   "return": {
     "prefix": "rr",
     "body": [
@@ -177,7 +200,7 @@
   "set const MAX": {
     "prefix": "N",
     "body": [
-      "const int N = 1e$1 + 7;"
+      "const int N = 1e$1 + 10;"
     ]
   },
   "Header": {
@@ -225,10 +248,10 @@
       "#else",
       "#define debug(...) 42",
       "#endif\n",
-      "#define long  long long",
-      "#define endl  '\\n'",
+      "#define ll  long long",
+      "#define br  '\\n'",
       "\n$2\n",
-      "void solve() {",
+      "void solve() {$3",
       "}\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
@@ -246,7 +269,7 @@
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla efectiva y eficaz para la CP"
+    "description": "Plantilla para CF"
   },
   "Template Ultra-Light": {
     "prefix": "tem2",
@@ -257,6 +280,8 @@
       "   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
       "#include <bits/stdc++.h>\n",
+      "#define ll  long long",
+      "#define br  '\\n'\n",
       "using namespace std;\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
@@ -265,7 +290,7 @@
       "\treturn 0;",
       "}",
     ],
-    "description": "Plantilla estándar simple"
+    "description": "Plantilla estándar liviana"
   },
   "Template 2 BITS()": {
     "prefix": "tem3",
@@ -276,34 +301,34 @@
       " *   █▄▄  ▀▀▀─ ▀▀▀ ──▀── ▀▀▀ ▀▄ ▄▀",
       " *   created: ${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR_SHORT} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
       "**/",
-      "#include <bits/stdc++.h>",
+      "#include <bits/stdc++.h>\n",
+      "#define ll  long long",
+      "#define br  '\\n'\n",
       "using namespace std;\n",
-      "#ifdef DEBUG",
-      "#include \"../debug.h\"",
-      "#else",
-      "#define debug(...) 42",
-      "#endif\n",
-      "const int N = 1e6$2 + 7;",
-      "int a[N], n;\n"
-      "void solve() {",
-      "}\n",
+      "class ${TM_FILENAME_BASE} {",
+      "public:",
+      "\tstatic const int N = $2 + 10;\n",
+      "\tvoid solve() {",
+      "\t}",
+      "};\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
       "\tcin.tie(0);",
-      "\tint tt = 1;",
+      "\t${TM_FILENAME_BASE} solver;",
+      "\tint tt = 1, nc = 1;",
       "\tcin >> tt;$1",
-      "\tfor (int nc = 1; nc <= tt; nc++) {",
+      "\twhile (tt--) {",
       "#ifdef LOCAL",
-      "\t\tcout << \"Case #\" << nc << \": \";",
-      "\t\tsolve();",
+      "\t\tcout << \"Case #\" << nc++ << \": \";",
+      "\t\tsolver.solve();",
       "#else",
-      "\t\tsolve();",
+      "\t\tsolver.solve();",
       "#endif",
       "\t}",
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla del equipo 2 Bits() RPC"
+    "description": "Plantilla equipo 2 Bits()"
   },
   "Template Um_nik CF": {
     "prefix": "tem4",
@@ -1297,22 +1322,22 @@
       "}",
       "#endif // ATCODER_CONVOLUTION_HPP",
       "",
-      "#ifdef josuerom",
+      "#ifdef DEBUG",
       "#include \"debug.h\"",
       "#else",
       "#define debug(...) 42",
       "#endif",
       "",
-      "#define rall(v)  (v).rbegin(), (v).rend()",
-      "#define all(v)   (v).begin(), (v).end()",
-      "#define mp       make_pair",
-      "#define se       second",
-      "#define fi       first",
+      "#define pb   push_back",
+      "#define mp   make_pair",
+      "#define ss   second",
+      "#define ff   first",
+      "#define endl '\\n'",
       "",
       "using namespace std;",
       "",
-      "using ll = long long int;",
-      "using ull = unsigned long long int;",
+      "using ll = long long;",
+      "using ull = unsigned long long;",
       "using uc = unsigned char;",
       "using ld = long double;",
       "using str = string;",
@@ -1440,8 +1465,7 @@
       "      return calc(n);",
       "   }",
       "}\n",
-      "/* Now the solution to the problem begins */",
-      "$2",
+      "/* Now the solution to the problem begins */$2",
       "",
       "class ${TM_FILENAME_BASE} {",
       "public:",
@@ -1450,13 +1474,13 @@
       "};\n",
       "int main() {",
       "\tios::sync_with_stdio(false);",
-      "\tcin.tie(nullptr); cout.tie(nullptr);",
+      "\tcin.tie(0); cout.tie(0);",
       "\t${TM_FILENAME_BASE} solver;",
       "\tint tt = 1;",
       "\tcin >> tt;$1",
       "\tfor (int nc = 1; nc <= tt; nc++) {",
-      "#ifdef josuerom",
-      "\t\tcout << \"------ Case #\" << nc << \" ------\\n\";",
+      "#ifdef LOCAL",
+      "\t\tcout << \"Case #\" << nc << \": \";",
       "\t\tsolver.solve();",
       "#else",
       "\t\tsolver.solve();",
@@ -1465,6 +1489,6 @@
       "\treturn 0;",
       "}"
     ],
-    "description": "Plantilla orientada y extensa por JHelper"
+    "description": "Plantilla con todo por JHelper Petr"
   }
 }
