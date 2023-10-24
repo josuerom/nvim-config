@@ -38,15 +38,11 @@ set cmdheight=1
 set updatetime=50
 set shortmess+=c
 
-" integro intrucciones para refrescar, limpiar espacios en blancos y ejecutar programas
-"autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType java :call RunJava()
 autocmd FileType cpp :call RunCpp()
-autocmd FileType python :call RunPython()
-autocmd FileType cpp,java,python :call EditInputFiles()
-"autocmd FileType javascript,typescript :call RunJsAndTs()
+autocmd FileType cpp,java :call EditInputFiles()
 
-" ajustes del tema
 let g:gruvbox_contrast_dark = "hard"
 highlight Normal ctermbg = NONE
 let g:gruvbox_italic = 1
